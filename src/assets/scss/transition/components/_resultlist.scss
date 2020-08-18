@@ -1,0 +1,104 @@
+.result--list {
+  margin-left: -1em;
+  margin-right: -1em;
+
+  @media (min-width: $breakpointDesktop) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  > ul,
+  > ul:first-child {
+    background: $lightBlue;
+    padding: .5em .5em 1px; // 1px fix needed for padding-flow bug;
+    margin: 0 0 2.25em 0;
+
+    @media (min-width: $breakpointDesktop) {
+      padding: 1.25em 1.25em 1px;
+    }
+
+    > li {
+      background: white;
+      list-style: none;
+      padding: 1em .5em .5em 1em;
+      margin-bottom: 1.25em;
+      border: 0;
+
+      @media (min-width: $breakpointDesktop) {
+        padding: 1.5em 1.25em .5em 2em;
+      }
+
+      p {
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  p {
+    margin-bottom: 1.325em;
+    line-height: 1.325em;
+  }
+
+  .result--title {
+    max-width: 100%;
+    margin-top: 0;
+
+    ~ .list--metadata {
+      line-height: 1.25em;
+      margin-bottom: 1em;
+
+      li {
+        font-style: normal;
+
+      }
+    }
+  }
+  h2.result--title {
+    ~ .list--metadata {
+      margin-top: -.8em;
+      line-height: 1.25em;
+      margin-bottom: 1em;
+
+      li {
+        font-style: normal;
+
+      }
+    }
+  }
+
+  .result--label {
+    margin: 0 0 0.5em;
+    .label {
+      font-size: 1em;
+    }
+  }
+
+  .result--actions {
+    right: 1em;
+    top: 1em;
+  }
+
+  .list--metadata {
+    margin-bottom: 1.325em;
+    color: $darkBlue;
+
+    li {
+      font-size: .85em;
+      font-style: italic;
+      color: $darkBlue;
+    }
+  }
+
+
+
+  @media (min-width: $breakpointDesktop) {
+    &--wide {
+      > ul > li,
+      > ul:first-child > li {
+        padding: 2.25em 4em 1px;
+      }
+    }
+  }
+}
+

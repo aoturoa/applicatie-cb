@@ -1,0 +1,9 @@
+title: Breadcrumb
+context:
+  title: "U bent hier:"
+  breadcrumb:
+    - text: Zoeken
+      url: '#'
+    - text: Zoekresultaten
+      url: '#'
+    - text: Regeling

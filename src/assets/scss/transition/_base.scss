@@ -1,0 +1,19 @@
+html {
+  @media (min-width: 50em) {
+    padding-bottom: 16.5em;
+  }
+}
+body {
+  color: $darkBlue;
+  font-size: $fontsizeBody;
+}
+
+.author {
+  line-height: 1.8em;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+label {
+  display: inline-block;
+}

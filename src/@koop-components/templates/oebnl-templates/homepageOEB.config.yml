@@ -1,0 +1,10 @@
+---
+title: Homepage
+label: Homepage OEP
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    search:
+      toggleableSearch: false

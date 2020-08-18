@@ -1,0 +1,129 @@
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+input[type="email"],
+textarea {
+  border: 1px solid $darkBlue;
+  color: $darkBlue;
+  border-radius: .25em;
+  padding: .6em .8em;
+  font-size: 1em;
+  height: 50px;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: outline-offset $fastEaseInOut;
+  margin: 0;
+
+  &:focus {
+    outline: 2px solid #ffb612;
+    outline-offset: 0;
+  }
+
+  &.has-error {
+    border-color: $red;
+    color: $red;
+  }
+
+  &:disabled,
+  &[disabled],
+  &[read-only] {
+    background-color: $lightGrey;
+    border-color: $mediumGrey;
+    color: $darkGrey;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+textarea {
+  min-height: 150px;
+}
+
+
+textarea {
+  width: 100%;
+}
+
+select {
+  font-size: 1.25rem;
+}
+input[type=text].input-text,
+input[type=password].input-text {
+  // padding: .4em .75em;
+  padding: .6em .8em;
+
+  &--accent {
+    padding: .625em;
+    border-width: 2px;
+  }
+
+  &--searchmedium {
+    font-size: 1em;
+    color: $darkBlue;
+    border-width: 2px;
+    height: 60px; // needed to correct crossbrowser fields; :(
+    padding: .625em 2em .625em 3em;
+    background-position: .75em center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.5em;
+
+    ~ .combobox-clear-button ~ .combobox-suggestions > div {
+      top: 3.4em;
+
+      > div.combobox-suggestion {
+        font-size: 1.325rem;
+        padding: .625em 1em .625em 3em;
+        color: $darkBlue;
+      }
+    }
+  }
+}
+
+.form__element--pagesearch {
+  input[type=text] {
+    display: inline-block;
+    height: auto;
+    font-size: 1.25rem;
+  }
+  button {
+    position: relative;
+    top: -1px;
+  }
+}
+
+
+fieldset {
+  margin: 0;
+
+  & + fieldset {
+    margin-top: 1.5em;
+  }
+
+  legend {
+    border-bottom: 0;
+    font-size: 1.325em;
+    width: auto;
+    display: inline-block;
+    line-height: 1.2;
+    margin-bottom: 0.625em;
+  }
+}
+.column--sidebar fieldset legend {
+  font-size: 1.25em;
+}
+
+input[type=date].datepicker__input~.ui-datepicker-trigger,
+input[type=text].datepicker__input~.ui-datepicker-trigger {
+  background-color: white;
+  border: 1px solid $darkBlue;
+  border-left: 0;
+  background-image: $calendarIconBlue;
+  background-size: 22px;
+  width: 53px;
+  padding: 4em .5em .5em .5em;
+}

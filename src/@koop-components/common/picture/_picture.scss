@@ -1,0 +1,10 @@
+picture {
+  img {
+    width: 100%;
+
+    @media ( min-width: $breakpointDesktop ) {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}

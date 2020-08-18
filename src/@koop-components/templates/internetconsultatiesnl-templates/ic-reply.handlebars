@@ -1,0 +1,70 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbContext }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <h1>NFP wijzigingspakket 2018-1</h1>
+
+    <h2>Reageren op consultatie</h2>
+
+    {{ render "@steps" stepsContext }}
+
+    <p>
+      Hieronder staan één of meer vragen die horen bij de consultatie. U kunt uw reactie geven in de ruimte onder de
+      vraag. Daarnaast
+      is het mogelijk om een document aan uw reactie toe te voegen, bijvoorbeeld als u achtergrondinformatie wilt
+      bijvoegen.
+    </p>
+    <p>
+      <a href="#" class="link link--forward">Direct naar document toevoegen</a>
+    </p>
+
+    <form>
+      <h3>Vraag</h3>
+      <p>
+        Geïnteresseerden kunnen een openbare reactie geven op alle onderdelen van het ontwerpbesluit en de
+        bijbehorende nota van
+        toelichting.
+      </p>
+      <fieldset class="form__element">
+        <textarea id="txtVraag" rows="5" placeholder="Uw reactie"></textarea>
+      </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
+    </form>
+
+
+  </div>
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--primary">Zoeken</button>
+      </form>
+      <a href="#" class="link link--forward">Zoek uitgebreid</a>
+    </div>
+    <p>
+      <a href="#" class="link link--back">Startpagina</a>
+    </p>
+    <ul class="list list--linked">
+      <li><a href="#">Consultatiegegevens</a></li>
+      <li><a href="#">Reacties op consultatie (0)</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

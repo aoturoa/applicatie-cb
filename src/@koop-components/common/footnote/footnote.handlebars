@@ -1,0 +1,15 @@
+{{#if customlist}}
+  {{{text}}}
+  <ul class="list-custom list-custom--size-xs footnotes">
+    {{#each notes}}
+    <li class="list-custom__item" id="voetnoot{{id}}"><span class="list-custom__itembullet">{{number}}</span>{{note}}<a href="#referentie{{id}}" class="reference">Terug naar referentie {{number}}</a></li>
+    {{/each}}
+  </ul>
+{{else}}
+  {{{text}}}
+  <ol class="footnotes">
+    {{#each notes}}
+    <li id="voetnoot{{id}}">{{note}}<a href="#referentie{{id}}" class="reference">Terug naar referentie {{id}}</a></li>
+    {{/each}}
+  </ol>
+{{/if}}

@@ -1,0 +1,67 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbContext }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <h1>NFP wijzigingspakket 2018-1</h1>
+
+    <h2>Reageren op consultatie</h2>
+
+
+    {{ render "@steps" stepsContext2 }}
+
+    <p>
+      Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier
+      insturen.
+      Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet
+      groter zijn
+      dan 3MB.
+    </p>
+
+    <form>
+      <fieldset class="form__element">
+        <div>
+          {{ render "@input-file" fileContext }}
+        </div>
+
+      </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Vorige</button>
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
+    </form>
+
+
+  </div>
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--primary">Zoeken</button>
+      </form>
+      <a href="#" class="link link--forward">Zoek uitgebreid</a>
+    </div>
+    <p>
+      <a href="#" class="link link--back">Startpagina</a>
+    </p>
+    <ul class="list list--linked">
+      <li><a href="#">Consultatiegegevens</a></li>
+      <li><a href="#">Reacties op consultatie (0)</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

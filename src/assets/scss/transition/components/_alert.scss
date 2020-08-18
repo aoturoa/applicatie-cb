@@ -1,0 +1,19 @@
+.alert {
+  margin: 0 0 1.5em 0;
+  border: 0;
+  border-radius: 0;
+  padding: 1.15em 1.15em 1.15em 3.5em;
+  line-height: 1.25em;
+
+  &--info {
+    background-color: $lightBlue;
+    background-image: $infoIconBlue;
+  }
+
+  &--warning {
+    background-color: lighten($lightRed,7);
+    background-image: $iconAlertRed;
+    background-size: 1.5em;
+    background-position: 1em 1em;
+  }
+}

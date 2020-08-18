@@ -1,0 +1,10 @@
+<div class="form__element">
+  <label for="input--{{ id }}">{{ fieldLabel }}</label>
+  {{#if fieldInstruction }}
+    <small>{{ fieldInstruction }}</small>
+  {{/if }}
+  <input type="text" id="input--{{ id }}" class="input--error" aria-labelledby="input--{{ id }} error__input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+
+  <p id="error__input--{{ id }}" class="form__error"><strong>{{ warningMessage }}</strong> {{ errorMessage }}</p>
+</div>
+ 

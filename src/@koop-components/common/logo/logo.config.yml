@@ -1,0 +1,10 @@
+title: Logo
+context:
+  file: logo.svg
+  alt: Overheid.nl logo
+  href: https://www.overheid.nl
+  youAreHere:
+    - text: Particulieren
+    - text: Buitenland
+
+

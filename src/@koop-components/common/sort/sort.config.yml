@@ -1,0 +1,9 @@
+title: sort
+label: Sort
+context:
+  options:
+    - label: Datum
+      href: '#'
+      active: is-active
+    - label: Titel
+      href: '#'

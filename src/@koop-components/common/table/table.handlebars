@@ -1,0 +1,46 @@
+<table class="table {{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
+{{#if caption }}
+  <caption>{{ caption }} </caption>
+{{/if}}
+<thead>
+  {{#each items }}
+  {{#if @first}}
+  <tr>
+    {{#each item }}
+    <th scope="col" class="{{thclass}}">{{#if ../../rotated}}<span class="rotated">{{/if}}{{ type }}{{#if ../../rotated}}</span>{{/if}}</th>
+    {{/each}}
+  </tr>
+  {{/if}}
+  {{/each }}
+   {{#if multilevel}} {{#each multilevels }}
+  <tr class="table__rowheading table__rowheading--lvl{{title}}">
+    <th colspan="4">Row {{title}}</th>
+  </tr>
+  {{/each}} {{/if}}
+</thead>
+<tbody>
+
+
+  {{#each items }}
+  <tr>
+    {{#each item }}
+      {{#if cellType }}
+      <td data-before="{{ type }}" class="status {{ cellType }}"><span>{{{ value }}}</span></td>
+      {{ else if download }}
+        <td data-before="{{ type }}" class="status"><a href="#">{{{ value }}}</a></td>
+      {{ else }}
+       <td data-before="{{ type }}">{{{ value }}}</td>
+      {{/if }}
+    {{/each }}
+  </tr>
+  {{/each }}
+</tbody>
+{{#if tableDescription }}
+<tfoot class="{{describedby}}">
+  <tr>
+    <td colspan="4">{{ tableDescription }}</td>
+  </tr>
+  </tfoot>
+{{/if}}
+</table>
+

@@ -1,0 +1,39 @@
+---
+label: Aanm. - Stap 1 (Landing)
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Altijd op de hoogte van betrekkingen in uw woonomgeving
+    subheading: Aanmelden voor de attenderingsservice
+    intro: Ontvang automatisch updates in uw e-mail inbox over alles wat er in uw buurt gebeurt.
+    centered: true
+    headingcentered: true
+    inputEmailContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Uw e-mailadres
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: E-mailadres
+      type: email
+      required: true
+      hastooltip: true
+      tooltipContext:
+        id: 12312
+    buttonSubmit:
+      id: 123
+      text: Volgende stap
+      button: true
+      modifier: button--primary form__button
+

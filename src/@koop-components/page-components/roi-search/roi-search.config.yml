@@ -1,0 +1,43 @@
+---
+label: ROI search
+status: ready
+context:
+  inputLegend: Zoeken in alle documenten
+  inputLabel: Zoekterm of dossiernummer
+  inputPlaceholder: Vul een zoekterm in of gebruik &quot;&quot; als u een woordgroep zoekt
+  id: 1
+  searchScope:
+    id: search-scope
+    fieldLabel: Selecteer documentsoort
+    fieldInstruction: ''
+    visuallyHideLabel: true
+    regularFormElement: false
+    placeholder: Collecties
+    optionGroups:
+      - label: Parlementaire documenten
+        groupId: search-scope-set-1
+        options:
+          - text: Alle parlementaire documenten
+          - text: Handelingen
+          - text: Moties
+          - text: Kamervragen
+          - text: Kamerstukken
+          - text: Agenda's
+      - label: Officiële bekendmakingen
+        groupId: search-scope-set-2
+        options:
+          - text: Alle bekendmakingen
+          - text: Tractatenblad
+          - text: Staatsblad
+          - text: Staatscourant
+          - text: Gemeenteblad
+          - text: Provinciaal blad
+  radioGroupContext:
+    modifier: inline-group
+    fieldLabel: ""
+    name: geldigheid
+    options:
+    - id: 1
+      text: Zoek in alle teksten
+    - id: 2
+      text: Zoek alleen in titels en kenmerken

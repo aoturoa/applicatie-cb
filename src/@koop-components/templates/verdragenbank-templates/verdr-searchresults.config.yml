@@ -1,0 +1,216 @@
+---
+label: Verdr. - Searchresults
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  onderwerpContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Aanlegvergunning
+      name: onderwerp
+    - id: checkbox-21
+      text: Apv vergunning
+      name: onderwerp
+    - id: checkbox-22
+      text: Bodembeschermingsvergunning
+      name: onderwerp
+    - id: checkbox-23
+      text: Bouwvergunning
+      name: onderwerp
+    - id: checkbox-24
+      text: Drank- en horecavergunning
+      name: onderwerp
+    - id: checkbox-25
+      text: Evenementenvergunning
+      name: onderwerp
+  publicatiedatumContext:
+    moreless: true
+    options:
+    - id: radio-1
+      text: Vandaag (1)
+      name: publicatie
+    - id: radio-2
+      text: Afgelopen week (21)
+      name: publicatie
+    - id: radio-3
+      text: Afgelopen maand (54)
+      name: publicatie
+    - id: radio-4
+      text: Afgelopen 2 maanden (0)
+      name: publicatie
+      disabled: disabled
+    - id: radio-5
+      text: Zelf een periode kiezen
+      name: publicatie
+  resultmodalContext:
+    modifier: result--list--wide
+    items:
+    - title: Aangevraagde evenementenvergunningen 2018
+      headerimg: https://via.placeholder.com/720x280.png?text=Kaart+met+marker
+      titleHeader: h2
+      text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
+      buttons:
+        - button: Bekijken
+          type: secendary
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
+      buttons:
+        - button: Bekijken
+          type: secendary
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      text: 12 september 1986, Brussel
+      buttons:
+        - button: Bekijken
+          type: secendary
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      text: 12 september 1986, Brussel
+      buttons:
+        - button: Bekijken
+          type: secendary
+  inputsubmitContext:
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Verfijn uw zoekopdracht
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  inputsearchMobContext:
+    fieldPlaceholder: Verfijn uw zoekopdracht
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  selectedfilterContext:
+    items:
+      - label: Bouwvergunning
+      - label: APV vergunning
+  depositarisContext:
+    moreless: true
+    options:
+    - id: checkbox-30
+      text: Enkel deze verdragen tonen
+      name: onderwerp
+  geldendContext:
+    options:
+    - id: checkbox-40
+      text: Nederland (in Europa)
+      name: onderwerp
+    - id: checkbox-41
+      text: Nederland (Bonaire)
+      name: onderwerp
+    - id: checkbox-422
+      text: Nederland (Sint Eustatius)
+      name: onderwerp
+    - id: checkbox-422
+      text: Aruba
+      name: onderwerp
+    - id: checkbox-422
+      text: Curacao
+      name: onderwerp
+    - id: checkbox-422
+      text: Sint Maarten
+      name: onderwerp
+  typeverdagContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Bilateraal
+      name: onderwerp
+    - id: checkbox-21
+      text: Multilateraal
+      name: onderwerp
+    - id: checkbox-22
+      text: Plurilateraal
+      name: onderwerp
+  laatstContext:
+    options:
+    - id: checkbox-20111
+      text: Afgelopen maand
+      name: onderwerp
+    - id: checkbox-21111
+      text: Afgelopen 3 maanden
+      name: onderwerp
+    - id: checkbox-22111
+      text: Afgelopen 12 maanden
+      name: onderwerp
+    - id: checkbox-221112
+      text: Alle resultaten
+      name: onderwerp
+      checked: checked
+  subselectionContext:
+    linkText: Selecteer partij(en)
+    id: 1
+    modalTitle: Selecteer partijen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 122
+        id: 122
+        title: Spanje
+        short: Spanje
+      - Option: 222
+        id: 222
+        title: Griekenland
+        short: Griekenland
+      - Option: 322
+        id: 322
+        title: Nederland
+        short: Nederland
+  subselectionOnderwerpContext:
+    linkText: Selecteer onderwerp(en)
+    id: 23
+    modalTitle: Selecteer onderwerp(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3
+        title: Nederland
+        short: Nederland
+
+

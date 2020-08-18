@@ -1,0 +1,66 @@
+.input-checkbox {
+  margin-bottom: .5em;
+}
+
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+
+  &:not(:disabled) {
+    &:hover + label:before {
+      background-color: $lightBlue;
+    }
+  }
+
+  &:focus + label {
+    outline-color: $focus;
+    outline-offset: 0;
+  }
+
+  &:checked + label:before {
+    background-color: $darkBlue !important;
+    background-image: $iconCheckboxWhite;
+  }
+
+  &:disabled + label {
+    color: $mediumGrey;
+    cursor: auto;
+  }
+
+  &:disabled + label:before {
+    border-color: $mediumGrey;
+  }
+
+  &.js-checkbox-master {
+    & ~ label {
+      font-weight: bold;
+    }
+  }
+}
+
+.modal .js-checkbox-master {
+  margin-bottom: em(24);
+}
+
+.checkbox__label {
+  position: relative;
+  padding: 0 0 0 2em;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: outline-offset $fastEaseInOut;
+
+  &::before {
+    background: $white;
+    border-radius: .25em;
+    border: 1px solid $darkBlue;
+    content: '';
+    display: inline-block;
+    height: 1.325em;
+    margin-right: .5em;
+    vertical-align: middle;
+    width: 1.325em;
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+}

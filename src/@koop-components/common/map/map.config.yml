@@ -1,0 +1,25 @@
+---
+title: map
+context:
+  id: 1
+  text: map
+  controls: true
+  inputsubmit:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  kpm:
+

@@ -1,0 +1,26 @@
+---
+title: Zoekresultaten wetten.nl
+label: Zoekresultaten wetten.nl
+status: wip
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  spoedpublicatiemelding:
+    modifier: alert--info
+    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  actieblok:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        text: Alles openklappen
+      - link: '#'
+        text: Alles dichtklappen
+      - link: '#'
+        text: Alles aanvinken
+      - link: '#'
+        text: Alles uitvinken
+      - link: '#'
+        text: Toon aangevinkte elementen

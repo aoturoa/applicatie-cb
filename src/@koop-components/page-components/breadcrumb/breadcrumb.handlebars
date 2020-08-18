@@ -1,0 +1,14 @@
+<div class="breadcrumb">
+  <p>{{ title }}</p>
+  <ol>
+    {{#each breadcrumb}}
+    <li>
+      {{#if url }}
+        <a href={{ url }}>{{ text }}</a>
+      {{else }}
+        {{ text }}
+      {{/if }}
+    </li>
+    {{/each}}
+  </ol>
+</div>

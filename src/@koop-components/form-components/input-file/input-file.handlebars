@@ -1,0 +1,22 @@
+<div class="input-filebox" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "{{showbuttonAfterChange}}" {{#if ajax}}, "ajax": "/preview-portaal/upload"{{/if}}{{#if messageModal}}, "messageModal": "{{messageModal}}"{{/if}} }'>
+  <div class="input-dragbox js-input-dragbox">
+    <div class="input-dragbox__content">
+      <span class="input-dragbox__prelabel js-input-dragbox__prelabel">{{prelabel}}</span>
+      <label for="{{id}}">
+        <span class="js-input-dragbox__label" role="button" aria-controls="{{id}}" tabindex="0">Selecteer een bestand</span>
+      </label>
+      <input type="file" tabindex="-1" name="files[]" id="{{id}}" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
+      {{#if showButtonOnSelection}}
+        <div><button class="button button--primary js-input-dragbox__button" hidden>{{submitLabel}}</button></div>
+      {{/if}}
+    </div>
+    {{#if ajax }}
+      <div class="input-dragbox__uploading">
+        <p class="input-dragbox__uploading__msg">Document is bezig met uploaden <span></span>%</p>
+        <progress class="input-dragbox__uploading__progress" max="100" value="30"></progress>
+        <p><a href="#refresh"><small>Upload annuleren</small></a></p>
+      </div>
+      <div class="input-dragbox__msg js-input-dragbox__msg"><span></span><p><a href='#' class='js-reset'>Upload een nieuw bestand</a></p></div>
+    {{/if}}
+  </div>
+</div>

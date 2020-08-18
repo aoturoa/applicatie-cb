@@ -1,0 +1,7 @@
+---
+title: Question Explanation
+label: Toelichting
+context:
+  id: 1
+  Helptext: <p>U moet dit <a href="#">formulier</a> volledig en naar waarheid invullen.</p>
+  Text: Voornaam

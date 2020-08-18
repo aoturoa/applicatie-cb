@@ -1,0 +1,154 @@
+// much needed;
+h1,h2,h3,h4,h5,h6 {
+  color: $darkBlue;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin-top: 0;
+}
+
+h1,
+.h1 {
+  font-size: em(24);
+  margin-bottom: 0.625em;
+  line-height: 1.2em;
+  margin-top: 0;
+
+  @media (min-width: $breakpointDesktop) {
+    font-size: em(29);
+  }
+
+  &--slim {
+    margin-bottom: 0.25em;
+  }
+
+  &--large {
+    font-size: em(40);
+  }
+}
+
+h2,
+.h2 {
+  font-size: em(20);
+  margin-bottom: 0.625em;
+  line-height: 1em;
+  @media (min-width: $breakpointDesktop) {
+    font-size: em(24);
+  }
+  &--slim {
+    margin-bottom: 0.25em;
+    margin-top: 0;
+  }
+}
+
+h3,
+.h3 {
+  font-size: em(18);
+  line-height: 1.25em;
+  margin-bottom: 1em;
+  @media (min-width: $breakpointDesktop) {
+    font-size: em(22);
+  }
+}
+
+h4,
+.h4 {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  font-style: normal;
+}
+
+h5,
+.h5 {
+  font-style: italic;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+h6,
+.h6 {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: em(16);
+
+  &.pre-h {
+    margin-top: -1em;
+    margin-bottom: .5em;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+}
+
+p+h2,
+ul+h2,
+ol+h2,
+p+h3,
+ul+h3,
+ol+h3,
+p+h4,
+ul+h4,
+ol+h4 {
+  margin-top: 1.5em;
+}
+
+
+p {
+  &__intro {
+    font-size: 1.125em;
+  }
+}
+
+.docRegelingOpschrift {
+  @extend .h1;
+}
+.docHoofdstuk {
+  @extend .h2;
+}
+.docTitel {
+  @extend .h3;
+  font-size: em(18);
+}
+.docAfdeling {
+  @extend .h3;
+  font-size: em(18);
+}
+.docParagraaf {
+  @extend .h5;
+  font-weight: bold;
+}
+.docSubparagraaf {
+  @extend .h5;
+  font-weight: bold;
+}
+.docSubsubparagraaf {
+  @extend .h5;
+  font-weight: bold;
+}
+.docArtikel {
+  @extend .h4;
+  font-weight: bold;
+  font-style: normal;
+}
+.docDivisie {
+  font-style: italic;
+}
+
+.docFormeleInhoud {
+  @extend .h4;
+  font-weight: bold;
+}
+.docFormeleDivisie {
+  @extend .h4;
+  font-weight: bold;
+}
+
+.docTussenkop {
+  @extend .h4;
+  font-style: italic;
+  font-weight: normal;
+}

@@ -1,0 +1,14 @@
+.input-text,
+input[type=text] {
+
+  &__remove {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    width: 2em;
+    bottom: 0;
+    background: $iconCrossFilled no-repeat center center;
+  }
+
+
+}

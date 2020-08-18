@@ -1,0 +1,78 @@
+.input-radio {
+  margin-bottom: .5em;
+}
+
+.radio__input {
+  color: $darkBlue;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:not(:disabled) {
+    &:hover + label:before {
+      background-color: $lightBlue;
+    }
+  }
+
+  &:focus + label {
+    outline: 2px solid $focus;
+  }
+
+  &:checked + label:before {
+    background-color: $white;
+  }
+
+  &:checked + label:after {
+    display: block;
+  }
+
+  &:disabled + label {
+    color: $mediumGrey;
+    cursor: auto;
+  }
+
+  &:disabled + label:before {
+    border-color: $mediumGrey;
+  }
+}
+
+.radio__label {
+  color: $darkBlue;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $white;
+    border-radius: 50%;
+    border: 1px solid $darkBlue;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 4px;
+    left: 4px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: $darkBlue;
+  }
+}
+
+.radio__input.has-error ~ .radio__label {
+  &:before {
+    border-color: $red;
+  }
+}

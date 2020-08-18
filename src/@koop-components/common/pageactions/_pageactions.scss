@@ -1,0 +1,36 @@
+.pageactions {
+  margin:0;
+  padding:0;
+  float:right;
+
+  li {
+    list-style:none;
+    position:relative;
+    display:inline-block;
+  }
+
+  a {
+    display:inline-block;
+    padding:.5em 2em .5em .5em;
+    background-color:#fff;
+    text-decoration:none;
+
+    &:hover{
+      background-color:#e5f1f9;
+      color:#154273;
+      text-decoration:none;
+    }
+
+    img {
+      position:absolute;
+      right:.25em;
+      top:50%;
+      margin-top:-8px;
+      height:16px;
+    }
+
+    svg {
+      fill:#154273;
+    }
+  }
+}

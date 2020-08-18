@@ -1,0 +1,22 @@
+label: Inline icon
+context:
+    text: icon text
+    modifier: icon--overheid
+    href: '#'
+variants:
+  - name: download
+    label: download icon
+    context:
+      text: Download icon
+      modifier: icon--download
+  - name: remove
+    label: remove icon
+    context:
+      text: Verwijderen icon
+      modifier: icon--remove
+  - name: bin
+    label: bin icon
+    context:
+      text: bin icon
+      modifier: icon--bin
+
