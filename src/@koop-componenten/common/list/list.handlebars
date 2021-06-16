@@ -1,0 +1,47 @@
+{{#if maxItems }}<div data-decorator="showmoreless" data-config='{"amount": "{{maxItems}}" }'>{{/if}}
+{{#if heading }}
+  <{{#if headingType }}{{headingType}}{{else}}h4{{/if}} class="facet--heading">{{ heading }}</{{#if headingType }}{{headingType}}{{else}}h4{{/if}}>
+{{/if }}
+
+{{#if orderedList }}
+  <ol {{#if id}}id="{{id}}"{{/if}} class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
+{{else}}
+  <ul {{#if id}}id="{{id}}"{{/if}} class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
+{{/if }}
+{{#if orderedList }}
+  {{#each items }}
+    {{#if subitems }}
+    <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}
+      <ol>
+      {{#each subitems }}
+        <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}</li>
+      {{/each }}
+      </ol>
+    </li>
+    {{else}}
+      <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}</li>
+    {{/if }}
+  {{/each }}
+{{else}}
+  {{#each items }}
+    {{#if subitems }}
+      <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}
+        <ul {{#if ../custom}}class="list-custom"{{/if}}>
+          {{#each subitems }}
+            <li class="list-custom__item">{{{content}}}</li>
+          {{/each }}
+        </ul>
+      </li>
+    {{else}}
+      <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{#if color}}<span class="{{color}}"></span>{{/if}}{{{ content }}}</li>
+    {{/if }}
+  {{/each }}
+{{/if}}
+{{#if orderedList }}
+  </ol>
+{{else}}
+  </ul>
+{{/if }}
+{{#if maxItems }}
+</div>
+{{/if}}

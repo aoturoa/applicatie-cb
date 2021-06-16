@@ -1,0 +1,15 @@
+---
+label: PLOOI - Homepage TXT
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  jumbotronContext:
+    heading: Wat is actief openbaar?
+    subheading: Overheidsdocumenten
+  jumbotron2Context:
+    heading: Welke overheidsdocumenten zijn actief openbaar?
+    hstyle: h2
+    modifier: transparent

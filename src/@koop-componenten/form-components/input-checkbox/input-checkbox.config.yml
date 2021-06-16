@@ -1,0 +1,68 @@
+---
+label: Input checkbox
+status: ready
+context:
+  options:
+    - id: checkbox-1
+      text: Groot-Brittanië
+      status: disabled
+      name: countries
+    - id: checkbox-2
+      text: Verenigde Staten
+      checked: checked
+      name: countries
+    - id: checkbox-3
+      text: Canada
+      name: countries
+variants:
+  - name: met Link
+    context:
+      options:
+        - id: checkbox-1
+          text: Groot-Brittanië
+          name: countries
+          hasLink: true
+          linkLabel: (Voorbeeld link)
+          linkHref: '#'
+        - id: checkbox-2
+          text: Verenigde Staten
+          checked: checked
+          name: countries
+        - id: checkbox-3
+          text: Canada
+          name: countries
+  - name: Many
+    label: Uitgebreid
+    explanation: false
+    context:
+      options:
+        - id: waterschappen-1
+          text: Hoogheemraadschap Amstel, Gooi en Vecht
+        - id: waterschappen-2
+          text: Hoogheemraadschap De Stichtse Rijnlanden
+        - id: waterschappen-3
+          text: Hoogheemraadschap Hollands Noorderkwartier
+        - id: waterschappen-4
+          text: Hoogheemraadschap van Delfland
+        - id: waterschappen-5
+          text: Hoogheemraadschap van Rijnland
+        - id: waterschappen-6
+          text: Hoogheemraadschap van Schieland en de Krimpenswaard
+        - id: waterschappen-7
+          text: Waterschap Aa en Maas
+        - id: waterschappen-8
+          text: Waterschap  Blija Buitendijks
+        - id: waterschappen-9
+          text: Waterschap Brabantse Delta
+        - id: waterschappen-10
+          text: Waterschap De Dommel
+        - id: waterschappen-11
+          text: Waterschap Hunze en Aa's
+        - id: waterschappen-12
+          text: Waterschap Limburg
+        - id: waterschappen-13
+          text: Waterschap Noorderzijlvest
+        - id: waterschappen-14
+          text: Waterschap Peel en Maasvallei
+        - id: waterschappen-15
+          text: Waterschap Rijn en IJssel

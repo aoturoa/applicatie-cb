@@ -6,6 +6,28 @@ table,
     border: 1px solid $lighterGrey;
   }
 
+  &--fontsmall {
+    font-size: 0.9em;
+  }
+
+  [scope=colgroup] {
+    background: $darkBlue !important;
+    color: white !important;
+    a {
+      color: white !important;
+    }
+  }
+
+  // thead {
+  //   th[scope=col] {
+  //     background: $darkBlue !important;
+  //     color: white !important;
+  //     a {
+  //       color: white !important;
+  //     }
+  //   }
+  // }
+
   tr td,
   tr th {
     border-bottom: 1px solid $lighterGrey;
@@ -15,6 +37,33 @@ table,
 
   &.table__data-overview {
     border: 1px solid $lighterGrey;
+  }
+
+  &.table--dataintro {
+
+
+    th, td {
+      padding: .5em;
+      @media ( min-width: $breakpointDesktop ) {
+        padding: 0 1em 0 0;
+      }
+    }
+    th {
+      padding-bottom: 0.125em;
+      font-weight: normal;
+      color: $darkBlue;
+      line-height: 1.25;
+      font-size: .9em;
+      color: $green;
+    }
+
+    th,
+    td {
+      border: none;
+    }
+
+    td {
+    }
   }
 }
 

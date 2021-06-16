@@ -1,0 +1,30 @@
+.documentbanner {
+  display: flex;
+  flex-direction: column;
+
+  @media ( min-width: $breakpointDesktop ) {
+    flex-direction: row;
+  }
+
+  &__logo {
+    order: 1;
+    padding: 2em;
+    text-align: center;
+  }
+
+  &__content {
+    order: 2;
+
+    h1,h2 {
+      font-size: em(24);
+      margin-bottom: .5em;
+      line-height: 1.1em;
+      margin-top: 0;
+
+      @media (min-width: $breakpointDesktop) {
+        font-size: em(43);
+        line-height: 1em;
+      }
+    }
+  }
+}

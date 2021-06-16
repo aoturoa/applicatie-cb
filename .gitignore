@@ -6,90 +6,15 @@ yarn.lock
 package-lock.json
 *.json
 !/package.json
+!/backstop.json
+!/backstop_stopxml.json
+!/backstop_stopxml-basics.json
+!/backstop_stopxml-templates.json
 /package-lock.json
 component-library/
+designsystem/
 public/
 backstop_data/html_report/
 backstop_data/bitmaps_test/
 backstop_data/bitmaps_reference/
 backstop_data/
-
-#Ignore thumbnails created by Windows
-Thumbs.db
-#Ignore files built by Visual Studio
-*.obj
-*.exe
-*.pdb
-*.user
-*.aps
-*.pch
-*.vspscc
-*_i.c
-*_p.c
-*.ncb
-*.suo
-*.tlb
-*.tlh
-*.bak
-*.cache
-*.ilk
-*.log
-[Bb]in
-[Dd]ebug*/
-*.lib
-*.sbr
-obj/
-[Rr]elease*/
-_ReSharper*/
-[Tt]est[Rr]esult*
-.vs/
-#Nuget packages folder
-packages/
-
-
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-/dist
-/tmp
-/out-tsc
-# Only exists if Bazel was run
-/bazel-out
-
-# dependencies
-/node_modules
-
-# profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
-
-# System Files
-.DS_Store
-Thumbs.db

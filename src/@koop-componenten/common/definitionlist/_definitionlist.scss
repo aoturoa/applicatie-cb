@@ -1,0 +1,106 @@
+dl,
+.dl {
+  margin: 0 0 2em 0;
+
+  dt {
+    color: $darkBlue;
+    font-weight: 700;
+    padding: 0;
+  }
+
+  dd {
+    padding: 0;
+    margin: 0 0 1em 0;
+  }
+
+  &.columns--data {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    div {
+      width: 50%;
+
+      @media ( min-width: $breakpointDesktop ) {
+        width: 33%;
+      }
+    }
+  }
+
+  &--nomargin {
+    margin-bottom: .5em;
+  }
+
+  &--horizontal {
+    @media ( min-width: $breakpointDesktop ) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    dt {
+      @media ( min-width: $breakpointDesktop ) {
+        width: 50%;
+      }
+      @media ( min-width: $breakpointDesktopL ) {
+        width: 33%;
+      }
+    }
+    dd {
+      @media ( min-width: $breakpointDesktop ) {
+        margin-left: auto;
+        margin-bottom: .5em;
+        width: 50%;
+      }
+      @media ( min-width: $breakpointDesktopL ) {
+        width: 66%;
+      }
+    }
+  }
+
+  &--condensed {
+    dt, dd {
+      margin-bottom: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &--publication {
+
+    dt {
+      color: $green;
+      font-weight: normal;
+      font-size: .9em;
+    }
+    dd {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+
+    & > div {
+      margin-bottom: .5em;
+    }
+
+    @media ( min-width: $breakpointDesktop ) {
+      flex-direction: row;
+      display: flex;
+
+      & > * {
+        justify-content: flex-start;
+        margin-left: 2em;
+        margin-bottom: 0;
+      }
+
+      & >:first-child,
+      & >:only-child {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,20 @@
+.treeview,
+.nav.nav-tree {
+  li {
+    a {
+      button[data-handler="toggle-fold"] {
+        background: {
+          repeat: no-repeat;
+          position: left top .05em;
+          size: 1em;
+          color: transparent;
+          image: $iconMinFilledBlue;
+        };
+      }
+
+      button[aria-expanded="false"] {
+        background-image: $iconPlusFilledBlue;
+      }
+    }
+  }
+}

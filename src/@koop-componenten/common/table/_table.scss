@@ -1,0 +1,522 @@
+.table--container,
+.table__container {
+  max-width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 2em;
+  position: relative;
+  border: .5em solid transparent;
+  outline: 1px solid $lightBlue;
+  box-sizing: border-box;
+  background: white;
+
+  .table__container {
+    border: 0;
+    outline: 0;
+  }
+
+
+  > table {
+    margin: 0;
+  }
+  > table ~ p {
+    margin-top: .5em;
+  }
+
+  > p {
+    margin: 0;
+  }
+
+  .table__caption,
+  .table__description {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-style: italic;
+  }
+
+  &__openfullscreen {
+    margin-bottom: 1em;
+  }
+
+  &__fullscreen.is-fullscreen {
+    position: fixed;
+    left: 2em;
+    top: 2em;
+    right: 2em;
+    bottom: 2em;
+    background: white;
+    // padding: 3em 4em 2em;
+    margin: 0;
+    overflow: auto;
+    z-index: 100;
+    outline-style: solid;
+    outline-color: rgba(0,0,0,0.5);
+    outline-width: 2em;
+    padding-top: 3.5em;
+    table,
+    .table__container {
+      margin: 0;
+    }
+  }
+
+  &__closefullscreen {
+    position: fixed;
+    right: 3em;
+    top: 3em;
+    z-index: 101;
+    display: none;
+    width: 4em;
+    height: 4em;
+    border: none;
+    background-color: transparent;
+    text-indent: -9999em;
+    cursor: pointer;
+    background: {
+      image: $modalCloser;
+      repeat: no-repeat;
+      position: center center;
+    };
+
+    &:hover {
+      background-image: $modalCloserHover;
+    }
+  }
+  &__fullscreen.is-fullscreen &__closefullscreen {
+    display: block;
+  }
+  &__fullscreen.is-fullscreen &__openfullscreen {
+    display: none;
+  }
+
+
+}
+
+table,
+.table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  table-layout: fixed;
+  min-width: 100%;
+  background: white;
+
+  &--fontsmall {
+    font-size: 0.9em;
+  }
+
+  &__rowheading {
+
+    th,
+    th[scope=col] {
+      font-weight: bold;
+    }
+
+    &--lvl1 {
+      th,td {
+        background: $darkBlue;
+        color: white;
+      }
+    }
+    &--lvl2 {
+      th,
+      td{
+        background: $primaryBlue;
+        color: white;
+      }
+    }
+    &--lvl3 {
+      th,td {
+        background: $mediumBlue;
+        color: $darkBlue;
+      }
+    }
+    &--lvl4 {
+      th,td {
+        background: $lightBlue;
+        color: $darkBlue;
+      }
+    }
+    &--lvl5 {
+      th,td {
+        background: $bgBlue;
+        color: $darkBlue;
+      }
+    }
+    &--lvl6 {
+      th,td,
+      th[scope=col],
+      td[scope=col] {
+        background: white;
+        font-style: italic;
+        font-weight: 400;
+        border-bottom: 2px solid $lighterGrey;
+      }
+    }
+  }
+
+  tr.del td,
+  tr.del th,
+  th.del,
+  td.del {
+    outline: 2px solid $red;
+    outline-offset: -2px;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      outline: 1px solid $red;
+      border: 2px solid $red;
+    }
+  }
+  tr.ins td,
+  tr.ins th,
+  th.ins,
+  td.ins {
+    outline: 2px solid $green;
+    outline-offset: -2px;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      outline: 1px solid $green;
+      border: 2px solid $green;
+    }
+  }
+
+
+  .table--container & {
+    table-layout: auto;
+  }
+
+  caption {
+    font-style: italic;
+    text-align: left;
+    padding: .5em 0;
+  }
+
+  a[href*="//"]:not(.button):not([href*=".overheid.nl/"]) {
+    background-image: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  thead tr th,
+  thead tr td {
+    border-bottom: 1px solid $lighterGrey;
+  }
+
+  tr {
+    &.uneven {
+      background: $lightGrey;
+    }
+  }
+
+  tr td,
+  tr th {
+    padding: .5em;
+    vertical-align: top;
+    border-bottom: 1px solid $lighterGrey;
+  }
+
+  th {
+    font-weight: 700;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .rotated {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  &__container {
+    overflow: auto;
+  }
+
+  &.table__data-overview {
+    th {
+      vertical-align: top;
+      // width: 30%;
+    }
+  }
+
+  td {
+    font-weight: 400;
+    // min-width: 15%;
+    min-height: 2.5em; /* always have a height, even if field has no content; this is specifically needed on small screens */
+  }
+
+  // th *:last-child,
+  // td *:last-child {
+  //   margin-bottom: 0 !important;
+  // }
+  th p:last-child,
+  td p:last-child,
+  th ul:last-child,
+  td ul:last-child,
+  th ol:last-child,
+  td ol:last-child,
+  th div:last-child,
+  td div:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .date {
+    min-width: em(100);
+  }
+
+  td.status {
+    @media ( min-width: $breakpointDesktop ) {
+      text-align: center;
+
+      span {
+        width: 2.5em;
+        text-indent: -999em;
+      }
+    }
+
+    span {
+      display: inline-block;
+      border-radius: .5em;
+      padding: 0.25em;
+      color: $white;
+    }
+
+    a {
+      display: inline-block;
+      width: 2.5em;
+      padding: .25em;
+      background: $bgBlue;
+      border: 1px solid $lightBlue;
+    }
+
+    &--green {
+      span {
+        background-color: $green;
+      }
+    }
+
+    &--orange {
+      span {
+        background-color: $orange;
+      }
+    }
+
+    &--red {
+      span {
+        background-color: $red;
+      }
+    }
+  }
+
+  tbody tr.current td,
+  tbody tr.current th {
+    background: $mediumBlue;
+  }
+
+  &.table--condensed {
+    tr td,
+    tr th {
+      padding: .25em;
+    }
+  }
+
+  &.table--dataintro {
+    th {
+      color: $darkBlue;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    th,
+    td {
+      border: none;
+    }
+  }
+
+  @media ( min-width: $breakpointDesktop ) {
+    &.table--striped {
+      tbody tr:nth-child(odd) td,
+      tbody tr:nth-child(odd):not(.table__rowheading) th {
+        background: $lightGrey;
+      }
+    }
+
+    &.table--hover {
+      tbody tr:nth-child(odd):hover,
+      tbody tr:nth-child(even):hover {
+        background: $lighterGrey;
+
+        td,
+        th {
+          background: $lighterGrey;
+        }
+      }
+    }
+  }
+
+  &--small {
+    margin-bottom: 1em;
+    color: $darkBlue;
+
+    tr:first-of-type {
+      th,
+      td {
+        border-top: 0;
+        border-bottom: 1px solid #F3F3F3;
+      }
+    }
+
+    th {
+      padding-left: 0 !important;
+    }
+
+    td {
+      font-style: italic;
+    }
+
+    tr {
+      th, td {
+      padding: 4px 0;
+      border-top: 1px solid #F3F3F3;
+      border-bottom: 0;
+      }
+    }
+  }
+}
+
+table.table--borderless {
+  border: 0;
+  thead tr td,
+  thead tr th,
+  thead tr td,
+  thead tr th
+  thead th,td,
+  tbody th td,
+  tbody tr td,
+  tbody tr th {
+    border: 0;
+  }
+}
+table.table--headerhighlight {
+  thead tr {
+    background: $lightGrey;
+    border-bottom: 2px solid $darkBlue;
+  }
+  &.table--condensed thead tr th {
+    padding: 0.75em .25em;
+  }
+}
+
+
+@media ( max-width: $breakpointDesktop ) {
+  table.table--mobiletransform {
+    position: relative;
+    width: 100%;
+    // word-break: break-word;
+
+    thead {
+      display: none;
+    }
+
+    tbody tr:nth-child(odd) td {
+      background: transparent;
+    }
+
+    tr {
+      display: block;
+      border: 2px solid $lighterGrey;
+      margin: 1em 0;
+    }
+
+    th {
+      position: absolute;
+      left: -999em;
+    }
+
+    td {
+      width: 50%;
+      left: 50%;
+      position: relative;
+      display: block;
+      clear: both;
+      border: none !important;
+
+      &:nth-child(odd) {
+        background: $lightGrey !important;
+
+        &::before {
+          background: $lightGrey !important;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        padding: .5em;
+        height: 100%;
+        font-weight: 700;
+        content: attr(data-before);
+        word-break: break-all;
+        line-height: 1;
+      }
+    }
+
+    &.table--condensed td::before {
+      padding: .5em .25em;
+    }
+  }
+}
+@media print and ( max-width: $breakpointDesktop ) {
+  .table--container,
+  .table__container {
+    overflow: visible !important;
+  }
+}
+
+#broodtekst table {
+  @media ( max-width: $breakpointDesktop ) {
+    border-color: $lightGrey;
+    border-right: 1px solid $lightGrey;
+    border-bottom: 0;
+    table-layout: auto;
+
+    colgroup {
+      display: table-column-group;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tbody tr:nth-child(odd) td {
+      background: transparent;
+    }
+
+    tr {
+      display: table-row;
+      border: none;
+      margin: 0;
+    }
+    th {
+      position: relative;
+      left: auto;
+      border-left: 1px solid $lightGrey !important;
+      border-bottom: 1px solid $lightGrey !important;
+    }
+    td {
+      width: auto;
+      left: auto;
+      position: relative;
+      background: white;
+      display: table-cell;
+      clear: none;
+      border-left: 1px solid $lightGrey !important;
+      border-bottom: 1px solid $lightGrey !important;
+
+      &:nth-child(odd) {
+        background: white !important;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+

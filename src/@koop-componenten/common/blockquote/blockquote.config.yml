@@ -1,0 +1,13 @@
+---
+title: Blockquote
+label: Blockquote
+context:
+  lang: en
+  text: Yes, we can.
+  cite: www.barackobama.org
+variants:
+  - name: Q
+    context:
+      q: true
+      text: Yes, we can.
+      cite: www.barackobama.org

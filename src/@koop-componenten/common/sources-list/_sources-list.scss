@@ -1,0 +1,281 @@
+$breakpointDesktopListSources: 65em;
+
+.list--sources {
+	margin: 0 0 1em 0;
+  padding: 0;
+  border-top: 1px solid $mediumGrey;
+
+	li {
+		list-style: none;
+		border-bottom: 1px solid $mediumGrey;
+		position: relative;
+    padding: 1em 1em 1em 0;
+
+    @media (min-width: $breakpointDesktopListSources) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+		.list--source__information {
+      font-weight: bold;
+      background-image: $iconDocument;
+      background-size: 1.325em;
+      background-position: .75em 0.1em;
+      background-repeat: no-repeat;
+      padding-left: 3.25em;
+      position: relative;
+      width: 100%;
+
+      &.icon--publication {
+        background-image: $iconDocumentSimple;
+      }
+      &.icon--publication-new {
+        background-image: $iconDocumentSimpleNew;
+      }
+
+      .list--sources__item__filesize {
+        display: block;
+        margin-left: 0;
+
+        & ~ .label {
+          margin-left: 0;
+        }
+      }
+
+      .list--sources__item__date {
+        font-weight: normal;
+
+        .list--sources__item__filesize {
+          position: relative;
+          padding-left: .5em;
+          display: inline-block;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: .2em;
+            bottom: .2em;
+            width: 1px;
+            background: $darkBlue;
+          }
+        }
+        .tooltip ~ .list--sources__item__filesize {
+          margin-left: 0;
+        }
+        & ~ .label {
+          margin-left: 0;
+          @media (min-width: $breakpointDesktopListSources) {
+            margin-left: .5em;
+          }
+        }
+      }
+
+      @media (min-width: $breakpointDesktopListSources) {
+        width: auto;
+        margin: 0;
+        flex: 1 0 8em;
+        margin-right: 1em;
+        padding-right: 11.5em;
+
+
+        .list--sources__item__filesize,
+        .list--sources__item__date {
+          order: 100;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .list--sources__item__date {
+          .list--sources__item__filesize {
+            position: relative;
+            right: auto;
+            top: auto;
+          }
+        }
+        .list--sources__item__filesize ~ .label {
+          margin-left: .5em;
+        }
+
+      }
+
+      .label {
+        margin-left: .5em;
+        margin-right: 0;
+        font-style: italic;
+        width: auto;
+        display: inline-block;
+
+      }
+    }
+
+    .list--source__metadata {
+      padding-left: 3.25em;
+
+      dl {
+        margin: .5em 0 0;
+      }
+      dt,dd {
+        margin: 0;
+        font-weight: normal;
+        font-size: 90%;
+      }
+      dd {
+        font-style: italic;
+        @media ( min-width: $breakpointDesktopListSources ) {
+          font-style: normal;
+        }
+      }
+
+
+    }
+
+    &:nth-child(even) {
+      background-color: lighten($lightGrey, 2);
+    }
+
+    > .button {
+      padding-right: .75em;
+      padding-left: .75em;
+      padding-top: .55em;
+      padding-bottom: .55em;
+      font-weight: normal;
+      margin-top: 1em;
+      margin-left: 3.25em;
+
+      @media (min-width: $breakpointDesktopListSources) {
+        flex: 0 0 auto;
+        margin: -.4em 0 -.5em 0;
+        width: auto;
+      }
+    }
+
+    .list--source__defaultactions {
+      margin: 1em 0 0 3.25em;
+      @media (min-width: $breakpointDesktopListSources) {
+        flex: 0 0 auto;
+        margin: -.4em 0 -.5em 0;
+        width: auto;
+      }
+      .button {
+        padding-right: .75em;
+        padding-left: .75em;
+        padding-top: .55em;
+        padding-bottom: .55em;
+        font-weight: normal;
+        margin-bottom: .5em;
+        margin-right: .5em;
+      }
+      .button-icon {
+        margin-bottom: .5em;
+        margin-right: .5em;
+      }
+      @media (min-width: $breakpointDesktopListSources) {
+        .button,
+        .button-icon {
+          margin: 0 0 0 .5em;
+        }
+      }
+    }
+
+    > .collapsible {
+      width: calc(100% - 3.25em);
+      margin-left: 3.25em;
+      margin-top: .5em;
+    }
+
+  }
+
+  &__actions {
+    display: none;
+    margin-left: 3.25em;
+    margin-top: 1em;
+
+    @media (min-width: $breakpointDesktopListSources) {
+      flex: 0 0 auto;
+      margin: -.4em 0 -.5em 0;
+      width: auto;
+    }
+
+    .button-icon {
+      margin-bottom: 0.5em;
+      @media ( min-width: $breakpointDesktopListSources ) {
+        margin-bottom: 0;
+      }
+    }
+    .button {
+      width: auto;
+      margin: .5em 0 .5em;
+      font-weight: normal;
+      padding-right: .75em;
+      padding-left: .75em;
+      padding-top: .55em;
+      padding-bottom: .55em;
+      font-size: 1em;
+
+      @media ( min-width: $breakpointDesktopListSources ) {
+        width: auto;
+        padding-top: .55em;
+        padding-bottom: .55em;
+        margin: 0;
+      }
+    }
+
+    .button + .button,
+    .button-icon + .button-icon {
+      margin-left: 0.25em !important;
+    }
+    em + .button {
+      margin-left: .5em !important;
+    }
+
+  }
+
+  &__item {
+    &__filesize {
+      font-weight: normal;
+      display: inline-block;
+      margin-left: .75em;
+    }
+  }
+
+
+
+
+
+  .collapsible {
+    margin: 0 0 0 1em;
+  }
+
+	.collapsible__content {
+    clear: both;
+    margin: 0 0 .5em 0 !important;
+
+		@media ( min-width: $breakpointDesktopListSources ) {
+			padding: 2em 0 0 0;
+    }
+
+		> div {
+			position: relative;
+			margin: 0;
+			background: $bgBlue;
+			padding: 1em;
+
+			@media ( min-width: $breakpointDesktopListSources ) {
+				button {
+					right: 2em;
+					top: 3.5em;
+				}
+			}
+		}
+  }
+
+  // decorator: init-sourceslist;
+  &.is-state-actions &__actions {
+    display: block;
+  }
+  &.is-state-actions li > .button {
+    display: none;
+  }
+}

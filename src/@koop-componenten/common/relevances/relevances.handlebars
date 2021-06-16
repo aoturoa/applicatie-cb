@@ -1,0 +1,16 @@
+<div class="relevances">
+  <a {{#if id}}id="{{id}}"{{/if}} href="#">{{ description }} ({{ listItems.length }})</a>
+  <fieldset class="form__element checkboxgroup">
+    {{#each listItems}}
+      <input type="checkbox" id="option-{{increment @index 1}}"/>
+      <label for="option-{{increment @index 1}}">
+        {{ this }}
+      </label>
+    {{/each}}
+  </fieldset>
+  <ul class="list--metadata">
+    {{#each metadataItems}}
+    <li>{{ this }}</li>
+    {{/each}}
+  </ul>
+</div>

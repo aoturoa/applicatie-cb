@@ -1,0 +1,3939 @@
+{{ render "@header" header merge=true }}
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
+
+      {{render "@nav" navMenuContext }}
+      {{render "@nav" navComponentsContext }}
+      {{render "@nav" navFormComponentsContext }}
+      {{render "@nav" navJSComponentsContext }}
+
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
+
+    <div class="row row--spacer">
+
+      {{#> @jumbotron jumbotronContext }} {{/@jumbotron}}
+
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="accordion">
+      <h2 class="section-chapter__heading">Accordion</h2>
+
+      <dl>
+        <dt>Laatst gewijzigd</dt>
+        <dd>1.9.39</dd>
+      </dl>
+
+      <div class="row">
+        <h3 class="section-chapter__subheading">Standaard</h3>
+        <p>Meerdere items kunnen tegelijk open staan.</p>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@accordion" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/accordion.html">Bekijk configuratie 'Accordion'</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h3 class="section-chapter__subheading">Standaard - Enkel paneel</h3>
+        <p>Slechts één item kan open staan.</p>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@accordion--enkel-paneel" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/accordion--enkel-paneel.html">Bekijk configuratie variant 'Enkel paneel'</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h3 class="section-chapter__subheading">Checkbox</h3>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@accordion--checkbox" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/accordion--checkbox.html">Bekijk variant 'checkbox'</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="actieblok">
+      <h2>Actieblok</h2>
+      <dl>
+        <dt>Laatst gewijzigd</dt>
+        <dd>1.9.39</dd>
+      </dl>
+
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@actionblock" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/actionblock.html">Bekijk component 'Actieblok'</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="adres">
+      <h2>Adres</h2>
+
+      <dl>
+        <dt>Laatst gewijzigd</dt>
+        <dd>1.9.39</dd>
+      </dl>
+
+      <p>Gebruik altijd een
+        <code>address</code> element bij het uitschrijven van een adres.</p>
+
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@address" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/address.html">Bekijk component 'Adres'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="alert">
+      <h2>Alert</h2>
+
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+
+
+      <p>Alerts worden gebruikt voor het weergeven van tussentijdse informatie op een pagina. Dit kan inline, dus tussen twee
+        blokken op de pagina, of ze kunnen sticky aan de bovenzijde worden weergegeven.</p>
+
+      <p>Speciale meldingen (alerts) kunnen gebruikt zowel buiten als binnen een formulier. De class
+        <code>.alert</code> geeft de standaard styling.</p>
+
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert.html">Bekijk component 'Alert'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Waarschuwing</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert--warning" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert--warning.html">Bekijk component 'Alert Waarschuwing'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Informatie</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert--info" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert--info.html">Bekijk component 'Alert Informatie'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Succes</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert--success" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert--success.html">Bekijk component 'Alert Succes'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Update</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert--update" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert--update.html">Bekijk component 'Alert update'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Klein</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert--small" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert--small.html">Bekijk component 'Alert klein'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Vaste positie (top)</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@alert--fixed-to-top" alertFixed merge=true }}
+          <div id="holder_1"></div>
+          <script>
+            document.getElementsByClassName('alert--fixed')[0].classList.remove('show');
+            var link = document.createElement('a');
+            link.href = '#';
+            link.innerHTML = 'Toon alert';
+            link.id = 'linkId1';
+            document.getElementById('holder_1').appendChild(link);
+            document.getElementById('linkId1').addEventListener("click", function (e) {
+              document.getElementsByClassName('alert--fixed')[0].classList.add('show');
+              e.preventDefault();
+            }, false);
+          </script>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/alert--fixed-to-top.html">Bekijk component 'Alert vaste positie (top)'</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="artikelhoofd">
+      <h2>Artikel hoofd</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>De article header wordt gebruikt boven wetgevingen en geeft de gebruiker functionaliteiten gerelateerd aan de wetgeving
+        en of artikel.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@article-header" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/article-header.html">Bekijk component 'Artikel hoofd'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="azlijst">
+      <div class="row row--large">
+        <h2>A-Z Lijst</h2>
+        <dl class="dl columns--data">
+          <div>
+            <dt>Laatst gewijzigd</dt>
+            <dd>1</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Ready</dd>
+          </div>
+        </dl>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@az" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/az.html">Bekijk component 'A-Z Lijst'</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-chapter js-scrollSection" id="banner">
+      <div class="row row--large">
+        <h2>Banner</h2>
+
+        <dl class="dl columns--data">
+          <div>
+            <dt>Laatst gewijzigd</dt>
+            <dd>1.9.39</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Ready</dd>
+          </div>
+        </dl>
+
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@banner" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/banner.html">Bekijk component 'Banner'</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-chapter js-scrollSection" id="blok">
+      <h2>Blok</h2>
+
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+
+      <h3 class="section-chapter__subheading">Default</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block.html">Bekijk component 'Blok'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Primair</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block--primary" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block--primary.html">Bekijk variant 'Primair'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Secondair</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block--secondary" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block--secondary.html">Bekijk variant 'Secondair'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Call to Action</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block--call-to-action" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block--call-to-action.html">Bekijk variant 'Call to Action'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Slim (dun)</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block--slim" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block--slim.html">Bekijk variant 'Slim' (dun)</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-chapter js-scrollSection" id="blok-indent">
+      <h2>Blok indent</h2>
+
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+
+      <h3 class="section-chapter__subheading">Default</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block-indent" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent.html">Bekijk component 'Blok indent'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Klein</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block-indent--klein" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent.html">Bekijk variant 'Blok indent klein'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Medium</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block-indent--medium" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent--medium.html">Bekijk variant 'Blok indent medium'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Groot</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block-indent--groot" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent--groot.html">Bekijk variant 'Blok indent groot'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Extra groot</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block-indent--extra-groot" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent--extra-groot.html">Bekijk variant 'Blok indent extra groot'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="blok-search">
+      <h2>Blok zoeken</h2>
+
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+
+      <h3 class="section-chapter__subheading">Default</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@block-search" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/block-search.html">Bekijk component 'Blok zoeken'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="blockquote">
+      <h2>Blockquote</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Een citaat wordt weergegeven in een
+        <code>blockquote</code> element. Geef in de
+        <code>cite</code> de bron aan van de citaat.</p>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@blockquote" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/blockquote.html">Bekijk component 'Blockquote'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Q</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@blockquote--q" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/blockquote--q.html">Bekijk component 'Q'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="bronlijst">
+      <h2>Bronlijst</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@sources-list" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/sources-list.html">Bekijk component 'Bronlijst'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="browse">
+      <h2>Browse</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Het browse-component toont een lijst van items, inclusief het aantal per item. Beschikbaar in een versie mét en zónder
+        iconen.</p>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@browse" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/browse.html">Bekijk component 'Browse'</a>
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-chapter__subheading">Met iconen</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@browse--icons" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/browse--icons.html">Bekijk variant 'Met iconen'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="buttons">
+      <h2>Buttons</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Buttons worden opgemaakt middels de
+        <code>.button</code> class. Gebruik bij voorkeur altijd het
+        <code>button</code> element. Een hyperlink (a) als button krijgt
+        <code>role="button"</code> ten behoeve van de toegankelijkheid</p>
+      <h3 class="section-chapter__subheading">Primair</h3>
+      <p>De primaire button wordt gebruikt voor de belangrijkste actie op de pagina.</p>
+      <ul>
+        <li>Is altijd de belangrijkste actie op de pagina</li>
+        <li>Beperk zoveel mogelijk het gebruik per pagina tot 1 primaire button, of maximaal 1 per viewport</li>
+        <li>Nooit een afbrekende actie, zoals annuleren</li>
+        <li>Nooit een destructieve actie, zoals verwijderen</li>
+        <li>Wordt vooral gebruikt als actie button</li>
+      </ul>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <h3 class="h5">Button</h3>
+          <p>{{render "@button--primary" }}</p>
+          <h3 class="h5">Button met icoon</h3>
+          <p>{{render "@button--arrowed" }}</p>
+          <h3 class="h5">Button met icoon 'download'</h3>
+          <p>{{ render "@button--icon-download" }}</p>
+          <h3 class="h5">Button met icoon 'verversen'</h3>
+          <p>{{ render "@button--icon-refresh-documents" }}</p>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--primary.html">Bekijk component 'Button primair'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--arrowed.html">Bekijk component 'Button met icoon'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--icon-download.html">Bekijk component 'Button met icoon download'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--icon-refresh-documents.html">Bekijk component 'Button met icoon verversen'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Secondair</h3>
+      <ul>
+        <li>Een herhaaldelijke actie, zoals zoekresultaten bekijken</li>
+        <li>Mogen er meerdere van op een pagina en/of viewport staan</li>
+        <li>Mag ondersteunend zijn aan de primaire button</li>
+        <li>Wordt vooral gebruikt als navigatie button</li>
+      </ul>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <h3 class="h5">Button</h3>
+          <p>{{render "@button--secondary" }}</p>
+          <h3 class="h5">Button (doubleline)</h3>
+          <p>{{render "@button--doubleline" }}</p>
+          <h3 class="h5">Button met icoon 'zoeken'</h3>
+          <p>{{render "@button--secondary-icon-search" }}</p>
+          <h3 class="h5">Button met icoon 'prullenbak'</h3>
+          <p>{{render "@button--secondary-icon-bin" }}</p>
+          <h3 class="h5">Button met icoon 'wijzigen'</h3>
+          <p>{{render "@button--secondary-icon-edit" }}</p>
+          <h3 class="h5">Button met icoon 'toevoegen'</h3>
+          <p>{{render "@button--secondary-icon-add" }}</p>
+          <h3 class="h5">Button met icoon 'profiel'</h3>
+          <p>{{render "@button--secondary-icon-profile" }}</p>
+          <h3 class="h5">Button met icoon 'top'</h3>
+          <p>{{ render "@button--icon-top" }}</p>
+          <h3 class="h5">Button met icoon 'down'</h3>
+          <p>{{ render "@button--icon-down" }}</p>
+          <h3 class="h5">Button met icoon 'left'</h3>
+          <p>{{ render "@button--icon-left" }}</p>
+          <h3 class="h5">Button met icoon 'right'</h3>
+          <p>{{ render "@button--icon-right" }}</p>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--secondary.html">Bekijk component 'Button secondair'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--doubleline.html">Bekijk component 'Button (doubleline)'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--secondary-icon-search.html">Bekijk component 'Button met icoon zoeken'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--secondary-icon-bin.html">Bekijk component 'Button met icoon prullenbak'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--secondary-icon-edit.html">Bekijk component 'Button met icoon wijzigen'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--secondary-icon-add.html">Bekijk component 'Button met icoon toevoegen'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--secondary-icon-profile.html">Bekijk component 'Button met icoon profiel'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--icon-top.html">Bekijk component 'Button met icoon up'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--icon-down.html">Bekijk component 'Button met icoon down'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--icon-left.html">Bekijk component 'Button met icoon left'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--icon-right.html">Bekijk component 'Button met icoon right'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Tertiair</h3>
+      <ul>
+        <li>Mag ondersteunend zijn aan secundaire button</li>
+      </ul>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@button--tertiary" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--tertiary.html">Bekijk component 'Button tertiair'</a>
+            <br/>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Overig</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <h3 class="h5">Button 'slim'</h3>
+          <p>{{render "@button--slim" }}</p>
+          <h3 class="h5">Button 'tekst'</h3>
+          <p>{{render "@button--text" }}</p>
+
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--slim.html">Bekijk component 'Button slim'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button--text.html">Bekijk component 'Button tekst'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Button icon</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+
+          <h3 class="h5">Button-icoon 'plus'</h3>
+          <p>{{render "@button-icon--plus" }}</p>
+          <h3 class="h5">Button-icoon 'min'</h3>
+          <p>{{render "@button-icon--min" }}</p>
+          <h3 class="h5">Button-icoon 'verwijderen'</h3>
+          <p>{{render "@button-icon--bin" }}</p>
+
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button-icon--plus.html">Bekijk component 'Button-icon plus'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button-icon--min.html">Bekijk component 'Button-icon min'</a>
+            <br/>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/button-icon--bin.html">Bekijk component 'Button-icon verwijderen'</a>
+            <br/>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="buttongroup">
+
+      <h2>Buttongroup</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Verbonden knoppen. Wanneer slechts één van de opties beschikbaar is, is dit component niet van toepassen en wordt deze
+        ook niet weergegeven.</p>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@buttonswitch" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/buttonswitch.html">Bekijk component 'Buttonswitch'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met iconen</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@buttonswitch--with-icons" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/buttonswitch.html">Bekijk variant 'Met iconen'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="characteristics">
+      <h2>Characteristics</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@characteristic" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/characteristic.html">Bekijk component 'Characteristic'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="collapsible">
+      <h2>Collapsible</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.35</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>
+        Collapsibles gebruikt men als informatie initieel verborgen moet zijn. De informatie wordt zichtbaar bij muis/toetsenbord-klik.
+      </p>
+      <ul>
+        <li>
+          We gebruiken
+          <code>aria-expanded</code> om aan te geven dat de collapsible is uitgeklapt. Het is verbonden met de
+          <code>a</code> in de header, gezien het feit dat de gebruiker daarmee interacteert.
+
+        </li>
+        <li>
+          We gebruiken
+          <code>aria-controls</code> om aan te geven welk element is getoggled.
+        </li>
+      </ul>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@collapsible" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/collapsible.html">Bekijk component 'Collapsible'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Klein</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@collapsible--collapsible--small" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/collapsible--collapsible--small.html">Bekijk variant 'Klein'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="definitionlist">
+      <h2>Definitionlist</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Een lijst met definities; titel en omschrijving.</p>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@definitionlist" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/definitionlist.html">Bekijk component 'Definitionlist'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Horizontaal</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@definitionlist--horizontal" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/definitionlist--horizontal.html">Bekijk variant 'Horizontaal'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Data</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@definitionlist--data" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/definitionlist--data.html">Bekijk variant 'Data'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Publicatie</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@definitionlist--publication" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/definitionlist--publication.html">Bekijk variant 'Publicatie'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="delins">
+      <h2>Del / Ins</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.40</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@del-ins" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/del-ins.html">Bekijk component 'Del / Ins'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Blok (met block level component)</h3>
+      <p>Alle niet 'inline'-elementen worden geplaatst in een block-level ins/del.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@del-ins--block-level---standaard" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/del-ins--block-level---standaard.html">Bekijk variant 'Blok'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Blok tabel</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <ins class="ins ins--table">
+            <p>tabel</p>
+          </ins>
+          <del class="del del--table">
+            <p>tabel</p>
+          </del>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Blok figuur</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <ins class="ins ins--figure">
+            {{ render "@figure" }}
+          </ins>
+          <del class="del del--figure">
+            {{ render "@figure" }}
+          </del>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="documentbanner">
+      <h2>Document banner</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@document-banner" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/document-banner.html">Bekijk component 'Documentbanner'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section-chapter js-scrollSection" id="facet">
+      <h2>Facet</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@facet" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/facet.html">Bekijk component 'facet'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section-chapter js-scrollSection" id="figure">
+      <h2>Figure</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@figure" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/figure.html">Bekijk component 'figure'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Zonder figcaption</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@figure--without-figcaption" figure2 merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/figure--without-figcaption.html">Bekijk variant 'zonder figcaption'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-chapter js-scrollSection" id="gridcontainers">
+      <h2>Grid &amp; containers</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Zonder toevoegingen werkt het grid percentueel in een gelijke verdeling. De meer kolommen, de smaller deze worden.
+        Naar wens kan er een handmatige percentuele verdeling gemaakt worden, middels het toevoegen van een class op de column
+        zelf.</p>
+      <h3 class="section-chapter__subheading">Grid systeem</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <h4 class="ds-preview__demo__heading">Gelijkmatige percentuele verdeling</h4>
+          <div class="columns row">
+            <div class="column u-bg--grey">
+              <p>Kolom (auto)</p>
+            </div>
+            <div class="column u-bg--grey">
+              <p>Kolom (auto)</p>
+            </div>
+            <div class="column u-bg--grey">
+              <p>Kolom (auto)</p>
+            </div>
+          </div>
+          <h4 class="ds-preview__demo__heading">Handmatige percentuele verdeling</h4>
+          <div class="columns row">
+            <div class="column column-d-1 u-bg--grey">
+              <p>Kolom (1-12)</p>
+            </div>
+            <div class="column column-d-11 u-bg--grey">
+              <p>Kolom (11-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-2 u-bg--grey">
+              <p>Kolom (2-12)</p>
+            </div>
+            <div class="column column-d-10 u-bg--grey">
+              <p>Kolom (10-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-3 u-bg--grey">
+              <p>Kolom (3-12)</p>
+            </div>
+            <div class="column column-d-9 u-bg--grey">
+              <p>Kolom (9-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-4 u-bg--grey">
+              <p>Kolom (4-12)</p>
+            </div>
+            <div class="column column-d-8 u-bg--grey">
+              <p>Kolom (8-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-5 u-bg--grey">
+              <p>Kolom (5-12)</p>
+            </div>
+            <div class="column column-d-7 u-bg--grey">
+              <p>Kolom (7-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-6 u-bg--grey">
+              <p>Kolom (6-12)</p>
+            </div>
+            <div class="column column-d-6 u-bg--grey">
+              <p>Kolom (6-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-7 u-bg--grey">
+              <p>Kolom (7-12)</p>
+            </div>
+            <div class="column column-d-5 u-bg--grey">
+              <p>Kolom (5-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-8 u-bg--grey">
+              <p>Kolom (8-12)</p>
+            </div>
+            <div class="column column-d-4 u-bg--grey">
+              <p>Kolom (4-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-9 u-bg--grey">
+              <p>Kolom (9-12)</p>
+            </div>
+            <div class="column column-d-3 u-bg--grey">
+              <p>Kolom (3-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-10 u-bg--grey">
+              <p>Kolom (10-12)</p>
+            </div>
+            <div class="column column-d-2 u-bg--grey">
+              <p>Kolom (2-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-11 u-bg--grey">
+              <p>Kolom (11-12)</p>
+            </div>
+            <div class="column column-d-1 u-bg--grey">
+              <p>Kolom (1-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-3 u-bg--grey">
+              <p>Kolom (6-12)</p>
+            </div>
+            <div class="column column-d-7 u-bg--grey">
+              <p>Kolom (7-12)</p>
+            </div>
+            <div class="column column-d-2 u-bg--grey">
+              <p>Kolom (2-12)</p>
+            </div>
+          </div>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/columns.html">Bekijk component 'Grid'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Containers</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <div class="container">
+            Container (Standaard)
+          </div>
+          <div class="container container--centered">
+            Container (Centered / max-width: 49em)
+          </div>
+          <div class="container container--large">
+            Container (Large / padding: 0 2em)
+          </div>
+          <div class="container container--medium">
+            Container (Medium / max-width: 40.75em)
+          </div>
+          <div class="container container--small">
+            Container (Small / max-width: 30em)
+          </div>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/container.html">Bekijk component 'container'</a>
+          </p>
+        </div>
+      </div>
+
+
+      <h3 class="section-chapter__subheading">Rijen</h3>
+      <p>Gebruik de
+        <code>.row</code> als rij en houder in de template. Deze zorgt voor en gelijke afstand naar het volgende element.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <div class="row u-bg--grey">row</div>
+          <div class="row row--medium u-bg--grey">row medium</div>
+          <div class="row row--large u-bg--grey">row large</div>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/row.html">Bekijk component 'row'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Formulier rijen</h3>
+      <p>Gebruik de
+        <code>.form__row</code> als rij en houder in een formulier. Deze zorgt voor en gelijke afstand naar het volgende element/row. Uiteraard
+        altijd netjes in een
+        <code>form</code> met de class
+        <code>.form</code>
+      </p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <h4 class="ds-preview__demo__heading">Standaard rijen</h4>
+          <div class="form__row u-bg--grey">Form row</div>
+          <div class="form__row form__row--medium u-bg--grey">Form row medium</div>
+          <div class="form__row form__row--large u-bg--grey">Form row large</div>
+
+          <h4 class="ds-preview__demo__heading">Rij voor de (submit) knop(en)</h4>
+          <div class="form__row form__rowsubmit u-bg--grey">
+            <div class="form__rowsubmit__item">
+              Item 1
+            </div>
+          </div>
+          <div class="form__row form__rowsubmit u-bg--grey">
+            <div class="form__rowsubmit__item">
+              Item 1
+            </div>
+            <div class="form__rowsubmit__item">
+              Item 2
+            </div>
+          </div>
+        </div>
+        {{!--
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/row.html">Bekijk component 'row'</a>
+          </p>
+        </div> --}}
+      </div>
+    </div>
+
+
+
+    <div class="section-chapter js-scrollSection" id="highlight">
+      <h2>Highlight</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@highlight" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/highlight.html">Bekijk component 'highlight'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="section-chapter js-scrollSection" id="homepageblok">
+      <h2>Homepage blok</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@homepage-block" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/homepage-block.html">Bekijk component 'homepage-blok'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Gerelateerd</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@homepage-block--related" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/homepage-block--related.html">Bekijk variant 'Gerelateerd'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="jumbotron">
+      <h2>Jumbotron</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Het is mogelijk om verschillende varianten tegelijk toe te passen op één jumbotron.</p>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron.html">Bekijk component 'jumbotron'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Gecentreerd</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron--centered" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron--centered.html">Bekijk variant 'Gecentreerd'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Gecentreerd (medium)</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron--centered-(medium)" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron--centered-(medium).html">Bekijk variant 'Gecentreerd (medium)'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Gecentreerd (semimedium)</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron--centered-(semimedium)" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron--centered-(semimedium).html">Bekijk variant 'Gecentreerd (semimedium)'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Tekst gecentreerd</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron--text-centered" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron--text-centered.html">Bekijk variant 'Tekst gecentreerd'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Slim</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron--slim" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron--slim.html">Bekijk variant 'Slim'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Alternatieve stijl</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@jumbotron--secondary-style" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/jumbotron--secondary-style.html">Bekijk variant 'Alternatieve stijl'</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="labels">
+      <h2>Labels</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <div class="row">
+            <h2 class="h5">Default</h2>
+            <div>{{render "@label" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Blue</h2>
+            <div>{{render "@label--blue" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Primair</h2>
+            <div>{{render "@label--primary" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Orange</h2>
+            <div>{{render "@label--orange" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Success</h2>
+            <div>{{render "@label--success" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Warning</h2>
+            <div>{{render "@label--warning" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Danger</h2>
+            <div>{{render "@label--danger" }}</div>
+          </div>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/label.html">Bekijk component 'label'</a><br>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/label--primary.html">Bekijk variant 'primair'</a><br>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/label--orange.html">Bekijk variant 'oranje'</a><br>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/label--success.html">Bekijk variant 'succes'</a><br>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/label--warning.html">Bekijk variant 'waarschuwing'</a><br>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/label--danger.html">Bekijk variant 'gevaar'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="link">
+        <h2>Link</h2>
+        <dl class="dl columns--data">
+          <div>
+            <dt>Laatst gewijzigd</dt>
+            <dd>1.9.39</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Ready</dd>
+          </div>
+        </dl>
+        <p>Een hyperlink komt mee met een standaard style. Het icoon wordt automagisch geplaatst op basis van de
+          <code>href</code>.</p>
+        <ul>
+          <li>Een (extern) link openen we altijd in hetzelfde venster.</li>
+          <li>Zodra een link verwijst naar een locatie buiten het domein/platform, dan krijgt deze altijd een ‘externe link’ icoon mee.</li>
+          <li>We maken een uitzondering door te openen in een nieuw venster/tabblad als anders een proces onderbroken wordt of de gebruiker
+          wordt uitlogt.</li>
+        </ul>
+        <h3 class="section-chapter__subheading">Standaard</h3>
+        <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/appel">Interne link</a>
+          </p>
+          <p>
+            <a href="https://www.google.nl">Externe link</a>
+          </p>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/link.html">Bekijk component 'link'</a><br>
+          </p>
+        </div>
+      </div>
+        <h3 class="section-chapter__subheading">Met icoon</h3>
+        <p>Mag ondersteunend zijn bij primaire button.</p>
+        <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <p>
+            {{render "@link--wachtwoord-vergeten" }}
+          </p>
+          <p>
+            {{render "@link--terug-naar" }}
+          </p>
+          <p>{{render "@link--profiel" }}</p>
+          <p>{{render "@link--cta" }}</p>
+          <p>{{render "@link--mail" }}</p>
+          <p>{{render "@link--logout" }}</p>
+          <p>{{render "@link--edit" }}</p>
+          <p>{{render "@link--delete" }}</p>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/link.html">Bekijk component 'link'</a><br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="lists">
+      <h2>Lijsten</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.40</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--default.html">Bekijk component 'lijst'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Ordered list</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--ordered" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--ordered.html">Bekijk variant 'ordered'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Unstyled</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--unstyled" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--unstyled.html">Bekijk variant 'Unstyled'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Inline</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--inline" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--inline.html">Bekijk variant 'Inline'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Link</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--linklist" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--linklist.html">Bekijk variant 'link'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Facetlist</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--facetlist" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--facetlist.html">Bekijk variant 'Facetlist'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Alfabet</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--alphabet" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--alphabet.html">Bekijk variant 'Alfabet'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-chapter__subheading">Relationlist</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--relationlist" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--relationlist.html">Bekijk variant 'Relationlist'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-chapter__subheading">Law list</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--law-list" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--law-list.html">Bekijk variant 'Law list'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+
+
+      <h3 class="section-chapter__subheading">Law list unordered</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@list--law-list-unordered" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--law-list-unordered.html">Bekijk variant 'law list unordered'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Lower alpha</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--lower-alpha" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--lower-alpha.html">Bekijk variant 'Lower alpha'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Lower roman</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--lower-roman" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--lower-roman.html">Bekijk variant 'Lower roman'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Upper alpha</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--upper-alpha" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--upper-alpha.html">Bekijk variant 'Upper alpha'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Upper roman</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--upper-roman" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--upper-roman.html">Bekijk variant 'Upper roman'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Custom</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--custom" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--custom.html">Bekijk variant 'Custom'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">OL Container</h3>
+      <p>This list variant is used in a semi-medium 'row'.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--ol-container" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--ol-container.html">Bekijk variant 'OL container'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Actielijst</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--action" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--action.html">Bekijk variant 'Actielijst'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Themas</h3>
+      <p>De themalijst wordt ingezet als secundaire vorm van ‘eenvoudig zoeken’ binnen een collectie. Een themalijst item verwijst
+      naar de zoekresultatenpagina met een voorgeselecteerde zoekfilter (op basis van het gekozen thema). Hiermee is de themalijst
+      een ’navigerende zoekfilter’.</p>
+      <h4 class="h5">Gebruik</h4>
+      <ul>
+        <li>Een themalijst mag alleen toegepast worden binnen het template ‘Landing’</li>
+        <li>Een themalijst toont alleen thema’s op het hoofdniveau</li>
+      </ul>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--themas" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--themas.html">Bekijk variant 'Themas'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Tabs</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@list--tabs" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/list--tabs.html">Bekijk variant 'Tabs'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-chapter js-scrollSection" id="loader">
+      <h2>Loader</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@loader" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/loader.html">Bekijk component 'loader'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="logo">
+      <h2>Logo</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@logo" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/logo.html">Bekijk component 'logo'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="modal">
+        <h2>Modal</h2>
+        <dl class="dl columns--data">
+          <div>
+            <dt>Laatst gewijzigd</dt>
+            <dd>1.9.39</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Ready</dd>
+          </div>
+        </dl>
+
+        <p>Het modal component kan informatie tonen in een vlak dat over de rest van de pagina heenligt, en waarbij de rest van de pagina
+        ontoegankelijk is gemaakt.</p>
+
+        <p>
+          Let op, het bevat altijd:
+        </p>
+        <ul>
+          <li>een id, wat wordt gebruikt om het modal te kunnen aanroepen vanuit een knop</li>
+          <li>een classname, die wordt gebruikt voor de opmaak van het modal en het verbergen van het modal.</li>
+          <li>een hidden-attribuut, om het attribuut default te verbergen</li>
+          <li>een
+            <code>role="alert"</code> zodat screenreaders het netjes oplezen zodra het wordt getoond.</li>
+          <li>
+            <code>.modal</code> element als buitenste elementen, en
+            <code>.model__content</code> element voor de inhoud</li>
+          <li>Een 'close'-button, wat elke opmaak kan bevatten zolang het maar
+            <code>data-handler="close-modal"</code> bevat.</li>
+        </ul>
+        <p>
+          Let op: het
+          <code>data-modal</code> attribuut bevat het ID van het gekoppelde modal, en moet gelijk zijn aan het
+          <code>id</code> attribute in het bijbehorende modal.
+        </p>
+
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@modal" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/modal.html">Bekijk component 'modal'</a>
+              <br>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="navigation">
+        <h2>Navigatie</h2>
+        <dl class="dl columns--data">
+          <div>
+            <dt>Laatst gewijzigd</dt>
+            <dd>1.9</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Ready</dd>
+          </div>
+        </dl>
+        <h3 class="section-chapter__subheading">Standaard</h3>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@nav" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/nav.html">Bekijk component 'Navigatie'</a>
+              <br>
+            </p>
+          </div>
+        </div>
+        <h3 class="section-chapter__subheading">Folders</h3>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@nav--folders" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/nav--folders.html">Bekijk variant 'folders'</a>
+              <br>
+            </p>
+          </div>
+        </div>
+        <h3 class="section-chapter__subheading">Treeview</h3>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{render "@nav--treeview-niveau-4" }}
+          </div>
+          <div class="ds-preview__content">
+            <p>
+              <a href="https://jeroenhulscher.nl/koop/components/detail/nav--treeview-niveau-4.html">Bekijk variant 'treeview'</a>
+              <br>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="openlayers">
+      <h2>OpenLayers</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@ol-popup" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/ol-popup.html">Bekijk component 'ol popup'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="pageactions">
+      <h2>Pagina acties</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@pageactions" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/pageactions.html">Bekijk component 'Pagina acties'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="pagination">
+      <h2>Paginering</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@pagination" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/pagination.html">Bekijk component 'Paginering'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="picture">
+      <h2>Picture</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@picture" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/picture.html">Bekijk component 'Picture'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="pre">
+      <h2>Pre</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@pre" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/pre.html">Bekijk component 'Pre'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="profiel">
+      <h2>Profiel</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Dit component komt in twee staten: ingelogd, niet ingelogd.</p>
+      <ul>
+        <li>Voor publieke sites wordt alleen "Profiel" getoond als label. Vooralsnog is voor deze omgevingen geen gebruikersnaam beschikbaar
+          of van toepassing. Het emailadres tonen is als label te lang.</li>
+        <li>Voor niet-publieke websites kan een andere afweging worden gemaakt door hier of een gebruikersnaam of emailadres te tonen.</li>
+      </ul>
+      <h3 class="section-chapter__subheading">Niet ingelogd</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@profile" profileNotloggedin }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/profile.html">Bekijk component 'Niet ingelogd'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Ingelogd</h3>
+      <p>Met uitklap-menu.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@profile--ingelogd" profileLoggedin2 merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/profile--ingelogd.html">Bekijk variant 'Ingelogd'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Ingelogd - met iconen</h3>
+      <p>Met uitklap-menu.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@profile--logged-in-(with-icons)" profileLoggedin merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/profile--logged-in-(with-icons).html">Bekijk variant 'Ingelogd met iconen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="relevances">
+      <h2>Relevances</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@relevances" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/relevances.html">Bekijk component 'Relevances'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="resultlist">
+      <h2>Resultaten lijst</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@resultlist" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/resultlist.html">Bekijk component 'Resultaten lijst'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Data</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@resultlist--data" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/resultlist--data.html">Bekijk variant 'Data'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="skiplinks">
+      <h2>Skiplinks</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@skiplinks" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/skiplinks.html">Bekijk component 'Skiplinks'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="sort">
+      <h2>Sorteren</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@sort" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/sort.html">Bekijk component 'Sorteren'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met aantal resultaten</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@sort--with-amount" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/sort--with-amount.html">Bekijk variant 'met aantal resultaten'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met download knop</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@sort--with-download" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/sort--with-download.html">Bekijk variant 'met download knop'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="steps">
+      <h2>Stappen</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@steps" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/steps.html">Bekijk component 'Stappen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="subsup">
+      <h2>Sub / sup</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@sub-sup" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/sub-sup.html">Bekijk component 'Sub / sup'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="table">
+      <h2>Tabel</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.40</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table.html">Bekijk component 'Tabel'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Vaste kolommen</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--fixed-columns" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--fixed-columns.html">Bekijk variant 'Vaste kolommen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Meerlaags</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--multilevel" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--multilevel.html">Bekijk variant 'Meerlaags'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met caption</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--with-caption" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--with-caption.html">Bekijk variant 'Met caption'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Omschrijving</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--with-description" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--with-description.html">Bekijk variant 'Met omschrijving'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Borderless</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--borderless" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--borderless.html">Bekijk variant 'Borderless'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Gedraaide headers</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--rotated-headers" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--rotated-headers.html">Bekijk variant 'Gedraaide headers'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Strepen</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--striped" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--striped.html">Bekijk variant 'Strepen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Condensed</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--condensed" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--condensed.html">Bekijk variant 'Condensed'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Hovereffect</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--hover" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--hover.html">Bekijk variant 'met Hovereffect'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Header uitgelicht</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--header-highlighted" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--header-highlighted.html">Bekijk variant 'Header uitgelicht'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Datakalender</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--datakalender" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--datakalender.html">Bekijk variant 'Datakalender'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met Topbar</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table--met-topbar" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table--met-topbar.html">Bekijk variant 'Met Topbar'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="table-container">
+      <h2>Tabel container</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.33</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Een extra container om de tabel waardoor de gehele tabel verticaal scrollbaar is. Hiermee kunnen grote tabellen getoond worden en bruikbaar blijven.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table-container" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table-container.html">Bekijk component 'Tabel container'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="table-topbar">
+      <h2>Tabel topbar</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <p>Een extra container om de tabel waardoor de gehele tabel verticaal scrollbaar is. Hiermee kunnen grote tabellen getoond worden en bruikbaar blijven.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@table-topbar" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/table-topbar.html">Bekijk component 'Tabel topbar'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="tabs">
+      <h2>Tabs</h2>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@tabs"}}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/tabs.html">Bekijk component 'Tabs'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Justified</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{render "@tabs--justified" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/tabs--justified.html">Bekijk variant 'justified'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met buttons</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@tabs--met-buttons"}}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/tabs--met-buttons.html">Bekijk variant 'met buttons'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="text">
+      <h2>Tekst</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@text" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/text.html">Bekijk component 'Tekst'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="themeblock">
+      <h2>Thema blok</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <ul class="themelist list--unstyled">
+
+            {{ render "@themeblock" }} {{ render "@themeblock--cultuur" }} {{ render "@themeblock--economie" }} {{ render "@themeblock--financien"
+            }} {{ render "@themeblock--huisvesting" }} {{ render "@themeblock--internationaal" }} {{ render "@themeblock--landbouw"
+            }} {{ render "@themeblock--migratie" }} {{ render "@themeblock--natuur" }} {{ render "@themeblock--onderwijs" }} {{ render
+            "@themeblock--veiligheid" }} {{ render "@themeblock--recht" }} {{ render "@themeblock--infrastructuur" }} {{ render "@themeblock--socialezekerheid"
+            }} {{ render "@themeblock--verkeer" }} {{ render "@themeblock--werk" }} {{ render "@themeblock--zorg" }}
+
+          </ul>
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/themeblock.html">Bekijk component 'Thema blok'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="toolbar">
+      <h2>Toolbar</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@toolbar" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/toolbar.html">Bekijk component 'Toolbar'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="topbar">
+      <h2>Topbar</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@topbar" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/topbar.html">Bekijk component 'Topbar'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="treeview">
+      <h2>Treeview</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.40</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@treeview" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/treeview.html">Bekijk component 'Treeview'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="video">
+      <h2>Video</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@video" video merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/video.html">Bekijk component 'Video'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="voetnoot">
+      <h2>Voetnoot</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@footnote" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/footnote.html">Bekijk component 'voetnoot'</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Aanpasbare lijst</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@footnote--customlist" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/footnote--customlist.html">Bekijk variant 'aanpasbare lijst'</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="well">
+      <h2>Well</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@well" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/well.html">Bekijk component 'Well'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="algemeen">
+      <h2>Algemeen</h2>
+      <h3>Styling</h3>
+      <p>Een invoerveld kan bestaan uit:</p>
+      <dl>
+        <dt>Primair label</dt>
+        <dd>Een primair label is altijd verplicht</dd>
+        <dt>Informatie tooltip</dt>
+        <dd>Hieronder kan een helpertekst toegepast worden</dd>
+        <dt>Secundair label</dt>
+        <dd>Voor bijvoorbeeld toelichting van verplicht/optioneel</dd>
+        <dt>Placeholder</dt>
+        <dd>Hulp bij invoer van het veld (zie 'microcopy' voor toelichting)</dd>
+        <dt>Icoon in veld</dt>
+        <dd>Voor bijvoorbeeld datum of dropdown veld</dd>
+        <dt>Icoon buiten veld</dt>
+        <dd>Voor meldingen</dd>
+        <dt>Melding</dt>
+        <dd>Error of bevestiging</dd>
+      </dl>
+      <h3>States</h3>
+      <p>Verschillende statussen van een form element:</p>
+      <ul>
+        <li>Default met placeholder</li>
+        <li>Default met input</li>
+        <li>Focus met input</li>
+        <li>Disabled</li>
+        <li>Error</li>
+        <li>Correct</li>
+      </ul>
+      <p>De verschillende states zijn toe te passen op alle verschillende form elementen.</p>
+      <h3>Validatie</h3>
+      <p>...</p>
+    </div>
+    <div class="section-chapter js-scrollSection" id="autocomplete">
+      <h2>Autocomplete</h2>
+      <p>Gebruik de zoekterm "gem" om resultaten te zien.</p>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-autocomplete" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-autocomplete.html">Bekijk component 'Autocomplete'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met icoon 'zoeken'</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-autocomplete--input-search-autocomplete" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-autocomplete--input-search-autocomplete.html">Bekijk variant 'zoeken'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="datumselectie">
+      <h2>Datumselectie</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.38</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@date-selection" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/date-selection.html">Bekijk component 'Datumselectie'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-chapter js-scrollSection" id="datepicker">
+      <h2>Datepicker</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@datepicker--met-label" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/datepicker--met-label.html">Bekijk component 'datepicker'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met 'vandaag'</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@datepicker--today" datepickerToday merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/datepicker--today.html">Bekijk variant 'met vandaag'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="geselecteerdefilter">
+      <h2>Geselecteerde filter</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-selectedfilter" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-selectedfilter.html">Bekijk component 'Geselecteerde filter'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="inputcheckbox">
+      <h2>Input Checkbox</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-checkbox" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-checkbox.html">Bekijk component 'Input Checkbox'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="inputfile">
+      <h2>Input File</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-file" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-file.html">Bekijk component 'Input File'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Submit-knop</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-file--with-submit-button" inputfile2 merge=true}}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-file--with-submit-button.html">Bekijk variant 'met Submit-knop'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="inputgroup">
+      <h2>Input Group</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-group" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-group.html">Bekijk component 'Input group'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="inputinputsubmit">
+      <h2>Input InputSubmit</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-inputsubmit" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-inputsubmit.html">Bekijk component 'Input InputSubmit'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Klein</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-inputsubmit--small" datepickerToday merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-inputsubmit--small.html">Bekijk variant 'klein'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-chapter js-scrollSection" id="inputradio">
+      <h2>Input Radio</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-radio" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-radio.html">Bekijk component 'Input radio'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-chapter js-scrollSection" id="inputtekst">
+      <h2>Input Text</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text.html">Bekijk component 'Input Text'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Groot</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--medium" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--medium.html">Bekijk variant 'Groot'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Zoeken</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--search" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--search.html">Bekijk variant 'Zoeken'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Zoeken groot</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--search-medium" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--search-medium.html">Bekijk variant 'Zoeken groot'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Wachtwoord</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--password" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--password.html">Bekijk variant 'wachtwoord'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Nummer</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--number" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--number.html">Bekijk variant 'nummer'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Email</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--email" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--email.html">Bekijk variant 'email'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">URL</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--url" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--url.html">Bekijk variant 'URL'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Postcode</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--postal-code" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--postal-code.html">Bekijk variant 'Postcode'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Telefoon</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--tel" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--tel.html">Bekijk variant 'Telefoon'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Prefix</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--prefix" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--prefix.html">Bekijk variant 'met Prefix'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Remove</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@input-text--with-remove" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/input-text--with-remove.html">Bekijk variant 'met Remove'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="select">
+      <h2>Select</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@select-custom" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-custom.html">Bekijk component 'Select'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Groot</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@select-custom--large" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-custom--large.html">Bekijk variant 'Groot'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Klein</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@select-custom--small" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-custom--small.html">Bekijk variant 'Klein'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Label</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@select-custom--with-label" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-custom--with-label.html">Bekijk variant 'met Label'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Optgroup</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+           {{ render "@select-custom--with-optgroup" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-custom--with-optgroup.html">Bekijk variant 'met Optgroup'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="selectmulti">
+      <h2>Select Multi</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@select-multi" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-multi.html">Bekijk component 'Select Multi'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Groot</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@select-multi--large" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/select-multi--large.html">Bekijk variant 'Groot'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="subselection">
+      <h2>Subselection</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.45</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection.html">Bekijk component 'Subselection'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Secundair</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--secondary" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--secondary.html">Bekijk variant 'Secundair'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Zoekfilter</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-search-filter" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-search-filter.html">Bekijk variant 'met Zoekfilter'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Limiet</h3>
+      <p>Het standaard limiet is 3. Het limiet is configureerbaar in het component.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-limit-(3)" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-limit-(3).html">Bekijk variant 'met Limiet'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Selecteer alle</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-check-all" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-check-all.html">Bekijk variant 'met Selecteer alle'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Selecteer alle (meerdere)</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-check-all---multiple" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-check-all---multiple.html">Bekijk variant 'met Selecteer alle (meerdere)'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Selecteer alle opties</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-check-all-options" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-check-all-options.html">Bekijk variant 'met Selecteer alle opties'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Categorieën</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-catagories" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-catagories.html">Bekijk variant 'met Categorieën'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">met Categorieën en Selecteer alle</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@subselection--with-catagories-and-select-all" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-catagories-and-select-all.html">Bekijk variant 'met Categorieën en Selecteer alle'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="textarea">
+      <h2>Textarea</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@textarea" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/textarea.html">Bekijk component 'Textarea'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="tooltip">
+      <h2>Tooltip</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@tooltip" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/tooltip.html">Bekijk component 'Tooltip'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Info</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@tooltip--tooltip-info" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/tooltip--tooltip-info.html">Bekijk variant 'Info'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="checkbox-alle">
+      <h2>Checkbox - Selecteer alle</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.35</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@checkbox-selectall" selectall merge=true }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/checkbox-selectall.html">Bekijk component 'Selecteer alle'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="checkbox-dealle">
+      <h2>Checkbox - De-selecteer alle</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.37</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@checkbox-unselectall" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/checkbox-unselectall.html">Bekijk component 'De-selecteer alle'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="kopieerlink">
+      <h2>Kopieer link</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@copydata" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/copydata.html">Bekijk component 'Kopieer link'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="filterresultaten">
+      <h2>Filter resultaten</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@filtersearch-results" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/filtersearch-results.html">Bekijk component 'Filter resultaten'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met radio-buttons</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@filtersearch-results--input-radio" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/filtersearch-results--input-radio.html">Bekijk variant 'met radio-buttons'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met selecteer-knoppen</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@filtersearch-results--with-controls" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/filtersearch-results--input-radio.html">Bekijk variant 'met selecteer-knoppen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met meerlaags</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@filtersearch-results--multilevel" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/filtersearch-results--multilevel.html">Bekijk variant 'met meerlaags'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="formuliercondities">
+      <h2>Formulier condities</h2>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-conditionals" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-conditionals.html">Bekijk component 'Formulier condities'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Feedback module</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-conditionals--feedback" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-conditionals--feedback.html">Bekijk variant 'Feedback condities'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="annuleerwijzigingen">
+      <h2>Annuleer wijzigingen</h2>
+
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-disregardchanges" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-disregardchanges.html">Bekijk component 'Form annuleer wijzigingen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="veldtoevoegen">
+      <h2>Veld toevoegen</h2>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-field-repeater" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-field-repeater.html">Bekijk component 'Veld toevoegen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="redirecter">
+      <h2>Redirecter</h2>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-redirecter" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-redirecter.html">Bekijk component 'Formulier redirecter'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="resetformulier">
+      <h2>Reset formulier</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@form-reset" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/form-reset.html">Bekijk component 'Formulier reset'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="kpmhighlighter">
+      <h2>KPM Highlighter</h2>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@kpm-highlight" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/kpm-highlight.html">Bekijk component 'KPM-highlight'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="paswoordsterkte">
+      <h2>Paswoordsterkte</h2>
+      <h3 class="section-chapter__subheading">Standaard</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@passwordstrength--default" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/passwordstrength--default.html">Bekijk component 'Paswoordsterkte'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Met dubbele feedback</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@passwordstrength--with-duplicate" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/passwordstrength--with-duplicate.html">Bekijk variant 'met dubbele feedback'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="printen">
+      <h2>Printen</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@print" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/print.html">Bekijk component 'Printen'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="toonmeerminder">
+      <h2>Toon meer/minder</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@show-moreless" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/show-moreless.html">Bekijk component 'Toon meer/minder'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-chapter js-scrollSection" id="totop">
+      <h2>To top</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{ render "@to-top" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/to-top.html">Bekijk component 'To top'</a>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+      {{!-- <div class="row">
+        <fieldset>
+          <legend>Formulier voorbeeld</legend>
+          <div class="form__row">
+            <label>Uw naam</label>
+            {{ render "@input-text" }}
+          </div>
+          <div class="form__row">
+            {{ render "@button" }}
+          </div>
+        </fieldset>
+      </div> --}}
+
+    </div>
+
+</div>

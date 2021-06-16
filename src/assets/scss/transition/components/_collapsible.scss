@@ -6,12 +6,28 @@
     a {
       padding: 0 0 0 2em;
       color: #154273;
+      line-height: 1.2em;
       text-decoration: underline;
-      background: $plusShapeIcon no-repeat left top .2em;
+      background: $iconPlusFilledBlue no-repeat left top -.1em;
 
       &[aria-expanded=true] {
-        background: $minusShapeIcon no-repeat left top .625em;
+        background-image: $iconMinFilledBlue;;
       }
+    }
+  }
+
+  &--small {
+    .collapsible__header {
+      a {
+        padding-left: 1.5em;
+        background: {
+          size: 1em;
+          position: left top .05em;
+        }
+      }
+    }
+    .collapsible__content {
+      margin-left: 1.5em;
     }
   }
 

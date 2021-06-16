@@ -1,0 +1,61 @@
+---
+label: Wachtwoord reset
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn Abonnementen
+      url: '#'
+    - text: Wachtwoord opnieuw instellen
+  inputEmailContext:
+    id: 1
+    patterntype: email
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Uw e-mailadres
+    hastooltip: true
+    required: true
+    requiredLabel: true
+    tooltipContext:
+      id: 1231
+      content: Het e-mailadres waarmee u zich heeft geregistreerd.
+  buttonSubmit:
+    id: 123
+    text: Aanvragen bevestigingscode
+    button: true
+    type: submit
+    modifier: button--primary form__button
+  preheader:
+    value: Officiële bekendmakingen

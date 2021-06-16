@@ -1,0 +1,129 @@
+<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if selectAllOnMain}}, "selectAllOnMain": "{{selectAllID}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}}{{#if hiddenValueField}}, "hiddenValueField": true{{/if}} }'>
+  {{#if selectAllOnMain}}
+    <div class="input-checkbox">
+      <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{selectAllID}}" {{#if_eq selectAllOnMain/checked true}}checked{{/if_eq}} name="{{selectAllOnMain/name}}" value="Alle" />
+      <label class="checkbox__label" for="ref-{{selectAllID}}">
+        {{selectAllOnMain/label}}
+      </label>
+    </div>
+  {{/if}}
+  <div class="subselection__summary {{#if required}}required{{/if}}"></div>
+  <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>{{modalTitle}}</h2>
+        {{#if searchFilter}}
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <label class="form__label form__label--accent" for="filter-id--{{id}}">{{#if label}}{{label}}{{else}}Filter resultaten op trefwoord{{/if}}</label>
+              <div class="relative">
+                <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if inputPlaceholder}}{{inputPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="{{#if inputName}}{{inputName}}{{else}}name{{/if}}" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
+                <a {{#if removeId}}id="{{removeId}}"{{/if}} href="#" class="input-text__remove invisible" data-handler="empty-input">
+                  <span class="visually-hidden">Wis waarde</span>
+                </a>
+              </div>
+            </div>
+            {{#if controls}}
+              <div class="form__row">
+                <button {{#if id}}id="{{id}}"{{/if}} class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
+              </div>
+            {{/if}}
+
+            <fieldset class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
+              <legend class="visually-hidden">{{modalTitle}}</legend>
+              {{/if}}
+              {{#if selectAll}}
+              <div data-decorator="init-selectall">
+                <div class="input-checkbox u-margin--m">
+                  <input class="checkbox__input js-checkbox-master" type="checkbox" {{#if_eq selectAllChecked/checked true}}checked{{/if_eq}} id="{{selectAllID}}" name="selectAll" value="Alle iets" />
+                  <label class="checkbox__label" for="{{selectAllID}}">
+                    <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+                  </label>
+                </div>
+              {{/if}}
+              {{#if radio}}
+                <div class="" data-decorator="init-formreset">
+                  <p><a {{#if id}}id="{{id}}"{{/if}} href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
+              {{/if}}
+
+              {{#if multilevel}}
+                {{#each Options }}
+                  <fieldset class="js-filterresults__resultmother">
+
+                  {{#if checkAll}}
+                    <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
+                    <div data-decorator="init-selectall">
+                      <div class="input-checkbox">
+                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="selectAll" value="Alle iets"
+                        />
+                        <label class="checkbox__label u-nomargin" for="{{id}}">
+                          <strong>{{ title }}</strong>
+                        </label>
+                      </div>
+                  {{else}}
+                    <legend>{{#if title}}{{title}}{{/if}}</legend>
+                  {{/if}}
+
+                  <ul class="list--unstyled">
+                    {{#each OptionsSubs }}
+                      <li class=" js-filterresults__result">
+                        <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="2"
+                          />
+                          <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                            {{ title }}
+                          </label>
+                        </div>
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{#if checkAll}}
+                  </div>
+                {{/if}}
+                </fieldset>
+              {{/each}}
+
+            {{else}}
+                <ul class="list--unstyled">
+                  {{#each Options }}
+                  <li class=" js-filterresults__result">
+                    <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                      <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{required}} {{#if linkedto}}data-linkedto="{{linkedto}}"
+                        {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}"
+                        value="2" />
+                      <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                        {{ title }}
+                      </label>
+                    </div>
+                  </li>
+                  {{/each}}
+                </ul>
+            {{/if}}
+
+            {{#if radio}}
+            </div>
+            {{/if}}
+          {{#if selectAll}}
+          </div>
+          {{/if}}
+        {{#if searchFilter}}
+            </fieldset>
+          </div>
+        {{/if}}
+
+        <div class="modal__buttonpane">
+          {{#if buttonResetForm}}
+            <button class="icon icon--refresh formreset-resetlink">Reset formulier</button>
+          {{/if}}
+          {{#if buttonSubmit}}
+            <button type="submit" class="button button--primary">{{#if buttonSubmitLabel}}{{buttonSubmitLabel}}{{else}}Opnieuw zoeken{{/if}}</button>
+          {{else}}
+            <button type="button" data-handler="close-modal" class="button button--primary">Bevestig selectie</button>
+          {{/if}}
+        </div>
+        {{#if hideClose}}{{else}}<button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>{{/if}}
+      </div>
+    </div>
+  </div>
+  <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger">{{ linkText }}</button>
+</div>
