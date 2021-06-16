@@ -1,0 +1,122 @@
+<ul id="{{id}}" class="list--sources">
+	{{#each items }}
+		<li>
+			<div class="list--source__information {{icon}}">
+				{{#if nameHref}}
+          <a {{#if nameId}}id="{{nameId}}"{{/if}} href="{{nameHref}}">{{name}}</a>
+        {{else}}
+          {{ name }}
+        {{/if}}
+
+        {{#if date }}
+          <div class="list--sources__item__date">
+          {{ date/timestamp }} {{ render "@tooltip" date/tooltip merge=true }}
+           {{#if filesize}}
+              <span class="list--sources__item__filesize">{{ filesize }}</span>
+            {{/if}}
+          </div>
+        {{else}}
+        {{#if filesize}}
+          <span class="list--sources__item__filesize">{{ filesize }}</span>
+        {{/if}}
+        {{/if}}
+				{{#if files }}
+					{{#each files }}
+						<span class="label label--{{ type }}">{{ type}}</span>
+					{{/each}}
+				{{/if}}
+			</div>
+
+
+      {{#if buttonContext/action}}
+        <a {{#if id}}id="{{id}}"{{/if}} href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}
+          <span class="visually-hidden">van abonnement: {{name}}</span>
+        </a>
+      {{else}}
+        {{#if defaultactions}}
+          <div class="list--source__defaultactions">
+            {{#each defaultactions}}
+              {{#if buttonIcon}}
+                {{ render "@button-icon" buttonIconContext }}
+              {{else}}
+                <a {{#if id}}id="{{id}}"{{/if}} href="{{action}}" class="button {{modifier}}">{{text}}
+                  <span class="visually-hidden">van abonnement: {{../name}}</span>
+                </a>
+              {{/if}}
+            {{/each}}
+          </div>
+        {{/if}}
+      {{/if}}
+
+
+      {{#if actionsOne}}
+        <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{idprefix}}"}'>
+          <div id="{{idprefix}}1" class="js-form-conditionals__citem">
+            {{actionsOneLabel}}
+            {{#each actionsOne }}
+              {{#if iconOnly}}
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button-icon button-icon--plain button-icon--bin{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
+              {{else}}
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+              {{/if}}
+            {{/each}}
+          </div>
+          <div id="{{idprefix}}2" class="js-form-conditionals__citem">
+            <em>{{actionsTwoLabel}}</em>
+            {{#each actionsTwo }}
+              {{#if iconOnly}}
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
+              {{else}}
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+              {{/if}}
+            {{/each}}
+          </div>
+          <div id="{{idprefix}}3" class="js-form-conditionals__citem">
+            {{actionsThreeLabel}}
+            {{#each alternativeActions }}
+              <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+            {{/each}}
+          </div>
+        </div>
+      {{else}}
+
+      {{/if}}
+
+      {{#if metadata}}
+      <div class="list--source__metadata">
+        <dl class="dl dl--horizontal">
+          {{#each metadata/items}}
+            <dt>{{dt}}</dt>
+            <dd>{{dd}}</dd>
+          {{/each}}
+        </dl>
+      </div>
+      {{/if}}
+
+
+			{{#if moreInfo }}
+				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="{{#if moreInfoId}}{{moreInfoId}}{{else}}c1{{/if}}">
+				  <div class="collapsible__header">
+				    <a href="#{{#if moreInfoId}}{{moreInfoId}}{{else}}c1{{/if}}" aria-controls="collapsible-content-{{#if collapsibleContentId}}{{collapsibleContentId}}{{else}}1{{/if}}" aria-expanded="true" data-handler="toggle-collapsible" data-text="show/hide">toon informatie</a>
+				  </div>
+				  <div class="collapsible__content" id="collapsible-content-{{#if collapsibleContentId}}{{collapsibleContentId}}{{else}}1{{/if}}">
+				  	<div>
+					  	<h3>{{ title }}</h3>
+					  	<div class="well well--linkContainer">{{ link }}</div>
+							{{#if tableData }}
+								<table>
+									{{#each tableData }}
+										<tr>
+											<th>{{ type }}</th>
+											<td data-before="{{ type }}">{{{ value }}}</td>
+										</tr>
+									{{/each}}
+								</table>
+							{{/if}}
+						</div>
+				  </div>
+				</div>
+			{{/if}}
+		</li>
+	{{/each}}
+</ul>

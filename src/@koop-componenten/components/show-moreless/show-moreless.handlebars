@@ -1,0 +1,10 @@
+
+<div data-decorator="showmoreless">
+  <ul class="{{listmodifier}}">
+    {{#each items}}
+      <li>
+        <a {{#if id}}id="{{id}}"{{/if}} href="#" {{{attributes}}}>{{{item}}}</a> {{{descr}}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

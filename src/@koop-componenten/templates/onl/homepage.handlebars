@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  {{ render "@header" headerContext merge="true" }}
+
+  <div class="container row">
+    <div class="columns columns--homepage-tiles">
+      {{ render "@homepage-block--related" homepageBlock1 merge="true" }}
+      {{ render "@homepage-block--related" homepageBlock2 merge="true" }}
+      {{ render "@homepage-block--related" homepageBlock3 merge="true" }}
+      {{ render "@homepage-block--related" homepageBlock4 merge="true" }}
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}

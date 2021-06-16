@@ -1,8 +1,13 @@
 .label {
   font-size: .85rem;
 
-  &--lg {
+  &--lg,
+  &--large {
     font-size: 1em;
+  }
+
+  &--italic {
+    font-style: italic;
   }
 
   &--danger, &--pdf {

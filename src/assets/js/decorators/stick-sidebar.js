@@ -33,11 +33,28 @@
   };
 
   var updateStickability = function (scrollContentElement) {
-    var footerOffset = footer.getBoundingClientRect();
+    var footerOffset;
+    var maxTop
+    var disclaimer = document.querySelector('.disclaimer');
+    var footer = document.querySelector('.footer');
+
+    // the height of the sidebar (when sticky) is based on the footer area of the page;
+    if (disclaimer) {
+      footerOffset = disclaimer.getBoundingClientRect();
+    } else if(footer){
+      footerOffset = footer.getBoundingClientRect();
+    }
+
+    if (footerOffset) {
+      maxTop = footerOffset.top;
+    } else {
+      maxTop = '0';
+    }
+
     var scrollY = getScrollY();
-    var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
+    var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - maxTop ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
-    var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
+    var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 65em)' ).matches;
     var elements;
     var i;
 
@@ -71,31 +88,74 @@
 
   onl.decorate({
     'add-mobile-foldability': function( el ) {
-      var button = document.createElement( 'button' );
-      var labels = {
-        open: 'Open sidebar',
-        close: 'Sluit sidebar'
-      };
 
-      // set data to button
-      // button.classList.add( 'hidden-desktop' );
-      button.type = 'button';
-      button.setAttribute( 'data-handler', 'toggle-sidebar' );
-      button.setAttribute( 'aria-controls', el.id );
-      button.setAttribute( 'data-toggle-open', labels.open );
-      button.setAttribute( 'data-toggle-close', labels.close );
+        var parent;
+        var newTop = '150';
+        var parentOffsets;
+        var documentbanner = document.querySelector('.documentbanner');
+        if (documentbanner) {
+          parent = documentbanner;
+        } else {
+          parent = el;
+        }
+        parentOffsets = parent.getBoundingClientRect();
+        if(parentOffsets.top != '0') {
+          newTop = parentOffsets.top;
+        }
+        var button = document.createElement( 'button' );
+        var classlist = 'is-column-default';
+        var labels = {
+          open: 'Open sidebar',
+          close: 'Sluit sidebar'
+        };
+
+        if (document.querySelector('.columns--sidebar__sidebar form') ) {
+          classlist = 'is-column-filters';
+        }
+
+        // set data to button
+        // button.classList.add( 'hidden-desktop' );
+        button.type = 'button';
+        button.classList.add(classlist);
+        button.setAttribute( 'data-handler', 'toggle-sidebar' );
+        button.setAttribute( 'aria-controls', el.id );
+        button.setAttribute( 'data-toggle-open', labels.open );
+        button.setAttribute( 'data-toggle-close', labels.close );
 
 
-      // set initial state
-      button.setAttribute( 'aria-expanded', 'false' );
-      button.textContent = labels.close;
+        // set initial state
+        button.setAttribute( 'aria-expanded', 'false' );
+        button.textContent = labels.close;
 
-      el.before( button );
+        // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
+        button.style.top = Math.round(newTop) + 40 + 'px';
 
-      // apply first time
-      // if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
-      //   toggle( button );
-      // }
+        el.before( button );
+
+        // apply first time
+        // if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
+        //   toggle( button );
+        // }
+      setTimeout(function (el) {
+        var parent;
+        var newTop = '150';
+        var parentOffsets;
+        var documentbanner = document.querySelector('.documentbanner');
+        var blocksearch = document.querySelector('[data-blocksearch-pageheader]');
+        if (documentbanner) {
+          parent = documentbanner;
+        } else if (blocksearch) {
+          parent = blocksearch;
+        } else {
+          parent = el;
+        }
+        parentOffsets = parent.getBoundingClientRect();
+        if (parentOffsets.top != '0') {
+          newTop = parentOffsets.top;
+        }
+        var trigger = document.querySelector('[data-handler="toggle-sidebar"]');
+        trigger.style.top = Math.round(newTop) + 40 + 'px';
+      }, 1000, el);
     },
     'stick-sidebar': function( el ) {
       var timer;
@@ -105,21 +165,28 @@
       config = JSON.parse(el.getAttribute('data-config')) || [];
       scrollContentElement = config.scrollContentElement || '.js-scrollContentElement';
 
-      // console.log('config', config);
-
       footer = onl.dom.$( '.footer' )[0];
       element = el;
       var calculate = function() {
         referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + getScrollY() + 16;
-        left = onl.dom.$( '.breadcrumb' )[0].getBoundingClientRect().left;
-        h1ReferenceTop = onl.dom.$('h1')[0].getBoundingClientRect().bottom;
+        if (onl.dom.$('.container > .breadcrumb')[0]) {
+          left = onl.dom.$('.container > .breadcrumb')[0].getBoundingClientRect().left;
+        } else {
+          left = onl.dom.$('.logo')[0].getBoundingClientRect().left;
+        }
+        if (onl.dom.$('h1')[0]) {
+          h1ReferenceTop = onl.dom.$('h1')[0].getBoundingClientRect().bottom;
+        }
       };
 
       var sidebarHeight = document.querySelector('.columns--sticky-sidebar__sidebar > div').offsetHeight;
       var columns = document.querySelectorAll('.columns--sticky-sidebar > div');
       for (var i = 0; i < columns.length; i++) {
         if (!columns[i].classList.contains('columns--sticky-sidebar__sidebar')) {
+          // if (sidebarHeight > window.innerHeight) {
+            // columns[i].style.minHeight = window.innerHeight + 80 + "px";
           columns[i].style.minHeight = sidebarHeight + 80 + "px";
+          // }
         }
       }
 

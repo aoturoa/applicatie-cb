@@ -1,0 +1,13 @@
+{{ render "@header" header merge=true }}
+
+<div class="container" role="main" id="content">
+  <div class="row">
+    {{#> @jumbotron jumbotronContext }}
+      <p>Extra zin voor een tweede paragraaf.</p>
+      {{ render "@button" buttonAgain }}
+      {{ render "@button" buttonContact }}
+    {{/@jumbotron}}
+  </div>
+</div>
+
+{{ render "@footer" }}

@@ -1,0 +1,90 @@
+title: Link
+context:
+  text: link
+  action: /link/intern/
+variants:
+  - name: extern (auto)
+    label: Externe link (auto)
+    context:
+      text: externe link
+      action: http://www.google.nl
+  - name: extern (manual)
+    label: Externe link (manual)
+    context:
+      text: externe link (manual)
+      action: http://www.google.nl
+      mode: manual
+  - name: Wachtwoord vergeten
+    label: Wachtwoord vergeten
+    context:
+      text: Wachtwoord vergeten
+      action: '#'
+      class: link link--forgotpw
+  - name: Terug naar
+    label: Terug naar
+    context:
+      text: Terug naar het overzicht
+      action: '#'
+      class: icon--backlink
+  - name: Profiel
+    label: Profiel
+    context:
+      text: Ik heb nog geen profiel
+      action: '#'
+      class: link link--profile
+  - name: CTA
+    label: Cta
+    context:
+      text: Ga naar het overzicht
+      action: '#'
+      class: cta
+  - name: Mail
+    label: Email
+    context:
+      text: Label
+      action: '#'
+      class: link link--mail
+  - name: Logout
+    label: Uitloggen
+    context:
+      text: Label
+      action: '#'
+      class: link link--logout
+  - name: Edit
+    label: Wijzigen
+    context:
+      text: Label
+      action: '#'
+      class: link link--edit
+  - name: Delete
+    label: Verwijderen
+    context:
+      text: Label
+      action: '#'
+      class: link link--remove
+  - name: Feed
+    label: Feed
+    context:
+      text: RSS van deze zoekvraag
+      action: '#'
+      class: link link--feed
+  - name: Share
+    label: Delen
+    context:
+      text: Delen
+      action: '#'
+      class: link link--share
+  - name: Check
+    label: Vink
+    context:
+      text: Account activeren
+      action: '#'
+      class: link link--check
+  - name: Download
+    label: download
+    context:
+      text: Download
+      action: '#'
+      class: link link--download
+
+

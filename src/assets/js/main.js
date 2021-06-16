@@ -59,6 +59,9 @@ window.onl = {
       }
       return element.hasAttribute( 'hidden' ) || checkForHiddenParents && hasHiddenParents;
     },
+    isVisible: function (e) {
+      return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
+    },
     // focus `element`
     focus: function( element ) {
       if ( element ) {
@@ -278,11 +281,14 @@ window.onl = {
       .toLowerCase()
       .split( WHITESPACE );
 
-      decoratorArr.forEach( function( decorator ) {
-        if ( typeof onl.decorators[ decorator ] === 'function' ) {
-          onl.decorators[ decorator ]( element );
-        }
-      });
+      if(!element.getAttribute('data-decorator-initialized')) {
+        decoratorArr.forEach( function( decorator ) {
+          if ( typeof onl.decorators[ decorator ] === 'function' ) {
+            onl.decorators[ decorator ]( element );
+          }
+        });
+        element.setAttribute('data-decorator-initialized', true);
+      }
     });
   }
 

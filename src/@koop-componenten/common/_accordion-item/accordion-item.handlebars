@@ -1,0 +1,24 @@
+<div {{#if itemId}}id="{{itemId}}"{{/if}} class="accordion__item">
+
+  <div class="accordion__item__header {{#if type}}accordion__item--{{type}}{{/if}}">
+      {{#if_eq type 'checkbox'}}
+        {{render "@input-checkbox" accordionCheckbox }}
+      {{else}}
+        <h3 {{#if id}}id="{{id}}"{{/if}} class="accordion__item__heading">
+          <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" aria-controls="{{contentId}}" id="{{headerId}}">
+            {{headerLabel}}{{#if headerLabel2}}<span class="accordion__item__heading-extra">{{headerLabel2}}</span>{{/if}}
+          </button>
+        </h3>
+      {{/if_eq}}
+  </div>
+  {{#if_eq hasContent false}}
+  {{else}}
+  <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{#if_eq type 'checkbox'}}option-{{/if_eq}}{{headerId}}">
+    <div>
+      {{#> @partial-block}}
+        {{content}}
+      {{/ @partial-block}}
+    </div>
+  </div>
+  {{/if_eq}}
+</div>

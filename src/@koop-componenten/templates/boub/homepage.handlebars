@@ -1,0 +1,73 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">Zoek berichten</legend>
+          <div class="form__row ">
+            <div class="columns">
+              <div class="form__row form__row--medium">
+                {{render "@input-text" postcodeContext }}
+              </div>
+              <div class="form__row form__row--medium">
+                {{render "@input-text" huisnrContext }}
+              </div>
+              <div class="form__row form__row--medium">
+                {{ render "@select-custom--with-label" selectContext merge=true }}
+              </div>
+            </div>
+          </div>
+          <div class="form__row align-right">
+            <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
+          </div>
+        </fieldset>
+      </form>
+
+    {{/@jumbotron}}
+
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="column column-d-5 u-order--d2">{{render "@video" }}</div>
+      <div class="column column-d-7 column--padded-large">
+        {{render "@block" }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="column column-d-5">{{render "@picture" picture1 }}</div>
+      <div class="column column-d-7 column--padded-large">
+        {{render "@block" officieleContext }}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotron2Context }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+          <div class="form__row">
+            {{ render "@input-inputsubmit" }}
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

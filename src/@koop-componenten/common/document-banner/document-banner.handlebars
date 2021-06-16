@@ -1,0 +1,39 @@
+<header class="documentbanner">
+
+  <div class="documentbanner__logo">
+    {{#if img}}
+      <img src="{{img/src}}" {{#if img/width}}width="{{img/width}}"{{/if}} {{#if img/alt}}alt="{{img/alt}}"{{/if}} />
+    {{/if}}
+  </div>
+
+  <div class="documentbanner__content">
+    <article>
+      {{#if heading}}<h2>{{heading}}</h2>{{/if}}
+
+      <table class="table table--dataintro table--mobiletransform">
+        <thead>
+            <tr>
+              {{#each items}}
+                <th>{{ title }}</th>
+              {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               {{#each items}}
+                <td data-before="{{ title }}">
+                  {{#if isTime}}
+                    <time datetime="2018-07-07" class="u-nobreak">{{ value }}</time>
+                  {{else}}
+                    {{ value }}
+                  {{/if}}
+                </td>
+               {{/each}}
+            </tr>
+        </tbody>
+      </table>
+    </article>
+
+  </div>
+
+</header>

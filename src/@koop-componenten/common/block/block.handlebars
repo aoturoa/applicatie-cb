@@ -1,0 +1,23 @@
+<div class="block-content {{#if slim}}block-content--slim{{/if}} {{#if modifier}}block-content--{{modifier}}{{/if}} {{#if highlight}}block-content--highlight{{/if}} {{#if flexed}}block-content--flexed{{/if}}">
+  {{#if subheading}}
+    <p class="block-content__subheading">
+      <i>{{subheading}}</i>
+    </p>
+  {{/if}}
+  <h{{#if htype}}{{htype}}{{else}}2{{/if}} class="block-content__heading">{{heading}}</h{{#if htype}}{{htype}}{{else}}2{{/if}}>
+  {{#if content}}
+    {{{content}}}
+  {{/if}}
+  {{#> @partial-block}}
+  {{/ @partial-block}}
+
+  {{#if buttonText}}
+    <p>
+      <a href="{{href}}" class="button {{#if buttonModifier}}button--{{buttonModifier}}{{/if}}">{{buttonText}}</a>
+      {{!-- {{render "@button" }} --}}
+    </p>
+  {{/if}}
+  {{#if cta}}
+    <a href="{{ctahref}}" {{#if ctaid}}id="{{ctaid}}"{{/if}} class="block-content__cta cta" {{#if ctaexternal}}rel="external"{{/if}}>{{ctalabel}}</a>
+  {{/if}}
+</div>

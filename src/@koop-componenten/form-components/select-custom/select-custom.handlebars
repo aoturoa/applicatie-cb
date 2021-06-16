@@ -1,0 +1,19 @@
+<label for="{{id}}" class="form__label form__label--{{labelmodifier}} {{#if fieldLabelVisible}}{{else}}visually-hidden{{/if}}">{{fieldLabel}}</label>
+{{#if hastooltip}}{{render "@tooltip" tooltip merge=true }}{{/if}}
+<div class="select-custom {{modifier}}">
+  <select id="{{id}}">
+    {{#if optgroup}}
+      {{#each items}}
+        <optgroup label="{{optgroupLabel}}">
+          {{#each options}}
+            <option {{#if id}}id="{{id}}"{{/if}} value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} {{selected}}>{{label}}</option>
+          {{/each}}
+        </optgroup>
+      {{/each}}
+    {{else}}
+      {{#each options}}
+        <option {{#if id}}id="{{id}}"{{/if}} value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}" {{/if}} {{selected}}>{{label}}</option>
+      {{/each}}
+    {{/if}}
+  </select>
+</div>

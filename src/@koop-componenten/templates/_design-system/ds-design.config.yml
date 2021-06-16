@@ -1,0 +1,58 @@
+name: DS - Ontwerpprincipes
+label: DS - Ontwerpprincipes
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Design
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      href: templates-ds---index.html
+      active: true
+      sub: true
+      subItems:
+        - stitle: Componenten
+          href: templates-ds---componenten.html
+        - stitle: Content
+          href: templates-ds---content.html
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes.html
+          sactive: true
+        - stitle: Rationale
+          href: templates-ds---rationale.html
+        - stitle: Toelichting
+          href: templates-ds---toelichting.html
+  navContentContext:
+    items:
+    - title: Design
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Merk
+          href: sectie-merk
+        - stitle: Logo
+          href: sectie-logo
+        - stitle: Navigatie
+          href: sectie-navigatie
+        - stitle: Kleur
+          href: sectie-kleur
+        - stitle: Typografie
+          href: sectie-typografie
+        - stitle: Iconen
+          href: sectie-iconen
+        - stitle: Layout
+          href: sectie-layout
+  jumbotronContext:
+    heading: Ontwerpprincipes
+    h: h1
+    subheading: Design system
+    intro: Op deze pagina vind je meer informatie over designlijnen binnen KOOP.
+
+

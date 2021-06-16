@@ -1,0 +1,116 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" role="main" id="content">
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+
+        <form class="form">
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend class="visually-hidden">Doorzoek overheidsdocumenten</legend>
+
+              <div class="form__row form__row--slim">
+                {{ render "@input-text--medium" inputZoekwoord merge=true }}
+              </div>
+
+              <div class="form__row">
+                {{ render "@input-checkbox" searchcheckbox }}
+              </div>
+
+            </fieldset>
+          </div>
+          <div class="columns columns--dominant">
+            <div class="column">
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Beschikbaarheid</legend>
+                  {{ render "@date-selection" }}
+                </fieldset>
+              </div>
+            </div>
+            <div class="column">
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Informatiesoort
+                  </legend>
+                  {{render "@subselection" subselectionInfoContext }}
+                </fieldset>
+              </div>
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Thema
+                  </legend>
+                  {{render "@subselection" subselectionThemaContext }}
+                </fieldset>
+              </div>
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Organisatie
+                  </legend>
+                  {{render "@subselection" subselectionContext }}
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="form__row form__row--submit">
+            <div class="columns columns--vcenter">
+              <div class="column">
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+              </div>
+              <div class="column align-right">
+                <button type="submit" class="button button--primary">Zoek documenten</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+    {{/@jumbotron}}
+
+    </div>
+
+
+
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--promo jumbotron--green">
+
+      <div class="jumbotron__content">
+        <div class="columns columns--center">
+          <div class="column">
+        <p class="jumbotron__subheader">Meld je aan voor de mail service</p>
+
+        <h2 class="jumbotron__header h2">En blijf automatisch op de hoogte van al het nieuws over depositaire verdragen</h2>
+
+        </div>
+        <div class="column">
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+            <div class="form__row">
+              {{ render "@input-inputsubmit" }}
+            </div>
+          </fieldset>
+        </form>
+
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}

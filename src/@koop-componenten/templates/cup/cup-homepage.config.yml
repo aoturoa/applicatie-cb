@@ -1,0 +1,34 @@
+---
+label: CUP - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  jumbotronContext:
+    heading: Fusce dapibus, tellus ac cursus commodo, tortor mauris
+    subheading: Repository
+    intro: Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
+    centered: true
+    headingcentered: true
+    selectCustomContext:
+      modifier: select-custom--large
+      id: 1
+      required: true
+      options:
+        - label: Gemeente Den Haag
+          value: 10
+          selected: selected
+        - label: 20
+          value: 20
+        - label: 50
+          value: 50
+        - label: 100
+          value: 100
+  block1Context:
+    id: 1
+    heading: Gebruik repositoryservice
+    subheading: Repository
+    content: '<p> Via deze service is het mogelijk om de repository te benaderen. Via verschillende manieren is het mogelijk om items op te vragen/in te zien. De mogelijkheden worden hieronder beschreven per niveau. In het algemeen gelden de volgende mogelijkheden. </p> <p> <a href="#" class="button button--secondary">Meer over de repository</a> </p>'
+    cta: false
+

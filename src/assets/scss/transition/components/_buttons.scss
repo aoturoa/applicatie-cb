@@ -26,20 +26,36 @@
     color: $primaryBlue;
   }
 
-  &.icon-bg {
-    padding-right: 3.75em;
-    background-position: right .75em center;
-    background-repeat: no-repeat;
+  &-texticon {
+    text-decoration: underline;
+    color: $darkBlue;
+    padding: 0.125em 0 0.125em 1.5em;
+    border: 0;
+    font-weight: normal;
+    margin-right: 1em;
 
-    &:after {
-      content: "";
-      position: absolute;
-      right: 2.75em;
-      top: .6em;
-      bottom: .6em;
-      width: 1px;
-      background: $darkBlue;
+    &:hover {
+      box-shadow: none;
     }
+
+    &--marker {
+      background: $markerBlueIcon no-repeat left center;
+      background-size: .75em;
+    }
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  &--slim {
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-top: .55em;
+    padding-bottom: .55em;
+    font-weight: normal;
   }
 
   &.block-element {

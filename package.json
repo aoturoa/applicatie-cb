@@ -1,13 +1,16 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "1.9.32",
+  "version": "1.9.48",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
     "test": "npm e2e && npm vrtest && npm atest",
     "start": "gulp dev",
+    "dev-twig": "gulp dev-twig",
     "e2e": "protractor test/protractor.config.js",
     "vrtest": "backstop reference && backstop test",
+    "vrtest_stopxml-basics": "backstop reference --configPath=backstop_stopxml-basics.json && backstop test --configPath=backstop_stopxml-basics.json",
+    "vrtest_stopxml-templates": "backstop reference --configPath=backstop_stopxml-templates.json && backstop test --configPath=backstop_stopxml-templates.json",
     "atest": "pa11y-ci --threshold 10 --config test/pa11yci.json"
   },
   "repository": {
@@ -30,12 +33,12 @@
     "minimist": "^0.2.1",
     "node-sass": "^4.14.1",
     "set-value": "^2.0.1",
-    "webdriver-manager": "^12.1.7"
+    "webdriver-manager": "^12.1.8"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.0",
+    "@frctl/fractal": "^1.5.1",
     "@frctl/mandelbrot": "^1.2.1",
-    "@frctl/twig": "^1.0.0-beta.5",
+    "@geit/fractal-twig-adapter": "^1.4.0",
     "autoprefixer": "^9.6.1",
     "backstopjs": "^5.0.1",
     "combobo": "2.0.1",
@@ -45,6 +48,7 @@
     "fastselect": "^0.7.3",
     "glob-all": "^3.1.0",
     "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
     "gulp-changed": "^4.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
@@ -52,6 +56,8 @@
     "gulp-header": "^2.0.9",
     "gulp-imagemin": "^6.1.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "jasmine-spec-reporter": "^4.2.1",
