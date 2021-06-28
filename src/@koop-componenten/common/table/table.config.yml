@@ -11,39 +11,39 @@ context:
         value: 1
       - column:
         type: Voornaam
-        value: Alexander
+        value: John 
       - column:
         type: Achternaam
-        value: Fase
+        value: Doe
       - column:
         type: Woonplaats
-        value: Delft
+        value: City
     - item:
       - column:
         type:
         value: 2
       - column:
         type: Voornaam
-        value: Ted
+        value: Pieter
       - column:
         type: Achternaam
-        value: van Geest
+        value: Post
       - column:
         type: Woonplaats
-        value: Delft
+        value: City
     - item:
       - column:
         type:
         value: 3
       - column:
         type: Voornaam
-        value: Ard
+        value: Test
       - column:
         type: Achternaam
-        value: van der Heijden
+        value: Test
       - column:
         type: Woonplaats
-        value: Alkmaar
+        value: Test
 variants:
   - name: Fixed columns
     label: Vaste kolommen
@@ -57,41 +57,41 @@ variants:
           - column:
             thclass: u-columnwidth-30p
             type: Voornaam
-            value: Alexander
+            value: John
           - column:
             thclass: u-columnwidth-30p
             type: Achternaam
-            value: Fase
+            value: Doe
           - column:
             thclass: u-columnwidth-30p
             type: Woonplaats
-            value: Delft
+            value: City
         - item:
           - column:
             type:
             value: 2
           - column:
             type: Voornaam
-            value: Ted
+            value: Pieter
           - column:
             type: Achternaam
-            value: van Geest
+            value: Post
           - column:
             type: Woonplaats
-            value: Delft
+            value: City
         - item:
           - column:
             type:
             value: 3
           - column:
             type: Voornaam
-            value: Ard
+            value: Test
           - column:
             type: Achternaam
-            value: van der Heijden
+            value: Test
           - column:
             type: Woonplaats
-            value: Alkmaar
+            value: Test
   - name: Multilevel
     label: Meerlaags
     context:
