@@ -88,10 +88,10 @@ variants:
             value: Test
           - column:
             type: Achternaam
-            value: van der Heijden
+            value: Test
           - column:
             type: Woonplaats
-            value: Alkmaar
+            value: Test
   - name: Multilevel
     label: Meerlaags
     context:
