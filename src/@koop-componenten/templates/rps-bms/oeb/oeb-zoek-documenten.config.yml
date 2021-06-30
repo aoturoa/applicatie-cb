@@ -419,7 +419,7 @@ context:
           type: number
           fieldLabel: Vergadernummer
           fieldLabelVisible: true
-          fieldPlaceholder: 'JJJJ'
+          fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
         ha_itemnummer:
           id: 1111344
