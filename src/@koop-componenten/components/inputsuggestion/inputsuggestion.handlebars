@@ -1,0 +1,21 @@
+<h1>Input suggestion</h1>
+<p>
+  This components allows you to assist the end-user will suggestions based on their given value in the input.
+</p>
+<h2>Default usage</h2>
+<p>The default works with a regex, one you can define yourself.</p>
+<p>
+  <code>data-decorator="init-inputsuggestion" data-suggestionpattern="regex" data-regex="{regex}"</code>
+</p>
+<h2>Pre-defined</h2>
+<p>There are at the moment two fixed patterns available: 'ondernummer' and 'dossiernummer'.</p>
+<p>
+  <code>data-decorator="init-inputsuggestion" data-suggestionpattern="ondernummer"</code>
+</p>
+
+<h2>Examples</h2>
+
+{{render "@input-text" field3 }}
+{{render "@input-text" field }}
+{{render "@input-text" field2 }}
+
