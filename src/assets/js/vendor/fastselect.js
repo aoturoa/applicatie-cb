@@ -813,7 +813,50 @@
     maxItems: null,
 
     parseData: null,
-    onItemSelect: null,
+    onItemSelect: function(e){
+      var all = e[0].parentNode.querySelectorAll('.multiselect__result');
+      var label = e[0].innerHTML;
+      labelStart = label.substring(0,5);
+      if(labelStart === "Alle ") {
+
+        var multiselect = all[0].closest( '.select-multi' );
+        var choices = multiselect.querySelectorAll('.multiselect__choice');
+        for( var i = 0; i < all.length; i++) {
+          if(i != 0) {
+            for ( var x = 0; x < choices.length; x++ ) {
+              var choiceLabel = choices[x].innerText;
+              choiceLabel = choiceLabel.substring(0, choiceLabel.length - 1);
+              choiceLabel = choiceLabel.replace(/(\r\n|\n|\r)/gm, "");
+              if(choiceLabel === all[i].innerHTML) {
+                this.removeSelectedOption({
+                  value: $(choices[x]).attr('data-value'),
+                  text: $(choices[x]).attr('data-text')
+                }, $(choices[x]));
+              }
+            }
+          }
+        }
+      } else {
+          if(all[0].innerHTML.substring(0,5) === 'Alle ') {
+            if(all[0].classList.contains('is-selected')){
+              var multiselect = all[0].closest( '.select-multi' );
+              var choices = multiselect.querySelectorAll('.multiselect__choice');
+
+              for( var y = 0; y < choices.length; y++) {
+                var choiceLabel = choices[y].innerText;
+                choiceLabel = choiceLabel.substring(0, choiceLabel.length - 1);
+                choiceLabel = choiceLabel.replace(/(\r\n|\n|\r)/gm, "");
+                if(choiceLabel === all[0].innerHTML) {
+                  this.removeSelectedOption({
+                    value: $(choices[y]).attr('data-value'),
+                    text: $(choices[y]).attr('data-text')
+                  }, $(choices[y]));
+                }
+              }
+            }
+          }
+      }
+    },
     onItemCreate: null,
     onMaxItemsReached: null,
 
