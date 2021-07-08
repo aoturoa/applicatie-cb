@@ -24,7 +24,6 @@
       this.trigger.addEventListener('keyup', function (e) { this.hideTooltipKeyboard(e); }.bind(this), false);
       this.trigger.addEventListener('mouseout', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('blur', function (e) { this.timeoutTooltip(e); }.bind(this), false);
-      this.content.addEventListener('click', function (e) { this.showTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('click', function (e) { e.preventDefault(); }.bind(this), false);
       this.trigger.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
