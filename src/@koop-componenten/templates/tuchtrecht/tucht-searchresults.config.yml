@@ -22,6 +22,12 @@ context:
   sortContext:
     modifier:
     amountPerPageFilter: true
+    amountPerPageOptions:
+      - amount: 10
+        active: true
+        pressed: true
+      - amount: 20
+      - amount: 50
     columns: true
     options:
     - label: Datum

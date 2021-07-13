@@ -5,6 +5,20 @@ context:
   previousPage: 3
   currentPage: 4
   lastPage: 102
+  pages:
+    - page:
+      href: '#'
+    - page: 3
+      href: '#'
+    - page: 4
+      currentPage: true
+      href: '#'
+    - page: '...'
+      href: '#'
+    - page: 102
+      href: '#'
+    - page:
+      href: '#'
   filterOptions:
     - 10
     - 25

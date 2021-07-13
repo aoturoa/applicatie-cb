@@ -25,7 +25,7 @@
       this.trigger.addEventListener('mouseout', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('blur', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.content.addEventListener('click', function (e) { this.showTooltip(e); }.bind(this), false);
-      this.trigger.addEventListener('click', function (e) { this.showTooltip(e); e.preventDefault(); }.bind(this), false);
+      this.trigger.addEventListener('click', function (e) { e.preventDefault(); }.bind(this), false);
       this.trigger.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
           self.hideTooltip();
@@ -43,9 +43,9 @@
 
 
     }
-    
 
-    
+
+
   };
 
   tooltip.prototype.createCloseButton = function () {
@@ -67,8 +67,8 @@
     // });
   }
 
- 
-  
+
+
   tooltip.prototype.showTooltip = function (sourceEvent) {
     var all = document.querySelectorAll('.tooltip__content');
     var i;
@@ -81,7 +81,7 @@
     this.trigger.classList.add('is-active');
     this.content.setAttribute('aria-hidden', 'false');
     this.content.classList.remove('is-hidden');
-    
+
     if(sourceEvent === 'click') {
       this.trigger.classList.add('is-clicked');
       return;

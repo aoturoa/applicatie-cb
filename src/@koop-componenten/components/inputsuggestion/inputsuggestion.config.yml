@@ -1,0 +1,20 @@
+---
+label: Input suggestion
+status: ready
+context:
+  id: 1
+  field:
+    id: 1
+    fieldLabelVisible: true
+    fieldLabel: Ondernummer
+    attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="ondernummer"
+  field2:
+    id: 2
+    fieldLabelVisible: true
+    fieldLabel: Dossiernummer
+    attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="dossiernummer"
+  field3:
+    id: 3
+    fieldLabelVisible: true
+    fieldLabel: Default (regex)
+    attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="regex" data-regex="^([0-9]{1,4}[A-z]{0,3}|[A-z]{1,5})$"

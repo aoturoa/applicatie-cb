@@ -7,6 +7,12 @@ context:
       active: is-active
     - label: Titel
       href: '#'
+  amountPerPageOptions:
+    - amount: 10
+      active: true
+      pressed: true
+    - amount: 20
+    - amount: 50
 variants:
   - name: with amount
     label: met Aantal resultaten

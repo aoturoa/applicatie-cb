@@ -133,7 +133,7 @@ describe('Datepicker', function() {
     browser.sleep(1400);
 
 
-    expect(datepickerField.getAttribute('value')).toEqual('15-02-2015');
+    expect(datepickerField.getAttribute('data-date')).toEqual('15-02-2015');
   });
 
   it('[RANGE] open second datepicker and the 12th is NOT clickable', function () {
@@ -156,7 +156,7 @@ describe('Datepicker', function() {
     browser.sleep(400);
 
     browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
-    expect(datepickerField.getAttribute('value')).toEqual('15-02-2015');
+    expect(datepickerField.getAttribute('data-date')).toEqual('15-02-2015');
   });
 
   it('[RANGE] open second datepicker and selects the 18th', function () {
@@ -176,7 +176,7 @@ describe('Datepicker', function() {
 
     browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
 
-    expect(datepickerField.getAttribute('value')).toEqual('18-02-2015');
+    expect(datepickerField.getAttribute('data-date')).toEqual('18-02-2015');
   });
 
 });

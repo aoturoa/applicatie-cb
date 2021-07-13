@@ -1,4 +1,4 @@
-<div class="sort {{ modifier }}">
+<div {{#if id}}id="{{id}}"{{/if}} class="sort {{ modifier }}">
   <div class="columns">
     <div class="column {{#if columns}}column-d-8{{/if}}">
       {{#if options}}
@@ -20,15 +20,11 @@
       {{#if amountPerPageFilter}}
           Aantal:
           <ul class="sort__options">
+            {{#each amountPerPageOptions}}
             <li>
-              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="is-active" role="button" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="{{#if active}}is-active{{/if}}" role="button" {{#if pressed}}aria-pressed="true"{{/if}}><span class="visually-hidden">Toon </span>{{amount}}<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
-            <li>
-              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="" role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
-            </li>
-            <li>
-              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class=""  role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
-            </li>
+            {{/each}}
           </ul>
 
       {{/if}}

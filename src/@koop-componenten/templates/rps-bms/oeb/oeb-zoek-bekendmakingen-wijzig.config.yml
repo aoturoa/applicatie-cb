@@ -602,7 +602,6 @@ context:
           labelmodifier: secondary
     sc_rubrieken:
       id: 11125
-      multilevel: false
       linkText: Selecteer rubriek(en)
       linkTextActive: Wijzig selectie
       modalTitle: Selecteer rubriek(en)
@@ -611,33 +610,68 @@ context:
       label: Zoek rubriek
       controls:
         selectAllLabel: Selecteer alle rubrieken
+      multilevel: true
       Options:
-      - Option: 11126
-        id: 11126
-        title: Aanbestedingen
-        short: Aanbestedingen
-      - Option: 11127
-        id: 11127
-        title: Adviezen Raad van State
-        short: Adviezen Raad van State
-        checked: checked
-      - Option: 11128
-        id: 11128
-        title: Algemeenverbindendverklaring van CAO-bepalingen
-        short: Algemeenverbindendverklaring van CAO-bepalingen
-      - Option: 11129
-        id: 11129
-        title: Autorisatiebesluiten basisregistratie Personen
-        short: Autorisatiebesluiten basisregistratie Personen
-      - Option: 11130
-        id: 11130
-        title: Bekendmakingen aan de scheepvaart
-        short: Bekendmakingen aan de scheepvaart
-      - Option: 11131
-        id: 11131
-        title: Bekendmakingen aan het wegverkeer
-        short: Bekendmakingen aan het wegverkeer
-      - Option: 11132
-        id: 11132
-        title: Bekendmakingen Nederland Zorgautoriteit
-        short: Bekendmakingen Nederland Zorgautoriteit
+        - Option: 155671
+          id: 155671
+          title: Besluit van algemene strekking
+          short: Besluit van algemene strekking
+          OptionsSubs:
+            - OptionsSub: 1155672
+              id: 1155672
+              title: algemeen verbindend voorschrift (verordening)
+              short: algemeen verbindend voorschrift (verordening)
+            - OptionsSub: 1255673
+              id: 1255673
+              title: algemeenverbindendverklaring van cao-bepalingen
+              short: algemeenverbindendverklaring van cao-bepalingen
+            - OptionsSub: 1355674
+              id: 1355674
+              title: ander besluit van algemene strekking
+              short: ander besluit van algemene strekking
+            - OptionsSub: 1455675
+              id: 1455675
+              title: Raad voor Werk en Inkomen
+              short: Raad voor Werk en Inkomen
+        - Option: 155676
+          id: 155676
+          title: Melding
+          short: Melding
+          OptionsSubs:
+            - OptionsSub: 1155677
+              id: 1155677
+              title: andere melding
+              short: andere melding
+            - OptionsSub: 1255678
+              id: 1255678
+              title: evenementmelding
+              short: evenementmelding
+            - OptionsSub: 1355679
+              id: 1355679
+              title: exploitatiemelding
+              short: exploitatiemelding
+            - OptionsSub: 14556711
+              id: 14556711
+              title: melding van activiteiten op of in oppervlaktewater
+              short: melding van activiteiten op of in oppervlaktewater
+        - Option: 1556712
+          id: 1556712
+          title: Oproeping of juridische kennisgeving
+          short: Oproeping of juridische kennisgeving
+          OptionsSubs:
+            - OptionsSub: 11556713
+              id: 11556713
+              title: deurwaardersexploot of betekening Belastingdienst
+              short: deurwaardersexploot of betekening Belastingdienst
+            - OptionsSub: 12556714
+              id: 12556714
+              title: echtscheiding of ontbinding
+              short: echtscheiding of ontbinding
+            - OptionsSub: 13556715
+              id: 13556715
+              title: faillissement, surseance van betaling of schuldsanering
+              short: faillissement, surseance van betaling of schuldsanering
+            - OptionsSub: 14556716
+              id: 14556716
+              title: ondercuratelestelling of handlichting
+              short: ondercuratelestelling of handlichting

@@ -15,6 +15,8 @@ context:
   categories:
     - title: Parlementaire documenten
       options:
+        - label: Alle parlementaire documenten
+          value: AllePDocs
         - label: Handelingen
           value: Hand
         - label: Moties
@@ -27,6 +29,8 @@ context:
           value: Agen
     - title: Officiële bekendmakingen
       options:
+        - label: Alle officiele documenten
+          value: AlleODocs
         - label: Tractatenblad
           value: Tractatenblad
         - label: Staatsblad

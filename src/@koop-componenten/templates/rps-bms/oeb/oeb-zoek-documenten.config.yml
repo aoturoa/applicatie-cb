@@ -419,7 +419,7 @@ context:
           type: number
           fieldLabel: Vergadernummer
           fieldLabelVisible: true
-          fieldPlaceholder: 'JJJJ'
+          fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
         ha_itemnummer:
           id: 1111344
@@ -460,6 +460,7 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 12345-XII'
           labelmodifier: secondary
+          attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="dossiernummer"
         ka_ondernummer:
           id: 111122
           type: number
@@ -467,6 +468,7 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 2'
           labelmodifier: secondary
+          attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="ondernummer"
       item5:
         type: checkbox
         headerId: header5
