@@ -74,8 +74,12 @@ inputsuggestion.prototype.setSuggestionAsValue = function(e) {
     suggestion.classList.add('form__error');
     suggestion.setAttribute('role', 'alert');
     suggestion.setAttribute('data-id', 'error-' + this.element.getAttribute('data-id'));
+    suggestion.setAttribute('id', 'error-' + this.element.getAttribute('data-id'));
 
     this.element.parentNode.insertBefore(suggestion, this.element.nextSibling);
+
+    this.element.setAttribute('aria-invalid', true);
+    this.element.setAttribute('aria-describedby', 'error-' + this.element.getAttribute('data-id'));
   };
 
   inputsuggestion.prototype.validateValue = function(suggestiontype, value) {
@@ -188,13 +192,19 @@ inputsuggestion.prototype.setSuggestionAsValue = function(e) {
     if(suggestion) {
       suggestion.parentNode.removeChild(suggestion);
     }
+
+    this.element.removeAttribute('aria-describedby');
   };
   inputsuggestion.prototype.removeExcistingError = function(field) {
     var error = document.querySelector('[data-id="error-' + this.element.getAttribute('data-id') + '"]');
 
     if(error) {
       error.parentNode.removeChild(error);
+
+      this.element.removeAttribute('aria-describedby');
     }
+
+    this.element.setAttribute('aria-invalid', false);
   };
 
   inputsuggestion.prototype.buildAndAppendSuggestion = function(hasSuggestion) {
@@ -203,7 +213,10 @@ inputsuggestion.prototype.setSuggestionAsValue = function(e) {
     suggestion.classList.add('form__suggestion');
     suggestion.setAttribute('role', 'alert');
     suggestion.setAttribute('data-id', 'suggestion-' + this.element.getAttribute('data-id'));
+    suggestion.setAttribute('id', 'suggestion-' + this.element.getAttribute('data-id'));
     suggestion.innerHTML = 'Bedoelde u: "<a href="#" class="js-inputsuggestion__suggestion-link">' + hasSuggestion + '</a>"?';
+
+    this.element.setAttribute('aria-describedby', 'suggestion-' + this.element.getAttribute('data-id'));
 
     this.element.parentNode.insertBefore(suggestion, this.element.nextSibling);
 
