@@ -288,7 +288,7 @@ gulp.task( 'js:watch', function() {
 gulp.task( 'default', gulp.parallel( 'css', 'images', 'fonts', 'js', 'vendor' ) );
 gulp.task( 'dist-build', gulp.series( 'default', 'dist:clean', 'dist:copypublic' ) );
 
-gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'vendor:copy', 'fractal:build', 'ds' ) );
+gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'vendor:copy', 'fractal:build' ) );
 // gulp.task( 'watch', gulp.parallel( 'lint:watch', 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'watch', gulp.parallel( 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'clean', gulp.parallel( 'css:clean', 'images:clean', 'fonts:clean', 'js:clean' ) );
