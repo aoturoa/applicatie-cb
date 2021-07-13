@@ -14,7 +14,8 @@ textarea {
   height: 50px;
   margin: 0;
 
-  &.has-error {
+  &.has-error,
+  &[aria-invalid="true"] {
     border-color: $red;
     color: $red;
   }
