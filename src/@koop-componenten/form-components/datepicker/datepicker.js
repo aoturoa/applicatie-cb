@@ -83,6 +83,8 @@
         if (self.config.range) {
           if (self.config.rangePosition === 'from') {
             $(self.config.rangeRelation).datepicker('option', 'minDate', date);
+            $(self.config.rangeRelation).attr('data-date', date);
+            $(self.config.rangeRelation).parent().find('.datepicker__hiddenfield').val(date);
           } else {
             $(self.config.rangeRelation).datepicker('option', 'maxDate', date);
           }
