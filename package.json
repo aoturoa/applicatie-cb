@@ -1,5 +1,5 @@
 {
-  "name": "koop-componentenbibliotheek",
+  "name": "@applicatie-cb",
   "version": "1.9.49",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://tfs.officielebekendmakingen.nl:8080/tfs/Projects/KOOP/_git/applicatie-overheidnl-frontend"
+    "url": "https://tfs.officielebekendmakingen.nl:8080/tfs/Projects/KOOP/_git/applicatie-cb"
   },
   "author": "Hidde de Vries, Jeroen Hulscher",
   "license": "ISC",
