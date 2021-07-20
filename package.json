@@ -1,5 +1,5 @@
 {
-  "name": "@applicatie-cb",
+  "name": "applicatie-cb",
   "version": "1.9.49",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
