@@ -53,6 +53,10 @@ function findObjectByKey(array, key, value) {
     // if (!onl.dom.$('.selection_popup', this.element)[0]) {
     //   this.trigger.classList.add('icon');
     // }
+    var uniqueId = Math.floor(Math.random() * 1000000);
+    this.element.setAttribute('data-id', uniqueId);
+    this.elementId = uniqueId;
+
     this.trigger.classList.add(this.triggerClassDefault);
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
@@ -63,10 +67,12 @@ function findObjectByKey(array, key, value) {
     this.checkboxSelectAllOnMain = onl.dom.$( '.js-checkbox-selectAllOnMain', this.element )[0];
     this.checkboxSelectAll = onl.dom.$( '.js-checkbox-master', this.element )[0];
     this.hasHiddenValueField = this.config.hiddenValueField || false;
+    this.hiddenValueFieldSeperator = this.config.hiddenValueFieldSeperator || ",";
+    this.hiddenValueFieldValueAttribute = this.config.hiddenValueFieldValueAttribute || "id";
+    this.hiddenValueFieldId = this.config.hiddenValueFieldId || 'hvf-' + this.elementId;
+    this.hiddenValueFieldName = this.config.hiddenValueFieldName || 'hvf-' + this.elementId;
 
-    var uniqueId = Math.floor(Math.random() * 1000000);
-    this.element.setAttribute('data-id', uniqueId);
-    this.elementId = uniqueId;
+
 
     // TODO: improve
     setTimeout(function(){
@@ -95,8 +101,8 @@ function findObjectByKey(array, key, value) {
     var field = document.createElement("input");
     field.type = 'hidden';
     field.classList.add("js-hiddenvaluefield");
-    field.id = 'hvf-' + this.elementId;
-    field.name = 'hvf-' + this.elementId;
+    field.id = this.hiddenValueFieldId;
+    field.name = this.hiddenValueFieldName;
     this.element.appendChild(field);
   }
 
@@ -155,6 +161,7 @@ function findObjectByKey(array, key, value) {
     var y;
     var option;
     var value;
+    var datavalue;
     var id;
 
     // reset items;
@@ -164,15 +171,16 @@ function findObjectByKey(array, key, value) {
     for ( y = 0; y < this.options.length; y++ ) {
       option = [];
       if ( this.options[y].checked ) {
-        value = this.options[y].getAttribute( 'data-value' ) || this.options[y].value;
+        value = this.options[y].value;
+        datavalue = this.options[y].getAttribute( 'data-value' ) || this.options[y].value;
         id = this.options[y].getAttribute( 'id' );
         if (this.options[y].closest('label') !== null) {
-          option.push(value, this.options[y].closest('label').innerText, id);
+          option.push(value, datavalue, this.options[y].closest('label').innerText, id);
         } else {
           if (this.options[y].closest('.input-checkbox')) {
-            option.push(value, this.options[y].closest('.input-checkbox').querySelector('label').innerText, id);
+            option.push(value, datavalue, this.options[y].closest('.input-checkbox').querySelector('label').innerText, id);
           } else {
-            option.push(value, this.options[y].closest('.input-radio').querySelector('label').innerText, id);
+            option.push(value, datavalue, this.options[y].closest('.input-radio').querySelector('label').innerText, id);
           }
 
         }
@@ -188,26 +196,34 @@ function findObjectByKey(array, key, value) {
     var y;
     var summary = '';
     var value;
+    var label;
     var title;
     var id;
     var hiddenvalue = '';
 
     for ( y = 0; y < this.items.length; y++ ) {
+      console.log('this.items[y]',this.items[y]);
       value = this.items[y][0];
-      title = this.items[y][1];
-      id = this.items[y][2];
+      label = this.items[y][1];
+      title = this.items[y][2];
+      id = this.items[y][3];
       if (this.config.type !== 'abbr') {
-        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove" data-subselection-id="' + this.elementId +'"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
+        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '" data-value="'+ value +'">' + label + '<a href="#" class="subselection__summaryitem__remove" data-subselection-id="' + this.elementId +'"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
       } else {
-        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
+        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '" data-value="'+ value +'">' + label + '</' + this.config.type + '> ';
       }
-      hiddenvalue += "," + id;
+      if(this.hiddenValueFieldValueAttribute === 'value') {
+        hiddenvalue += this.hiddenValueFieldSeperator + value;
+      } else {
+        hiddenvalue += this.hiddenValueFieldSeperator + id;
+      }
+
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
 
     if(this.hasHiddenValueField) {
-      var hiddenvaluefield = this.element.querySelector('#hvf-' + this.elementId);
+      var hiddenvaluefield = this.element.querySelector('#' + this.hiddenValueFieldId);
       hiddenvaluefield.value = hiddenvalue.substring(1);
     }
 
