@@ -378,11 +378,13 @@ context:
           short: Zorg en gezondheid
     accordion1:
       type: checkbox
+      id: acc1
       item1:
         type: checkbox
         headerId: header1
         headerLabel: Accordion Vraag 1
         contentId: con1
+        itemId: item1
         hasContent: false
         accordionCheckbox:
           options:
@@ -397,6 +399,7 @@ context:
         headerId: header2
         headerLabel: Accordion Vraag 2
         contentId: con2
+        itemId: item2
         hasContent: false
         accordionCheckbox:
           options:
@@ -407,6 +410,7 @@ context:
         type: checkbox
         headerId: header3
         contentId: con3
+        itemId: item3
         accordionCheckbox:
           options:
           - id: header3
@@ -446,6 +450,7 @@ context:
         type: checkbox
         headerId: header4
         contentId: con4
+        itemId: item4
         accordionCheckbox:
           options:
           - id: header4
@@ -473,6 +478,7 @@ context:
         type: checkbox
         headerId: header5
         contentId: con5
+        itemId: item5
         accordionCheckbox:
           options:
           - id: header5
@@ -512,6 +518,7 @@ context:
         type: checkbox
         headerId: header6
         contentId: con6
+        itemId: item6
         accordionCheckbox:
           options:
           - id: header6
@@ -530,6 +537,7 @@ context:
         type: checkbox
         headerId: header7
         contentId: con7
+        itemId: item7
         accordionCheckbox:
           options:
           - id: header7
