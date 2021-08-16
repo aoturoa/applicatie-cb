@@ -202,7 +202,6 @@ function findObjectByKey(array, key, value) {
     var hiddenvalue = '';
 
     for ( y = 0; y < this.items.length; y++ ) {
-      console.log('this.items[y]',this.items[y]);
       value = this.items[y][0];
       label = this.items[y][1];
       title = this.items[y][2];
