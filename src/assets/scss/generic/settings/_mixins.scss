@@ -2,8 +2,8 @@
 $browser-context: 16; // Default
 
 @function em($pixels, $context: $browser-context) {
-  // @return #{$pixels/$context}em;
-  @return math.div($pixels, $context)em;
+  @return #{$pixels/$context}em;
+  // @return math.div($pixels, $context)em;
 }
 
 @mixin aspect-ratio($width, $height) {
@@ -13,7 +13,8 @@ $browser-context: 16; // Default
     display: block;
     content: "";
     width: 100%;
-    padding-top: math.div($height, $width) * 100%;
+    padding-top: ($height / $width) * 100%;
+    // padding-top: math.div($height, $width) * 100%;
   }
 
   > .content--inner {
