@@ -69,10 +69,12 @@
     if(hash){
       // is accordion? then open the item;
       var el = document.querySelector('#'+hash);
-      if(el.classList.contains('accordion__item')){
-        var trigger = el.querySelector('.accordion__item__header-trigger');
-        if(trigger) {
-          trigger.click();
+      if(el){
+        if(el.classList.contains('accordion__item')){
+          var trigger = el.querySelector('.accordion__item__header-trigger');
+          if(trigger) {
+            trigger.click();
+          }
         }
       }
     }
