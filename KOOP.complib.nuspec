@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>KOOP.componentenbiliotheek</id>
+    <version>0.0.1</version>
+    <title>Componentenbibliotheek</title>
+    <authors>Kennis- en Exploitatiecentrum voor Officiële Overheidspublicaties</authors>
+    <owners>Kennis- en Exploitatiecentrum voor Officiële Overheidspublicaties</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Front-end componentenbiliotheek</description>
+    <releaseNotes>
+      - 1.9.49 / RPS / Input suggestie
+    </releaseNotes>
+    <summary>Bibliotheek</summary>
+    <tags>KOOP complib componentenbibliotheek</tags>
+  </metadata>
+  <files>
+    <file src="dist\images\**" target="complib\images"/>
+    <file src="dist\css\**" target="complib\css"/>
+    <file src="dist\js\**" target="complib\js"/>
+    <file src="dist\fonts\**" target="complib\fonts"/>
+  </files>
+</package>
