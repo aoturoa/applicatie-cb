@@ -12,6 +12,10 @@
   &--info {
     background-color: $lightBlue;
     background-image: $infoIconBlue;
+
+    h2, h3, h4 {
+      color: $darkBlue;
+    }
   }
 
   &--warning {
@@ -32,38 +36,6 @@
   &--update &__inner {
     padding-top: 1.25em;
   }
-
-  body > & {
-
-    &--warning {
-        background-position: 1em .6em;
-    }
-    @media ( min-width: $breakpointDesktop ) {
-      &--warning {
-        background-color: lighten($lightRed,7);
-
-        .alert__inner {
-          background-image: $iconAlertRed;
-          background-size: 1.5em;
-          background-position: 0 -0.1em;
-        }
-      }
-
-      &--info {
-        background-color: $lightBlue;
-        .alert__inner {
-          background-image: $infoIconBlue;
-          background-position: 0 .125em;
-        }
-      }
-      &--success {
-        .alert__inner {
-          background-position: 0 .125em;
-        }
-      }
-    }
-  }
-
 }
 
 .jumbotron {
@@ -75,6 +47,4 @@
       border: 2px solid $red;
     }
   }
-
-
 }

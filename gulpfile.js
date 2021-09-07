@@ -17,7 +17,6 @@ const rename = require( 'gulp-rename' );
 const change = require( 'gulp-change' );
 const cleancss = require( 'gulp-clean-css' );
 var replace = require( 'gulp-replace' );
-
 const paths = {
   assets: 'src/assets',
   styles: 'src/assets/scss',
@@ -47,16 +46,14 @@ gulp.task( 'fractal:start', function() {
 gulp.task( 'fractal:start-twig', function() {
 
   // Twig adapter
-  const twigAdapter = require( '@geit/fractal-twig-adapter' )( {
+  const twigAdapter = require( '@frctl/twig' )( {
     importContext: true
   } );
 
   // Fractal
   const fractal = require( './fractal.js' );
-
   fractal.components.engine( twigAdapter );
   fractal.components.set( 'ext', '.twig' );
-
   const logger = fractal.cli.console;
   const server = fractal.web.server( {
     sync: true,
@@ -179,14 +176,15 @@ gulp.task( 'js:build', function() {
       paths.scripts + '/vendor/fastselect.js',
       paths.scripts + '/vendor/moment.js',
       paths.scripts + '/vendor/stickybit.min.js',
-      paths.scripts + '/vendor/mutationobserver.min.js',
       paths.scripts + '/vendor/jquery-autocomplete.js',
       paths.scripts + '/vendor/validityState.polyfill.js',
       paths.scripts + '/polyfills.js',
       paths.scripts + '/main.js',
       paths.components + '/**/*.js',
       '!' + paths.components + '/**/*.e2e.js',
-      paths.scripts + '/decorators/*.js',
+      paths.scripts + '/decorators/collapse.js',
+      paths.scripts + '/decorators/stick-sidebar.js',
+      paths.scripts + '/decorators/sticky.js',
       paths.scripts + '/run.js'
     ] )
     .pipe( concat( 'main.js' ) )
@@ -196,11 +194,23 @@ gulp.task( 'js:build', function() {
         sourceMap: false
       },
     } ) )
-    .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name } ) )
+    .pipe( header( '/* Package version: bwb-<%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name } ) )
     .pipe( gulp.dest( paths.drop + '/js' ) );
 } );
 
-gulp.task( 'js', gulp.series( 'js:clean', 'js:build' ) );
+gulp.task( 'js:bwb', function() {
+  return gulp.src( paths.scripts + '/decorators/bwb.js' )
+    .pipe( minify( {
+      minify: true,
+      minifyJS: {
+        sourceMap: false
+      },
+    } ) )
+    .pipe( header( '/* Packaged with "<%= name %>" version: bwb-<%= version %>. */\n', { version: packagejson.version, name: packagejson.name } ) )
+    .pipe( gulp.dest( paths.drop + '/js' ) );
+} );
+
+gulp.task( 'js', gulp.series( 'js:clean', 'js:build', 'js:bwb' ) );
 
 gulp.task( 'ds:clean', function( done ) {
   return del( [ paths.designsystem ], done );
@@ -210,6 +220,9 @@ gulp.task( 'ds:copypublic', function() {
   return gulp.src( paths.drop + '/**/*' )
     .pipe( gulp.dest( paths.designsystem ) );
 } );
+
+
+
 gulp.task( 'ds:copytemplates', function() {
   return gulp.src( [
       paths.componentlibrary + '/components/preview/templates-ds---rationale.html',

@@ -11,9 +11,9 @@ context:
       - label:
         value: Accountantregister
         url: "#"
-  buttonAction:
+  buttonReset: true
+  linkDelete:
     text: Wis alle filters
     action: '#'
-    class: link link--remove
 
 

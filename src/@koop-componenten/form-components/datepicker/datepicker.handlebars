@@ -18,14 +18,14 @@
 
 {{else}}
   {{#if haslabel}}
-    <label class="form__label{{#if labelmodifier}} form__label--{{labelmodifier}}{{/if}}" for="input--{{id}}">{{label}}</label>
+    <label class="{{#if hidelabel}}visually-hidden {{else}}{{/if}} form__label{{#if labelmodifier}} form__label--{{labelmodifier}}{{/if}}" for="input--{{id}}">{{label}}</label>
   {{/if}}
   <div class="datepicker">
-    <input type="date" {{#if required}}required{{/if}} {{#if disabled}}disabled{{/if}} value="{{value}}" data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
-      data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" data-placeholder="{{ fieldPlaceholder }}" />
+    <input type="date" {{#if required}}required{{/if}} value="{{value}}" {{#if name}}name="{{name}}"{{/if}} data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="{{#if cleanId}}{{id}}{{else}}input--{{ id }}{{/if}}" data-placeholder="{{ fieldPlaceholder }}" {{{attributes}}}/>
   </div>
 {{/if}}
 {{#if selectToday}}
-  <a {{#if todayId}}id="{{todayId}}"{{/if}} href="#" data-handler="select-today" data-for="input--{{id}}">Vandaag</a>
+  <a {{#if todayId}}id="{{todayId}}"{{/if}} href="#" data-handler="select-today" data-for="{{#if cleanId}}{{id}}{{else}}input--{{ id }}{{/if}}">Vandaag</a>
 {{/if}}
 

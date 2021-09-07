@@ -2,10 +2,6 @@
   margin-bottom: .5em;
   text-align: right;
 
-  &--alignleft {
-    text-align: left;
-  }
-
   &__list {
     @extend .list--inline;
     margin: 0;

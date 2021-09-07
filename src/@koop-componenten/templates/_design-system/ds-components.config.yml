@@ -67,10 +67,6 @@ context:
           href: banner
         - stitle: Blok
           href: blok
-        - stitle: Blok indent
-          href: blok-indent
-        - stitle: Blok zoeken
-          href: blok-search
         - stitle: Blockquote
           href: blockquote
         - stitle: Bronlijst
@@ -81,6 +77,8 @@ context:
           href: buttons
         - stitle: Buttongroup
           href: buttongroup
+        - stitle: CopyData
+          href: copydata
         - stitle: Characteristics
           href: characteristics
         - stitle: Collapsible
@@ -294,9 +292,3 @@ context:
     id: 2765432
   profileLoggedin2:
     id: 2765431
-  selectall:
-    id: 9767890
-  figure2:
-    id: 98765678
-  video:
-    id: 8765456789

@@ -62,22 +62,6 @@
     color: $mediumGrey;
   }
 
-  &.icon-bg {
-    padding-right: 3.75em;
-    background-position: right .75em center;
-    background-repeat: no-repeat;
-
-    &:after {
-      content: "";
-      position: absolute;
-      right: 2.75em;
-      top: .6em;
-      bottom: .6em;
-      width: 1px;
-      background: $darkBlue;
-    }
-  }
-
   &--slim {
     font-weight: normal;
     padding-right: .75em;
@@ -368,12 +352,6 @@
       border-right: 1px solid $white;
       padding-left: .75em;
       margin-right: .2em;
-    }
-  }
-
-  @media ( min-width: $breakpointDesktop ) {
-    &--nolabel {
-      margin-top: 1.45em;
     }
   }
 }

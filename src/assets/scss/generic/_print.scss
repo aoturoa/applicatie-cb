@@ -18,7 +18,6 @@
     flex: none;
   }
 
-
   .header {
     border: none;
     padding-bottom: 12px;
@@ -74,8 +73,7 @@
   .question-explanation,
   .sort,
   .pageactions,
-  .buttonswitch,
-  .table-topbar {
+  .buttonswitch {
     display: none !important;
   }
 
@@ -86,9 +84,6 @@
   .article__header--law {
     page-break-inside: avoid;
   }
-
-
-  
 
 
 }

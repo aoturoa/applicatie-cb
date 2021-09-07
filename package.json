@@ -1,12 +1,11 @@
 {
-  "name": "koop-componentenbibliotheek",
-  "version": "1.9.48",
+  "name": "koop-componentenbibliotheek-wettennl",
+  "version": "1.3.0",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
     "test": "npm e2e && npm vrtest && npm atest",
     "start": "gulp dev",
-    "dev-twig": "gulp dev-twig",
     "e2e": "protractor test/protractor.config.js",
     "vrtest": "backstop reference && backstop test",
     "vrtest_stopxml-basics": "backstop reference --configPath=backstop_stopxml-basics.json && backstop test --configPath=backstop_stopxml-basics.json",
@@ -33,12 +32,12 @@
     "minimist": "^0.2.1",
     "node-sass": "^4.14.1",
     "set-value": "^2.0.1",
-    "webdriver-manager": "^12.1.8"
+    "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.5.1",
     "@frctl/mandelbrot": "^1.2.1",
-    "@geit/fractal-twig-adapter": "^1.4.0",
+    "@frctl/twig": "^1.0.0-beta.5",
     "autoprefixer": "^9.6.1",
     "backstopjs": "^5.0.1",
     "combobo": "2.0.1",

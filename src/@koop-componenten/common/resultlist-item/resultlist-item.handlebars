@@ -1,6 +1,10 @@
 
 <li>
 
+  {{#each hiddenInputs }}
+    <input type="hidden" {{#if id}}id="{{id}}"{{/if}} class="{{class}}" value="{{value}}" />
+  {{/each}}
+
   {{#if headerimg }}
     <p><img src="{{headerimg}}" /></p>
   {{/if}}
@@ -10,9 +14,9 @@
   {{/if}}
 
   {{#if titleHeader }}
-    <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}>
+    <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}> {{#if amountResults}}<span class="resultlist__amountresults">{{amountResults}}</span>{{/if}}
   {{else}}
-    <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="result--title">{{ title }}</a>
+    <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="result--title">{{ title }}</a> {{#if amountResults}}<span class="resultlist__amountresults">{{amountResults}}</span>{{/if}}
   {{/if}}
 
   {{#if metadata }}
@@ -42,6 +46,10 @@
       {{/each}}
     </ul>
   {{/if}}
+
+  {{#each labelsSecondair }}
+    <p class="result--label"><span class="label {{#if labelSecondairType}}label--{{labelSecondairType}}{{/if}}">{{ labelSecondair }}</span></p>
+  {{/each}}
 
   {{#if text }}
     <p>{{{ text }}}</p>

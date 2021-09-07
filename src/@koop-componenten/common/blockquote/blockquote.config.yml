@@ -4,10 +4,10 @@ label: Blockquote
 context:
   lang: en
   text: Yes, we can.
-  cite: www.barackobama.org
+  cite: Barack Obama
 variants:
   - name: Q
     context:
       q: true
       text: Yes, we can.
-      cite: www.barackobama.org
+      cite: Barack Obama

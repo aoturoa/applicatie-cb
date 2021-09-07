@@ -23,11 +23,14 @@
     }
   }
 
+  .result--label {
+    margin: 0;
+  }
+
   .result--title {
     font-size: 1rem;
     font-weight: 700;
     color: $darkBlue;
-    text-decoration: none;
     display: block;
     max-width: calc(100% - 6em);
     &.icon {
@@ -38,9 +41,7 @@
     font-size: 1.5rem;
     margin-bottom: .75em;
     line-height: 1em;
-  }
-  a.result--title {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .result--actions {
@@ -60,10 +61,6 @@
     // & ~ .list {
     //   margin-top: 1em;
     // }
-  }
-
-  .dl--publication {
-    margin-bottom: 1em;
   }
 
   &__data {

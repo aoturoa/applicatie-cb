@@ -4,25 +4,9 @@ document.documentElement.className = 'has-js';
 // run all decorators on page load
 onl.run();
 
-var mutationObserver = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    if(mutation.target.dataset.decorator === 'init-accordion') {
-      var accordionId = mutation.target.id;
-      var accordion = document.querySelector('#'+accordionId);
-      accordion.removeAttribute('data-decorator-initialized');
-    }
-    onl.run();
-  });
-});
-
-mutationObserver.observe(document.documentElement, {
-  attributes: false,
-  characterData: false,
-  childList: true,
-  subtree: true,
-  attributeOldValue: false,
-  characterDataOldValue: false
-});
+if(onl.ui.isTouch()){
+  document.documentElement.classList.add('is-touch');
+}
 
 // bind click handler so that handlers run on click
 // of elements with data-handler="handler"

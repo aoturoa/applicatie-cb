@@ -49,7 +49,7 @@ variants:
         content: Accordion Antwoord 12
         accordionCheckbox:
           options:
-          - id: header1442
+          - id: header1
             text: Agenda's
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
@@ -62,7 +62,7 @@ variants:
         content: Accordion Antwoord 23
         accordionCheckbox:
           options:
-          - id: header2442
+          - id: header2
             text: Handelingen
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
@@ -76,6 +76,6 @@ variants:
         hasContent: false
         accordionCheckbox:
           options:
-          - id: checkbox-3442
+          - id: checkbox-3
             text: Kamerstukken
             name: countries

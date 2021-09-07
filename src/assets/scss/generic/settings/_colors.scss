@@ -31,7 +31,8 @@ $lighterRed: #F5E4E0 !default;
 $lightPurple: #F7F0FE !default;
 $blueGray: #A4B3C6 !default;
 
-$focus: $yellow;
+$focus: #B37D00;
+$focusOnBlue: #FFCE5C;
 
 $textColor: $darkGrey !default;
 
@@ -45,9 +46,6 @@ $buttonTextColor: $textColor !default;
 $buttonBorderColor: $lighterGrey !default;
 
 $headerBackgroundColor: $primaryBlue !default;
-$headerBackgroundColorAcc: $green !default;
-$headerBackgroundColorTest: $darkGrey !default;
-$headerBackgroundColorDev: $orange !default;
 $headerBorderColor: $mediumBlue !default;
 $headerLinkColor: $white !default;
 $headerLinkCurrentColor: $darkBlue !default;

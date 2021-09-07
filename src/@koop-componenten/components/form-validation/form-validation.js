@@ -21,8 +21,23 @@ var supports = function () {
   'use strict';
 
   onl.decorate({
-    'init-form-validation': function (element) {
+    'init-form-bwbvalidation': function (element) {
       // new formvalidation(element);
+      var submitHandler = function(event) {
+        event.preventDefault();
+        if(Page_ClientValidate()){
+          element.submit();
+        } else {
+          var errors = document.querySelectorAll('[data-validation-field]');
+          for(var i = 0; i < errors.length; i++) {
+            if(errors[i].style.display === "block") {
+              document.getElementById(errors[i].getAttribute('data-validation-field')).focus();
+              return;
+            }
+          }
+        }
+    };
+      element.addEventListener("submit", submitHandler, true);
     }
   });
 

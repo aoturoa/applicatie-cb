@@ -2,6 +2,9 @@
 label: Input checkbox
 status: ready
 context:
+  modifier: inline-group
+  fieldLabel: Welke landen vochten er mee met de geallieerden in de Tweede Wereldoorlog?
+  name: alliedforces
   options:
     - id: checkbox-1
       text: Groot-Brittanië
@@ -17,6 +20,9 @@ context:
 variants:
   - name: met Link
     context:
+      modifier: inline-group
+      fieldLabel: Welke landen vochten er mee met de geallieerden in de Tweede Wereldoorlog?
+      name: alliedforces
       options:
         - id: checkbox-1
           text: Groot-Brittanië
@@ -35,6 +41,8 @@ variants:
     label: Uitgebreid
     explanation: false
     context:
+      modifier: checkboxgroup--many
+      name: waterschappen
       options:
         - id: waterschappen-1
           text: Hoogheemraadschap Amstel, Gooi en Vecht

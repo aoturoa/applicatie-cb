@@ -281,14 +281,11 @@ window.onl = {
       .toLowerCase()
       .split( WHITESPACE );
 
-      if(!element.getAttribute('data-decorator-initialized')) {
-        decoratorArr.forEach( function( decorator ) {
-          if ( typeof onl.decorators[ decorator ] === 'function' ) {
-            onl.decorators[ decorator ]( element );
-          }
-        });
-        element.setAttribute('data-decorator-initialized', true);
-      }
+      decoratorArr.forEach( function( decorator ) {
+        if ( typeof onl.decorators[ decorator ] === 'function' ) {
+          onl.decorators[ decorator ]( element );
+        }
+      });
     });
   }
 

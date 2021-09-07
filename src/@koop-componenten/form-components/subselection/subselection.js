@@ -57,12 +57,9 @@ function findObjectByKey(array, key, value) {
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
-    this.modal = onl.dom.$( '.modal', this.element )[0];
-    this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.modal );
+    this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
-    this.checkboxSelectAllOnMain = onl.dom.$( '.js-checkbox-selectAllOnMain', this.element )[0];
-    this.checkboxSelectAll = onl.dom.$( '.js-checkbox-master', this.element )[0];
-    this.hasHiddenValueField = this.config.hiddenValueField || false;
+    this.motherCheckboxIds = this.config.motherCheckboxIds || false;
 
     var uniqueId = Math.floor(Math.random() * 1000000);
     this.element.setAttribute('data-id', uniqueId);
@@ -72,74 +69,25 @@ function findObjectByKey(array, key, value) {
     setTimeout(function(){
       self.resetLink = self.element.querySelector('.' + self.resetLinkClass);
       if (self.resetLink) {
-        self.resetLink.addEventListener('click', function (e) {
-          self.resetCheckboxes(e);
-          // self.collectValues(e);
-        }.bind(self), false);
+        self.resetLink.addEventListener('click', function (e) { self.collectValues(e); }.bind(self), false);
       }
     }, 1000);
 
     this.items = [];
 
-    if(this.hasHiddenValueField) {
-      this.createHiddenValueField();
-    }
-
     this.collectValues();
-    this.parseSelectedOptions();
+    this.parseSelectedOptions("firstinit");
 
     this.attachListeners();
   };
 
-  formSubselection.prototype.createHiddenValueField = function() {
-    var field = document.createElement("input");
-    field.type = 'hidden';
-    field.classList.add("js-hiddenvaluefield");
-    field.id = 'hvf-' + this.elementId;
-    field.name = 'hvf-' + this.elementId;
-    this.element.appendChild(field);
-  }
-
   formSubselection.prototype.attachListeners = function() {
     var y;
-    var self = this;
 
     for ( y = 0; y < this.options.length; y++ ) {
       this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
     }
-
-    if (this.checkboxSelectAllOnMain) {
-      this.checkboxSelectAllOnMain.addEventListener( 'change', function (el) { this.setStateSelectAll(el); }.bind(this), false);
-    }
-
-
-    var subscription = pubsub.subscribe('/disregardchanges/disregardAll/updateSummary', function (obj) {
-      var subselection = self.element;
-
-      // if clicked remove-trigger from subselection is in the same subselection component.
-      if (obj.element.getAttribute('data-id') === subselection.getAttribute('data-id')) {
-        self.collectValues();
-      }
-    });
-
-
-
   };
-
-  formSubselection.prototype.setStateSelectAll = function(el) {
-    this.checkboxSelectAll.checked = el.target.checked;
-
-    if ("createEvent" in document) {
-      var evt = document.createEvent("HTMLEvents");
-      evt.initEvent("change", false, true);
-      this.checkboxSelectAll.dispatchEvent(evt);
-    } else {
-      this.checkboxSelectAll.fireEvent("onchange");
-    }
-
-
-
-  }
 
   formSubselection.prototype.attachRemoveListeners = function() {
     var i;
@@ -184,35 +132,30 @@ function findObjectByKey(array, key, value) {
     this.parseSelectedOptions();
   };
 
-  formSubselection.prototype.parseSelectedOptions = function() {
+  formSubselection.prototype.parseSelectedOptions = function(firstinit) {
     var y;
     var summary = '';
     var value;
     var title;
     var id;
-    var hiddenvalue = '';
+    var firstTimeLoaded = firstinit;
 
     for ( y = 0; y < this.items.length; y++ ) {
       value = this.items[y][0];
       title = this.items[y][1];
       id = this.items[y][2];
-      if (this.config.type !== 'abbr') {
+      // if (this.config.type !== 'abbr') {
         summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove" data-subselection-id="' + this.elementId +'"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
-      } else {
-        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
-      }
-      hiddenvalue += "," + id;
+      // } else {
+        // summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
+      // }
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
 
-    if(this.hasHiddenValueField) {
-      var hiddenvaluefield = this.element.querySelector('#hvf-' + this.elementId);
-      hiddenvaluefield.value = hiddenvalue.substring(1);
+    if(!firstTimeLoaded) {
+      this.updateTriggerLabel(this.items.length);
     }
-
-
-    this.updateTriggerLabel(this.items.length);
     if (this.config.maxShow) {
       this.initHideUnwantedResults();
     }
@@ -295,12 +238,26 @@ function findObjectByKey(array, key, value) {
       this.trigger.innerText = this.config.triggerOnChangeText;
       this.trigger.classList.remove(this.triggerClassDefault);
       this.trigger.classList.add(this.triggerClassActive);
+      this.updateMotherCheckboxes(true);
     } else {
       this.trigger.innerText = this.triggerOnLoadText;
       this.trigger.classList.remove(this.triggerClassActive);
       this.trigger.classList.add(this.triggerClassDefault);
+      // this.updateMotherCheckboxes(false);
     }
   };
+
+  formSubselection.prototype.updateMotherCheckboxes = function (e) {
+    if(this.motherCheckboxIds){
+      var state = e;
+      var a;
+      var boxes = this.motherCheckboxIds.split(',');
+
+      for ( a = 0; a < boxes.length; a++ ) {
+        document.getElementById(boxes[a]).checked = state;
+      }
+    }
+  }
 
   formSubselection.prototype.removeSummaryItem = function (e) {
     var item = e.target.parentNode;
@@ -327,18 +284,6 @@ function findObjectByKey(array, key, value) {
       // }
     }
 
-    var insideSubselection = getClosest(this.element, '.subselection');
-    if(insideSubselection){
-      var checkboxSelectAll = insideSubselection.querySelector('.js-checkbox-master');
-      if(checkboxSelectAll) {
-        checkboxSelectAll.checked = false;
-      }
-      var checkboxSelectAllOnMain = insideSubselection.querySelector('.js-checkbox-selectAllOnMain');
-      if(checkboxSelectAllOnMain) {
-        checkboxSelectAllOnMain.checked = false;
-      }
-    }
-
     // onchange event needs manual triggering on checkboxes
     if ("createEvent" in document) {
       var evt = document.createEvent("HTMLEvents");
@@ -348,29 +293,12 @@ function findObjectByKey(array, key, value) {
       target.fireEvent("onchange");
     }
 
-    // used in: "disregardchanges";
+    // used in: "form-disregardchanges.js";
     pubsub.publish('/subselection/removeSummaryItem', {
       element: this.element
     });
 
     this.collectValues();
-  };
-
-  formSubselection.prototype.resetCheckboxes = function (e) {
-    var y;
-    for ( y = 0; y < this.options.length; y++ ) {
-      this.options[y].checked = false;
-    }
-
-    // onchange event needs manual triggering on checkboxes
-    if ("createEvent" in document) {
-      var evt = document.createEvent("HTMLEvents");
-      evt.initEvent("change", false, true);
-      this.options[0].dispatchEvent(evt);
-    } else {
-      this.options[0].fireEvent("onchange");
-    }
-    e.preventDefault();
   };
 
 
@@ -383,7 +311,6 @@ function findObjectByKey(array, key, value) {
 
     this.triggerDisregard = this.element.querySelector(this.config.triggerDisregard) || this.element.querySelector('.modal__close');
     this.triggerApplySelection = this.element.querySelector(this.config.triggerApplySelection) || this.element.querySelector('[data-handler="close-modal"]');
-    this.selectAllOnMain = this.element.querySelector('.js-checkbox-selectAllOnMain');
 
     this.options = onl.dom.$('input[type=checkbox], input[type=radio]', this.element);
 
@@ -405,16 +332,11 @@ function findObjectByKey(array, key, value) {
       }
     });
 
-    var subscription2 = pubsub.subscribe('/selectall/init/checkboxSelectAllOnMain/true', function (obj) {
-      self.createState();
-    });
-
   };
 
 
 
   disregardchanges.prototype.setEventListeners = function () {
-    var self = this;
 
     // Event listeners
     if (this.triggerDisregard) {
@@ -424,16 +346,6 @@ function findObjectByKey(array, key, value) {
       this.triggerApplySelection.addEventListener('click', function (e) { this.rebuildState(e) }.bind(this), false);
     }
 
-    var subscription = pubsub.subscribe('/selectall/changeMasterCheckbox', function (subselectionId) {
-      var subselectionId = subselectionId.element;
-      var subselection = self.element;
-
-      // if clicked remove-trigger from subselection is in the same subselection component.
-      if (subselectionId === subselection.getAttribute('data-id')) {
-        self.createState();
-      }
-    });
-
   }
 
   disregardchanges.prototype.rebuildState = function () {
@@ -442,6 +354,7 @@ function findObjectByKey(array, key, value) {
 
   disregardchanges.prototype.createState = function () {
     this.state = [];
+
     var elements = onl.dom.$('input[type=checkbox], input[type=radio]', this.element);
 
     for (var i = 0; i < elements.length; i++) {
@@ -449,12 +362,10 @@ function findObjectByKey(array, key, value) {
       // only accept radio and checkbox;
       if (!(elements[i].type === 'radio' || elements[i].type === 'checkbox')) return;
 
-      // if(!elements[i].classList.contains('js-checkbox-master')) {
-        var id = elements[i].getAttribute('id');
-        var type = elements[i].type;
-        var state = elements[i].checked;
-        this.state.push({ "ID": id, "type": type, "state": state });
-      // }
+      var id = elements[i].getAttribute('id');
+      var type = elements[i].type;
+      var state = elements[i].checked;
+      this.state.push({ "ID": id, "type": type, "state": state });
     }
   }
 
@@ -462,22 +373,22 @@ function findObjectByKey(array, key, value) {
     var state = this.state;
 
     for (var i = 0; i < state.length; i++) {
-
       // create relation between state and input;
       var item = findObjectByKey(state, 'ID', state[i].ID);
       // set state;
       var input = document.getElementById(item.ID);
       input.checked = state[i].state;
 
+      // onchange event needs manual triggering on checkboxes
+      if ("createEvent" in document) {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("change", false, true);
+        input.dispatchEvent(evt);
+      } else {
+        input.fireEvent("onchange");
+      }
     }
-
-    pubsub.publish('/disregardchanges/disregardAll/updateSummary', {
-      element: this.element
-    });
-
   }
-
-
 
 
 

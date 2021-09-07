@@ -12,20 +12,17 @@
     }
   }
 
-  &:checked + label:before,
-  &:checked + input + label:before {
+  &:checked + label:before {
     background-color: $darkBlue !important;
     background-image: $iconCheckboxWhite;
   }
 
-  &:disabled + label,
-  &:disabled + input + label {
+  &:disabled + label {
     color: $mediumGrey;
     cursor: auto;
   }
 
-  &:disabled + label:before,
-  &:disabled + input + label:before {
+  &:disabled + label:before {
     border-color: $mediumGrey;
   }
 

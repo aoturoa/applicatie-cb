@@ -6,6 +6,24 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+        className: is-active
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+    youAreHere:
+      - text: Wettenbank
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Regeling
   sidebar:
     modifier: list--facet
     heading: Officiële bekendmakingen
@@ -16,30 +34,253 @@ context:
       - link: '#'
         text: Alles openklappen
         icon: icon-plus.svg
+        id: Unfoldall
       - link: '#'
         text: Alles dichtklappen
         icon: icon-minus.svg
+        id: Foldall
   counter:
     modifier: article__header--main
     counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
-    relationsAmount: 128
-    activeFrom: Geldend van 01-07-2016 t/m heden
+    activeFrom: Geldend van 18-04-2019 t/m heden
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01" data-bwbngid="http://wetten.overheid.nl/id/BWBR0008994/1998-01-01/0"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01" data-citeertitel="Aanpassingswet derde tranche Awb I" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0008994%2f1998-01-01%2f0&amp;geldigheidsdatum=2020-09-28&amp;zichtdatum=2021-01-27"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    compare: true
+    compareMode: true
+    compareLabel: Versie vergelijk
+    compareModalId: popupvergelijken
+    compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
+    compareAClass: popupvergelijken
+    print: true
+    printModal: true
+    printLabel: Druk de regeling af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla de regeling op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0001840/2018-12-21/0'
+  popuplidorelaties:
+    modalId: popuplidorelaties
+    openButton: false
+    initClosed: true
+  popuppermanentelink:
+    modalId: popuppermanentelink
+    openButton: false
+    initClosed: true
+    copydata1:
+      datafieldId: divCiteertitel
+    copydata2:
+      datafieldId: divUrl
+    copydata3:
+      datafieldId: divJuriconnectverwijzing
+  popupafdrukken:
+    modalId: popupafdrukken
+    openButton: false
+    initClosed: true
+    modalPrintButton:
+      text: Ok
+    printradio:
+      options:
+        - id: checkbox-1
+          text: Exclusief wetstechnische informatie
+          name: printopties
+          value: rbExclusief
+          checked: checked
+        - id: checkbox-2
+          text: Inclusief wetstechnische informatie
+          name: printopties
+          value: rbInclusief
+  popupvergelijken:
+    modalId: popupvergelijken
+    openButton: false
+    initClosed: true
+    modalCompareButton:
+      text: Vergelijk
+    compareSelect:
+      id: 112
+      selectClass: dlDatum
+      fieldLabel: Inwerkingtreding
+      options:
+        - label: 01-01-2019
+          value: 20
+          selected: selected
+        - label: 01-01-2018
+          value: 20
+        - label: 01-01-2017
+          value: 20
+        - label: 01-01-2016
+          value: 20
+  popupexporteren:
+    modalId: popupexporteren
+    openButton: false
+    initClosed: true
+    modalExportButton:
+      text: Exporteer
+    exportradio:
+      options:
+        - id: checkbox-3
+          text: XML (De tekst zal worden geleverd in een .xml-bestand)
+          name: exportopties
+          modifier: exporteren-xml-optie
+          value: rbXml
+          checked: checked
+        - id: checkbox-4
+          text: TXT (De tekst zal worden geleverd in een .txt-bestand)
+          name: exportopties
+          value: rbTxt
+        - id: checkbox-5
+          text: RTF (Maak deze keuze als u de tekst wilt (her)gebruiken in een tekstverwerkingsprogramma)
+          name: exportopties
+          value: rbRtf
+    exportradio2:
+      options:
+        - id: rbZonderAfbeeldingen
+          text: Tekst zonder afbeeldingen exporteren
+          name: exportopties2
+          value: rbZonderAfbeeldingen
+          checked: checked
+        - id: rbMetAfbeeldingen
+          text: Tekst met afbeeldingen exporteren
+          name: exportopties2
+          value: rbMetAfbeeldingen
   counter1:
     modifier: article__header--law--part
     useTitle: true
     titleTag: h2
-    counter: Hoofdstuk 1
-    relationsAmount: 128
+    counter: Deel 1. Algemene bepalingen
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0008994&hoofdstuk=1&z=1998-01-01&g=1998-01-01
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0008994&amp;hoofdstuk=1&amp;z=1998-01-01&amp;g=1998-01-01" data-bwbngid="http://wetten.overheid.nl/id/BWBR0008994/1998-01-01/0/Hoofdstuk1"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0008994&hoofdstuk=1&z=1998-01-01&g=1998-01-01'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0008994&hoofdstuk=1&z=1998-01-01&g=1998-01-01
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0008994&hoofdstuk=1&z=1998-01-01&g=1998-01-01" data-citeertitel="" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0008994%2f1998-01-01%2f0%2fHoofdstuk1&geldigheidsdatum=1998-01-01&zichtdatum=2021-02-17"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    compare: true
+    compareModal: true
+    compareLabel: Versie vergelijk
+    compareModalId: popupvergelijken
+    compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
+    compareAClass: popupvergelijken
+    print: true
+    printModal: true
+    printLabel: Druk het regelingonderdeel af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla het regelingonderdeel op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0035322/2016-07-01/0/Hoofdstuk1/Artikel1.1'
   counter2:
     modifier: article__header--law--chapter
     useTitle: true
     titleTag: h3
-    counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
-    relationsAmount: 128
-    activeFrom: Versie geldend per 01-04-2012
+    counter: Hoofdstuk 1.1. Begripsbepalingen
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0008994&hoofdstuk=3&artikel=17&z=1998-01-01&g=1998-01-01
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0008994&amp;hoofdstuk=3&amp;artikel=17&amp;z=1998-01-01&amp;g=1998-01-01" data-bwbngid="http://wetten.overheid.nl/id/BWBR0008994/1998-01-01/0/Hoofdstuk3/Artikel17"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0008994&hoofdstuk=3&artikel=17&z=1998-01-01&g=1998-01-01'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0035322&hoofdstuk=1&artikel=1.1&z=2016-07-01&g=2016-07-01
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0035322&hoofdstuk=1&artikel=1.1&z=2016-07-01&g=2016-07-01" data-citeertitel="" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0035322%2f2016-07-01%2f0%2fHoofdstuk1%2fArtikel1.1&geldigheidsdatum=2016-07-01&zichtdatum=2021-02-16"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    compare: true
+    compareModal: true
+    compareLabel: Versie vergelijk
+    compareModalId: popupvergelijken
+    compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
+    compareAClass: popupvergelijken
+    print: true
+    printModal: true
+    printLabel: Druk het regelingonderdeel af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla het regelingonderdeel op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0035322/2016-07-01/0/Hoofdstuk1/Artikel1.1'
   counter3:
     useTitle: true
     titleTag: h3
     counter: Artikel 1.1
-    relationsAmount: 128
-    activeFrom: Versie geldend per 01-04-2012
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0008994&hoofdstuk=12&artikel=29&z=1998-01-01&g=1998-01-01
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0008994&amp;hoofdstuk=12&amp;artikel=29&amp;z=1998-01-01&amp;g=1998-01-01" data-bwbngid="http://wetten.overheid.nl/id/BWBR0008994/1998-01-01/0/Hoofdstuk12/Artikel29"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0008994&hoofdstuk=12&artikel=29&z=1998-01-01&g=1998-01-01'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0035322&hoofdstuk=1&artikel=1.1&z=2016-07-01&g=2016-07-01
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0035322&hoofdstuk=1&artikel=1.1&z=2016-07-01&g=2016-07-01" data-citeertitel="" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0035322%2f2016-07-01%2f0%2fHoofdstuk1%2fArtikel1.1&geldigheidsdatum=2016-07-01&zichtdatum=2021-02-16"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    compare: true
+    compareModal: true
+    compareLabel: Versie vergelijk
+    compareModalId: popupvergelijken
+    compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
+    compareAClass: popupvergelijken
+    print: true
+    printModal: true
+    printLabel: Druk het regelingonderdeel af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla het regelingonderdeel op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0035322/2016-07-01/0/Hoofdstuk1/Artikel1.1'
+  alertUpdate1:
+    heading: 'Terugwerkende kracht'
+    text: Voor dit artikel is een wijziging met terugwerkende kracht gepubliceerd. Zie <a href="#opmerking_Hoofdstuk1_Artikel1.1">opmerking</a> onder de tekst voor nadere informatie.

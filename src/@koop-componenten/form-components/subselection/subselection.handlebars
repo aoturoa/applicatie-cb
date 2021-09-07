@@ -1,16 +1,8 @@
-<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if selectAllOnMain}}, "selectAllOnMain": "{{selectAllID}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}}{{#if hiddenValueField}}, "hiddenValueField": true{{/if}} }'>
-  {{#if selectAllOnMain}}
-    <div class="input-checkbox">
-      <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{selectAllID}}" {{#if_eq selectAllOnMain/checked true}}checked{{/if_eq}} name="{{selectAllOnMain/name}}" value="Alle" />
-      <label class="checkbox__label" for="ref-{{selectAllID}}">
-        {{selectAllOnMain/label}}
-      </label>
-    </div>
-  {{/if}}
+<div {{#if id}}id="{{id}}"{{/if}} class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}}{{#if motherCheckboxIds}}, "motherCheckboxIds": "{{motherCheckboxIds}}"{{/if}} }'>
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
-      <div class="modal__content">
+      <div class="modal__content" {{{modalContentAttributes}}}>
         <h2>{{modalTitle}}</h2>
         {{#if searchFilter}}
           <div class="" data-decorator="init-filter-results">
@@ -35,7 +27,7 @@
               {{#if selectAll}}
               <div data-decorator="init-selectall">
                 <div class="input-checkbox u-margin--m">
-                  <input class="checkbox__input js-checkbox-master" type="checkbox" {{#if_eq selectAllChecked/checked true}}checked{{/if_eq}} id="{{selectAllID}}" name="selectAll" value="Alle iets" />
+                  <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{selectAllID}}" name="selectAll" value="Alle iets" />
                   <label class="checkbox__label" for="{{selectAllID}}">
                     <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
                   </label>
@@ -54,21 +46,30 @@
                     <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
                     <div data-decorator="init-selectall">
                       <div class="input-checkbox">
-                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="selectAll" value="Alle iets"
+                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="{{#if name}}{{name}}{{else}}selectAll{{/if}}" value="{{value}}"
                         />
                         <label class="checkbox__label u-nomargin" for="{{id}}">
                           <strong>{{ title }}</strong>
                         </label>
                       </div>
                   {{else}}
-                    <legend>{{#if title}}{{title}}{{/if}}</legend>
+                    {{#if checkbox}}
+                      <div class="input-checkbox">
+                        <input class="checkbox__input" type="checkbox" id="{{id}}" value="{{value}}" data-value="{{ short }}" />
+                        <label class="checkbox__label u-nomargin" for="{{id}}">
+                          <strong>{{ title }}</strong>
+                        </label>
+                      </div>
+                    {{else}}
+                      <legend>{{#if title}}{{title}}{{/if}}</legend>
+                    {{/if}}
                   {{/if}}
 
                   <ul class="list--unstyled">
                     {{#each OptionsSubs }}
                       <li class=" js-filterresults__result">
                         <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="2"
+                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="{{value}}"
                           />
                           <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
                             {{ title }}
@@ -125,5 +126,5 @@
       </div>
     </div>
   </div>
-  <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger">{{ linkText }}</button>
+  <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger {{buttonClass}}">{{ linkText }}</button>
 </div>

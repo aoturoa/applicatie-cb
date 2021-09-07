@@ -4,30 +4,18 @@ a {
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
   word-break: break-word;
 
-  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]):not([href*=".officiele-overheidspublicaties.nl"]),
+  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]),
   &[rel="external"] {
-    // padding-right: 1.5em;
-    // margin-right: .25em;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      margin: 0 .25em;
-      background: {
-        repeat: no-repeat;
-        image: $externalLinkIcon;
-        position: right center;
-        size: em(12);
-      }
-      width: 1em;
-      height: .8em;
-      top: 1px;
-      position: relative;
+    padding-right: 1.5em;
+    margin-right: .25em;
+    background: {
+      repeat: no-repeat;
+      image: $externalLinkIcon;
+      position: right center;
+      size: em(12);
     }
     .related--primaryBlue & {
-      &:after {
-        background-image: $externalLinkWhiteIcon;
-      }
+      background-image: $externalLinkWhiteIcon;
     }
   }
 
@@ -206,10 +194,6 @@ div.link {
   &--check {
     @extend .icon;
     @extend .icon--check2Blue;
-  }
-  &--download {
-    @extend .icon;
-    @extend .icon--download;
   }
 }
 

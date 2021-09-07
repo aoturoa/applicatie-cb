@@ -14,6 +14,7 @@ variants:
       text: externe link (manual)
       action: http://www.google.nl
       mode: manual
+      external: true
   - name: Wachtwoord vergeten
     label: Wachtwoord vergeten
     context:
@@ -80,11 +81,5 @@ variants:
       text: Account activeren
       action: '#'
       class: link link--check
-  - name: Download
-    label: download
-    context:
-      text: Download
-      action: '#'
-      class: link link--download
 
 

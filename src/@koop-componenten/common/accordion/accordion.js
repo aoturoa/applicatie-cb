@@ -28,7 +28,6 @@
 
     this.init();
     this.initEventListeners();
-    this.readHashForActions();
 
   };
 
@@ -55,28 +54,11 @@
     }
 
     for (i = 0; i < this.triggers.length; i++) {
-      if(!this.triggers[i].classList.contains('has-eventlisterner')) {
-        this.triggers[i].addEventListener('click', function (e) { this.doTriggerAction(e); }.bind(this), false);
-        this.triggers[i].classList.add('has-eventlisterner');
-      }
+      this.triggers[i].addEventListener('click', function (e) { this.doTriggerAction(e); }.bind(this), false);
       // this.triggers[i].addEventListener('focus', function () { this.element.classList.add('is-focused'); }.bind(this), false);
       // this.triggers[i].addEventListener('blur', function () { this.element.classList.remove('is-focused'); }.bind(this), false);
     }
   };
-
-  accordion.prototype.readHashForActions = function (e) {
-    var hash = window.location.hash.substr(1);
-    if(hash){
-      // is accordion? then open the item;
-      var el = document.querySelector('#'+hash);
-      if(el.classList.contains('accordion__item')){
-        var trigger = el.querySelector('.accordion__item__header-trigger');
-        if(trigger) {
-          trigger.click();
-        }
-      }
-    }
-  }
 
   accordion.prototype.doCheckboxTriggerAction = function (e, onpageloud) {
     this.doTriggerAction(e, 'checkbox', onpageloud);
@@ -131,7 +113,6 @@
         if (!isExpanded) {
           trigger.setAttribute(ariaType, 'true');
           document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden','false');
-          trigger.scrollIntoView({behavior: "smooth"});
 
           if (!this.allowToggle) {
             trigger.setAttribute('aria-disabled', 'true');

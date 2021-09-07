@@ -1,8 +1,0 @@
----
-label: Browseralert
-status: ready
-context:
-  id: 1
-  button:
-    text: Toon melding
-    attributes: data-decorator="init-browseralert" data-alertmessage="Weet u zeker dat u uw account wilt verwijderen?"

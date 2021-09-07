@@ -20,8 +20,12 @@ h1,
   color: $darkBlue;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom: .5em;
   margin-top: .5em;
+
+  .pageactions ~ & {
+    margin-top: 0;
+  }
 
   &--large {
     font-size: 2.75rem;
@@ -86,8 +90,13 @@ h2,
 }
 
 .tabs__panels h2 {
-  margin: 1em 0 0;
+  // margin: 1em 0 0;
+  padding-top: 1em;
 }
+.tabs__panels .modal h2 {
+  padding-top: 0;
+}
+
 .tabs__panels .columns--sidebar-left h2 {
   margin: 0 0 .5em 0;
 }

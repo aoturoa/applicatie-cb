@@ -10,10 +10,8 @@
   var selectall = function (element) {
     this.element = element;
     this.mastercheckbox = this.element.querySelector('.js-checkbox-master');
-    this.mastercheckboxId = this.mastercheckbox.getAttribute('id');
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]:not(.js-checkbox-master)');
-    this.checkboxSelectAllOnMain = document.getElementById('ref-'+this.mastercheckboxId);
 
     this.amountLabel = this.element.querySelector('.js-amount-checkboxes');
     if(this.amountLabel){
@@ -27,15 +25,6 @@
     // check mastercheckbox if all checkboxes are checked on pageload;
     if(this.areAllCheckboxesChecked()){
       this.mastercheckbox.checked = true;
-
-
-      if(this.checkboxSelectAllOnMain) {
-        this.checkboxSelectAllOnMain.checked = true;
-
-        pubsub.publish('/selectall/init/checkboxSelectAllOnMain/true', {
-          element: this.element
-        });
-      }
     }
     this.initEventListeners();
   }
@@ -49,8 +38,7 @@
     }
 
     // master checkbox (select all)
-    // this.mastercheckbox.addEventListener('click', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
-    this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); console.log('change this.mastercheckbox') }.bind(this), false);
+    this.mastercheckbox.addEventListener('click', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
   };
 
   selectall.prototype.areAllCheckboxesChecked = function (e) {
@@ -74,41 +62,31 @@
 
   selectall.prototype.changeCheckbox = function (e) {
     var totalCheckboxes = this.checkboxes.length;
-    var stateMasterCheckbox;
 
     // after un-checking the current checkbox, check the mastercheckbox and if needed uncheck that one as well.
     if (e.target.checked === false && this.mastercheckbox.checked) {
       this.mastercheckbox.checked = false;
-      stateMasterCheckbox = false;
     }
 
     // if all checkboxes are checked, also check the mastercheckbox.
     if (totalCheckboxes === this.countAmountChecked()) {
       this.mastercheckbox.checked = true;
-      stateMasterCheckbox = true;
-    }
-
-    if(this.checkboxSelectAllOnMain) {
-      this.checkboxSelectAllOnMain.checked = stateMasterCheckbox;
     }
   }
 
   selectall.prototype.changeMasterCheckbox = function (e) {
     var i;
     var checkboxes = this.checkboxes;
-    var stateMasterCheckbox = e.target.checked;
 
     for (i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i] !== e.target) {
 
         // skip this checkbox if it's not visible;
-        // if(!onl.ui.isVisible(checkboxes[i])) {
-        if(checkboxes[i].classList.contains('is-invisible')) {
+        if(!onl.ui.isVisible(checkboxes[i])) {
           continue;
         }
 
         checkboxes[i].checked = e.target.checked;
-
 
         // onchange event needs manual triggering on checkboxes
         if ("createEvent" in document) {
@@ -121,22 +99,6 @@
       }
 
     }
-
-    var insideSubselection = getClosest(this.element, '.subselection');
-    if(insideSubselection){
-      var checkboxSelectAllOnMain = insideSubselection.querySelector('.js-checkbox-selectAllOnMain');
-      if(insideSubselection && checkboxSelectAllOnMain) {
-        checkboxSelectAllOnMain.checked = stateMasterCheckbox;
-      }
-
-      var subselectionId = insideSubselection.getAttribute('data-id');
-      pubsub.publish('/selectall/changeMasterCheckbox', {
-        element: subselectionId
-      });
-    }
-
-
-
   };
 
 })();

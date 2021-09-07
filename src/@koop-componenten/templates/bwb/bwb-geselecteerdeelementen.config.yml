@@ -1,0 +1,244 @@
+---
+title: BWB - Geselecteerde elementen
+label: BWB - Geselecteerde elementen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+    youAreHere:
+      - text: Wettenbank
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Aangevinkte regelingselementen
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - content: <a href="#">Veelgestelde vragen</a>
+  actionBlock:
+    items:
+      - link: '#'
+        text: Alles openklappen
+        icon: icon-plus.svg
+        id: Unfoldall
+      - link: '#'
+        text: Alles dichtklappen
+        icon: icon-minus.svg
+        id: Foldall
+  treeview:
+    id: 1
+  treeview2:
+    id: 2
+  counterFirst:
+    modifier: article__header--main
+    activeFrom: Geldend op 15-02-2021
+    export: true
+    exportLabel: Sla de geselecteerde elementen op
+    exportHref: 'javascript:void(0)'
+    exportDataAttributes: onclick="$('#hfRegelingOnderdelenActie').val('rtf'); __doPostBack('exporteernaarrtf', '');"
+    print: true
+    printLabel: Druk de geselecteerde elementen af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    printDataAttributes: data-onderdeelids="BWBR0032203/2019-04-18/0/Intitule,BWBR0032203/2019-04-18/0/Aanhef"
+  counter:
+    modifier: article__header--main
+    counter: Aanbestedingswet 2012
+    activeFrom: Geldend van 18-04-2019 t/m heden
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18" data-bwbngid="http://wetten.overheid.nl/id/BWBR0032203/2019-04-18/0"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet 2012" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    print: true
+    printModal: true
+    printLabel: Druk de regeling af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    printDataAttributes: data-onderdeelids="BWBR0032203/2019-04-18/0/Intitule"
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla de regeling op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0032203/2019-04-18/0'
+  popuplidorelaties:
+    modalId: popuplidorelaties
+    openButton: false
+    initClosed: true
+  popuppermanentelink:
+    modalId: popuppermanentelink
+    openButton: false
+    initClosed: true
+    copydata1:
+      datafieldId: divCiteertitel
+    copydata2:
+      datafieldId: divUrl
+    copydata3:
+      datafieldId: divJuriconnectverwijzing
+  popupafdrukken:
+    modalId: popupafdrukken
+    openButton: false
+    initClosed: true
+    modalPrintButton:
+      text: Ok
+    printradio:
+      options:
+        - id: checkbox-1
+          text: Exclusief wetstechnische informatie
+          name: printopties
+          value: rbExclusief
+          checked: checked
+        - id: checkbox-2
+          text: Inclusief wetstechnische informatie
+          name: printopties
+          value: rbInclusief
+  popupvergelijken:
+    modalId: popupvergelijken
+    openButton: false
+    initClosed: true
+    modalCompareButton:
+      text: Vergelijk
+    compareSelect:
+      id: 112
+      selectClass: dlDatum
+      fieldLabel: Inwerkingtreding
+      options:
+        - label: 01-01-2019
+          value: 20
+          selected: selected
+        - label: 01-01-2018
+          value: 20
+        - label: 01-01-2017
+          value: 20
+        - label: 01-01-2016
+          value: 20
+  popupexporteren:
+    modalId: popupexporteren
+    openButton: false
+    initClosed: true
+    modalExportButton:
+      text: Exporteer
+    exportradio:
+      options:
+        - id: checkbox-3
+          text: XML (De tekst zal worden geleverd in een .xml-bestand)
+          name: exportopties
+          modifier: exporteren-xml-optie
+          value: rbXml
+          checked: checked
+        - id: checkbox-4
+          text: TXT (De tekst zal worden geleverd in een .txt-bestand)
+          name: exportopties
+          value: rbTxt
+        - id: checkbox-5
+          text: RTF (Maak deze keuze als u de tekst wilt (her)gebruiken in een tekstverwerkingsprogramma)
+          name: exportopties
+          value: rbRtf
+    exportradio2:
+      options:
+        - id: rbZonderAfbeeldingen
+          text: Tekst zonder afbeeldingen exporteren
+          name: exportopties2
+          value: rbZonderAfbeeldingen
+          checked: checked
+        - id: rbMetAfbeeldingen
+          text: Tekst met afbeeldingen exporteren
+          name: exportopties2
+          value: rbMetAfbeeldingen
+  counter1:
+    modifier: article__header--main
+    counter: Aanbestedingswet op defensie- en veiligheidsgebied
+    activeFrom: Geldend van 18-04-2019 t/m heden
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18" data-bwbngid="http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet op defensie- en veiligheidsgebied" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032898%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    print: true
+    printModal: true
+    printLabel: Druk de regeling af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    printDataAttributes: data-onderdeelids="BWBR0032898/2019-04-18/0/Intitule,BWBR0032898/2019-04-18/0/Deel1"
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla de regeling op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0032203/2019-04-18/0'
+  counter2:
+    modifier: article__header--main
+    counter: Deel 1. Algemene bepalingen
+    useTitle: true
+    titleTag: h2
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0032898&deel=1&amp;z=2019-04-18&amp;g=2019-04-18
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0032898&deel=1&amp;z=2019-04-18&amp;g=2019-04-18" data-bwbngid="http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0/Deel1"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0032898&deel=1&amp;z=2019-04-18&amp;g=2019-04-18'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0032898&deel=1&amp;z=2019-04-18&amp;g=2019-04-18
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0032898&deel=1&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet op defensie- en veiligheidsgebied" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032898%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    print: true
+    printModal: true
+    printLabel: Druk het regelingonderdeel af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    printDataAttributes: data-onderdeelids="BWBR0032898/2019-04-18/0/Intitule,BWBR0032898/2019-04-18/0/Deel1"
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla het regelingonderdeel op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0032203/2019-04-18/0'

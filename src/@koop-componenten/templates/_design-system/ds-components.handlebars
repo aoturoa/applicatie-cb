@@ -2,7 +2,7 @@
 
 <div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
 
-  <div class="columns--sticky-sidebar__sidebar" data-decorator="add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
     id="toggleable-1">
     <div>
 
@@ -21,7 +21,7 @@
 
     </div>
 
-    <div class="section-chapter js-scrollSection" id="accordion">
+    <section class="section-chapter js-scrollSection" id="accordion">
       <h2 class="section-chapter__heading">Accordion</h2>
 
       <dl>
@@ -71,9 +71,9 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="actieblok">
+    <section class="section-chapter js-scrollSection" id="actieblok">
       <h2>Actieblok</h2>
       <dl>
         <dt>Laatst gewijzigd</dt>
@@ -91,9 +91,9 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="adres">
+    <section class="section-chapter js-scrollSection" id="adres">
       <h2>Adres</h2>
 
       <dl>
@@ -114,9 +114,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="alert">
+    <section class="section-chapter js-scrollSection" id="alert">
       <h2>Alert</h2>
 
       <dl class="dl columns--data">
@@ -228,20 +228,10 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="artikelhoofd">
+    <section class="section-chapter js-scrollSection" id="artikelhoofd">
       <h2>Artikel hoofd</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <p>De article header wordt gebruikt boven wetgevingen en geeft de gebruiker functionaliteiten gerelateerd aan de wetgeving
         en of artikel.</p>
       <div class="ds-preview">
@@ -254,21 +244,11 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="azlijst">
+    <section class="section-chapter js-scrollSection" id="azlijst">
       <div class="row row--large">
         <h2>A-Z Lijst</h2>
-        <dl class="dl columns--data">
-          <div>
-            <dt>Laatst gewijzigd</dt>
-            <dd>1</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd>Ready</dd>
-          </div>
-        </dl>
         <div class="ds-preview">
           <div class="ds-preview__demo">
             {{render "@az" }}
@@ -279,22 +259,21 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="section-chapter js-scrollSection" id="banner">
+    </section>
+    <section class="section-chapter js-scrollSection" id="banner">
       <div class="row row--large">
         <h2>Banner</h2>
 
         <dl class="dl columns--data">
-          <div>
-            <dt>Laatst gewijzigd</dt>
-            <dd>1.9.39</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd>Ready</dd>
-          </div>
-        </dl>
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
 
         <div class="ds-preview">
           <div class="ds-preview__demo">
@@ -306,9 +285,8 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="section-chapter js-scrollSection" id="blok">
+    </section>
+    <section class="section-chapter js-scrollSection" id="blok">
       <h2>Blok</h2>
 
       <dl class="dl columns--data">
@@ -377,119 +355,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-
-    <div class="section-chapter js-scrollSection" id="blok-indent">
-      <h2>Blok indent</h2>
-
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
-
-      <h3 class="section-chapter__subheading">Default</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@block-indent" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent.html">Bekijk component 'Blok indent'</a>
-          </p>
-        </div>
-      </div>
-      <h3 class="section-chapter__subheading">Klein</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@block-indent--klein" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent.html">Bekijk variant 'Blok indent klein'</a>
-          </p>
-        </div>
-      </div>
-      <h3 class="section-chapter__subheading">Medium</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@block-indent--medium" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent--medium.html">Bekijk variant 'Blok indent medium'</a>
-          </p>
-        </div>
-      </div>
-      <h3 class="section-chapter__subheading">Groot</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@block-indent--groot" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent--groot.html">Bekijk variant 'Blok indent groot'</a>
-          </p>
-        </div>
-      </div>
-      <h3 class="section-chapter__subheading">Extra groot</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@block-indent--extra-groot" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/block-indent--extra-groot.html">Bekijk variant 'Blok indent extra groot'</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-chapter js-scrollSection" id="blok-search">
-      <h2>Blok zoeken</h2>
-
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
-
-      <h3 class="section-chapter__subheading">Default</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@block-search" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/block-search.html">Bekijk component 'Blok zoeken'</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-chapter js-scrollSection" id="blockquote">
+    <section class="section-chapter js-scrollSection" id="blockquote">
       <h2>Blockquote</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <p>Een citaat wordt weergegeven in een
         <code>blockquote</code> element. Geef in de
         <code>cite</code> de bron aan van de citaat.</p>
@@ -515,9 +384,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="bronlijst">
+    <section class="section-chapter js-scrollSection" id="bronlijst">
       <h2>Bronlijst</h2>
       <dl class="dl columns--data">
         <div>
@@ -540,9 +409,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="browse">
+    <section class="section-chapter js-scrollSection" id="browse">
       <h2>Browse</h2>
       <dl class="dl columns--data">
         <div>
@@ -579,14 +448,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="buttons">
+    <section class="section-chapter js-scrollSection" id="buttons">
       <h2>Buttons</h2>
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
+          <dd>1.9.39</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -742,9 +611,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="buttongroup">
+    <section class="section-chapter js-scrollSection" id="buttongroup">
 
       <h2>Buttongroup</h2>
       <dl class="dl columns--data">
@@ -781,20 +650,24 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="characteristics">
+    <section class="section-chapter js-scrollSection" id="copydata">
+      <h2>CopyData</h2>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          {{render "@copydata" }}
+        </div>
+        <div class="ds-preview__content">
+          <p>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/copydata.html">Bekijk component 'Copydata'</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-chapter js-scrollSection" id="characteristics">
       <h2>Characteristics</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{render "@characteristic" }}
@@ -805,20 +678,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="collapsible">
+    <section class="section-chapter js-scrollSection" id="collapsible">
       <h2>Collapsible</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.35</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <p>
         Collapsibles gebruikt men als informatie initieel verborgen moet zijn. De informatie wordt zichtbaar bij muis/toetsenbord-klik.
       </p>
@@ -856,20 +719,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="definitionlist">
+    <section class="section-chapter js-scrollSection" id="definitionlist">
       <h2>Definitionlist</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <p>Een lijst met definities; titel en omschrijving.</p>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
@@ -904,31 +757,10 @@
           </p>
         </div>
       </div>
-      <h3 class="section-chapter__subheading">Publicatie</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{render "@definitionlist--publication" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/definitionlist--publication.html">Bekijk variant 'Publicatie'</a>
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="delins">
+    <section class="section-chapter js-scrollSection" id="delins">
       <h2>Del / Ins</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.40</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
 
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
@@ -941,43 +773,20 @@
           </p>
         </div>
       </div>
-      <h3 class="section-chapter__subheading">Blok (met block level component)</h3>
-      <p>Alle niet 'inline'-elementen worden geplaatst in een block-level ins/del.</p>
+      <h3 class="section-chapter__subheading">Blok</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
-          {{render "@del-ins--block-level---standaard" }}
+          {{render "@del-ins--block-level" }}
         </div>
         <div class="ds-preview__content">
           <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/del-ins--block-level---standaard.html">Bekijk variant 'Blok'</a>
+            <a href="https://jeroenhulscher.nl/koop/components/detail/del-ins--block-level.html">Bekijk variant 'Blok'</a>
           </p>
         </div>
       </div>
-      <h3 class="section-chapter__subheading">Blok tabel</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          <ins class="ins ins--table">
-            <p>tabel</p>
-          </ins>
-          <del class="del del--table">
-            <p>tabel</p>
-          </del>
-        </div>
-      </div>
-      <h3 class="section-chapter__subheading">Blok figuur</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          <ins class="ins ins--figure">
-            {{ render "@figure" }}
-          </ins>
-          <del class="del del--figure">
-            {{ render "@figure" }}
-          </del>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="documentbanner">
+    <section class="section-chapter js-scrollSection" id="documentbanner">
       <h2>Document banner</h2>
       <dl class="dl columns--data">
         <div>
@@ -999,8 +808,8 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="section-chapter js-scrollSection" id="facet">
+    </section>
+    <section class="section-chapter js-scrollSection" id="facet">
       <h2>Facet</h2>
       <dl class="dl columns--data">
         <div>
@@ -1022,19 +831,9 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="section-chapter js-scrollSection" id="figure">
+    </section>
+    <section class="section-chapter js-scrollSection" id="figure">
       <h2>Figure</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -1049,7 +848,7 @@
       <h3 class="section-chapter__subheading">Zonder figcaption</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
-          {{render "@figure--without-figcaption" figure2 merge=true }}
+          {{render "@figure--without-figcaption" }}
         </div>
         <div class="ds-preview__content">
           <p>
@@ -1057,21 +856,11 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
 
-    <div class="section-chapter js-scrollSection" id="gridcontainers">
+    <section class="section-chapter js-scrollSection" id="gridcontainers">
       <h2>Grid &amp; containers</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <p>Zonder toevoegingen werkt het grid percentueel in een gelijke verdeling. De meer kolommen, de smaller deze worden.
         Naar wens kan er een handmatige percentuele verdeling gemaakt worden, middels het toevoegen van een class op de column
         zelf.</p>
@@ -1275,11 +1064,11 @@
           </p>
         </div> --}}
       </div>
-    </div>
+    </section>
 
 
 
-    <div class="section-chapter js-scrollSection" id="highlight">
+    <section class="section-chapter js-scrollSection" id="highlight">
       <h2>Highlight</h2>
       <dl class="dl columns--data">
         <div>
@@ -1301,22 +1090,12 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
 
 
-    <div class="section-chapter js-scrollSection" id="homepageblok">
+    <section class="section-chapter js-scrollSection" id="homepageblok">
       <h2>Homepage blok</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -1339,9 +1118,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="jumbotron">
+    <section class="section-chapter js-scrollSection" id="jumbotron">
       <h2>Jumbotron</h2>
       <dl class="dl columns--data">
         <div>
@@ -1432,9 +1211,9 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="labels">
+    <section class="section-chapter js-scrollSection" id="labels">
       <h2>Labels</h2>
       <dl class="dl columns--data">
         <div>
@@ -1488,9 +1267,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="link">
+    <section class="section-chapter js-scrollSection" id="link">
         <h2>Link</h2>
         <dl class="dl columns--data">
           <div>
@@ -1549,14 +1328,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="lists">
+    <section class="section-chapter js-scrollSection" id="lists">
       <h2>Lijsten</h2>
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.40</dd>
+          <dd>1.9.39</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -1804,10 +1583,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
 
-    <div class="section-chapter js-scrollSection" id="loader">
+    <section class="section-chapter js-scrollSection" id="loader">
       <h2>Loader</h2>
       <dl class="dl columns--data">
         <div>
@@ -1830,9 +1609,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="logo">
+    <section class="section-chapter js-scrollSection" id="logo">
       <h2>Logo</h2>
       <dl class="dl columns--data">
         <div>
@@ -1843,6 +1622,10 @@
           <dt>Status</dt>
           <dd>Ready</dd>
         </div>
+      </dl>
+      <dl>
+        <dt>Laatst gewijzigd</dt>
+        <dd>1.9.39</dd>
       </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -1855,9 +1638,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="modal">
+    <section class="section-chapter js-scrollSection" id="modal">
         <h2>Modal</h2>
         <dl class="dl columns--data">
           <div>
@@ -1868,6 +1651,10 @@
             <dt>Status</dt>
             <dd>Ready</dd>
           </div>
+        </dl>
+        <dl>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.39</dd>
         </dl>
 
         <p>Het modal component kan informatie tonen in een vlak dat over de rest van de pagina heenligt, en waarbij de rest van de pagina
@@ -1905,20 +1692,11 @@
             </p>
           </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="navigation">
+    <section class="section-chapter js-scrollSection" id="navigation">
         <h2>Navigatie</h2>
-        <dl class="dl columns--data">
-          <div>
-            <dt>Laatst gewijzigd</dt>
-            <dd>1.9</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd>Ready</dd>
-          </div>
-        </dl>
+
         <h3 class="section-chapter__subheading">Standaard</h3>
         <div class="ds-preview">
           <div class="ds-preview__demo">
@@ -1955,20 +1733,10 @@
             </p>
           </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="openlayers">
+    <section class="section-chapter js-scrollSection" id="openlayers">
       <h2>OpenLayers</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{render "@ol-popup" }}
@@ -1980,9 +1748,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="pageactions">
+    <section class="section-chapter js-scrollSection" id="pageactions">
       <h2>Pagina acties</h2>
       <dl class="dl columns--data">
         <div>
@@ -2004,9 +1772,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="pagination">
+    <section class="section-chapter js-scrollSection" id="pagination">
       <h2>Paginering</h2>
       <dl class="dl columns--data">
         <div>
@@ -2028,9 +1796,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="picture">
+    <section class="section-chapter js-scrollSection" id="picture">
       <h2>Picture</h2>
       <dl class="dl columns--data">
         <div>
@@ -2041,6 +1809,10 @@
           <dt>Status</dt>
           <dd>Ready</dd>
         </div>
+      </dl>
+      <dl>
+        <dt>Laatst gewijzigd</dt>
+        <dd>1.9.39</dd>
       </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -2053,20 +1825,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="pre">
+    <section class="section-chapter js-scrollSection" id="pre">
       <h2>Pre</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{render "@pre" }}
@@ -2078,9 +1840,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="profiel">
+    <section class="section-chapter js-scrollSection" id="profiel">
       <h2>Profiel</h2>
       <dl class="dl columns--data">
         <div>
@@ -2136,9 +1898,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="relevances">
+    <section class="section-chapter js-scrollSection" id="relevances">
       <h2>Relevances</h2>
       <dl class="dl columns--data">
         <div>
@@ -2161,14 +1923,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="resultlist">
+    <section class="section-chapter js-scrollSection" id="resultlist">
       <h2>Resultaten lijst</h2>
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
+          <dd>1.9.39</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -2199,9 +1961,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="skiplinks">
+    <section class="section-chapter js-scrollSection" id="skiplinks">
       <h2>Skiplinks</h2>
       <dl class="dl columns--data">
         <div>
@@ -2224,9 +1986,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="sort">
+    <section class="section-chapter js-scrollSection" id="sort">
       <h2>Sorteren</h2>
       <dl class="dl columns--data">
         <div>
@@ -2274,9 +2036,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="steps">
+    <section class="section-chapter js-scrollSection" id="steps">
       <h2>Stappen</h2>
       <dl class="dl columns--data">
         <div>
@@ -2299,20 +2061,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="subsup">
+    <section class="section-chapter js-scrollSection" id="subsup">
       <h2>Sub / sup</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{render "@sub-sup" }}
@@ -2323,14 +2075,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="table">
+    <section class="section-chapter js-scrollSection" id="table">
       <h2>Tabel</h2>
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.40</dd>
+          <dd>1.9.39</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -2493,20 +2245,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="table-container">
+    <section class="section-chapter js-scrollSection" id="table-container">
       <h2>Tabel container</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.33</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <p>Een extra container om de tabel waardoor de gehele tabel verticaal scrollbaar is. Hiermee kunnen grote tabellen getoond worden en bruikbaar blijven.</p>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -2519,9 +2261,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="table-topbar">
+    <section class="section-chapter js-scrollSection" id="table-topbar">
       <h2>Tabel topbar</h2>
       <dl class="dl columns--data">
         <div>
@@ -2545,14 +2287,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="tabs">
+    <section class="section-chapter js-scrollSection" id="tabs">
       <h2>Tabs</h2>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
-          {{render "@tabs"}}
+          {{render "@tabs" }}
         </div>
         <div class="ds-preview__content">
           <p>
@@ -2576,7 +2318,7 @@
       <h3 class="section-chapter__subheading">Met buttons</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
-          {{render "@tabs--met-buttons"}}
+          {{render "@tabs--met-buttons" }}
         </div>
         <div class="ds-preview__content">
           <p>
@@ -2585,20 +2327,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="text">
+    <section class="section-chapter js-scrollSection" id="text">
       <h2>Tekst</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@text" }}
@@ -2610,20 +2342,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="themeblock">
+    <section class="section-chapter js-scrollSection" id="themeblock">
       <h2>Thema blok</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           <ul class="themelist list--unstyled">
@@ -2643,9 +2365,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="toolbar">
+    <section class="section-chapter js-scrollSection" id="toolbar">
       <h2>Toolbar</h2>
       <dl class="dl columns--data">
         <div>
@@ -2668,9 +2390,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="topbar">
+    <section class="section-chapter js-scrollSection" id="topbar">
       <h2>Topbar</h2>
       <dl class="dl columns--data">
         <div>
@@ -2693,20 +2415,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="treeview">
+    <section class="section-chapter js-scrollSection" id="treeview">
       <h2>Treeview</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.40</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@treeview" }}
@@ -2718,9 +2430,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="video">
+    <section class="section-chapter js-scrollSection" id="video">
       <h2>Video</h2>
       <dl class="dl columns--data">
         <div>
@@ -2734,7 +2446,7 @@
       </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
-          {{ render "@video" video merge=true }}
+          {{ render "@video" }}
         </div>
         <div class="ds-preview__content">
           <p>
@@ -2743,20 +2455,31 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="voetnoot">
+
+
+
+    {{!-- <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h2 id="tooltip">Tooltip</h2>
+
+
+        <p>Een titel{{render "@tooltip" }}</p>
+      </div>
+    </article> --}}
+
+    {{!-- <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h2 id="treeview">Treeview</h2>
+
+
+        {{render "@treeview" }}
+      </div>
+    </article> --}}
+
+    <section class="section-chapter js-scrollSection" id="voetnoot">
       <h2>Voetnoot</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -2779,9 +2502,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="well">
+    <section class="section-chapter js-scrollSection" id="well">
       <h2>Well</h2>
       <dl class="dl columns--data">
         <div>
@@ -2804,9 +2527,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="algemeen">
+    <section class="section-chapter js-scrollSection" id="algemeen">
       <h2>Algemeen</h2>
       <h3>Styling</h3>
       <p>Een invoerveld kan bestaan uit:</p>
@@ -2839,8 +2562,8 @@
       <p>De verschillende states zijn toe te passen op alle verschillende form elementen.</p>
       <h3>Validatie</h3>
       <p>...</p>
-    </div>
-    <div class="section-chapter js-scrollSection" id="autocomplete">
+    </section>
+    <section class="section-chapter js-scrollSection" id="autocomplete">
       <h2>Autocomplete</h2>
       <p>Gebruik de zoekterm "gem" om resultaten te zien.</p>
       <h3 class="section-chapter__subheading">Standaard</h3>
@@ -2867,20 +2590,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="datumselectie">
+    <section class="section-chapter js-scrollSection" id="datumselectie">
       <h2>Datumselectie</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.38</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@date-selection" }}
@@ -2892,21 +2605,11 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
 
-    <div class="section-chapter js-scrollSection" id="datepicker">
+    <section class="section-chapter js-scrollSection" id="datepicker">
       <h2>Datepicker</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -2931,9 +2634,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="geselecteerdefilter">
+    <section class="section-chapter js-scrollSection" id="geselecteerdefilter">
       <h2>Geselecteerde filter</h2>
       <dl class="dl columns--data">
         <div>
@@ -2956,9 +2659,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="inputcheckbox">
+    <section class="section-chapter js-scrollSection" id="inputcheckbox">
       <h2>Input Checkbox</h2>
       <dl class="dl columns--data">
         <div>
@@ -2981,9 +2684,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="inputfile">
+    <section class="section-chapter js-scrollSection" id="inputfile">
       <h2>Input File</h2>
       <dl class="dl columns--data">
         <div>
@@ -3019,20 +2722,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="inputgroup">
+    <section class="section-chapter js-scrollSection" id="inputgroup">
       <h2>Input Group</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@input-group" }}
@@ -3044,20 +2737,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="inputinputsubmit">
+    <section class="section-chapter js-scrollSection" id="inputinputsubmit">
       <h2>Input InputSubmit</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3082,10 +2765,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
 
-    <div class="section-chapter js-scrollSection" id="inputradio">
+    <section class="section-chapter js-scrollSection" id="inputradio">
       <h2>Input Radio</h2>
       <dl class="dl columns--data">
         <div>
@@ -3108,21 +2791,11 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
 
-    <div class="section-chapter js-scrollSection" id="inputtekst">
+    <section class="section-chapter js-scrollSection" id="inputtekst">
       <h2>Input Text</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3267,20 +2940,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="select">
+    <section class="section-chapter js-scrollSection" id="select">
       <h2>Select</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3341,20 +3004,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="selectmulti">
+    <section class="section-chapter js-scrollSection" id="selectmulti">
       <h2>Select Multi</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3379,20 +3032,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="subselection">
+    <section class="section-chapter js-scrollSection" id="subselection">
       <h2>Subselection</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.45</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3466,18 +3109,6 @@
           </p>
         </div>
       </div>
-      <h3 class="section-chapter__subheading">met Selecteer alle opties</h3>
-      <div class="ds-preview">
-        <div class="ds-preview__demo">
-          {{ render "@subselection--with-check-all-options" }}
-        </div>
-        <div class="ds-preview__content">
-          <p>
-            <a href="https://jeroenhulscher.nl/koop/components/detail/subselection--with-check-all-options.html">Bekijk variant 'met Selecteer alle opties'</a>
-            <br>
-          </p>
-        </div>
-      </div>
       <h3 class="section-chapter__subheading">met Categorieën</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3502,20 +3133,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="textarea">
+    <section class="section-chapter js-scrollSection" id="textarea">
       <h2>Textarea</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@textarea" }}
@@ -3527,20 +3148,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="tooltip">
+    <section class="section-chapter js-scrollSection" id="tooltip">
       <h2>Tooltip</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3565,23 +3176,13 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="checkbox-alle">
+    <section class="section-chapter js-scrollSection" id="checkbox-alle">
       <h2>Checkbox - Selecteer alle</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.35</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
-          {{ render "@checkbox-selectall" selectall merge=true }}
+          {{ render "@checkbox-selectall" }}
         </div>
         <div class="ds-preview__content">
           <p>
@@ -3590,20 +3191,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="checkbox-dealle">
+    <section class="section-chapter js-scrollSection" id="checkbox-dealle">
       <h2>Checkbox - De-selecteer alle</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.37</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@checkbox-unselectall" }}
@@ -3615,20 +3206,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="kopieerlink">
+    <section class="section-chapter js-scrollSection" id="kopieerlink">
       <h2>Kopieer link</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@copydata" }}
@@ -3640,20 +3221,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="filterresultaten">
+    <section class="section-chapter js-scrollSection" id="filterresultaten">
       <h2>Filter resultaten</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3702,9 +3273,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="formuliercondities">
+    <section class="section-chapter js-scrollSection" id="formuliercondities">
       <h2>Formulier condities</h2>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
@@ -3730,11 +3301,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="annuleerwijzigingen">
+    <section class="section-chapter js-scrollSection" id="annuleerwijzigingen">
       <h2>Annuleer wijzigingen</h2>
-
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@form-disregardchanges" }}
@@ -3746,9 +3316,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="veldtoevoegen">
+    <section class="section-chapter js-scrollSection" id="veldtoevoegen">
       <h2>Veld toevoegen</h2>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3761,9 +3331,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="redirecter">
+    <section class="section-chapter js-scrollSection" id="redirecter">
       <h2>Redirecter</h2>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3776,20 +3346,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="resetformulier">
+    <section class="section-chapter js-scrollSection" id="resetformulier">
       <h2>Reset formulier</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@form-reset" }}
@@ -3801,9 +3361,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="kpmhighlighter">
+    <section class="section-chapter js-scrollSection" id="kpmhighlighter">
       <h2>KPM Highlighter</h2>
       <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -3816,9 +3376,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="paswoordsterkte">
+    <section class="section-chapter js-scrollSection" id="paswoordsterkte">
       <h2>Paswoordsterkte</h2>
       <h3 class="section-chapter__subheading">Standaard</h3>
       <div class="ds-preview">
@@ -3844,20 +3404,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="printen">
+    <section class="section-chapter js-scrollSection" id="printen">
       <h2>Printen</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@print" }}
@@ -3869,20 +3419,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="toonmeerminder">
+    <section class="section-chapter js-scrollSection" id="toonmeerminder">
       <h2>Toon meer/minder</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@show-moreless" }}
@@ -3894,20 +3434,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-chapter js-scrollSection" id="totop">
+    <section class="section-chapter js-scrollSection" id="totop">
       <h2>To top</h2>
-      <dl class="dl columns--data">
-        <div>
-          <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Ready</dd>
-        </div>
-      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@to-top" }}
@@ -3919,7 +3449,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
       {{!-- <div class="row">
         <fieldset>
