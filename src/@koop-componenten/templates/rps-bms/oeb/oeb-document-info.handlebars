@@ -23,6 +23,8 @@
   </div>
   <div id="content" role="main" class="content content--publication">
 
+    {{ render "@pageactions" pageactions }}
+
     {{ render "@alert--info" alertinfo1 merge=true }}
     {{ render "@alert--info" alertinfo2 merge=true }}
 
@@ -98,6 +100,16 @@
       De metadata is ook als los bestand beschikbaar
     </p>
      {{ render "@list--unstyled" listMeta }}
+
+     {{#> @modal modalDelen }}
+
+      <h2>Permanente link</h2>
+      <p class="form__sublegend">Kopieer de link naar uw clipboard </p>
+      <div class="row">
+        {{render "@copydata" copydata merge=true }}
+      </div>
+
+    {{/@modal}}
 
   </div>
 </div>
