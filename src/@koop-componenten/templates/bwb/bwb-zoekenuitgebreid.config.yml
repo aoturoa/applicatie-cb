@@ -684,6 +684,8 @@ context:
     type: button
   btnReset:
     text: Wis scherm
-    inputButton: true
+    inputButton: false
     inputSubmit: false
     type: button
+    action: http://www.wetten.nl
+    anchor: true
