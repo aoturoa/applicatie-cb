@@ -16,67 +16,67 @@
     {
       "label": "templates-bwb-eurrichtlijnen-richtlijn",
       "url": "http://localhost:3000/components/preview/templates-bwb-eurrichtlijnen-richtlijn",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-eurrichtlijnen-richtlijn.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-eurrichtlijnen-richtlijn.html"
     },
     {
       "label": "templates-bwb-eurrichtlijnen-zoeken",
       "url": "http://localhost:3000/components/preview/templates-bwb-eurrichtlijnen-zoeken",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-eurrichtlijnen-zoeken.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-eurrichtlijnen-zoeken.html"
     },
     {
       "label": "templates-bwb-eurrichtlijnen-zoekresultaten",
       "url": "http://localhost:3000/components/preview/templates-bwb-eurrichtlijnen-zoekresultaten",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-eurrichtlijnen-zoekresultaten.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-eurrichtlijnen-zoekresultaten.html"
     },
     {
       "label": "templates-bwb-geselecteerdeelementen",
       "url": "http://localhost:3000/components/preview/templates-bwb-geselecteerdeelementen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-geselecteerdeelementen.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-geselecteerdeelementen.html"
     },
     {
       "label": "templates-bwb-geselecteerdeelementen_print_exclusief-wti",
       "url": "http://localhost:3000/components/preview/templates-bwb-geselecteerdeelementen_print_exclusief-wti",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-geselecteerdeelementen_print_exclusief-wti.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-geselecteerdeelementen_print_exclusief-wti.html"
     },
     {
       "label": "templates-bwb-printen-regeling",
       "url": "http://localhost:3000/components/preview/templates-bwb-printen-regeling",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-printen-regeling.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-printen-regeling.html"
     },
     {
       "label": "templates-bwb-printen-resultaten",
       "url": "http://localhost:3000/components/preview/templates-bwb-printen-resultaten",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-printen-resultaten.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-printen-resultaten.html"
     },
     {
       "label": "templates-bwb-printen-resultaten-eu",
       "url": "http://localhost:3000/components/preview/templates-bwb-printen-resultaten-eu",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-printen-resultaten-eu.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-printen-resultaten-eu.html"
     },
     {
       "label": "templates-bwb-regeling",
       "url": "http://localhost:3000/components/preview/templates-bwb-regeling",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-regeling.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-regeling.html"
     },
     {
       "label": "templates-bwb-regeling-wti",
       "url": "http://localhost:3000/components/preview/templates-bwb-regeling-wti",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-regeling-wti.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-regeling-wti.html"
     },
     {
       "label": "templates-bwb-zoekeneenvoudig",
       "url": "http://localhost:3000/components/preview/templates-bwb-zoekeneenvoudig",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-zoekeneenvoudig.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-zoekeneenvoudig.html"
     },
     {
       "label": "templates-bwb-zoekenuitgebreid",
       "url": "http://localhost:3000/components/preview/templates-bwb-zoekenuitgebreid",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-zoekenuitgebreid.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-zoekenuitgebreid.html"
     },
     {
       "label": "templates-bwb-zoekresultaten",
       "url": "http://localhost:3000/components/preview/templates-bwb-zoekresultaten",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/_/bwb-ouderepo/components/preview/templates-bwb-zoekresultaten.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-zoekresultaten.html"
     }
   ],
   "paths": {
