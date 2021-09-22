@@ -56,6 +56,30 @@ context:
       src: ../../images/maintiendrai-grijs.png
       alt: Logo overheid
     heading: Staatsblad van het Koninkrijk der Nederlanden
+  pageactions:
+    items:
+    - link: '#'
+      text: Authentieke versie (PDF)
+      icon: icon-download.svg
+    - link: '#gerelateerd'
+      text: Gerelateerd
+      icon: icon-document.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+      actionPrint: true
+    - link: '#'
+      text: Delen
+      icon: icon-permalink.svg
+      modal: true
+      modalId: 512
+  modalDelen:
+    modalId: 512
+    initClosed: true
+    openButton: false
+    closeButton: Toevoegen
+    copydata:
+      url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
   listFormats:
     modifier: list--unstyled
     items:

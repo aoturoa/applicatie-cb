@@ -434,6 +434,21 @@ describe('Subselection', function () {
   });
 
 
+  it('should display use a different seperator en value', function () {
+    browser.get('http://localhost:3000/components/preview/subselection--met-hidden-input-(instelbare-seperator)');
+
+    var width = 1200;
+    var height = 800;
+    var results;
+    browser.driver.manage().window().setSize(width, height);
+
+    browser.driver.sleep(1500);
+
+    var hiddenfield = element(by.css('#hiddenfieldId1'));
+    expect(hiddenfield.getAttribute('value')).toBe("vallnv$valocw");
+  });
+
+
 
 
 
@@ -483,6 +498,8 @@ describe('Subselection', function () {
     expect(subTrigger.getText()).toEqual("Selecteer");
 
   });
+
+
 
 
 });
