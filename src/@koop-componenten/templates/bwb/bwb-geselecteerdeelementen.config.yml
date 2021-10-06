@@ -73,7 +73,7 @@ context:
     permalinkAModalId: popuppermanentelink
     permalinkAClass: popuppermanentelink
     permalinkAHref: /jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18
-    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet 2012" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
+    permalinkDataAttributes: data-inwerking="12-12-2018" data-juriconnectverwijzing="jci1.3:c:BWBR0032203&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet 2012" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
     version: true
     versionLabel: Toon wetstechnische informatie
     versionHref: '/BWBR0008994/1998-01-01/0/informatie'
@@ -191,7 +191,7 @@ context:
     permalinkAModalId: popuppermanentelink
     permalinkAClass: popuppermanentelink
     permalinkAHref: /jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18
-    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet op defensie- en veiligheidsgebied" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032898%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
+    permalinkDataAttributes: data-inwerking="12-12-2018" data-juriconnectverwijzing="jci1.3:c:BWBR0032898&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet op defensie- en veiligheidsgebied" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032898%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
     version: true
     versionLabel: Toon wetstechnische informatie
     versionHref: '/BWBR0008994/1998-01-01/0/informatie'
@@ -226,7 +226,7 @@ context:
     permalinkAModalId: popuppermanentelink
     permalinkAClass: popuppermanentelink
     permalinkAHref: /jci1.3:c:BWBR0032898&deel=1&amp;z=2019-04-18&amp;g=2019-04-18
-    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0032898&deel=1&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet op defensie- en veiligheidsgebied" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032898%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
+    permalinkDataAttributes: data-inwerking="12-12-2018" data-juriconnectverwijzing="jci1.3:c:BWBR0032898&deel=1&z=2019-04-18&g=2019-04-18" data-citeertitel="Aanbestedingswet op defensie- en veiligheidsgebied" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032898%2f2019-04-18%2f0&geldigheidsdatum=2021-02-05&zichtdatum=2021-02-05"
     version: true
     versionLabel: Toon wetstechnische informatie
     versionHref: '/BWBR0008994/1998-01-01/0/informatie'

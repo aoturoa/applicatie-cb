@@ -77,11 +77,11 @@
               onderdelenItems[i].click();
                 hadItems = true;
             }
-            
+
           }
-          
+
       }
-      if(hadItems){         
+      if(hadItems){
         if($("#" + inputId).is(':checked')) {
         $("#" + inputId).prop('checked', false);
         }
@@ -532,6 +532,8 @@
               h;
           e = c != -1 ? f.slice(0, c) : n.trim(f);
           o = e;
+          var inwerking = n(this).data("inwerking");
+          if(inwerking){n("#pmlink-inwerking").html(inwerking);}
           n("#geselecteerdeonderdelen").length == 1 &&
               (t = n(this).closest(".fragment-header").length == 1 ? n(this).closest(".fragment-header").find("h1").text() : n(this).closest(".wetgeving").parent("div").prev(".fragment-header").find("h1").text());
           e != t && (o += " " + t);
