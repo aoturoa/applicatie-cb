@@ -1,0 +1,26 @@
+.bar {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+
+    &__item {
+      display: inline-block;
+      margin: 0 2em 1em 0;
+
+      p {
+        font-size: 0.9em;
+      }
+
+      &-icon {
+        margin: 0 0 .25em 0;
+        font-size: 1em !important;
+      }
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+}

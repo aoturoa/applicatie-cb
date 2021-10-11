@@ -38,6 +38,11 @@ variants:
     context:
       text: Secundaire knop
       modifier: icon-bg icon--edit
+  - name: Secondary Icon External
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--external
   - name: Secondary Icon Add
     status: ready
     context:

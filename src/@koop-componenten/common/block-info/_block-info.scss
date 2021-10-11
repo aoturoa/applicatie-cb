@@ -1,0 +1,24 @@
+.block-info {
+  background: $lightGreen;
+  padding: 1em;
+  margin-bottom: 1.5em;
+
+  @media ( min-width: $breakpointDesktopAdjusted ) {
+    padding: 1.75em;
+  }
+
+  &__icon img,
+  &__icon svg {
+    width: 3.25em;
+    margin-bottom: .5em;
+  }
+
+  &__content {
+    font-weight: bold;
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

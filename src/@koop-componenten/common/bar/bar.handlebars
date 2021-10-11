@@ -1,0 +1,10 @@
+<div {{#if id}}id="{{id}}"{{/if}} class="bar{{#if modifier}} bar--{{modifier}}{{/if}} {{modifiers}}" {{attributes}}>
+  <ul class="bar__list">
+    {{#each items}}
+      <li class="bar__list__item">
+        {{#if link}}<p class="bar__list__item-icon"><a href="{{link/href}}" class="link {{#if link/icon}}link--{{link/icon}}{{/if}}">{{link/label}}</a></p>{{/if}}
+        {{{content}}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

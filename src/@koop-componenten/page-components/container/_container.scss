@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 0 1em;
 
+  &--alignleft {
+    margin: 0;
+  }
+
   &--centered {
     max-width: 49em;
   }
