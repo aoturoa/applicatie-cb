@@ -11,25 +11,23 @@
   </div>
 
   <div class="row row--container">
-
     <h2 class="row__heading">Welke berichten krijg ik te zien?</h2>
-
     <div class="columns">
       {{ render "@block-info" blockinfo1 }}
       {{ render "@block-info" blockinfo2 }}
       {{ render "@block-info" blockinfo3 }}
     </div>
-
-    <p class="p p-intro">
-      Wilt u meer of minder berichten zien? U kunt deze en andere voorkeuren wijzigen in MijnOverheid via ‘Berichten over uw buurt’ op de pagina ‘Wonen’.
-    </p>
-    <p>
-      {{ render "@button--secondary-icon-external" buttonMijnoverheid merge=true }}
-    </p>
-
+    <div class="container container--alignleft">
+      <p class="p p-intro">
+        Wilt u meer of minder berichten zien? U kunt deze en andere voorkeuren wijzigen in MijnOverheid via ‘Berichten over uw buurt’ op de pagina ‘Wonen’.
+      </p>
+      <p>
+        {{ render "@button--secondary-icon-external" buttonMijnoverheid merge=true }}
+      </p>
+    </div>
   </div>
 
-  {{!-- <div class="container container--alignleft"> --}}
+  <div class="container container--alignleft">
     <div class="row row--container">
       <h2 class="row__heading">Ik heb een vraag of opmerking over de inhoud van een bericht uit Berichten over uw buurt.</h2>
       <p class="p p-intro">
@@ -61,17 +59,14 @@
           </p>
         {{/@accordion-item}}
       {{/@accordion}}
-
     </div>
-  {{!-- </div> --}}
+  </div>
 
   <div class="row">
-
     {{#> @block--slim blockhelpen }}
       <p>Heeft u vragen over de dienst Berichten over uw buurt van MijnOverheid? In de veelgestelde vragen vindt u meer informatie.</p>
       {{ render "@bar" }}
     {{/@block--slim}}
-
   </div>
 
 </div>
