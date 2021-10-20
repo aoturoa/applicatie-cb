@@ -21,15 +21,15 @@ context:
     headingcentered: true
   blockinfo1:
     icon:
-      src: /images/icon-marker-v2.svg
+      src: ../../images/icon-marker-v2.svg
     content: <p>U krijgt berichten te zien die gaan over zaken die spelen binnen een straal van 125, 250 of 500 meter rondom uw woonadres.</p>
   blockinfo2:
     icon:
-      src: /images/icon-building.svg
+      src: ../../images/icon-building.svg
     content: <p>Het gaat hierbij om berichten van uw Gemeente, Provincie, Waterschap, Regionaal Samenwerkingsorgaan of de Rijksoverheid.</p>
   blockinfo3:
     icon:
-      src: /images/icon-calendar-v2.svg
+      src: ../../images/icon-calendar-v2.svg
     content: <p>De berichten die u ziet, zijn gepubliceerd in de afgelopen 8 weken.</p>
   buttonMijnoverheid:
     text: MijnOverheid
