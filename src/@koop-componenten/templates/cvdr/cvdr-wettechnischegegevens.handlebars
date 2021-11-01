@@ -19,9 +19,11 @@
     </div>
   </div>
 
-  <div role="main" id="content">
+  <div role="main" id="content" class="content content--publication">
 
     {{ render "@pageactions" pageactions }}
+
+    {{!-- https://lokaleregelgeving.overheid.nl/CVDR620100/2?titel=PZH-2018-661534998&datumrange=op&datumop=1-11-2021&date-input--2=1-11-2021&show-wti=true --}}
 
     <div id="modal-1" class="modal modal--off-screen" hidden role="alert">
       <div class="modal__inner">
@@ -76,56 +78,74 @@
       </tbody>
     </table>
 
+    <h2>Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd</h2>
+    <p><a href="#">http://decentrale.regelgeving.overheid.nl/cvdr/XHTMLoutput/Historie/Zuid-Holland/468224/CVDR468224_1.html</a></p>
+
     <h2 class="">Opmerkingen met betrekking tot de regeling</h2>
     <p>
-      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-      inwerking treedt.
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking treedt.
     </p>
 
-    <h2 class="">Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd</h2>
-    <p>
-      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-      inwerking treedt.
-    </p>
 
-    <h2 class="">Regelgeving die op deze regeling is gebaseerd (gedelegeerde regelgeving)</h2>
-    <p>
-      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-      inwerking treedt.
-    </p>
+    <h2 class="inline-block">Overzicht van in de tekst verwerkte wijzigingen</h2>
+    {{ render "@tooltip" tt1 }}
 
-      <h2 class="">Overzicht van in de tekst verwerkte wijzigingen</h2>
+    <div>
       <div class="table__container">
         <table class="table__data-overview">
-          <thead>
-            <tr>
-              <th scope="col">Datum inwerkingtreding</th>
-              <th scope="col">Terugwerkende kracht tot en met</th>
-              <th scope="col">Datum uitwerkingtreding</th>
-            </tr>
-          </thead>
           <tbody>
             <tr>
-              <td>07-03-2019</td>
-              <td>07-03-2019</td>
-              <td></td>
+                <th scope="col">
+                  <p>Datum inwerkingtreding</p>
+                </th>
+                <th scope="col">
+                  <p>Terugwerkende kracht tot en met</p>
+                </th>
+                <th scope="col">
+                  <p>Datum uitwerkingtreding</p>
+                </th>
+                <th scope="col">
+                  <p>Betreft</p>
+                </th>
+                <th scope="col">
+                  <p>Datum ondertekening</p>
+                  <p>Bron bekendmaking</p>
+                </th>
+                <th scope="col">
+                  <p>Kenmerk voorstel</p>
+                </th>
+            </tr>
+            <tr class="current">
+                <td><a href="/CVDR620100/2">07-03-2019</a></td>
+                <td></td>
+                <td></td>
+                <td>gewijzigde regeling</td>
+                <td>
+                  <p>22-01-2019</p>
+                  <p><a href="https://zoek.officielebekendmakingen.nl/prb-2019-1649.html">prb-2019-1649</a></p>
+                </td>
+                <td>PZH-2018-661534998</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td>07-03-2019</td>
+                <td><a href="/CVDR620100/1">12-01-2019</a></td>
+                <td></td>
+                <td>07-03-2019</td>
+                <td>Nieuw besluit</td>
+                <td>
+                  <p>02-10-2018</p>
+                  <p><a href="https://zoek.officielebekendmakingen.nl/prb-2019-166.html">prb-2019-166</a></p>
+                </td>
+                <td>PZH-2018-661534998</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </div>
 
 
-      <div class="row row--large">
-        {{ render "@alert" alertFoutief }}
-      </div>
+    <div class="row row--large">
+      {{ render "@alert" alertFoutief }}
+    </div>
 
 
 </div>
