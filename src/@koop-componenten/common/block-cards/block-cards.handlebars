@@ -1,11 +1,11 @@
 <div class="block-cards">
-  <p class="block-cards__subheading">Voor u geselecteerd</p>
-  <h2 class="block-cards__heading">Uitgelichte wetsvoorstellen</h2>
-  <div class="block-cards__intro">
-    <p>
-      Wetsvoorstellen worden uitgelicht als ze belangrijk kunnen zijn voor veel mensen. Bijvoorbeeld omdat het onderwerp nu in de samenleving speelt. Of omdat ze grote gevolgen hebben voor burgers of bedrijven. Wat is úw mening over deze voorstellen?
-    </p>
-  </div>
+  <p class="block-cards__subheading">{{subheading}}</p>
+  <h2 class="block-cards__heading">{{heading}}</h2>
+  {{#if intro}}
+    <div class="block-cards__intro">
+      {{{intro}}}
+    </div>
+  {{/if}}
   <div class="columns">
     {{#each cards}}
       <div class="block-cards__card">

@@ -1,0 +1,25 @@
+---
+title: bar
+context:
+  text: bar
+  items:
+    - link:
+        label: Veelgestelde vragen
+        icon: question
+        href: https://www.overheid.nl/faq
+      content: <p>Vind direct het antwoord op uw vraag</p>
+    - link:
+        label: MijnOverheid
+        icon: external
+        href: https://www.mijnoverheid.nl/
+      content: <p>Pas uw voorkeuren aan</p>
+    - link:
+        label: Contactformulier
+        icon: mail
+        href: https://www.overheid.nl/contact
+      content: <p>Binnen 2 werkdagen reactie op uw vraag</p>
+    - link:
+        label: +31(0)12 3456 789
+        icon: tel
+        href: https://www.overheid.nl/tel
+      content: <p>Op werkdagen bereikbaar van 08.30 tot 17.00 uur</p>

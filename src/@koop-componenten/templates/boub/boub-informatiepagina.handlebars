@@ -1,0 +1,74 @@
+{{ render "@header" header merge=true }}
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="row row--container">
+    <h2 class="row__heading">Welke berichten krijg ik te zien?</h2>
+    <div class="columns">
+      {{ render "@block-info" blockinfo1 }}
+      {{ render "@block-info" blockinfo2 }}
+      {{ render "@block-info" blockinfo3 }}
+    </div>
+    <div class="container container--alignleft">
+      <p class="p p-intro">
+        Wilt u meer of minder berichten zien? U kunt deze en andere voorkeuren wijzigen in MijnOverheid via ‘Berichten over uw buurt’ op de pagina ‘Wonen’.
+      </p>
+      <p>
+        {{ render "@button--secondary-icon-external" buttonMijnoverheid merge=true }}
+      </p>
+    </div>
+  </div>
+
+  <div class="container container--alignleft">
+    <div class="row row--container">
+      <h2 class="row__heading">Ik heb een vraag of opmerking over de inhoud van een bericht uit Berichten over uw buurt.</h2>
+      <p class="p p-intro">
+        Afhankelijk van uw vraag of opmerking kunt u het volgende doen:
+      </p>
+      {{#> @accordion accordion1 }}
+        {{#> @accordion-item item1 }}
+          <p>Kijk eerst of de stukken als bijlage zijn toegevoegd aan de bekendmaking. Als dit niet zo is kunt u hiervoor contact opnemen met de organisatie die het bericht heeft gepubliceerd.</p>
+          <p>
+            {{ render "@link--cta" cta1 merge=true }}
+          </p>
+        {{/@accordion-item}}
+        {{#> @accordion-item item2 }}
+          <p>In de bekendmaking staat hoe u dit kunt doen. Als u vragen heeft over de bezwaarprocedure kunt u contact opnemen met de organisatie die het bericht heeft gepubliceerd.</p>
+          <p>
+            {{ render "@link--cta" cta2 merge=true }}
+          </p>
+        {{/@accordion-item}}
+        {{#> @accordion-item item3 }}
+          <p>Neem dan contact op met de organisatie die de bekendmaking heeft gemaakt. Deze organisatie is namelijk zelf verantwoordelijk voor de inhoud van het bericht.</p>
+          <p>
+            {{ render "@link--cta" cta3 merge=true }}
+          </p>
+        {{/@accordion-item}}
+        {{#> @accordion-item item4 }}
+          <p>Zoek dan de contactgegevens op in het <a href="https://www.overheid.nl/roo">'Register van Overheidsorganisaties'</a>. De naam van de organisatie staat altijd boven aan de bekendmaking.</p>
+          <p>
+            {{ render "@link--cta" cta4 merge=true }}
+          </p>
+        {{/@accordion-item}}
+      {{/@accordion}}
+    </div>
+  </div>
+
+  <div class="row">
+    {{#> @block--slim blockhelpen }}
+      <p>Heeft u vragen over de dienst Berichten over uw buurt van MijnOverheid? In de veelgestelde vragen vindt u meer informatie.</p>
+      {{ render "@bar" }}
+    {{/@block--slim}}
+  </div>
+
+</div>
+
+{{ render "@footer" }}

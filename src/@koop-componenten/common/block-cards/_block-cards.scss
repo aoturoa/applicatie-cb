@@ -9,10 +9,10 @@ $breakpointDesktopAdjusted: 65em;
     font-size: 1.3em;
   }
   &__heading {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 .5em 0;
     font-size: 1.8125em;
     @media ( min-width: $breakpointDesktopAdjusted ) {
-      margin: 0 0 0.25em 0;
+      margin: 0 0 1.25em 0;
     }
   }
   &__intro {
@@ -21,6 +21,7 @@ $breakpointDesktopAdjusted: 65em;
       max-width: 35em;
       font-size: 1.2em;
       line-height: 1.3;
+      margin-top: -1em;
     }
   }
 

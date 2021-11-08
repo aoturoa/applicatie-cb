@@ -1,0 +1,8 @@
+---
+label: Blok (inhoud)
+context:
+  id: 1
+  icon:
+    src: /images/icon-download.svg
+    alt:
+  content: <p>De berichten die u ziet, zijn gepubliceerd in de afgelopen 8 weken.</p>
