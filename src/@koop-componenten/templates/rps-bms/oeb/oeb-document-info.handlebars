@@ -42,6 +42,9 @@
     <p>
        Onderstaande tabel bevat een overzicht van de publicatiegegevens (metadata) die bij deze publicatie horen.
     </p>
+
+    {{ render "@list--unstyled" listMeta }}
+
     <table class="table--condensed table--headerhighlight">
       <thead>
         <tr>
@@ -96,10 +99,45 @@
         </tr>
       </tbody>
     </table>
-    <p>
-      De metadata is ook als los bestand beschikbaar
-    </p>
-     {{ render "@list--unstyled" listMeta }}
+
+    <h2>Op de kaart</h2>
+
+    {{render "@map" mapContext }}
+
+    <script id="config1" type="application/json">
+    {
+      "locations": [
+        {
+          "type": "adres",
+          "geometry": "POINT(4.34015737 52.07846659)",
+          "geometry_type": "WKT",
+          "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+          "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+        }
+      ],
+      "options": {
+        "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+        "class": "kaartprikmodule-overlay",
+        "mode": "geoview",
+        "center": {
+          "highlight": false,
+          "type": "circle",
+          "circle": {
+            "radius": 200,
+            "x": 83224,
+            "y": 454983
+          }
+        },
+        "controls": ["base-layer", "center", "fullscreen", "zoom"],
+        "layers": {
+          "bgtachtergrondkaart": {
+            "enabled": true
+          }
+        }
+      }
+    }
+    </script>
+
 
      {{#> @modal modalDelen }}
 

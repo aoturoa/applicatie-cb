@@ -106,3 +106,6 @@ context:
     text: Deze publicatie is niet beschikbaar als Webversie. <a href="#">Bekijk de authentieke versie (PDF)</a>
   alertinfo2:
     text: Wegens privacy-overwegingen is deze publicatie niet meer als Webversie beschikbaar. U kunt wel de <a href="#">authentieke versie (PDF)</a> raadplegen.
+  mapContext:
+    modifier: h-400
+    controls: false
