@@ -384,6 +384,7 @@ context:
           text: Spreker toevoegen
           anchor: false
           button: true
+          type: button
           modifier: js-form-fieldrepeater__addbutton
         ha_datepicker1:
           id: 11118122232322312
@@ -431,7 +432,7 @@ context:
           labelmodifier: secondary
         ka_ondernummer:
           id: 111122
-          type: number
+          type: text
           fieldLabel: Ondernummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 2'

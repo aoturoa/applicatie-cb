@@ -468,7 +468,7 @@ context:
           attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="dossiernummer"
         ka_ondernummer:
           id: 111122
-          type: number
+          type: text
           fieldLabel: Ondernummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 2'
