@@ -2,7 +2,7 @@
 'use strict';
 
 const gulp = require( 'gulp' );
-const sass = require( 'gulp-sass' );
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require( 'gulp-postcss' );
 const concat = require( 'gulp-concat' );
 const packagejson = require( './package.json' );
