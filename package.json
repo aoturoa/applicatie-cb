@@ -20,7 +20,7 @@
   "author": "Hidde de Vries, Jeroen Hulscher",
   "license": "ISC",
   "dependencies": {
-    "chromedriver": "^77.0.0",
+    "chromedriver": "^87.0.1",
     "dot-prop": "^5.1.1",
     "gulp-minifier": "^3.5.0",
     "is-obj": "^2.0.0",
