@@ -557,19 +557,44 @@
 (function (n) {
   "use strict";
   n(function () {
-      n(".popupexporteren").click(function (t) {
-          var i = n(this).attr("href");
-          n("#hfRegelingOnderdelenActie").val("");
-          n("#hfExportOnderdeelID").val(i);
-          n("#popupexporterenafbeeldingen").hide();
-          /^\/([a-z0-9]+)\/([0-9|_|-]*)\/([0-9]+)(\/?)$/i.test(i)
-              ? (n("#popupexporterenafbeeldingen").show(), n(".exporteren-xml-optie").show())
-              : (n("#rbZonderAfbeeldingen").prop("checked", !0),
-                n(".exporteren-xml-optie input:checked").length && n('#popupexporteren input[id$="rbRtf"]').prop("checked", !0),
-                n(".exporteren-xml-optie input:checked").prop("checked", !1),
-                n(".exporteren-xml-optie").hide());
-          t.preventDefault();
-      });
+    
+      $('.popupexporteren').click(function (e) {
+        var href = $(this).attr('href');
+        var hasHeadingAttributes = n('.pexporteren-heading');
+
+        $('#hfRegelingOnderdelenActie').val('');
+        $('#hfExportOnderdeelID').val(href);
+
+        $('#popupexporterenafbeeldingen').hide();
+
+        if (/^\/([a-z0-9]+)\/([0-9|_|-]*)\/([0-9]+)(\/?)$/i.test(href)) {
+            // Alleen bij volledige regeling de optie om afbeeldingen te exporteren weergeven
+            $('#popupexporterenafbeeldingen').show();
+
+            // Alleen bij volledige regeling de optie voor export als xml
+            $('.exporteren-xml-optie').show();
+
+            if(hasHeadingAttributes){
+                $('.pexporteren-heading').text($('.pexporteren-heading').attr('data-label-regeling'));
+            }
+        }
+        else {
+            // Bij regelingonderdelen de optie 'Zonder afbeeldingen' weer aanvinken
+            $('#rbZonderAfbeeldingen').prop('checked', true);
+
+            // Bij regelingonderdelen de optie xml uitvinken en verbergen
+            if ($('.exporteren-xml-optie input:checked').length) {
+                $('#popupexporteren input[id$="rbRtf"]').prop('checked', true);
+            }
+            $('.exporteren-xml-optie input:checked').prop('checked', false);
+            $('.exporteren-xml-optie').hide();
+            if(hasHeadingAttributes){
+                $('.pexporteren-heading').text($('.pexporteren-heading').attr('data-label-regelingsonderdeel'));
+            }
+        }
+
+        e.preventDefault();
+    });
   });
 })(jQuery);
 
