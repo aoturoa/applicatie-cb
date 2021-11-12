@@ -473,7 +473,6 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 2'
           labelmodifier: secondary
-          attributes: data-decorator="init-inputsuggestion" data-suggestionpattern="ondernummer"
       item5:
         type: checkbox
         headerId: header5
