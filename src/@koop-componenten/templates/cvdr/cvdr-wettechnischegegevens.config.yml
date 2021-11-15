@@ -19,20 +19,14 @@ context:
   navToeContext:
     id: 3
     items:
-    - title: Regeling
-      sub: true
-      subItems:
-      - stitle: Intitulé
-        href: "#section-1"
-      - stitle: Besluiten
-        href: "#section-2"
-      - stitle: Artikel 1
-        href: "#artikel-1"
-      - stitle: Artikel 2
-        href: "#artikel-2"
+    - title: Toon regelingtekst
+  tt1:
+    id: 1453
+    label: Help?
+    content: Dit overzicht bevat alleen gepubliceerde versies.
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
-    text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
+    text: '<p>Bent u van mening dat de inhoud niet juist is? Neem dan contact op met de organisatie die de regelgeving heeft gepubliceerd. Deze organisatie is namelijk zelf verantwoordelijk voor de inhoud van de regelgeving. De naam van de organisatie ziet u bovenaan de regelgeving. De contactgegevens van de organisatie kunt u hier opzoeken: almanak.overheid.nl.</p><p>Werkt de website of een link niet goed? Stuur dan een e-mail naar <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a></p>'
     modifier: alert--success alert--large icon--document
   pageactions:
     items:

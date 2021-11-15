@@ -2,6 +2,10 @@
 label: Blok (cards)
 context:
   id: 1
+  heading: Uitgelichte wetsvoorstellen
+  subheading: Voor u geselecteerd
+  headingType: h2
+  intro: <p>Wetsvoorstellen worden uitgelicht als ze belangrijk kunnen zijn voor veel mensen. Bijvoorbeeld omdat het onderwerp nu in de samenleving speelt. Of omdat ze grote gevolgen hebben voor burgers of bedrijven. Wat is úw mening over deze voorstellen?</p>
   cards:
     - heading:
         label: Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden

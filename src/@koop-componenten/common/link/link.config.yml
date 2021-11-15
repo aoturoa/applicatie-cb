@@ -86,5 +86,23 @@ variants:
       text: Download
       action: '#'
       class: link link--download
+  - name: Question
+    label: Vraag
+    context:
+      text: Veel gestelde vragen
+      action: '#'
+      class: link link--question
+  - name: External
+    label: Extern (icon)
+    context:
+      text: MijnOverheid
+      action: '#'
+      class: link link--external
+  - name: Tel
+    label: Tel
+    context:
+      text: '06 123456789'
+      action: '#'
+      class: link link--tel
 
 

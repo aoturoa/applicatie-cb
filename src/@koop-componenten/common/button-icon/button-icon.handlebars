@@ -1,3 +1,9 @@
+{{#if anchor }}
+<a href="{{action}}" {{#if id}}id="{{id}}"{{/if}} class="button-icon {{ modifier }}" {{ disabled }} {{{arguments}}}>
+  <span class="visually-hidden">{{ text }}</span>
+</a>
+{{else}}
 <button {{#if id}}id="{{id}}"{{/if}} class="button-icon {{ modifier }}" type="{{#if type}}{{type}}{{else}}button{{/if}}" {{ disabled }} {{{arguments}}}>
   <span class="visually-hidden">{{ text }}</span>
 </button>
+{{/if}}

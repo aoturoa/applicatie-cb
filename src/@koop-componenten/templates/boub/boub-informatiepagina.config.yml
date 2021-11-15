@@ -1,0 +1,79 @@
+---
+label: BouB - Informatiepagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks: false
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  jumbotronContext:
+    heading: Wat is Berichten over uw buurt?
+    h: h1
+    subheading: MijnOverheid Wonen
+    intro: Wanneer gemeenten of andere overheidsorganisaties een besluit nemen over bijvoorbeeld een aangevraagde bouwvergunning bij u in de straat of als er werkzaamheden in uw buurt uitgevoerd gaan worden, wordt dit gepubliceerd.
+    text: <p>U leest deze berichten over uw buurt op MijnOverheid.<p>
+    centered: true
+    headingcentered: true
+  blockinfo1:
+    icon:
+      src: ../../images/icon-marker-v2.svg
+    content: <p>U krijgt berichten te zien die gaan over zaken die spelen binnen een straal van 125, 250 of 500 meter rondom uw woonadres.</p>
+  blockinfo2:
+    icon:
+      src: ../../images/icon-building.svg
+    content: <p>Het gaat hierbij om berichten van uw Gemeente, Provincie, Waterschap, Regionaal Samenwerkingsorgaan of de Rijksoverheid.</p>
+  blockinfo3:
+    icon:
+      src: ../../images/icon-calendar-v2.svg
+    content: <p>De berichten die u ziet, zijn gepubliceerd in de afgelopen 8 weken.</p>
+  buttonMijnoverheid:
+    text: MijnOverheid
+    anchor: true
+    action: https://www.mijnoverheid.nl
+    attributes: rel="external" aria-label="Externe link naar MijnOverheid. Opent in een nieuw scherm"
+  accordion1:
+    headerId: header1
+    headerLabel: Accordion Vraag 1
+    item1:
+      headerId: itemheader1
+      headerLabel: Wilt u stukken inzien?
+      contentId: itemcontent1
+      cta1:
+        text: Contactgegevens overheden
+        action: https://www.overheid.nl/roo
+    item2:
+      headerId: itemheader2
+      headerLabel: Wilt u bezwaar maken?
+      contentId: itemcontent2
+      cta2:
+        text: Contactgegevens overheden
+        action: https://www.overheid.nl/roo
+    item3:
+      headerId: itemheader3
+      headerLabel: Wilt u meer informatie of klopt de inhoud van een bekendmaking niet?
+      contentId: itemcontent3
+      cta3:
+        text: Contactgegevens overheden
+        action: https://www.overheid.nl/roo
+    item4:
+      headerId: itemheader4
+      headerLabel: Wilt u contact opnemen met een organisatie die de bekendmaking heeft gemaakt?
+      contentId: itemcontent4
+      cta4:
+        text: Contactgegevens overheden
+        action: https://www.overheid.nl/roo
+  blockhelpen:
+    id: 12
+    htype: 2
+    heading: Kunnen we u verder helpen?
+    subheading: Berichten over uw buurt
+    content: false
+    buttonText: false
+    highlight: true
+    slim: true
+

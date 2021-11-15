@@ -103,6 +103,9 @@ context:
     items:
       - content: <a href="https://wetten.overheid.nl">Tabals- en rookwarenwet</a><small>Toon geconsolideerde verrsie op wetten.nl</small>
   alertinfo1:
-    text: Deze publicatie is niet beschikbaar als Webversie. Bekijk de authentieke versie (PDF)
+    text: Deze publicatie is niet beschikbaar als Webversie. <a href="#">Bekijk de authentieke versie (PDF)</a>
   alertinfo2:
-    text: Wegens privacy-overwegingen is deze publicatie niet meer als Webversie beschikbaar. U kunt wel de authentieke versie (PDF) raadplegen.
+    text: Wegens privacy-overwegingen is deze publicatie niet meer als Webversie beschikbaar. U kunt wel de <a href="#">authentieke versie (PDF)</a> raadplegen.
+  mapContext:
+    modifier: h-400
+    controls: false

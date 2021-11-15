@@ -1,6 +1,6 @@
 {
   "name": "applicatie-cb",
-  "version": "1.9.51",
+  "version": "1.9.52",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "Hidde de Vries, Jeroen Hulscher",
   "license": "ISC",
   "dependencies": {
-    "chromedriver": "^77.0.0",
+    "chromedriver": "^87.0.1",
     "dot-prop": "^5.1.1",
     "gulp-minifier": "^3.5.0",
     "is-obj": "^2.0.0",
