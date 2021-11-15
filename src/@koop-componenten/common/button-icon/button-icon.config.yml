@@ -24,3 +24,10 @@ variants:
     context:
       modifier: button-icon--bin
       text: Verwijderen
+  - name: Variant Link
+    status: ready
+    context:
+      modifier: button-icon--bin
+      text: Verwijderen
+      anchor: true
+      action: '#'
