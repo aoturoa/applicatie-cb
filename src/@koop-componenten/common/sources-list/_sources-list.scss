@@ -121,8 +121,19 @@ $breakpointDesktopListSources: 65em;
         font-weight: normal;
         font-size: 90%;
       }
+      dt {
+        @media ( min-width: $breakpointDesktop ) {
+          width: 25%;
+        }
+        @media ( min-width: $breakpointDesktopListSources ) {
+          width: 25%;
+        }
+      }
       dd {
         font-style: italic;
+        @media ( min-width: $breakpointDesktop ) {
+          width: 75%;
+        }
         @media ( min-width: $breakpointDesktopListSources ) {
           font-style: normal;
         }
