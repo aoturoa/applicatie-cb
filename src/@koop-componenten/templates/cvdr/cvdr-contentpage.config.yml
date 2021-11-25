@@ -9,28 +9,18 @@ context:
     skipLinks:
       - url: '#content'
         text: Direct naar content
-  navWetContext:
-    id: 2
-    items:
-    - title: Wettechnische gegevens
-      href: "/components/preview/templates-cvdr-wettechnischegegevens"
-      sub: false
   navToeContext:
     id: 3
     items:
     - title: Regeling
       sub: true
       active: true
-      sactive: true
       subItems:
-      - stitle: Intitulé
+      - stitle: Regeling tekst
         href: "#section-1"
-      - stitle: Besluiten
+        sactive: true
+      - stitle: Wettechnische gegevens
         href: "#section-2"
-      - stitle: Artikel 1
-        href: "#artikel-1"
-      - stitle: Artikel 2
-        href: "#artikel-2"
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
     text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
