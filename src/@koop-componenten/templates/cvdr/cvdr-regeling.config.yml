@@ -1,5 +1,5 @@
 ---
-label: CVDR - Wettechnischegegevens
+label: CVDR - Regeling
 status: ready
 context:
   header:
@@ -14,17 +14,13 @@ context:
     items:
     - title: Regeling tekst
       href: "#"
-    - title: Wetstechnische informatie
-      href: "#section-2"
       active: true
       sactive: true
-  tt1:
-    id: 1453
-    label: Help?
-    content: Dit overzicht bevat alleen gepubliceerde versies.
+    - title: Wetstechnische informatie
+      href: "#section-2"
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
-    text: '<p>Bent u van mening dat de inhoud niet juist is? Neem dan contact op met de organisatie die de regelgeving heeft gepubliceerd. Deze organisatie is namelijk zelf verantwoordelijk voor de inhoud van de regelgeving. De naam van de organisatie ziet u bovenaan de regelgeving. De contactgegevens van de organisatie kunt u hier opzoeken: almanak.overheid.nl.</p><p>Werkt de website of een link niet goed? Stuur dan een e-mail naar <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a></p>'
+    text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
     modifier: alert--success alert--large icon--document
   pageactions:
     items:
@@ -40,5 +36,12 @@ context:
       icon: icon-download.svg
     - link: '#'
       text: Printen
-      icon: icon-print.svg
+      icon: icon-print-blue.svg
       actionPrint: true
+  tablecontainer1:
+    topbar:
+      modifier: table-topbar--alignleft
+      items:
+      - text: Toon volledige tabel
+        href: '#'
+        class: button icon-bg icon--fullscreen

@@ -29,51 +29,53 @@
   }
 }
 
-.docRegelingOpschrift {
+body .docRegelingOpschrift {
   @extend .h1;
 }
-.docHoofdstuk {
+body .docHoofdstuk {
   @extend .h2;
 }
-.docTitel {
+body .docTitel {
   @extend .h3;
   font-size: em(18);
 }
-.docAfdeling {
+body .docAfdeling {
   @extend .h3;
   font-size: em(18);
 }
-.docParagraaf {
+body .docParagraaf {
   @extend .h5;
   font-weight: bold;
 }
-.docSubparagraaf {
+body .docSubparagraaf {
   @extend .h5;
   font-weight: bold;
 }
-.docSubsubparagraaf {
+body .docSubsubparagraaf {
   @extend .h5;
   font-weight: bold;
 }
-.docArtikel {
+body .docArtikel {
   @extend .h4;
   font-weight: bold;
   font-style: normal;
 }
-.docDivisie {
+body .docDivisie {
   font-style: italic;
+  font-size: 100%;
+  font-weight: normal;
 }
 
-.docFormeleInhoud {
+body .docFormeleInhoud {
   @extend .h4;
   font-weight: bold;
 }
-.docFormeleDivisie {
+body .docFormeleDivisie {
   @extend .h4;
   font-weight: bold;
 }
 
-.docTussenkop {
+body .docTussenkop {
   @extend .h4;
   font-style: italic;
   font-weight: normal;
