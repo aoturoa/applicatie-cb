@@ -236,6 +236,16 @@
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-cvdr-searchresults.html"
     },
     {
+      "label": "CVDR - regeling tekst",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-regeling",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-cvdr-regeling.html"
+    },
+    {
+      "label": "CVDR - regeling tekst",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-wettechnischegegevens",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-cvdr-wettechnischegegevens.html"
+    },
+    {
       "label": "tucht - Homepage",
       "url": "http://localhost:3000/components/preview/templates-tucht-homepage",
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-tucht-homepage.html"

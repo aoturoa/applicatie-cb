@@ -9,17 +9,15 @@ context:
     skipLinks:
       - url: '#content'
         text: Direct naar content
-  navWetContext:
-    id: 2
-    items:
-    - title: Wettechnische gegevens
-      href: ""
-      sub: false
-      sactive: sactive
   navToeContext:
     id: 3
     items:
-    - title: Toon regelingtekst
+    - title: Regeling tekst
+      href: "#"
+    - title: Wetstechnische informatie
+      href: "#section-2"
+      active: true
+      sactive: true
   tt1:
     id: 1453
     label: Help?
@@ -43,3 +41,4 @@ context:
     - link: '#'
       text: Printen
       icon: icon-print.svg
+      actionPrint: true
