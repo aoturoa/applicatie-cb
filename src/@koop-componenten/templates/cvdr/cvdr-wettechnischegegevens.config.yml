@@ -12,7 +12,7 @@ context:
   navToeContext:
     id: 3
     items:
-    - title: Toon regeling tekst
+    - title: Regeling tekst
       href: "#"
     - title: Wetstechnische informatie
       href: "#section-2"
@@ -41,3 +41,4 @@ context:
     - link: '#'
       text: Printen
       icon: icon-print.svg
+      actionPrint: true

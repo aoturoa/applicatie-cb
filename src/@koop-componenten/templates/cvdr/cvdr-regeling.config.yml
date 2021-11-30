@@ -12,11 +12,11 @@ context:
   navToeContext:
     id: 3
     items:
-    - title: Regeling
+    - title: Regeling tekst
       href: "#"
       active: true
       sactive: true
-    - title: Toon wetstechnische informatie
+    - title: Wetstechnische informatie
       href: "#section-2"
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
@@ -37,6 +37,7 @@ context:
     - link: '#'
       text: Printen
       icon: icon-print-blue.svg
+      actionPrint: true
   tablecontainer1:
     topbar:
       modifier: table-topbar--alignleft
