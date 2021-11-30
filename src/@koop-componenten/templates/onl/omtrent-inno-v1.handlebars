@@ -1,0 +1,42 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+ 
+        <form class="form form__row form__row--medium">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek de overheidsdocumenten</legend>
+            <div class="form__row form__row--medium">
+              {{render "@input-text" inputSearchContext }}
+            </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button--primary" btnSubmit merge=true }}
+              </div>
+              <div class="form__rowsubmit__item">
+                {{ render "@link" linkCta }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+    {{/@jumbotron}}
+
+  </div>
+  <div class="row">
+
+    <h2 class="row__heading">Zoek documenten op thema</h2>
+    
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

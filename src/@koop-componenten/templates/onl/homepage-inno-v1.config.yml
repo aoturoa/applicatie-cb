@@ -1,0 +1,31 @@
+---
+name: homepag ONL inno v1
+label: Homepage (inno v1)
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: 'https://www.mijnoverheid.nl'
+        text: MijnOverheid.nl
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+  jumbotronContext:
+    heading: Titel
+    subheading: Subtitel
+    intro: Intro
+    centered: true
+    headingcentered: true
+    inputSearchContext:
+      id: 87656
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek op postcode
+      fieldLabelVisible: true
+      name: searchcr
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    btnSubmit:
+      text: Zoek iets
+      button: true
+      type: submit
