@@ -50,7 +50,7 @@
 
     // master checkbox (select all)
     // this.mastercheckbox.addEventListener('click', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
-    this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); console.log('change this.mastercheckbox') }.bind(this), false);
+    this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
   };
 
   selectall.prototype.areAllCheckboxesChecked = function (e) {
