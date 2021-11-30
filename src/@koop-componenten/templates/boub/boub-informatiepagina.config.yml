@@ -37,8 +37,6 @@ context:
     action: https://www.mijnoverheid.nl
     attributes: rel="external" aria-label="Externe link naar MijnOverheid. Opent in een nieuw scherm"
   accordion1:
-    headerId: header1
-    headerLabel: Accordion Vraag 1
     item1:
       headerId: itemheader1
       headerLabel: Wilt u stukken inzien?
