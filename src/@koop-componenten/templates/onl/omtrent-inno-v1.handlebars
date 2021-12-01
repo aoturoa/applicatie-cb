@@ -32,36 +32,83 @@
   {{!-- </div> --}}
 
   {{!-- <div class="row row--container u-margin-top-48"> --}}
+  
   <div class="row row--container u-margin-top-48">
+    <h1>Gemeente Rotterdam</h1>
+    <p><img src="/images/temp/logo-rotterdam.jpg" alt="Logo: Gemeente Rotterdam"/></p>
+  </div>
 
+  <div class="row row--container">
+    {{#> @block blockIntro }}
+      <div class="block-content__intro">
+        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus.
+      </div>
+    {{/@block}}
+  </div>
+  <div class="row row--container">
     <div class="columns">
       <div class="column">
-        <h1>Gemeente Rotterdam</h1>
-        <table class="table__data-overview">
-          <tbody>
-            <tr>
-              <th scope="row">Bezoekadres</th>
-              <td>Coolsingel 40<br/>3011 AD ROTTERDAM</td>
-            </tr>
-            <tr>
-              <th scope="row">Provincie</th>
-              <td>Zuid-Holland</td>
-            </tr>
-            <tr>
-              <th scope="row">Postadres</th>
-              <td>Postbus 70012<br/>3000 KP ROTTERDAM</td>
-            </tr>
-            <tr>
-              <th scope="row">Telefoon</th>
-              <td>14 010 (algemeen)</td>
-            </tr>
-            <tr>
-              <th scope="row">Internet</th>
-              <td>{{ render "@link" linkInternet}}</td>
-            </tr>
-          </tbody>
-        </table>
-        {{ render "@button--secondary-icon-cta" buttonCtaGegevens merge=true }}
+        <h3>Berichten over uw buurt</h3>
+        {{ render "@list--action" listBoub merge=true }}
+        {{ render "@link--cta" linkCta1 merge=true }}
+      </div>
+      <div class="column">
+        <h3>Lokale wet- en regelgeving</h3>
+        {{ render "@list--action" listCvdr merge=true }}
+        {{ render "@link--cta" linkCta2 merge=true }}
+      </div>
+      <div class="column">
+        <h3>Diensten</h3>
+        {{ render "@list--action" listDiensten merge=true }}
+        {{ render "@link--cta" linkCta3 merge=true }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="row row--container">
+    {{#> @jumbotron jumbotron2Context }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+          <div class="form__row">
+            {{ render "@input-inputsubmit" }}
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
+  </div>
+
+  <div class="row row--container">
+
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        {{#> @block blockContact }}
+          <table class="table__data-overview">
+            <tbody>
+              <tr>
+                <th scope="row">Bezoekadres</th>
+                <td>Coolsingel 40<br/>3011 AD ROTTERDAM</td>
+              </tr>
+              <tr>
+                <th scope="row">Provincie</th>
+                <td>Zuid-Holland</td>
+              </tr>
+              <tr>
+                <th scope="row">Postadres</th>
+                <td>Postbus 70012<br/>3000 KP ROTTERDAM</td>
+              </tr>
+              <tr>
+                <th scope="row">Telefoon</th>
+                <td>14 010 (algemeen)</td>
+              </tr>
+              <tr>
+                <th scope="row">Internet</th>
+                <td>{{ render "@link" linkInternet}}</td>
+              </tr>
+            </tbody>
+          </table>
+          {{ render "@button--secondary-icon-cta" buttonCtaGegevens merge=true }}
+        {{/@block}}       
       </div>
       <div class="column">
         {{render "@map" mapContext }}
@@ -100,70 +147,6 @@
       </div>
     </div>    
 
-  </div>
-
-  <div class="row row--container">
-    {{#> @block blockIntro }}
-      <div class="block-content__intro">
-        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus.
-      </div>
-    {{/@block}}
-  </div>
-  <div class="row row--container">
-    <h3 class="inline-block u-margin-right-24">Lokale wet- en regelgeving</h3> {{ render "@link--cta" linkCta1 merge=true }}
-    <div class="columns">
-      <div class="column">
-        {{render "@card" }}
-      </div>
-      <div class="column">
-        {{render "@card" }}
-      </div>
-      <div class="column">
-        {{render "@card" }}
-      </div>
-    </div>
-  </div>
-  <div class="row row--container">
-    <h3 class="inline-block u-margin-right-24">Berichten over uw buurt</h3> {{ render "@link--cta" linkCta2 merge=true }}
-    <div class="columns">
-      <div class="column">
-        {{render "@card" }}
-      </div>
-      <div class="column">
-        {{render "@card" }}
-      </div>
-      <div class="column">
-        {{render "@card" }}
-      </div>
-    </div>
-  </div>
-
-  <div class="row row--container">
-    <h3 class="inline-block u-margin-right-24">Diensten</h3> {{ render "@link--cta" linkCta3 merge=true }}
-    <div class="columns">
-      <div class="column">
-        {{render "@card--without-figure" }}
-      </div>
-      <div class="column">
-        {{render "@card--without-figure" }}
-      </div>
-      <div class="column">
-        {{render "@card--without-figure" }}
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    {{#> @jumbotron jumbotron2Context }}
-      <form class="form" data-decorator="init-form-validation">
-        <fieldset>
-          <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-          <div class="form__row">
-            {{ render "@input-inputsubmit" }}
-          </div>
-        </fieldset>
-      </form>
-    {{/@jumbotron}}
   </div>
 
 </div>
