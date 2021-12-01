@@ -1,0 +1,141 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container" id="zoekopnieuw" data-blocksearch-pageheader>
+  {{ render "@block-search" blockSearch merge=true }}
+</div>
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Filter resultaten</h2>
+
+        
+            <div class="form__row form__row--large">
+              <form>
+                <fieldset>
+                  <legend>Documentsoort</legend>
+                  <div class="form__row">
+                    {{ render "@input-checkbox" onderwerpContext }}
+                  </div>
+                  {{ render "@button" buttonDocumentsoort }}
+                </fieldset>
+              </form>
+            </div> 
+
+            {{#> @accordion accordion1 }}
+              {{#> @accordion-item item1 }}
+                <form>
+                  <fieldset>
+                    <legend class="visually-hidden">Onderwerpen</legend>
+                    <div class="form__row">
+                      {{ render "@input-checkbox" checkboxesOnderwerp }}
+                    </div>
+                    {{ render "@button" buttonSubmit }}
+                  </fieldset>
+                </form>
+              {{/@accordion-item}}
+              {{#> @accordion-item item2 }}
+                <p>Jaargang</p>
+              {{/@accordion-item}}
+              {{#> @accordion-item item3 }}
+                <p>Sys. jaar</p>
+              {{/@accordion-item}}
+              {{#> @accordion-item item4 }}
+                <p>Sys. nummer</p>
+              {{/@accordion-item}}
+              {{#> @accordion-item item5 }}
+                <p>Sys. volgnummer</p>
+              {{/@accordion-item}}
+            {{/@accordion}}          
+
+            {{!-- <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Rubriek</legend>
+                {{ render "@facetlinkgroup" fgRubriek }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Rubriek</legend>
+                {{ render "@facetlinkgroup" fgRubriek }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Publicerende organisaties</legend>
+                {{ render "@facetlinkgroup" fgPubOrga }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Publicatie datum</legend>
+                {{ render "@facetlinkgroup" fgPublicatiedatum }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Jaargang</legend>
+                {{ render "@facetlinkgroup" fgJaargang }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Onderwerp</legend>
+                {{ render "@facetlinkgroup" fgOnderwerp }}
+              </fieldset>
+            </div> --}}
+
+        
+
+      </div>
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Abonneren</h2>
+
+        <p>
+          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
+        </p>
+
+        <p>
+          {{ render "@link--mail" linkAbonneren merge=true }}<br>
+          {{ render "@link--feed" linkRSS }}
+
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    {{!-- {{ render "@alert--info" alertSruQuery merge=true }} --}}
+
+    <h1>Zoekresultaten
+      <span class="h1__sub">1-10 van de 7396 resultaten</span>
+    </h1>
+
+    {{ render "@sort" sortContext }}
+
+    {{render "@resultlist" resultsContext }}
+
+    {{render "@pagination" }}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

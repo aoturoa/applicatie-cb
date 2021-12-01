@@ -1,5 +1,5 @@
 ---
-label: Zoekresultaten
+label: Zoekresultaten inno v1
 status: ready
 context:
   header:
@@ -45,20 +45,34 @@ context:
       - text: Officiële bekendmakingen
         url: '#'
       - text: Zoekresultaat
+  blockSearch:
+    isRegularSelect: true
+    regularSelect:
+      fieldLabel: Binnen
+      labelmodifier: accent
+      fieldLabelVisible: true
+      id: 32123
+      options:
+        - label: Op gehele tekst
+          value: 10
+          selected: selected
+        - label: Alleen de titel
+          value: 20
+    hasSelectedFilterbar: false
   sortContext:
     modifier:
     columns: true
     amountPerPageFilter: true
     buttonDownload: false
     options:
-    - label: Datum publicatie
-      value: value
-      active: is-active
-    - label: Datum document
-      value: value
-    - label: Relevantie
-      value: value
-      singleSort: true
+      - label: Datum publicatie
+        value: value
+        active: is-active
+      - label: Datum document
+        value: value
+      - label: Relevantie
+        value: value
+        singleSort: true
     amountPerPageOptions:
       - amount: 10
         active: true
@@ -187,6 +201,113 @@ context:
         downloads:
           - type: Download PDF
             href: '#'
+  onderwerpContext:
+    moreless: true
+    options:
+      - id: checkbox-2032
+        text: Agenda
+        name: onderwerp
+      - id: checkbox-2033
+        text: Blad gemeenschappelijke regeling
+        name: onderwerp
+      - id: checkbox-2034
+        text: Gemeenteblad
+        name: onderwerp
+      - id: checkbox-2034
+        text: Handelingen
+        name: onderwerp
+      - id: checkbox-2034
+        text: Kamerstuk
+        name: onderwerp
+      - id: checkbox-2034
+        text: Kamervragen (Aanhangsel) 
+        name: onderwerp
+      - id: checkbox-2034
+        text: Kamervragen zonder antwoord
+        name: onderwerp
+      - id: checkbox-2034
+        text: Niet-dossierstuk
+        name: onderwerp
+      - id: checkbox-2034
+        text: Provinciaal blad
+        name: onderwerp
+      - id: checkbox-2034
+        text: Staatsblad
+        name: onderwerp
+      - id: checkbox-2034
+        text: Staatscourant
+        name: onderwerp
+      - id: checkbox-2034
+        text: Tractatenblad
+        name: onderwerp
+      - id: checkbox-2034
+        text: Waterschapsblad
+        name: onderwerp
+  buttonDocumentsoort:
+    text: Filter
+    type: submit
+    button: true
+  accordion1:
+    item1:
+      headerId: itemheader1
+      headerLabel: Onderwerp
+      contentId: itemcontent1
+      checkboxesOnderwerp:
+        moreless: true
+        options:
+          - text: Arbitrage
+            id: 51
+            name: onderwerp
+          - text: Belasting
+            id: 51
+            name: onderwerp
+          - text: Bestuur | Gemeenten
+            id: 51
+            name: onderwerp
+          - text: Bestuur | Organisatie en beleid
+            id: 51
+            name: onderwerp
+          - text: Bestuur | Provincies
+            id: 51
+            name: onderwerp
+          - text: Bestuur | Rijksoverheid
+            id: 51
+            name: onderwerp
+          - text: Bestuur | Waterschappen
+            id: 51
+            name: onderwerp
+          - text: Cultuur en recreatie | Cultuur
+            id: 51
+            name: onderwerp
+          - text: Cultuur en recreatie | Media
+            id: 51
+            name: onderwerp
+          - text: Cultuur en recreatie | Organisatie en beleid
+            id: 51
+            name: onderwerp
+          - text: Cultuur en recreatie | Recreatie
+            id: 51
+            name: onderwerp
+      buttonSubmit:
+        text: Filter
+        type: submit
+        button: true
+    item2:
+      headerId: itemheader2
+      headerLabel: Jaargang
+      contentId: itemcontent2
+    item3:
+      headerId: itemheader3
+      headerLabel: Systematisch jaar
+      contentId: itemcontent3
+    item4:
+      headerId: itemheader4
+      headerLabel: Systematisch nummer
+      contentId: itemcontent4
+    item5:
+      headerId: itemheader5
+      headerLabel: Systematisch volgnummer
+      contentId: itemcontent5
   fgDocumentsoort:
     items:
       - label: Blad gemeenschappelijke regelingen met nog iets
