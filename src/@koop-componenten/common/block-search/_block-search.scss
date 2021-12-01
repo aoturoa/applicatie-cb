@@ -1,10 +1,14 @@
 .block-search {
   background: $lightBlue;
-  padding: 1em 1em 1px;
+  padding: 1em 1em .5em;
   margin-bottom: 2em;
 
   @media ( min-width: $breakpointDesktop ) {
-    padding: 2em 2em 1px;
+    padding: 2em 2em 1.5em;
+  }
+
+  .selectedfilterbar {
+    margin-bottom: 0;
   }
 }
 .container[data-blocksearch-pageheader] {
