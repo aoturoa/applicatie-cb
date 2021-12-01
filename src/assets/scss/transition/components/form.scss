@@ -127,6 +127,10 @@ input[type=text].datepicker__input~.ui-datepicker-trigger {
   padding: 4em .5em .5em .5em;
 }
 
+form fieldset .list:last-child {
+  margin-bottom: 0;
+}
+
 .form {
 
   &__row {
