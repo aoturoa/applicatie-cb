@@ -6,11 +6,11 @@
 </div>
 
 <div class="container" role="main" id="content">
-  <div class="row row--spacer">
+  {{!-- <div class="row row--spacer"> --}}
 
-    {{#> @jumbotron jumbotronContext }}
+    {{!-- {{#> @jumbotron jumbotronContext }} --}}
  
-        <form class="form form__row form__row--medium">
+        {{!-- <form class="form form__row form__row--medium">
           <fieldset>
             <legend class="visually-hidden">Doorzoek de overheidsdocumenten</legend>
             <div class="form__row form__row--medium">
@@ -25,16 +25,145 @@
               </div>
             </div>
           </fieldset>
-        </form>
+        </form> --}}
 
-    {{/@jumbotron}}
+    {{!-- {{/@jumbotron}} --}}
+
+  {{!-- </div> --}}
+
+  {{!-- <div class="row row--container u-margin-top-48"> --}}
+  <div class="row row--container u-margin-top-48">
+
+    <div class="columns">
+      <div class="column">
+        <h1>Gemeente Rotterdam</h1>
+        <table class="table__data-overview">
+          <tbody>
+            <tr>
+              <th scope="row">Bezoekadres</th>
+              <td>Coolsingel 40<br/>3011 AD ROTTERDAM</td>
+            </tr>
+            <tr>
+              <th scope="row">Provincie</th>
+              <td>Zuid-Holland</td>
+            </tr>
+            <tr>
+              <th scope="row">Postadres</th>
+              <td>Postbus 70012<br/>3000 KP ROTTERDAM</td>
+            </tr>
+            <tr>
+              <th scope="row">Telefoon</th>
+              <td>14 010 (algemeen)</td>
+            </tr>
+            <tr>
+              <th scope="row">Internet</th>
+              <td>{{ render "@link" linkInternet}}</td>
+            </tr>
+          </tbody>
+        </table>
+        {{ render "@button--secondary-icon-cta" buttonCtaGegevens merge=true }}
+      </div>
+      <div class="column">
+        {{render "@map" mapContext }}
+        <script id="config1" type="application/json">
+        {
+          "locations": [
+            {
+              "type": "adres",
+              "geometry": "POINT(4.34015737 52.07846659)",
+              "geometry_type": "WKT",
+              "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+              "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+            }
+          ],
+          "options": {
+            "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+            "class": "kaartprikmodule-overlay",
+            "mode": "geoview",
+            "center": {
+              "highlight": true,
+              "type": "location",
+              "location": {
+                "type": "gemeente",
+                "title": "Gemeente Rotterdam"
+              }
+            },
+            "controls": ["base-layer", "center", "fullscreen", "zoom"],
+            "layers": {
+              "bgtachtergrondkaart": {
+                "enabled": true
+              }
+            }
+          }
+        }
+        </script>
+      </div>
+    </div>    
 
   </div>
+
+  <div class="row row--container">
+    {{#> @block blockIntro }}
+      <div class="block-content__intro">
+        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus.
+      </div>
+    {{/@block}}
+  </div>
+  <div class="row row--container">
+    <h3 class="inline-block u-margin-right-24">Lokale wet- en regelgeving</h3> {{ render "@link--cta" linkCta1 merge=true }}
+    <div class="columns">
+      <div class="column">
+        {{render "@card" }}
+      </div>
+      <div class="column">
+        {{render "@card" }}
+      </div>
+      <div class="column">
+        {{render "@card" }}
+      </div>
+    </div>
+  </div>
+  <div class="row row--container">
+    <h3 class="inline-block u-margin-right-24">Berichten over uw buurt</h3> {{ render "@link--cta" linkCta2 merge=true }}
+    <div class="columns">
+      <div class="column">
+        {{render "@card" }}
+      </div>
+      <div class="column">
+        {{render "@card" }}
+      </div>
+      <div class="column">
+        {{render "@card" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row row--container">
+    <h3 class="inline-block u-margin-right-24">Diensten</h3> {{ render "@link--cta" linkCta3 merge=true }}
+    <div class="columns">
+      <div class="column">
+        {{render "@card--without-figure" }}
+      </div>
+      <div class="column">
+        {{render "@card--without-figure" }}
+      </div>
+      <div class="column">
+        {{render "@card--without-figure" }}
+      </div>
+    </div>
+  </div>
+
   <div class="row">
-
-    <h2 class="row__heading">Zoek documenten op thema</h2>
-    
-
+    {{#> @jumbotron jumbotron2Context }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+          <div class="form__row">
+            {{ render "@input-inputsubmit" }}
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
   </div>
 
 </div>

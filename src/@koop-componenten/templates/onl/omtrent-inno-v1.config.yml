@@ -9,14 +9,17 @@ context:
         text: MijnOverheid.nl
   breadcrumb:
     breadcrumb:
-      - text: Home
+      - text: Overheid.nl
         url: '#'
+      - text: Gemeente Rotterdam
   jumbotronContext:
-    heading: Titel
-    subheading: Subtitel
-    intro: Intro
+    heading: Gemeente Rotterdam
+    subheading: Passende subtitel
     centered: true
-    headingcentered: true
+    size: semimedium
+    backlink:
+      title: Zoek opnieuw
+      href: '#'
     inputSearchContext:
       id: 87656
       fieldPlaceholder: Zoekwoord of zinsdeel
@@ -29,3 +32,91 @@ context:
       text: Zoek iets
       button: true
       type: submit
+  buttonCtaGegevens:
+    text: Bekijke alle gegevens
+    action: http://www.overheid.nl/roo
+    anchor: true
+  mapContext:
+    modifier: h-400
+    controls: false
+  linkInternet:
+    text: www.rotterdam.nl
+    action: www.rotterdam.nl
+    external: true
+  blockIntro:
+    id: 1
+    heading: Actueel in de Gemeente Rotterdam
+    htype: 2
+    subheading: Het laatste nieuws
+  linkCta1:
+    text: Alle lokale wet- en regelgeving
+  linkCta2:
+    text: Alle Berichten over uw buurt
+  blockCards1:
+    id: 1
+    heading: Lokale wet- en regelgeving
+    subheading: Regelingen van lokale overheden
+    headingType: h2
+    intro: <p>Algemeen verbindende voorschriften, beleidsregels en andere besluiten van lokale overheden.</p>
+    cards:
+      - heading:
+          label: Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden
+        subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+        figure:
+          figcaption: false
+          source: false
+          picture:
+            src: ../../images/temp/illu-walkingdog.png
+            alt: alt text
+        labels:
+          - label:
+              text: Onderwijs
+              modifier: label--large label--info
+          - label:
+              text: 16-07-2020
+              modifier: label--large
+        cta:
+          label: Bekijk consultatie
+      - heading:
+          label: Wet deelgezag
+        subheading: Ministerie van Justitie en Veiligheid
+        figure:
+          figcaption: false
+          source: false
+          picture:
+            src: ../../images/temp/illu-walkingdog.png
+            alt: alt text
+        labels:
+          - label:
+              text: Gezien
+              modifier: label--large label--info
+          - label:
+              text: 10-03-2021
+              modifier: label--large
+        cta:
+          label: Bekijk consultatie
+      - heading:
+          label: Wijziging van o.a. het EKB WEB i.v.m. de uitwerking van het taalschakeltraject als onderwijsroute inburgering en de examinering Nt2
+        subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+        figure:
+          figcaption: false
+          source: false
+          picture:
+            src: ../../images/temp/illu-walkingdog.png
+            alt: alt text
+        labels:
+          - label:
+              text: Onderwijs
+              modifier: label--large label--info
+          - label:
+              text: 10-03-2021
+              modifier: label--large
+        cta:
+          label: Bekijk consultatie
+  jumbotron2Context:
+    modifier: slim
+    heading: Meld je aan voor de mail service
+    h: h2
+    subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
+    centered: true
+    headingcentered: true
