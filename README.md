@@ -1,9 +1,11 @@
 # KOOP componentenbibliotheek
 De componentenbibliotheek voor KOOP.
 
-## Requirements
+## Requirements DEV
 - Node.js
 - NPM
+
+## Requirements TESTING
 - webdriver-manager: ```npm install webdriver-manager -g```, see [webdriver-manager on npm](https://www.npmjs.com/package/webdriver-manager).
 
 ## Intergratie - Gebruik de KOOP componentenbibliotheek
@@ -15,6 +17,8 @@ De bestanden die nodig zijn om de KOOP componentenbibliotheek te gebruiken kan j
 ## Exporteren
 Voor het exporteren/bouwen van de gehele (fractal) componentenbibliotheek:
 - ```gulp fractal-build```
+
+Na het bouwen staat er een map 'component-library' met de gebouwde bestanden inclusief FractalJS.
 
 ## E2E test
 Controleer, geautomatiseerd, de werking van de componenten na het aanbrengen van een wijziging.
