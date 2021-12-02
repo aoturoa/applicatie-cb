@@ -21,54 +21,67 @@ context:
       id: 1777778
       title: Agenda
       short: Agenda
+      value: Agenda
     - Option: 27777782
       id: 27777782
       title: Blad gemeenschappelijke regeling
+      value: Blad gemeenschappelijke regeling
       short: Blad gemeenschappelijke regeling
       checked: checked
     - Option: 37777783
       id: 37777783
       title: Gemeenteblad
+      value: Gemeenteblad
       short: Gemeenteblad
     - Option: 37777784
       id: 37777784
       title: Handelingen
+      value: Handelingen
       short: Handelingen
       checked: checked
     - Option: 37777785
       id: 37777785
       title: Kamerstuk
+      value: Kamerstuk
       short: Kamerstuk
     - Option: 37777786
       id: 37777786
+      value: Kamervragen (Aanhangsel)
       title: Kamervragen (Aanhangsel)
       short: Kamervragen (Aanhangsel)
     - Option: 37777787
       id: 37777787
+      value: Kamervragen zonder antwoord
       title: Kamervragen zonder antwoord
       short: Kamervragen zonder antwoord 
     - Option: 37777788
       id: 37777788
+      value: Niet-dossierstuk 
       title: Niet-dossierstuk 
       short: Niet-dossierstuk 
     - Option: 37777789
       id: 37777789
+      value: Provinciaal blad 
       title: Provinciaal blad 
       short: Provinciaal blad 
       checked: checked
     - Option: 37777791
       id: 37777791
+      value: Staatsblad 
       title: Staatsblad 
       short: Staatsblad
     - Option: 37777792
       id: 377777892
+      value: Staatscourant 
       title: Staatscourant 
       short: Staatscourant 
     - Option: 377777893
       id: 37777793
+      value: Tractatenblad 
       title: Tractatenblad 
       short: Tractatenblad 
     - Option: 37777794
       id: 37777794
+      value: Waterschapsblad 
       title: Waterschapsblad 
       short: Waterschapsblad 
