@@ -1,0 +1,74 @@
+---
+label: Subselection checkbox
+context:
+  name: Default
+  id: 98768
+  linkText: Toon alle
+  modalTitle: Documentsoort
+  label: Zoek documentsoort(en)
+  inputPlaceholder: 'Zoekwoord'
+  searchFilter: true
+  multilevel: false
+  buttonResetForm: true
+  initialCheckboxesAmount: 5
+  triggerSubmit: true
+  controls:
+    selectAllLabel: Selecteer alle documentsoorten
+  buttonSubmit:
+    buttonSubmitLabel: Filter toepassen
+  Options:
+    - Option: 1777778
+      id: 1777778
+      title: Agenda
+      short: Agenda
+    - Option: 27777782
+      id: 27777782
+      title: Blad gemeenschappelijke regeling
+      short: Blad gemeenschappelijke regeling
+      checked: checked
+    - Option: 37777783
+      id: 37777783
+      title: Gemeenteblad
+      short: Gemeenteblad
+    - Option: 37777784
+      id: 37777784
+      title: Handelingen
+      short: Handelingen
+      checked: checked
+    - Option: 37777785
+      id: 37777785
+      title: Kamerstuk
+      short: Kamerstuk
+    - Option: 37777786
+      id: 37777786
+      title: Kamervragen (Aanhangsel)
+      short: Kamervragen (Aanhangsel)
+    - Option: 37777787
+      id: 37777787
+      title: Kamervragen zonder antwoord
+      short: Kamervragen zonder antwoord 
+    - Option: 37777788
+      id: 37777788
+      title: Niet-dossierstuk 
+      short: Niet-dossierstuk 
+    - Option: 37777789
+      id: 37777789
+      title: Provinciaal blad 
+      short: Provinciaal blad 
+      checked: checked
+    - Option: 37777791
+      id: 37777791
+      title: Staatsblad 
+      short: Staatsblad
+    - Option: 37777792
+      id: 377777892
+      title: Staatscourant 
+      short: Staatscourant 
+    - Option: 377777893
+      id: 37777793
+      title: Tractatenblad 
+      short: Tractatenblad 
+    - Option: 37777794
+      id: 37777794
+      title: Waterschapsblad 
+      short: Waterschapsblad 
