@@ -3,7 +3,7 @@ label: Subselection checkbox
 context:
   name: Default
   id: 98768
-  linkText: Toon alle
+  linkText: Toon alle documentsoorten
   modalTitle: Documentsoort
   label: Zoek documentsoort(en)
   inputPlaceholder: 'Zoekwoord'
