@@ -29,28 +29,113 @@
               </form>
             </div> 
 
+            <div class="form__row form__row--large">
+              <form>
+                <fieldset>
+                  <legend>Rubrieken</legend>
+                  <div class="form__row">
+                    {{ render "@subselection-checkbox" scRubriek }}
+                  </div>
+                  {{ render "@button" buttonRubriek }}
+                </fieldset>
+              </form>
+            </div> 
+
+            <div class="form__row form__row--large">
+              <form>
+                <fieldset>
+                  <legend>Type organisatie</legend>
+                  <div class="form__row">
+                    {{ render "@subselection-checkbox" scOrganisatie }}
+                  </div>
+                  {{ render "@button" buttonOrganisatie }}
+                </fieldset>
+              </form>
+            </div> 
+            
+            <div class="form__row form__row--large">
+              <form>
+                <fieldset>
+                  <legend>Publicerende organisatie</legend>
+                  <div class="form__row">
+                    {{ render "@subselection-checkbox" scPubOrganisatie }}
+                  </div>
+                  {{ render "@button" buttonPubOrganisatie }}
+                </fieldset>
+              </form>
+            </div> 
+
+            <div class="form__row form__row--large" data-decorator="init-form-conditionals">
+              <form>
+                <fieldset>
+                  <legend>Publicatiedatum</legend>
+                  <div id="citem-0" class="form__row js-form-conditionals__citem">
+                    {{render "@input-radio" publicatiedatumContext }}
+                  </div>
+                  <div id="citem-1" class="form__row js-form-conditionals__citem">
+                    {{render "@datepicker" publicatieCustomRange merge=true }}
+                  </div>
+                  {{ render "@button" buttonPublicatiedatum }}
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="form__row form__row--large" data-decorator="init-form-conditionals">
+              <form>
+                <fieldset>
+                  <legend>Documentdatum</legend>
+                  <div id="citem-10" class="form__row js-form-conditionals__citem">
+                    {{render "@input-radio" documentdatumContext }}
+                  </div>
+                  <div id="citem-11" class="form__row js-form-conditionals__citem">
+                    {{render "@datepicker" documentCustomRange merge=true }}
+                  </div>
+                  {{ render "@button" buttonDocumentdatum }}
+                </fieldset>
+              </form>
+            </div>
+
             {{#> @accordion accordion1 }}
               {{#> @accordion-item item1 }}
                 <form>
                   <fieldset>
-                    <legend class="visually-hidden">Onderwerpen</legend>
+                    <legend class="visually-hidden">Onderwerp</legend>
                     <div class="form__row">
-                      {{ render "@input-checkbox" checkboxesOnderwerp }}
+                      {{ render "@subselection-checkbox" scOnderwerp }}
                     </div>
-                    {{ render "@button" buttonSubmit }}
+                    {{ render "@button" buttonOnderwerp }}
                   </fieldset>
                 </form>
               {{/@accordion-item}}
               {{#> @accordion-item item2 }}
-                <p>Jaargang</p>
+                <form>
+                  <fieldset>
+                    <legend class="visually-hidden">Jaargang</legend>
+                    <div class="form__row">
+                      {{ render "@subselection-checkbox" scJaargang }}
+                    </div>
+                    {{ render "@button" buttonJaargang }}
+                  </fieldset>
+                </form>
               {{/@accordion-item}}
               {{#> @accordion-item item3 }}
-                <p>Sys. jaar</p>
+                <form>
+                  <fieldset>
+                    <legend class="visually-hidden">Nummer</legend>
+                    <div class="form__row">
+                      input nummer
+                    </div>
+                    {{ render "@button" buttonJaargang }}
+                  </fieldset>
+                </form>
               {{/@accordion-item}}
               {{#> @accordion-item item4 }}
-                <p>Sys. nummer</p>
+                <p>Sys. jaar</p>
               {{/@accordion-item}}
               {{#> @accordion-item item5 }}
+                <p>Sys. nummer</p>
+              {{/@accordion-item}}
+              {{#> @accordion-item item6 }}
                 <p>Sys. volgnummer</p>
               {{/@accordion-item}}
             {{/@accordion}}          
