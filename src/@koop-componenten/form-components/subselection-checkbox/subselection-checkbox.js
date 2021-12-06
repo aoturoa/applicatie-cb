@@ -74,6 +74,8 @@ function findObjectByKey(array, key, value) {
     this.hasInitialCheckboxes = true;
     this.InitialCheckboxesAmount = this.config.initialCheckboxesAmount || 5;
 
+    console.log('this.options',this.options);
+
     // TODO: improve
     setTimeout(function(){
       self.resetLink = self.element.querySelector('.' + self.resetLinkClass);
@@ -105,11 +107,13 @@ function findObjectByKey(array, key, value) {
 
   formSubselectionCheckbox.prototype.createInitialCheckboxes = function() {
     var summary = '';
+    var item;
 
-    for ( var y = 0; y < this.InitialCheckboxesAmount; y++ ) {
-      var id = this.options[y].getAttribute('id');
-      var value = this.options[y].getAttribute('data-value');
-      var isChecked = this.options[y].hasAttribute('checked');
+    for ( var y = 0; y < this.InitialCheckboxesAmount && y < this.options.length; y++ ) {
+      item = this.options[y];
+      var id = item.getAttribute('id');
+      var value = item.getAttribute('data-value');
+      var isChecked = item.hasAttribute('checked');
       var checked;
       isChecked ? checked = 'checked' : checked = '';
 
@@ -117,7 +121,7 @@ function findObjectByKey(array, key, value) {
 
       summary += checkbox;
     }
-
+  
     this.containerSummary.querySelector('.subselection-checkbox__summary-main').innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
 
