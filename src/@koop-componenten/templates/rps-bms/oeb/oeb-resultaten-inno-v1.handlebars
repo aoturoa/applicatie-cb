@@ -130,13 +130,37 @@
                 </form>
               {{/@accordion-item}}
               {{#> @accordion-item item4 }}
-                <p>Sys. jaar</p>
+                <form>
+                  <fieldset>
+                    <legend class="visually-hidden">Systematisch jaar</legend>
+                    <div class="form__row">
+                      {{ render "@subselection-checkbox" scSysJaar }}
+                    </div>
+                    {{ render "@button" buttonSysJaar }}
+                  </fieldset>
+                </form>
               {{/@accordion-item}}
               {{#> @accordion-item item5 }}
-                <p>Sys. nummer</p>
+                <form>
+                  <fieldset>
+                    <legend class="visually-hidden">Systematisch nummer</legend>
+                    <div class="form__row">
+                      {{ render "@input-text--label" inputSysNummer merge=true }}
+                    </div>
+                    {{ render "@button" buttonSysNummer }}
+                  </fieldset>
+                </form>
               {{/@accordion-item}}
               {{#> @accordion-item item6 }}
-                <p>Sys. volgnummer</p>
+                <form>
+                  <fieldset>
+                    <legend class="visually-hidden">Systematisch volgnummer</legend>
+                    <div class="form__row">
+                      {{ render "@input-text--label" inputSysVolgnummer merge=true }}
+                    </div>
+                    {{ render "@button" buttonSysVolgnummer }}
+                  </fieldset>
+                </form>
               {{/@accordion-item}}
             {{/@accordion}}          
 

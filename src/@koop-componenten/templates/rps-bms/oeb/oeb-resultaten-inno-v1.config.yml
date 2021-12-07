@@ -506,6 +506,7 @@ context:
       datadate: '19-07-2020'
     placeholder: false
   buttonDocumentsoort:
+    id: 12335
     text: Filter
     type: submit
     button: true
@@ -514,18 +515,22 @@ context:
     type: submit
     button: true
   buttonOrganisatie:
+    id: 123334
     text: Filter
     type: submit
     button: true
   buttonPubOrganisatie:
+    id: 1233331
     text: Filter
     type: submit
     button: true
   buttonPublicatiedatum:
+    id: 123332
     text: Filter
     type: submit
     button: true
   buttonDocumentdatum:
+    id: 123331
     text: Filter
     type: submit
     button: true
@@ -606,6 +611,7 @@ context:
             short: Cultuur en recreatie | Recreatie
             value: Cultuur en recreatie | Recreatie
       buttonOnderwerp:
+        id: 12333312
         text: Filter
         type: submit
         button: true
@@ -614,6 +620,7 @@ context:
       headerLabel: Jaargang
       contentId: itemcontent2
       buttonJaargang:
+        id: 123333
         text: Filter
         type: submit
         button: true
@@ -693,21 +700,73 @@ context:
         fieldLabel: Nummer
         fieldPlaceholder: 'Nummer'
       buttonNummer:
+        id: 12333
         text: Filter
         type: submit
         button: true
     item4:
-      headerId: itemheader3
-      headerLabel: Systematisch jaar
-      contentId: itemcontent3
-    item5:
       headerId: itemheader4
-      headerLabel: Systematisch nummer
+      headerLabel: Systematisch jaar
       contentId: itemcontent4
-    item6:
+      buttonSysJaar:
+        id: 1233
+        text: Filter
+        type: submit
+        button: true
+      scSysJaar:
+        id: sc4
+        linkText: Toon alle jaren
+        modalTitle: Systematisch jaar
+        label: Zoek systematisch jaar
+        inputPlaceholder: 'Zoekwoord'
+        searchFilter: true
+        multilevel: false
+        buttonResetForm: true
+        initialCheckboxesAmount: 5
+        triggerSubmit: true
+        controls:
+          selectAllLabel: Selecteer alle jaren
+        buttonSubmit:
+          buttonSubmitLabel: Filter toepassen
+        Options:
+          - Option: 100
+            id: 100
+            title: 2021 (98)
+            short: 2021 (98)
+            value: 2021 (98)
+          - Option: 101
+            id: 101
+            title: 2020 (102)
+            short: 2020 (102)
+            value: 2020 (102)
+    item5:
       headerId: itemheader5
-      headerLabel: Systematisch volgnummer
+      headerLabel: Systematisch nummer
       contentId: itemcontent5
+      inputSysNummer:
+        id: 123422
+        type: number
+        fieldLabel: Systematisch nummer
+        fieldPlaceholder: 'Nummer'
+      buttonSysNummer:
+        id: 12323
+        text: Filter
+        type: submit
+        button: true
+    item6:
+      headerId: itemheader6
+      headerLabel: Systematisch volgnummer
+      contentId: itemcontent6
+      inputSysVolgnummer:
+        id: 123
+        type: number
+        fieldLabel: Systematisch volgnummer
+        fieldPlaceholder: 'Nummer'
+      buttonSysVolgnummer:
+        id: 123233
+        text: Filter
+        type: submit
+        button: true
   linkAbonneren:
     text: Abonneer op deze zoekvraag
   linkFeed:
