@@ -688,6 +688,14 @@ context:
       headerLabel: Nummer
       contentId: itemcontent3
       isOpen: true
+      inputNummer:
+        type: number
+        fieldLabel: Nummer
+        fieldPlaceholder: 'Nummer'
+      buttonNummer:
+        text: Filter
+        type: submit
+        button: true
     item4:
       headerId: itemheader3
       headerLabel: Systematisch jaar

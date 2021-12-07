@@ -123,9 +123,9 @@
                   <fieldset>
                     <legend class="visually-hidden">Nummer</legend>
                     <div class="form__row">
-                      input nummer
+                      {{ render "@input-text--label" inputNummer merge=true }}
                     </div>
-                    {{ render "@button" buttonJaargang }}
+                    {{ render "@button" buttonNummer }}
                   </fieldset>
                 </form>
               {{/@accordion-item}}
