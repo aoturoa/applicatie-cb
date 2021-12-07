@@ -17,7 +17,7 @@
   }
 
   &:focus + label {
-    outline: 2px solid $focus;
+    outline: 2px solid $focusInput;
   }
 
   &:checked + label:before {
