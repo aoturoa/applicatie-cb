@@ -74,7 +74,9 @@ function findObjectByKey(array, key, value) {
     this.hasInitialCheckboxes = true;
     this.InitialCheckboxesAmount = this.config.initialCheckboxesAmount || 5;
 
-    console.log('this.options',this.options);
+    if(this.options.length <= this.InitialCheckboxesAmount) {
+      this.trigger.remove();
+    }
 
     // TODO: improve
     setTimeout(function(){
