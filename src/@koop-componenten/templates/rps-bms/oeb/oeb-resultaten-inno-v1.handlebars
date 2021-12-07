@@ -72,7 +72,7 @@
                   <div id="citem-0" class="form__row js-form-conditionals__citem">
                     {{render "@input-radio" publicatiedatumContext }}
                   </div>
-                  <div id="citem-1" class="form__row js-form-conditionals__citem">
+                  <div id="citem-1" class="form__row js-form-conditionals__citem columns">
                     {{render "@datepicker" publicatieCustomRange merge=true }}
                   </div>
                   {{ render "@button" buttonPublicatiedatum }}
@@ -87,7 +87,7 @@
                   <div id="citem-10" class="form__row js-form-conditionals__citem">
                     {{render "@input-radio" documentdatumContext }}
                   </div>
-                  <div id="citem-11" class="form__row js-form-conditionals__citem">
+                  <div id="citem-11" class="form__row js-form-conditionals__citem columns">
                     {{render "@datepicker" documentCustomRange merge=true }}
                   </div>
                   {{ render "@button" buttonDocumentdatum }}
@@ -161,6 +161,12 @@
                     {{ render "@button" buttonSysVolgnummer }}
                   </fieldset>
                 </form>
+              {{/@accordion-item}}
+              {{#> @accordion-item item7 }}
+                x
+              {{/@accordion-item}}
+              {{#> @accordion-item item7 }}
+                x
               {{/@accordion-item}}
             {{/@accordion}}          
 

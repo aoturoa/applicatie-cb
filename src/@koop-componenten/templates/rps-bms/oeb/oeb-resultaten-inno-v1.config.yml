@@ -767,6 +767,14 @@ context:
         text: Filter
         type: submit
         button: true
+    item7:
+      headerId: itemheader7
+      headerLabel: Datum totstandkoming verdrag
+      contentId: itemcontent7
+    item8:
+      headerId: itemheader8
+      headerLabel: Plaats totstandkoming verdrag
+      contentId: itemcontent8
   linkAbonneren:
     text: Abonneer op deze zoekvraag
   linkFeed:
