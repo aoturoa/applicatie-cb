@@ -58,8 +58,8 @@ context:
     triggerSubmit: true
     controls:
       selectAllLabel: Selecteer alle rubrieken
-    buttonSubmit:
-      buttonSubmitLabel: Filter toepassen
+    buttonSubmit: true
+    buttonSubmitLabel: Filter toepassen
     Options:
       - Option: 177777811
         id: 177777811
@@ -119,8 +119,8 @@ context:
     triggerSubmit: true
     controls:
       selectAllLabel: Selecteer alle organisaties
-    buttonSubmit:
-      buttonSubmitLabel: Filter toepassen
+    buttonSubmit: true
+    buttonSubmitLabel: Filter toepassen
     Options:
       - Option: 1777778111
         id: 1777778111
@@ -195,8 +195,8 @@ context:
     triggerSubmit: true
     controls:
       selectAllLabel: Selecteer alle publicerende organisaties
-    buttonSubmit:
-      buttonSubmitLabel: Filter toepassen
+    buttonSubmit: true
+    buttonSubmitLabel: Filter toepassen
     Options:
       - Option: 177777811141
         id: 177777811141
@@ -243,6 +243,70 @@ context:
         title: "Amsterdam (11)"
         short: "Amsterdam (11)"
         value: "Amsterdam (11)"
+  publicatiedatumContext:
+    moreless: true
+    options:
+    - id: radio-21231232
+      text: Afgelopen week (1)
+      name: publicatie
+    - id: radio-3312312312
+      text: Afgelopen maand (1)
+      name: publicatie
+    - id: radio-412312313
+      text: Afgelopen jaar (1)
+      name: publicatie
+    - id: radio-412312314
+      text: Ouder dan een jaar (4321)
+      name: publicatie
+    - id: radio-51222
+      text: Andere periode
+      name: publicatie
+      linkedto: 1
+  publicatieCustomRange:
+    range: true
+    rangeInput1:
+      id: dp10
+      label: Vanaf
+      value: '2020-04-19'
+      datadate: '19-04-2020'
+    rangeInput2: 
+      id: dp11
+      label: Tot en met
+      value: '2020-05-19'
+      datadate: '19-05-2020'
+    placeholder: false
+  documentdatumContext:
+    moreless: true
+    options:
+    - id: radio-212312321
+      text: Afgelopen week (1)
+      name: document
+    - id: radio-33123123121
+      text: Afgelopen maand (1)
+      name: document
+    - id: radio-4123123131
+      text: Afgelopen jaar (1)
+      name: document
+    - id: radio-4123123132
+      text: Ouder dan een jaar (231)
+      name: document
+    - id: radio-512221
+      text: Andere periode
+      name: document
+      linkedto: 11
+  documentCustomRange:
+    range: true
+    rangeInput1:
+      id: dp12
+      label: Vanaf
+      value: '2020-06-19'
+      datadate: '19-06-2020'
+    rangeInput2: 
+      id: dp13
+      label: Tot en met
+      value: '2020-07-19'
+      datadate: '19-07-2020'
+    placeholder: false
   blockSearch:
     isRegularSelect: true
     regularSelect:
@@ -399,139 +463,84 @@ context:
         downloads:
           - type: Download PDF
             href: '#'
-  onderwerpContext:
-    moreless: true
-    options:
-      - id: checkbox-2032
-        text: Agenda
-        name: onderwerp
-      - id: checkbox-2033
-        text: Blad gemeenschappelijke regeling
-        name: onderwerp
-      - id: checkbox-2034
-        text: Gemeenteblad
-        name: onderwerp
-      - id: checkbox-2034
-        text: Handelingen
-        name: onderwerp
-      - id: checkbox-2034
-        text: Kamerstuk
-        name: onderwerp
-      - id: checkbox-2034
-        text: Kamervragen (Aanhangsel) 
-        name: onderwerp
-      - id: checkbox-2034
-        text: Kamervragen zonder antwoord
-        name: onderwerp
-      - id: checkbox-2034
-        text: Niet-dossierstuk
-        name: onderwerp
-      - id: checkbox-2034
-        text: Provinciaal blad
-        name: onderwerp
-      - id: checkbox-2034
-        text: Staatsblad
-        name: onderwerp
-      - id: checkbox-2034
-        text: Staatscourant
-        name: onderwerp
-      - id: checkbox-2034
-        text: Tractatenblad
-        name: onderwerp
-      - id: checkbox-2034
-        text: Waterschapsblad
-        name: onderwerp
-  publicatiedatumContext:
-    moreless: true
-    options:
-    - id: radio-21231232
-      text: Afgelopen week (1)
-      name: publicatie
-    - id: radio-3312312312
-      text: Afgelopen maand (1)
-      name: publicatie
-    - id: radio-412312313
-      text: Afgelopen jaar (1)
-      name: publicatie
-    - id: radio-412312314
-      text: Ouder dan een jaar (4321)
-      name: publicatie
-    - id: radio-51222
-      text: Andere periode
-      name: publicatie
-      linkedto: 1
-  publicatieCustomRange:
-    range: true
-    rangeInput1:
-      id: dp10
-      label: Vanaf
-      value: '2020-04-19'
-      datadate: '19-04-2020'
-    rangeInput2: 
-      id: dp11
-      label: Tot en met
-      value: '2020-05-19'
-      datadate: '19-05-2020'
-    placeholder: false
-  documentdatumContext:
-    moreless: true
-    options:
-    - id: radio-212312321
-      text: Afgelopen week (1)
-      name: document
-    - id: radio-33123123121
-      text: Afgelopen maand (1)
-      name: document
-    - id: radio-4123123131
-      text: Afgelopen jaar (1)
-      name: document
-    - id: radio-4123123132
-      text: Ouder dan een jaar (231)
-      name: document
-    - id: radio-512221
-      text: Andere periode
-      name: document
-      linkedto: 11
-  documentCustomRange:
-    range: true
-    rangeInput1:
-      id: dp12
-      label: Vanaf
-      value: '2020-06-19'
-      datadate: '19-06-2020'
-    rangeInput2: 
-      id: dp13
-      label: Tot en met
-      value: '2020-07-19'
-      datadate: '19-07-2020'
-    placeholder: false
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
   buttonDocumentsoort:
     id: 12335
-    text: Filter
+    text: Filter toepassen
     type: submit
     button: true
   buttonRubriek:
-    text: Filter
+    text: Filter toepassen
     type: submit
     button: true
   buttonOrganisatie:
     id: 123334
-    text: Filter
+    text: Filter toepassen
     type: submit
     button: true
   buttonPubOrganisatie:
     id: 1233331
-    text: Filter
+    text: Filter toepassen
     type: submit
     button: true
   buttonPublicatiedatum:
     id: 123332
-    text: Filter
+    text: Filter toepassen
     type: submit
     button: true
   buttonDocumentdatum:
     id: 123331
-    text: Filter
+    text: Filter toepassen
     type: submit
     button: true
   accordion1:
@@ -552,8 +561,8 @@ context:
         triggerSubmit: true
         controls:
           selectAllLabel: Selecteer alle onderwerpen
-        buttonSubmit:
-          buttonSubmitLabel: Filter toepassen
+        buttonSubmit: true
+        buttonSubmitLabel: Filter toepassen
         Options:
           - Option: 17777781114131
             id: 17777781114131
@@ -612,7 +621,7 @@ context:
             value: Cultuur en recreatie | Recreatie
       buttonOnderwerp:
         id: 12333312
-        text: Filter
+        text: Filter toepassen
         type: submit
         button: true
     item2:
@@ -621,7 +630,7 @@ context:
       contentId: itemcontent2
       buttonJaargang:
         id: 123333
-        text: Filter
+        text: Filter toepassen
         type: submit
         button: true
       scJaargang:
@@ -637,8 +646,8 @@ context:
         triggerSubmit: true
         controls:
           selectAllLabel: Selecteer alle jaargangen
-        buttonSubmit:
-          buttonSubmitLabel: Filter toepassen
+        buttonSubmit: true
+        buttonSubmitLabel: Filter toepassen
         Options:
           - Option: 1
             id: 1
@@ -694,14 +703,13 @@ context:
       headerId: itemheader3
       headerLabel: Nummer
       contentId: itemcontent3
-      isOpen: true
       inputNummer:
         type: number
         fieldLabel: Nummer
         fieldPlaceholder: 'Nummer'
       buttonNummer:
         id: 12333
-        text: Filter
+        text: Filter toepassen
         type: submit
         button: true
     item4:
@@ -710,7 +718,7 @@ context:
       contentId: itemcontent4
       buttonSysJaar:
         id: 1233
-        text: Filter
+        text: Filter toepassen
         type: submit
         button: true
       scSysJaar:
@@ -726,8 +734,8 @@ context:
         triggerSubmit: true
         controls:
           selectAllLabel: Selecteer alle jaren
-        buttonSubmit:
-          buttonSubmitLabel: Filter toepassen
+        buttonSubmit: true
+        buttonSubmitLabel: Filter toepassen
         Options:
           - Option: 100
             id: 100
@@ -750,7 +758,7 @@ context:
         fieldPlaceholder: 'Nummer'
       buttonSysNummer:
         id: 12323
-        text: Filter
+        text: Filter toepassen
         type: submit
         button: true
     item6:
@@ -764,7 +772,7 @@ context:
         fieldPlaceholder: 'Nummer'
       buttonSysVolgnummer:
         id: 123233
-        text: Filter
+        text: Filter toepassen
         type: submit
         button: true
     item7:

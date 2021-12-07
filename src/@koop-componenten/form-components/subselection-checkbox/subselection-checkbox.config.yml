@@ -14,8 +14,8 @@ context:
   triggerSubmit: true
   controls:
     selectAllLabel: Selecteer alle documentsoorten
-  buttonSubmit:
-    buttonSubmitLabel: Filter toepassen
+  buttonSubmit: true
+  buttonSubmitLabel: Filter toepassen
   Options:
     - Option: 1777778
       id: 1777778
