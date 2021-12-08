@@ -4,7 +4,7 @@ label: Tooltip
 status: ready
 context:
   id: 1
-  label: Help?
+  label: 'Toon meer informatie'
   content: U moet dit volledig en naar waarheid invullen
 variants:
   - name: Tooltip Info
