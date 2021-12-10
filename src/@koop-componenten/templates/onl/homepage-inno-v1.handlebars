@@ -20,9 +20,6 @@
               <div class="form__rowsubmit__item">
                 {{ render "@button--primary" btnSubmit merge=true }}
               </div>
-              <div class="form__rowsubmit__item">
-                {{ render "@link" linkCta }}
-              </div>
             </div>
           </fieldset>
         </form>
@@ -32,9 +29,49 @@
   </div>
   <div class="row">
 
-    <h2 class="row__heading">Zoek documenten op thema</h2>
+    {{!-- <h2 class="row__heading">Zoek documenten op thema</h2> --}}
     
+    <div class="row row--large">
+      <div class="columns columns--dominant">
+        <div class="column">
+          {{render "@block" blockIntro }}
+        </div>
+        {{#> @block blockBurger }}
+          {{ render "@list--linklist" listBurger merge=true }}
+        {{/@block}}
+      </div>
+    </div>
 
+  </div>
+
+  <div class="row">
+
+    <h2 class="row__heading">Ga snel naar</h2>
+
+    <div class="columns">
+      <div class="column">
+        <h3>Dienstverlening</h3>
+        <p>
+          Verschillende diensten van Overheid.nl op basis van overheidsinformatie.
+        </p>
+        {{ render "@list--linklist" listDienstverlening merge=true }}
+      </div>
+      <div class="column">
+        <h3>Publicaties</h3>
+        <p>
+          Officiële publicaties van de overheid.
+        </p>
+        {{ render "@list--linklist" listPublicaties merge=true }}
+      </div>
+      <div class="column">
+        <h3>Wet- en regelgeving</h3>
+        <p>
+          Alle wet- en regelgeving geldend op lokaal of nationaal niveau. 
+        </p>
+        {{ render "@list--linklist" listWER merge=true }}
+      </div>
+    </div>
+  
   </div>
 
 </div>
