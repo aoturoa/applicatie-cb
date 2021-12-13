@@ -87,6 +87,35 @@ function findObjectByKey(array, key, value) {
     for ( y = 0; y < this.options.length; y++ ) {
       this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
     }
+
+
+    if (this.checkboxSelectAllOnMain) {
+      this.checkboxSelectAllOnMain.addEventListener( 'change', function (el) { this.setStateSelectAll(el); }.bind(this), false);
+    }
+
+
+    var subscription = pubsub.subscribe('/disregardchanges/disregardAll/updateSummary', function (obj) {
+      var subselection = self.element;
+
+      // if clicked remove-trigger from subselection is in the same subselection component.
+      if (obj.element.getAttribute('data-id') === subselection.getAttribute('data-id')) {
+        self.collectValues();
+      }
+    });
+    
+    // To correct viewport design issues, we check the browsers zoomlevel. Based on the zoomlevel we will show
+    // fixed buttons, or regular inline.
+    window.addEventListener('resize', function() {
+      const browserZoomLevel = (window.outerWidth - 8) / window.innerWidth;
+      if(browserZoomLevel > 1.7) {
+        var modal = this.element.querySelector('.modal');
+        modal.classList.remove('modal--fixedpane');
+      } else {
+        var modal = this.element.querySelector('.modal');
+        modal.classList.add('modal--fixedpane');
+      }
+    }.bind(this), false);
+
   };
 
   formSubselection.prototype.attachRemoveListeners = function() {
