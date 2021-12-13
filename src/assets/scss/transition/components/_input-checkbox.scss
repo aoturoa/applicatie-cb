@@ -12,7 +12,12 @@
     }
   }
 
-  &:checked + label:before {
+  &:focus + label {
+    outline: 2px solid $focusInput;
+  }
+
+  &:checked + label:before,
+  &:checked + input + label:before {
     background-color: $darkBlue !important;
     background-image: $iconCheckboxWhite;
   }
