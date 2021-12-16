@@ -153,9 +153,13 @@ function findObjectByKey(array, key, value) {
           }
 
         }
-        if (!this.options[y].classList.contains('js-checkbox-master')) {
+        if(this.config.includeValueOfCheckboxMaster) {
           this.items.push(option);
-        }
+        } else {
+          if (!this.options[y].classList.contains('js-checkbox-master')) {
+            this.items.push(option);
+          }
+        }        
       }
     }
     this.parseSelectedOptions();

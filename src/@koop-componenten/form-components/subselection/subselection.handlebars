@@ -1,4 +1,4 @@
-<div {{#if id}}id="{{id}}"{{/if}} class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}}{{#if motherCheckboxIds}}, "motherCheckboxIds": "{{motherCheckboxIds}}"{{/if}} }'>
+<div {{#if id}}id="{{id}}"{{/if}} class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}}{{#if motherCheckboxIds}}, "motherCheckboxIds": "{{motherCheckboxIds}}"{{/if}}{{#if includeValueOfCheckboxMaster}}, "includeValueOfCheckboxMaster": {{includeValueOfCheckboxMaster}}{{/if}} }'>
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
@@ -46,7 +46,7 @@
                     <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
                     <div data-decorator="init-selectall">
                       <div class="input-checkbox">
-                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="{{#if name}}{{name}}{{else}}selectAll{{/if}}" value="{{value}}"
+                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="{{#if name}}{{name}}{{else}}selectAll{{/if}}" value="{{value}}" data-value="{{ short }}"
                         />
                         <label class="checkbox__label u-nomargin" for="{{id}}">
                           <strong>{{ title }}</strong>
