@@ -1,10 +1,13 @@
+{{#if fieldLabel}}
+  <label for="{{#if id}}{{id}}{{else}}id_mysuper_field{{/if}}" class="form__label {{#if fieldClassAccent}}form__label--accent{{/if}} {{fieldClass}}">{{fieldLabel}}</label>
+{{/if}}
 <input type="text"
   placeholder="{{placeholder}}"
-  name="mysuper_field" id="{{#if id}}{{id}}{{else}}id_mysuper_field{{/if}}"
+  name="{{#if name}}{{name}}{{else}}name_mysuper_field{{/if}}" id="{{#if id}}{{id}}{{else}}id_mysuper_field{{/if}}"
   class="{{modifier}} combobox-input js-combobox"
-  list="items"
+  list="{{#if datalistId}}{{datalistId}}{{else}}items{{/if}}"
   data-combobox-hidden-field="{{hiddenFieldClass}}" />
-<datalist id="items">
+<datalist id="{{#if datalistId}}{{datalistId}}{{else}}items{{/if}}">
   {{#each items}}
     <option value="{{item}}">{{code}}</option>
   {{/each}}
