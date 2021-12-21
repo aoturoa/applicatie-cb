@@ -18,7 +18,18 @@
   };
 
   addfield.prototype.init = function () {
+    this.applyZindex();
     this.initEventListeners();
+  }
+
+  addfield.prototype.applyZindex = function () {
+    var rows = this.element.querySelectorAll('.form__row');
+    var y = 1000;
+  
+
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].style.zIndex = y - i;
+    }
   }
 
   addfield.prototype.initEventListeners = function () {
@@ -39,6 +50,9 @@
     clone.querySelector('input').focus();
 
     e.preventDefault();
+
+    // reapply z-index;
+    this.applyZindex();
   };
 
 })();
