@@ -1,3 +1,6 @@
+{{#if fieldLabel}}
+  <label for="{{#if id}}{{id}}{{else}}id_mysuper_field{{/if}}" class="form__label {{#if fieldLabelModifier}}{{fieldLabelModifier}}{{/if}}">{{fieldLabel}}</label>
+{{/if}}
 <input type="text"
   placeholder="{{placeholder}}"
   name="mysuper_field" id="{{#if id}}{{id}}{{else}}id_mysuper_field{{/if}}"

@@ -187,6 +187,10 @@ $(document).ready(function () {
               }
               i++;
             }
+            /* koop fix; zindex */
+            $('.combobox-container').css("z-index","0");
+            $(this).parent('.combobox-container').css("z-index","2");
+            
             if (counter >= combobox_limit_number_suggestions) {
               $suggestions.append('<div id="suggestion-' + index_table + '-' + counter + '" class="js-suggestion js-seemore ' + $combobox_prefix_class + 'suggestion" tabindex="-1" role="option">' + $combobox_see_more_text + '</div>');
               counter++;
