@@ -58,6 +58,24 @@ context:
     placeholder: Identifier
     button: Zoek identifier
     modifierComponent: input-inputsubmit--s
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Relevantie
+      value: relevantie
+      active: is-active
+      singleSort: true
+    - label: Identifier
+      value: identifier
+    - label: Titel
+      value: titel
+    - label: Documentsoort
+      value: documentsoort
+    - label: Vergaderjaar
+      value: vergaderjaar
   tableResults:
     caption: false
     modifier: table--condensed
@@ -69,6 +87,15 @@ context:
       - column:
         type: Titel
         value: Planologische Kernbeslissing Waddenzee
+      - column:
+        type: Vergaderjaar
+        value: 2021
+      - column:
+        type: Documentsoort
+        value: PDF
+      - column:
+        type: Omschrijving
+        value: '-'
     - item:
       - column:
         type: Identifier
@@ -76,3 +103,12 @@ context:
       - column:
         type: Titel
         value: Tweede Kamer der Staten-Generaal
+      - column:
+        type: Vergaderjaar
+        value: 2020
+      - column:
+        type: Documentsoort
+        value: PDF
+      - column:
+        type: Omschrijving
+        value: '-'
