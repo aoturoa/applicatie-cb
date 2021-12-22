@@ -69,8 +69,8 @@ context:
         - label: Gehele tekst
           value: gehele-tekst
           selected: selected
-        - label: Alleen titel
-          value: alleen-titel
+        - label: Alleen titel en omschrijving
+          value: alleen-titel-en-omschrijving
     dateselection:
       additionalSelect:
         id: 1678765

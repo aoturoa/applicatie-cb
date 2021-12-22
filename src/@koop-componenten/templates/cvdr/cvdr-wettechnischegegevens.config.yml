@@ -33,9 +33,6 @@ context:
       icon: icon-permalink.svg
       modal: true
     - link: '#'
-      text: Fout in deze regeling
-      icon: icon-alert-blue.svg
-    - link: '#'
       text: Downloaden
       icon: icon-download.svg
     - link: '#'

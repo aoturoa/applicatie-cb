@@ -12,15 +12,12 @@ context:
   navToeContext:
     id: 3
     items:
-    - title: Regeling
-      sub: true
+    - title: Regeling tekst
+      href: "#"
       active: true
-      subItems:
-      - stitle: Regeling tekst
-        href: "#section-1"
-        sactive: true
-      - stitle: Wettechnische gegevens
-        href: "#section-2"
+      sactive: true
+    - title: Wetstechnische informatie
+      href: "#section-2"
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
     text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
