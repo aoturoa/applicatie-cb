@@ -46,7 +46,7 @@
   copydata.prototype.giveFeedbackToUser = function() {
     var self = this;
     var originalLabel = this.trigger.innerText;
-    var tempLabel = this.config.triggerCopiedlabel || 'Gekopiëerd';
+    var tempLabel = this.config.triggerCopiedlabel || 'Gekopieerd';
 
     this.trigger.classList.add("is-active");
     this.triggerSpan.innerHTML = tempLabel;
