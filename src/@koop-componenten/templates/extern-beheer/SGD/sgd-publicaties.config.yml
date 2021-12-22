@@ -55,7 +55,7 @@ context:
   searchPublications:
     showLabel: true
     label: Zoek publicatie
-    placeholder: Identifier
+    placeholder: Metadata of vrije tekst
     button: Zoek identifier
     modifierComponent: input-inputsubmit--s
   sortContext:
