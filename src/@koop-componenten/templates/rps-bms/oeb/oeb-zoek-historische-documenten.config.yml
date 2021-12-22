@@ -373,12 +373,54 @@ context:
           labelmodifier: secondary
         ha_spreker:
           id: 1111344
-          type: text
-          name: spreker
-          fieldLabel: 'Spreker (achternaam)'
-          fieldLabelVisible: true
-          fieldPlaceholder: 'Naam spreker'
-          labelmodifier: secondary
+          fieldLabel: Spreker (achternaam)
+          fieldLabelModifier: form__label--secondary
+          placeholder: Naam spreker
+          items:
+            - item: Achternaam 1
+              code: Achternaam 1
+            - item: Achternaam 2
+              code: Achternaam 2
+            - item: Achternaam 3
+              code: Achternaam 3
+            - item: Achternaam 4
+              code: Achternaam 4
+            - item: Achternaam 5
+              code: Achternaam 5
+            - item: Achternaam 6
+              code: Achternaam 6
+            - item: Achternaam 7
+              code: Achternaam 7
+            - item: Achternaam 8
+              code: Achternaam 8
+            - item: Achternaam 9
+              code: Achternaam 9
+            - item: Achternaam 10
+              code: Achternaam 10
+            - item: Achternaam 11
+              code: Achternaam 11
+            - item: Achternaam 12
+              code: Achternaam 12
+            - item: Achternaam 13
+              code: Achternaam 13
+            - item: Achternaam 14
+              code: Achternaam 14
+            - item: Achternaam 15
+              code: Achternaam 15
+            - item: Achternaam 16
+              code: Achternaam 16
+            - item: Achternaam 17
+              code: Achternaam 17
+            - item: Achternaam 18
+              code: Achternaam 18
+            - item: Achternaam 19
+              code: Achternaam 19
+            - item: Achternaam 20
+              code: Achternaam 20
+            - item: Achternaam 21
+              code: Achternaam 21
+            - item: Achternaam 22
+              code: Achternaam 22
         buttonHaAddSpeaker:
           id: 100
           text: Spreker toevoegen
@@ -475,19 +517,32 @@ context:
           fieldPlaceholder: 'Bijv. 1234'
           labelmodifier: secondary
         kv_indiener:
-          id: 11112212435
-          type: text
+          id: 113441
           fieldLabel: Indiener (achternaam)
-          fieldLabelVisible: true
-          fieldPlaceholder: 'Bijv. Jansen'
-          labelmodifier: secondary
+          fieldLabelModifier: form__label--secondary
+          placeholder: 'Bijv. Jansen'
+          items:
+            - item: Geerts
+              code: Geerts
+            - item: Jansen
+              code: Jansen
+            - item: van Dam
+              code: van Dam
+            - item: Hogendijk
+              code: Hogendijk
         kv_ontvanger:
-          id: 1111222
-          type: text
+          id: 113442
           fieldLabel: Ontvanger (achternaam)
-          fieldLabelVisible: true
-          fieldPlaceholder: 'Bijv. Jansen'
-          labelmodifier: secondary
+          fieldLabelModifier: form__label--secondary
+          placeholder: 'Bijv. Jansen'
+          items:
+            - item: Geerts
+              code: Geerts
+            - item: Jansen
+              code: Jansen
+            - item: van Dam
+              code: van Dam
+            
         kv_datepicker1:
           id: 111181222323223128
           haslabel: true

@@ -50,7 +50,7 @@
                           </div>
                           <div data-decorator="init-form-addfield">
                             <div class="form__row">
-                              {{ render "@input-text" ha_spreker }}
+                              {{ render "@input-autocomplete--default" ha_spreker merge=true }}
                             </div>
                             <div class="form__row">
                               {{ render "@button" buttonHaAddSpeaker }}
@@ -130,10 +130,10 @@
                             {{ render "@input-text" kv_aanhangselnummer }}
                           </div>
                           <div class="form__row">
-                            {{ render "@input-text" kv_indiener }}
+                            {{ render "@input-autocomplete--default" kv_indiener merge=true }}
                           </div>
                           <div class="form__row">
-                            {{ render "@input-text" kv_ontvanger }}
+                            {{ render "@input-autocomplete--default" kv_ontvanger merge=true }}
                           </div>
                         </fieldset>
                         <fieldset>
