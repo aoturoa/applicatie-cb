@@ -2,18 +2,18 @@
   background-color: $lightGrey;
   padding: 1em;
   margin: 1em 0;
-  font-size: 90%; 
+  // font-size: 90%; 
 
-  @media (min-width: $breakpointDesktop) {
-    .columns {
-      .column-d-8 {
-        flex-basis: 75% !important;
-      }
-      .column-d-4 {
-        flex-basis: 25% !important;
-      }
-    }
-  }
+  // @media (min-width: $breakpointDesktop) {
+  //   .columns {
+  //     .column-d-8 {
+  //       flex-basis: 75% !important;
+  //     }
+  //     .column-d-4 {
+  //       flex-basis: 25% !important;
+  //     }
+  //   }
+  // }
 
   &--headless {
     background: none;
