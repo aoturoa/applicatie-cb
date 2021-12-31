@@ -39,6 +39,9 @@
     clone.querySelector('input').focus();
 
     e.preventDefault();
+
+    // reapply z-index;
+    this.applyZindex();
   };
 
 })();

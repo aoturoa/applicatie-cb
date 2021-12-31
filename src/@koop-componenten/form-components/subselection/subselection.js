@@ -127,8 +127,19 @@ function findObjectByKey(array, key, value) {
         self.collectValues();
       }
     });
-
-
+    
+    // To correct viewport design issues, we check the browsers zoomlevel. Based on the zoomlevel we will show
+    // fixed buttons, or regular inline.
+    window.addEventListener('resize', function() {
+      const browserZoomLevel = (window.outerWidth - 8) / window.innerWidth;
+      if(browserZoomLevel > 1.7) {
+        var modal = this.element.querySelector('.modal');
+        modal.classList.remove('modal--fixedpane');
+      } else {
+        var modal = this.element.querySelector('.modal');
+        modal.classList.add('modal--fixedpane');
+      }
+    }.bind(this), false);
 
   };
 
