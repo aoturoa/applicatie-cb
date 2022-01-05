@@ -506,6 +506,26 @@
       "label": "homepage-onl",
       "url": "http://localhost:3000/components/preview/templates-homepage-onl",
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-homepage-onl.html"
+    },
+    {
+      "label": "sgd-publicatie",
+      "url": "http://localhost:3000/components/preview/templates-sgd-publicatie",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-sgd-publicatie.html"
+    },
+    {
+      "label": "sgd-publicatie-bestanden-wijzigen",
+      "url": "http://localhost:3000/components/preview/templates-sgd-publicatie-bestanden-wijzigen",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-sgd-publicatie-bestanden-wijzigen.html"
+    },
+    {
+      "label": "sgd-publicatie-metadata-wijzigen",
+      "url": "http://localhost:3000/components/preview/templates-sgd-publicatie-metadata-wijzigen",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-sgd-publicatie-metadata-wijzigen.html"
+    },
+    {
+      "label": "sgd-publicaties",
+      "url": "http://localhost:3000/components/preview/templates-sgd-publicaties",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-sgd-publicaties.html"
     }
   ],
   "paths": {
