@@ -111,6 +111,7 @@
 
     }
 
+
     // start KPM;
     this.renderMap();
 
