@@ -19,6 +19,11 @@ context:
       name: searchcr
       labelmodifier: medium
       modifier: input-text--searchmedium
+    buttonSubmit:
+      text: "Zoek documenten"
+      button: true
+      type: submit
+      modifier: button--primary button--large
   themaItems:
     - title: Cultuur & Recreatie (2)
       id: 1

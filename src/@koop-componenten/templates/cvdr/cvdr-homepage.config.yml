@@ -35,6 +35,11 @@ context:
         - id: 2
           text: In de tekst
           name: type
+    buttonSubmit:
+      text: "Zoek regelingen"
+      button: true
+      type: submit
+      modifier: button--primary button--large
   block1Context:
     id: 1
     htype: 3
