@@ -13,13 +13,13 @@ context:
       id: 1
   mapContext2:
     id: 2
-    modifier:
+    modifier: h-200
     controls: false
     kpm:
       id: 2
   mapContext3:
     id: 3
-    modifier:
+    modifier: h-200
     controls: false
     kpm:
       id: 3
