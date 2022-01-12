@@ -193,6 +193,10 @@ gulp.task( 'js:build', function() {
       minifyJS: {
         sourceMap: false
       },
+      getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+      }
     } ) )
     .pipe( header( '/* Package version: bwb-<%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name } ) )
     .pipe( gulp.dest( paths.drop + '/js' ) );
