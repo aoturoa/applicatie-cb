@@ -2,6 +2,31 @@
 
   'use strict';
 
+
+  var formSubmittion = function( element ) {
+    var forms = document.querySelectorAll('form');
+    var i;
+
+    for (i = 0; i < forms.length; i++) {
+      forms[i].addEventListener('submit', function (e) { this.formSubmit(e); }.bind(this), false);
+    }
+  }
+
+  formSubmittion.prototype.formSubmit = function(e) {
+    var form = e.target;
+    var buttons = form.querySelectorAll('button[type="submit"]');
+    var i;
+
+    for (i = 0; i < buttons.length; i++) {
+      if(buttons[i].querySelector('.button__label')){
+        buttons[i].classList.add('is-loading');
+        buttons[i].setAttribute('disabled', 'disabled');
+      }
+    }
+  }
+
+  new formSubmittion();
+
   onl.handle({
 
     'select-today': function( element, event ) {
