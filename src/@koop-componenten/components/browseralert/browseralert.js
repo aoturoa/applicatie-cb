@@ -12,8 +12,14 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     var self = this;
 
+    if(this.element.querySelector('.button__label')){
+      var label = this.element.querySelector('.button__label');
+      label.setAttribute('data-alertmessage', this.element.getAttribute('data-alertmessage'));
+    }
+
     this.element.addEventListener('click', function (e) {
-      if(window.confirm(e.target.getAttribute('data-alertmessage'))) {
+      var target = e.target;
+      if(window.confirm(target.getAttribute('data-alertmessage'))) {
 
       } else {
         e.preventDefault();
