@@ -8,9 +8,9 @@ const concat = require( 'gulp-concat' );
 const packagejson = require( './package.json' );
 const minify = require( 'gulp-minifier' );
 const autoprefixer = require( 'autoprefixer' );
-const eslint = require( 'gulp-eslint' );
+// const eslint = require( 'gulp-eslint' );
 const del = require( 'del' );
-const imageOptim = require( 'gulp-imagemin' );
+// const imageOptim = require( 'gulp-imagemin' );
 const changed = require( 'gulp-changed' );
 const header = require( 'gulp-header' );
 const rename = require( 'gulp-rename' );
@@ -120,7 +120,7 @@ gulp.task( 'css', gulp.series( 'css:clean', 'css:process' ) );
 gulp.task( 'images:optimise', function() {
   return gulp.src( paths.images + '/**/*.+(svg|gif|png|jpg)' )
     .pipe( changed( paths.drop + '/images' ) )
-    .pipe( imageOptim() )
+    // .pipe( imageOptim() )
 } );
 
 gulp.task( 'images:copy', function() {
