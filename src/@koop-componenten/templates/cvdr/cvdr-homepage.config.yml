@@ -39,7 +39,7 @@ context:
       text: "Zoek regelingen"
       button: true
       type: submit
-      modifier: button--primary button--large
+      modifier: form__button button--primary button--large
   block1Context:
     id: 1
     htype: 3

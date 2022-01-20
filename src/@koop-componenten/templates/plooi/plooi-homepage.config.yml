@@ -23,7 +23,7 @@ context:
       text: "Zoek documenten"
       button: true
       type: submit
-      modifier: button--primary button--large
+      modifier: form__button button--primary button--large
   themaItems:
     - title: Cultuur & Recreatie (2)
       id: 1

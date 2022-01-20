@@ -24,7 +24,7 @@ context:
       text: "Zoek verdragen"
       button: true
       type: submit
-      modifier: button--primary button--large
+      modifier: form__button button--primary button--large
   doubleline1Context:
     text: Overzicht verdragen in voorbereiding
     text2: officielebekendmakingen.nl
