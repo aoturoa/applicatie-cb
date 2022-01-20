@@ -309,6 +309,9 @@ $breakpointDesktopAdjusted: 65em;
           .has-stickysidebar-open & {
             display: block;
           }
+          .has-stickysidebar-open.is-modal-open & {
+            width: 100%;
+          }
 
           @media ( min-width: $breakpointDesktopAdjusted ) {
             background: transparent;
