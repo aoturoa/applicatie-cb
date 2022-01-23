@@ -16,14 +16,45 @@
 
     this.resetLink = this.element.querySelector('.' + this.resetElementClass);
 
+    this.storeInitialValue('select');
+
     if (this.resetLink) {
       this.initEventListeners();
     }
+
+    
+
   };
 
   formReset.prototype.initEventListeners = function() {
     this.resetLink.addEventListener('click', function (e) { this.resetForm(e); }.bind(this), false);
   };
+
+  formReset.prototype.storeInitialValue = function(e) {
+    this.inputs = this.element.querySelectorAll(this.elements);
+    
+    
+    for (var y = 0; y < this.inputs.length; y++) {
+      var type = this.getType(this.inputs[y]);
+      
+      switch (type) {
+        case 'select':
+          this.inputs[y].setAttribute('data-initial-value', this.inputs[y].value);
+      }
+
+    }
+
+  };
+
+  formReset.prototype.getType = function(e) {
+    var type;
+    if (e.nodeName === 'INPUT') {
+      type = e.getAttribute('type');
+    } else if (e.nodeName === 'SELECT') {
+      type = 'select';
+    }
+    return type;
+  };  
 
   formReset.prototype.resetForm = function(e) {
     var y;
@@ -34,11 +65,7 @@
     for (y = 0; y < this.inputs.length; y++) {
 
       // get type
-      if (this.inputs[y].nodeName === 'INPUT') {
-        type = this.inputs[y].getAttribute('type')
-      } else if (this.inputs[y].nodeName === 'SELECT') {
-        type = 'select';
-      }
+      var type = this.getType(this.inputs[y]);
 
       if (type) {
         switch (type) {
@@ -46,12 +73,14 @@
           if (this.inputs[y].checked) {
             this.inputs[y].checked = false;
           }
+          break;
         case 'checkbox':
           if (this.inputs[y].checked) {
             this.inputs[y].checked = false;
           }
+          break;
         case 'select':
-          this.inputs[y].selectedIndex = 0;
+          this.inputs[y].value = this.inputs[y].getAttribute('data-initial-value');
           if ("createEvent" in document) {
             var evt = document.createEvent("HTMLEvents");
             evt.initEvent("change", true, true);
@@ -59,16 +88,18 @@
           } else {
             this.inputs[y].fireEvent("change");
           }
+          break;
         case 'text':
           this.inputs[y].value = '';
-            // trigger keyUp event on input (for ie. filtersearch-results component)
-            if ("createEvent" in document) {
-              var evt = document.createEvent("HTMLEvents");
-              evt.initEvent("keyup", false, true);
-              this.inputs[y].dispatchEvent(evt);
-            } else {
-              this.inputs[y].fireEvent("keyup");
-            }
+          // trigger keyUp event on input (for ie. filtersearch-results component)
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("keyup", false, true);
+            this.inputs[y].dispatchEvent(evt);
+          } else {
+            this.inputs[y].fireEvent("keyup");
+          }
+          break;
         }
       }
     }
