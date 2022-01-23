@@ -472,8 +472,12 @@ body .docFormeleDivisie {
 }
 
 #broodtekst .wijziging .artikeltekst,#broodtekst .wijziging .artikel,#broodtekst .wijziging .divisie,#broodtekst .wijziging .wijzig-divisie {
-    margin-left: 2em;
+    margin-left: 1em;
+    @media (min-width: $breakpointDesktop) {
+        margin-left: 2em;
+    }
 }
+#broodtekst p>.nr { margin-right: 1em; }
 
 #broodtekst .wijziging .wijzig-divisie .wijzig-divisie,#broodtekst .wijziging .wijzig-divisie .artikeltekst,#broodtekst .wijziging .wijzig-divisie .artikel,#broodtekst .wijziging .wijzig-divisie .divisie {
     margin-left: 0;
@@ -1143,7 +1147,10 @@ hr .item {
 }
 
 #broodtekst ul.artikel_leden.whitespace-small>li,#broodtekst ul.expliciet.whitespace-small>li {
-    padding: 0 0 0 2.5em;
+    padding: 0 0 0 1.5em;
+    @media (min-width: $breakpointDesktop) {
+        padding: 0 0 0 2.5em;
+    }
 }
 
 #broodtekst ul.artikel_leden.whitespace-medium>li,#broodtekst ul.expliciet.whitespace-medium>li {
@@ -1166,8 +1173,13 @@ hr .item {
 }
 
 #broodtekst ul.whitespace-small>li>p.labeled {
-    margin: 0 0 1em 2.5em;
+    margin: 0 0 1em 1.5em;
     left: -2.5em;
+
+    @media (min-width: $breakpointDesktop) {
+        margin: 0 0 1em 2.5em;
+        left: -2.5em;
+    }
 }
 
 #broodtekst ul.whitespace-medium>li>p.labeled {
@@ -1194,7 +1206,10 @@ hr .item {
 }
 
 #broodtekst ul.whitespace-small>li>p.labeled span.ol,#broodtekst ul.whitespace-small>li>p.labeled span.lidnr,#broodtekst ul.whitespace-small>li>p.lid span.lidnr,#broodtekst div.wijziging.whitespace-small p.lid span.lidnr {
-    margin-left: -2.5em;
+    margin-left: -1.5em;
+    @media (min-width: $breakpointDesktop) {
+        margin-left: -2.5em;
+    }
 }
 
 #broodtekst ul.whitespace-medium>li>p.labeled span.ol,#broodtekst ul.whitespace-medium>li>p.labeled span.lidnr,#broodtekst ul.whitespace-medium>li>p.lid span.lidnr,#broodtekst div.wijziging.whitespace-medium p.lid span.lidnr {
