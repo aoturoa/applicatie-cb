@@ -80,7 +80,7 @@ context:
         hastooltip: false
         options:
           - id: 101
-            value:
+            value: 5
             label: Alle data
             linkedto: 1
             selected: selected
@@ -105,9 +105,8 @@ context:
         - id: 1012
           value:
           label: Publicatie
-          linkedto: 1
         - id: 1023
-          value: 10
+          value: 100
           label: Document
           selected: selected
       additionalSelect2:
@@ -123,9 +122,8 @@ context:
         - id: 10121
           value:
           label: Publicatie
-          linkedto: 1
         - id: 10231
-          value: 10
+          value: 101
           label: Document
           selected: selected
       dateselectionDatum:
