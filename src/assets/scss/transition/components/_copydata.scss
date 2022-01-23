@@ -15,9 +15,11 @@
     background: white;
     border: 1px solid $darkBlue;
     border-radius: 5px;
-    padding: .5em .75em;
+    padding: .75em .75em;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: .5em;
+    font-size: 90%;
+    line-height: 1.2;
 
     @media (min-width: $breakpointDesktop) {
       width: auto;
