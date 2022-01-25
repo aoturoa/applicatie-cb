@@ -241,7 +241,7 @@
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-cvdr-regeling.html"
     },
     {
-      "label": "CVDR - regeling tekst",
+      "label": "CVDR - regeling wti",
       "url": "http://localhost:3000/components/preview/templates-cvdr-wettechnischegegevens",
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-cvdr-wettechnischegegevens.html"
     },

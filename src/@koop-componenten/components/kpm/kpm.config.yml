@@ -1,5 +1,5 @@
 label: KPM Module
-status: ready
+status: prototype
 context:
   id: 1
   rangeSelector: input[name='radio-group-1']

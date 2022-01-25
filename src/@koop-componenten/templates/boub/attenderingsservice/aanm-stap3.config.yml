@@ -1,6 +1,6 @@
 ---
 label: Aanm. - Stap 3
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg

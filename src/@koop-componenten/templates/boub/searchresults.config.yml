@@ -1,6 +1,6 @@
 ---
 label: BodB - Zoekres. Lijst
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg
