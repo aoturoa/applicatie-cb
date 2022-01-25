@@ -20,6 +20,11 @@ context:
       fieldInstruction:
       fieldPlaceholder: Zoekwoord of verdragsnummer
       labelmodifier: accent
+    buttonSubmit:
+      text: "Zoek verdragen"
+      button: true
+      type: submit
+      modifier: form__button button--primary button--large
   doubleline1Context:
     text: Overzicht verdragen in voorbereiding
     text2: officielebekendmakingen.nl

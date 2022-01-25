@@ -15,17 +15,16 @@
     background: white;
     border: 1px solid $darkBlue;
     border-radius: 5px;
-    padding: .5em .75em;
+    padding: .75em .75em;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: .5em;
+    font-size: 90%;
+    line-height: 1.2;
 
     @media (min-width: $breakpointDesktop) {
       width: auto;
       margin: 0;
       flex: 1 0 8em;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       margin-right: .75em;
       margin-bottom: 0;
     }
@@ -62,7 +61,7 @@
         color: $darkBlue !important;
         position: absolute;
         right: 0;
-        top: 3em;
+        bottom: -1.5em;
         width: 15em;
         text-align: right;
       }

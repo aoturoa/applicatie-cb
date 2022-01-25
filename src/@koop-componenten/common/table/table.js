@@ -11,7 +11,18 @@
     var allTables = document.getElementsByTagName('table');
     var i;
 
+    function getFirstParentMatch(element, selector) {
+      if (!element) {return element};
+      element.matches(selector) || (element = (element.nodeName.toLowerCase() === 'html' ? false : getFirstParentMatch(element.parentNode, selector)));
+      return element;    
+    }
+
     for (i = 0; i < allTables.length; i++) {
+
+      // Ingore if table is inside the component: 'documentbanner';
+      if(getFirstParentMatch(allTables[i], '.documentbanner')) {
+        return;
+      }
 
       if (allTables[i].parentNode.classList.contains('table--container')) {
         allTables[i].parentNode.classList.add('table__container');

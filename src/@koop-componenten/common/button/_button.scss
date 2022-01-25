@@ -10,7 +10,7 @@
   line-height: 1;
   margin: 0 .5em .5em 0;
   max-width: 100%;
-  transition: color $fastEaseInOut;
+  // transition: color $fastEaseInOut;
   padding: $standardButtonPadding; // 40px total height
   position: relative;
   text-align: center;
@@ -61,6 +61,33 @@
     background-color: $lightGrey;
     color: $mediumGrey;
   }
+
+  &.is-loading {
+    position: relative;
+    border-color: #777;
+    background-color: #777;
+    width: 3em;  
+    height: 2.8em;
+
+    &:before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      left: 1em;
+      top: .95em;
+      background: url(../images/icon-loader.svg) no-repeat left top;
+      background-size: 1em;
+    }
+
+    .button__label {
+      @extend .visually-hidden;
+    }
+  }
+  &--large.is-loading {
+    height: 3.1em;
+  }
+
 
   &.icon-bg {
     padding-right: 3.75em;
@@ -378,3 +405,4 @@
     }
   }
 }
+

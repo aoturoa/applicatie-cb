@@ -1,6 +1,6 @@
 ---
 label: Beh. - Abonnement wijzigen
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg

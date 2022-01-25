@@ -1,5 +1,5 @@
 label: KPM Highlighter
-status: ready
+status: prototype
 context:
   straalContext:
     options:

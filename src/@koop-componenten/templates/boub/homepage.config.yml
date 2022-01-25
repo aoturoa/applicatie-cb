@@ -50,6 +50,11 @@ context:
           value: 1km
         - label: 2km
           value: 2km
+    buttonSubmit:
+      text: "Zoek berichten"
+      button: true
+      type: submit
+      modifier: form__button button--primary button--large
   jumbotron2Context:
     modifier: slim
     heading: Meld je aan voor de mail service

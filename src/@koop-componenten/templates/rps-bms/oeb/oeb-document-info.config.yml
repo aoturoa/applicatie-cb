@@ -1,6 +1,6 @@
 ---
 label: Document informatie
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg
