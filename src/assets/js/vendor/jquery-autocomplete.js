@@ -230,7 +230,8 @@ $(document).ready(function () {
 
         // if click outside => close opened suggestions
         if (!$target.is('.js-suggestion') && !$target.is('.js-combobox') && $suggestions_text.length) {
-          $input_text.val($input_text.attr('data-lastval'));
+          // $input_text.val($input_text.attr('data-lastval')); 
+          // creates bug when having two combobox'es. TFS 152175
           $suggestions.empty();
           $suggestions_text.empty();
         }
