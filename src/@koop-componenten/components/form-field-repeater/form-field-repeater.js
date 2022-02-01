@@ -31,17 +31,19 @@
     var allFormRows = this.element.querySelectorAll('.form__row');
     var existingRow = allFormRows[allFormRows.length - 2];
     var clone = existingRow.cloneNode(true);
+    var newId = existingRow.querySelector('input').id + '1';
 
     clone.querySelector('label').setAttribute('for', existingRow.querySelector('input').id + '1');
-    clone.querySelector('input').id = existingRow.querySelector('input').id + '1';
-    clone.querySelector('input').value = "";
+    clone.querySelector('label').setAttribute('id', existingRow.querySelector('input').id + '2');
+    clone.querySelector('input').id = newId;
+    clone.querySelector('input').setAttribute('data-lastval', "");
     existingRow.parentNode.insertBefore(clone, existingRow.nextSibling);
+    document.getElementById(newId).value = "";
     clone.querySelector('input').focus();
 
     e.preventDefault();
-
-    // reapply z-index;
-    this.applyZindex();
+    
+    return false;
   };
 
 })();
