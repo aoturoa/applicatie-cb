@@ -149,7 +149,7 @@ $(document).ready(function () {
       fill_hidden_field(options_combo.comboboxHiddenField, value_to_search);
 
       if (event.keyCode === 13) {
-        $form.submit();
+        // $form.submit();
       } else {
 
         if (event.keyCode !== 27) { // No Escape
@@ -219,7 +219,6 @@ $(document).ready(function () {
 
         }
       }
-
     })
       .on('click', function (event) {
         var $target = $(event.target),
@@ -230,8 +229,7 @@ $(document).ready(function () {
 
         // if click outside => close opened suggestions
         if (!$target.is('.js-suggestion') && !$target.is('.js-combobox') && $suggestions_text.length) {
-          // $input_text.val($input_text.attr('data-lastval')); 
-          // creates bug when having two combobox'es. TFS 152175
+          $input_text.last().val($input_text.last().attr('data-lastval')); 
           $suggestions.empty();
           $suggestions_text.empty();
         }
