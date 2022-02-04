@@ -48,39 +48,53 @@
 
               {{#if multilevel}}
                 {{#each Options }}
-                  <fieldset class="js-filterresults__resultmother">
 
-                  {{#if checkAll}}
-                    <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
-                    <div data-decorator="init-selectall">
-                      <div class="input-checkbox">
-                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="selectAll" value="{{#if value}}{{value}}{{else}}Alle{{/if}}"
+                  {{#if isSingle}}
+                    
+                      <div class="input-{{#if radio}}radio{{else}}checkbox{{/if}}">
+                        <input class="{{#if radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="{{value}}"
                         />
-                        <label class="checkbox__label u-nomargin" for="{{id}}">
-                          <strong>{{ title }}</strong>
+                        <label class="{{#if radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                          {{ title }}
                         </label>
                       </div>
+                    
                   {{else}}
-                    <legend>{{#if title}}{{title}}{{/if}}</legend>
-                  {{/if}}
+                    
+                    <fieldset class="js-filterresults__resultmother">
 
-                  <ul class="list--unstyled">
-                    {{#each OptionsSubs }}
-                      <li class=" js-filterresults__result">
-                        <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="{{value}}"
+                    {{#if checkAll}}
+                      <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
+                      <div data-decorator="init-selectall2">
+                        <div class="input-checkbox">
+                          <input class="checkbox__input js-checkbox-master-inner" type="checkbox" id="{{id}}" name="selectAll" value="{{#if value}}{{value}}{{else}}Alle{{/if}}"
                           />
-                          <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                          <label class="checkbox__label u-nomargin" for="{{id}}">
                             {{ title }}
                           </label>
                         </div>
-                      </li>
-                    {{/each}}
-                  </ul>
-                {{#if checkAll}}
-                  </div>
+                    {{else}}
+                      <legend>{{#if title}}{{title}}{{/if}}</legend>
+                    {{/if}}
+
+                    <ul class="subselection__list__sublist list--unstyled">
+                      {{#each OptionsSubs }}
+                        <li class=" js-filterresults__result">
+                          <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                            <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="{{value}}"
+                            />
+                            <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                              {{ title }}
+                            </label>
+                          </div>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  {{#if checkAll}}
+                    </div>
+                  {{/if}}
+                  </fieldset>
                 {{/if}}
-                </fieldset>
               {{/each}}
 
             {{else}}
