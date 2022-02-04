@@ -335,6 +335,55 @@ variants:
       type: span
       selectAll: true
       selectAllID: 123211
+  - name: With Check all & multi-level checkboxes
+    label: With Check all & multi-level checkboxes
+    context:
+      id: 98766
+      type: span
+      linkText: Kies opties voor rondom een adres
+      linkTextActive: Wijzig selectie
+      modalTitle: Rondom een adres
+      selectAll: true
+      selectAllID: 9877
+      selectAllOnMain:
+        label: Selecteer alle opties
+      maxShow: 3
+      multilevel: true
+      Options:
+        - Option: 15151
+          id: 15151
+          title: Nederland
+          short: Nederland
+          checkAll: true
+          OptionsSubs:
+            - OptionsSub: 11776
+              id: 11776
+              title: NederlandSub1
+              short: NederlandSub1
+              checked: checked
+            - OptionsSub: 12776
+              id: 12776
+              title: NederlandSub2
+              short: NederlandSub2
+        - Option: 27761111
+          id: 27761111
+          title: Duitsland
+          short: Duitsland
+          isSingle: true
+        - Option: 2776
+          id: 2776
+          title: Frankrijk
+          short: Frankrijk
+          checkAll: true
+          OptionsSubs:
+            - OptionSub: 21776
+              id: 21776
+              title: FrankrijkSub1
+              short: FrankrijkSub1
+            - OptionSub: 22776
+              id: 22776
+              title: FrankrijkSub2
+              short: FrankrijkSub2
   - name: with Check all options
     label: met Selecteer alle opties
     context:
@@ -386,6 +435,11 @@ variants:
               id: 12776
               title: NederlandSub2
               short: NederlandSub2
+        - Option: 27761111
+          id: 27761111
+          title: Duitsland
+          short: Duitsland
+          isSingle: true
         - Option: 2776
           id: 2776
           title: Frankrijk

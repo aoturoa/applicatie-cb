@@ -38,6 +38,11 @@
       font-weight: bold;
     }
   }
+  .js-filterresults__resultmother &.js-checkbox-master {
+    & ~ label {
+      font-weight: normal;
+    }
+  } 
 }
 
 .modal .js-checkbox-master {

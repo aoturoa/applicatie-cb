@@ -195,7 +195,7 @@ function findObjectByKey(array, key, value) {
           }
 
         }
-        if (!this.options[y].classList.contains('js-checkbox-master')) {
+        if (!this.options[y].classList.contains('js-checkbox-master') && !this.options[y].classList.contains('js-checkbox-master-inner')) {
           this.items.push(option);
         }
       }
