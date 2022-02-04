@@ -37,7 +37,7 @@
                 <div class="input-checkbox u-margin--m">
                   <input class="checkbox__input js-checkbox-master" type="checkbox" {{#if_eq selectAllChecked/checked true}}checked{{/if_eq}} id="{{selectAllID}}" name="selectAll" value="{{#if value}}{{value}}{{else}}Alle{{/if}}" />
                   <label class="checkbox__label" for="{{selectAllID}}">
-                    <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+                    <strong>{{#if selectAllLabel}}{{selectAllLabel}}{{else}}Alle{{/if}} {{#if selectAllHideCount}}{{else}}<i class="js-amount-checkboxes"></i>{{/if}} {{#if selectAllType}}{{selectAllType}}{{else}}verdragen{{/if}}</strong>
                   </label>
                 </div>
               {{/if}}

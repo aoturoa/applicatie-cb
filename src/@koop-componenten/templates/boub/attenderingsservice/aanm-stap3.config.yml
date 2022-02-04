@@ -46,157 +46,125 @@ context:
     modifier: h-400
     controls: false
   rondomadresContext:
-    linkText: Selecteer opties rondom een adres
-    id: 20
-    modalTitle: Selecteer opties rondom een adres
-    fieldLabel: fieldLabel
-    fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
-    maxShow: 3
-    required: true
-    selectAll: true
-    selectAllChecked: true
-    selectAllID: 9876
-    selectAllOnMain:
-      label: Selecteer alle opties
-      checked: true
+    id: 98766
     type: span
+    linkText: Kies opties voor rondom een adres
+    linkTextActive: Wijzig selectie
+    modalTitle: Rondom een adres
+    selectAll: true
+    selectAllID: 98773
+    selectAllType: opties
+    selectAllHideCount: true
+    selectAllLabel: Kies alle 
+    selectAllOnMain:
+      label: Kies alle opties
+    maxShow: 3
+    multilevel: true
     Options:
-      - Option: 1
-        id: 123711111
-        title: Aanlegvergunning
-        short: Aanlegvergunning
-        checked: checked
-      - Option: 2
-        id: 22372312321312
-        title: Apv vergunning
-        short: Apv vergunning
-        checked: checked
-      - Option: 3
-        id: 323723
-        title: Bodembeschermingsvergunning
-        short: Bodembeschermingsvergunning
-        checked: checked
-      - Option: 1222222222
-        id: 12372327
-        title: Bouwvergunning
-        short: Bouwvergunning
-        checked: checked
-      - Option: 2222222222222
-        id: 223712312312
-        title: Drank- en horecavergunning
-        short: Drank- en horecavergunning
-        checked: checked
-      - Option: 322222222
-        id: 3237123123
-        title: Evenementenvergunning
-        short: Evenementenvergunning
-        checked: checked
+      - Option: 15151
+        id: 15151
+        title: Nederland
+        short: Nederland
+        checkAll: true
+        OptionsSubs:
+          - OptionsSub: 11776
+            id: 11776
+            title: NederlandSub1
+            short: NederlandSub1
+            checked: checked
+          - OptionsSub: 12776
+            id: 12776
+            title: NederlandSub2
+            short: NederlandSub2
+      - Option: 27761111
+        id: 27761111
+        title: Duitsland
+        short: Duitsland
+        isSingle: true
+      - Option: 2776
+        id: 2776
+        title: Frankrijk
+        short: Frankrijk
+        checkAll: true
+        OptionsSubs:
+          - OptionSub: 21776
+            id: 21776
+            title: FrankrijkSub1
+            short: FrankrijkSub1
+          - OptionSub: 22776
+            id: 22776
+            title: FrankrijkSub2
+            short: FrankrijkSub2
   voorlichtingContext:
-    linkText: Selecteer opties over voorlichting
     id: 21
-    modalTitle: Selecteer opties over voorlichting
-    fieldLabel: fieldLabel
-    fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
-    maxShow: 3
-    selectAll: true
-    required: true
-    selectAllID: 9877
-    selectAllOnMain:
-      label: Selecteer alle opties
     type: span
+    linkText: Kies opties voor voorlichting
+    linkTextActive: Wijzig selectie
+    modalTitle: Voorlichting
+    selectAll: true
+    selectAllID: 987731
+    selectAllType: opties
+    selectAllHideCount: true
+    selectAllLabel: Kies alle
+    selectAllOnMain:
+      label: Kies alle opties
+    maxShow: 3
     Options:
       - Option: 1
         id: 1237222222
-        title: Aankondiging
-        short: Aankondiging
+        title: Afvalinzameling
+        short: Afvalinzameling
       - Option: 2
         id: 2237231232131
-        title: Huisafval
-        short: Huisafval
-      - Option: 3
-        id: 3237
         title: Inspraak
         short: Inspraak
-      - Option: 122222222
-        id: 12372329
-        title: Mededelingen
-        short: Mededelingen
-      - Option: 222222222222
-        id: 22371231231
-        title: Meldingen
-        short: Meldingen
-      - Option: 32222222
-        id: 323712123
+      - Option: 3
+        id: 3237
         title: Openingstijden
         short: Openingstijden
-  bestemmingsplannenContext:
-    linkText: Selecteer opties over bestemmingsplannen
-    id: 22
-    modalTitle: Selecteer opties over bestemmingsplannen
-    fieldLabel: fieldLabel
-    fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
-    maxShow: 3
-    required: true
-    selectAll: true
-    selectAllID: 9879
-    selectAllOnMain:
-      label: Selecteer alle opties
-    type: span
-    Options:
-      - Option: 1
-        id: 1237
-        title: Bestemmingsplan
-        short: Bestemmingsplan
-      - Option: 2
-        id: 223723123312
-        title: Voorbereidingsbesluit
-        short: Voorbereidingsbesluit
+      - Option: 122222222
+        id: 12372329
+        title: Verkiezingen
+        short: Verkiezingen
+      - Option: 222222222222
+        id: 22371231231
+        title: Andere voorlichtingsinformatie
+        short: Andere voorlichtingsinformatie
   voorschriftenContext:
-    linkText: Selecteer opties over voorschriften & beleid
+    linkText: Kies opties over voorschriften & beleid
     id: 23
-    modalTitle: Selecteer opties over voorschriften & beleid
-    fieldLabel: fieldLabel
-    fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
+    modalTitle: Voorschriften & beleid
     maxShow: 3
     required: true
     selectAll: true
     selectAllID: 9880
+    selectAllType: opties
+    selectAllHideCount: true
+    selectAllLabel: Kies alle
     selectAllOnMain:
-      label: Selecteer alle opties
+      label: Kies alle opties
     type: span
     Options:
       - Option: 1
         id: 123766666
-        title: Aanwijzingsbesluit
-        short: Aanwijzingsbesluit
+        title: Beleidsregel
+        short: Beleidsregel
       - Option: 2
         id: 223723321312
-        title: Agenda en notulen
-        short: Agenda en notulen
+        title: Algemeen verbindend voorschrift (verordering)
+        short: Algemeen verbindend voorschrift (verordering)
       - Option: 3
         id: 3223
-        title: Belastingbesluit
-        short: Belastingbesluit
+        title: Vergadering of stuk van het bestuur
+        short: Vergadering of stuk van het bestuur
       - Option: 12222222
         id: 12372
-        title: Besluitenlijst
-        short: Besluitenlijst
+        title: Ander besluit van algemene strekking
+        short: Ander besluit van algemene strekking
       - Option: 22222222222
         id: 2237122312
-        title: Collectevergunning
-        short: Collectevergunning
-      - Option: 3222222
-        id: 32373123
-        title: Delegatiebesluit
-        short: Delegatiebesluit
+        title: Overige overheidsinformatie
+        short: Overige overheidsinformatie
   checkallOverheidsorganisatiesContext:
     id: 1
     label: overheidsorganisaties

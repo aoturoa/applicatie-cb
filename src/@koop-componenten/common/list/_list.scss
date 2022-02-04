@@ -1005,6 +1005,10 @@ ol {
       padding-bottom: 0;
       border: 0;
     }
+    & > h2:first-child,
+    & .column > h2:first-child {
+      font-size: 1.25em;
+    }
   }
 
   .list__item {
