@@ -132,7 +132,7 @@
           {{#if buttonSubmit}}
             <button type="submit" class="button button--primary">{{#if buttonSubmitLabel}}{{buttonSubmitLabel}}{{else}}Opnieuw zoeken{{/if}}</button>
           {{else}}
-            <button type="button" data-handler="close-modal" class="button button--primary">Bevestig selectie</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">{{#if buttonSubmitLabel}}{{buttonSubmitLabel}}{{else}}Bevestig selectie{{/if}}</button>
           {{/if}}
         </div>
         {{#if hideClose}}{{else}}<button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>{{/if}}
