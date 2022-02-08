@@ -9,6 +9,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Front-end componentenbiliotheek</description>
     <releaseNotes>
+      ## 1.9.57
+      - Focus styles aangepast (nu rood)
+      - Templates geupdate van BKW (rubrieken)
+      - Subselection: waarde variabel gemaakt
+      - Show-moreless: waarde variabel gemaakt
+      - Paginatie: verborgen labels toegevoegd tbv toegankelijkheid
+      - Selectedfilter: verborgen labels toegevoegd tbv toegankelijkheid
+      - Subselection: meerlaagse checkboxes
       ## 1.9.55
       - Component: Checkbox
       - KM update naar 2.4.2
