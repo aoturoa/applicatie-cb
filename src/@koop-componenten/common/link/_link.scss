@@ -1,3 +1,9 @@
+*:focus {
+  box-shadow: 0 0 0 2px $focus !important;
+  outline: 1px solid $focusSecondary;
+  outline-offset: 2px;
+}
+
 a {
   color: $darkBlue;
   text-decoration: underline;
