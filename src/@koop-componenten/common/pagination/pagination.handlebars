@@ -2,12 +2,19 @@
   <div class="pagination__index">
     {{#if title}}<{{#if hLevel}}h{{hLevel}}{{else}}h2{{/if}}>{{title}}</{{#if hLevel}}h{{hLevel}}{{else}}h2{{/if}}>{{/if}}
     <ul>
-      <li class="prev"><a {{#if id}}id="{{id}}"{{/if}} href="#"><span class="">&laquo;</span></a></li>
-      <li><a {{#if id}}id="{{id}}"{{/if}} href="#">{{ previousPage }}</a></li>
-      <li class="active">{{ currentPage }}</li>
-      <li>...</li>
-      <li><a {{#if id}}id="{{id}}"{{/if}} href="#">{{ lastPage }}</a></li>
-      <li class="next"><a {{#if id}}id="{{id}}"{{/if}} href="#"><span class="">&raquo;</span></a></li>
+      {{#each pages}}
+        <li {{#if currentPage}}aria-current="page"{{/if}} 
+            class="{{#if currentPage}}active{{/if}}{{#if @first}} prev{{/if}}{{#if @last}} next{{/if}}">
+              {{#if currentPage}}<span class="visually-hidden">Pagina: </span>{{page}}
+              {{else}}
+                {{#if @first}}<a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="">Vorige pagina</span></a>
+                {{else if @last}}<a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="">Volgende pagina</span></a>
+                {{else}}
+                <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="visually-hidden">Pagina: </span>{{page}}</a>
+                {{/if}}
+              {{/if}}
+        </li>
+      {{/each}}
     </ul>
   </div>
   {{#if pageFilter}}
