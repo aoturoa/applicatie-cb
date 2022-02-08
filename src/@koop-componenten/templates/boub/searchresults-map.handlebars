@@ -194,14 +194,6 @@
             </fieldset>
           </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Gebied {{render "@tooltip" tt1 merge=true }}
-              </legend>
-              {{render "@input-radio" gebiedContext }}
-            </fieldset>
-          </div>
-
           <div data-decorator="init-form-conditionals">
 
 
@@ -221,32 +213,25 @@
           </div>
 
           <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Onderwerpen {{render "@tooltip" tt3 merge=true }}</legend>
-              {{render "@input-checkbox" onderwerpContext }}
-            </fieldset>
-          </div>
+              <fieldset>
+                <legend>Rondom een adres {{render "@tooltip" tt3 merge=true}}</legend>
+                {{render "@input-checkbox" rondomadresContext }}
+              </fieldset>
+            </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Voorlichting {{render "@tooltip" tt4 merge=true }}</legend>
-              {{render "@input-checkbox" voorlichtingContext }}
-            </fieldset>
-          </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Voorlichting {{render "@tooltip" tt4 merge=true}}</legend>
+                {{render "@input-checkbox" voorlichtingContext }}
+              </fieldset>
+            </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Bestemming {{render "@tooltip" tt5 merge=true }}</legend>
-              {{render "@input-checkbox" bestemmingContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Voorschriften {{render "@tooltip" tt6 merge=true }}</legend>
-              {{render "@input-checkbox" voorschriftenContext }}
-            </fieldset>
-          </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Voorschriften &amp; beleid{{render "@tooltip" tt6 merge=true}}</legend>
+                {{render "@input-checkbox" voorschriftenContext }}
+              </fieldset>
+            </div>
 
           <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
 
