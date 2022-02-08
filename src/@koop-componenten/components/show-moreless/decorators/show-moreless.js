@@ -14,7 +14,7 @@
     this.element = element;
     this.listitems = [].slice.call(this.element.querySelectorAll('li'));
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.config.amountVisible = this.config.amount || '5';
+    this.config.amountVisible = this.config.amount || '4';
     this.config.labelMore = this.config.labelmore || 'Toon meer';
     this.config.labelLess = this.config.labelless || 'Toon minder';
     this.allvisible = false;
