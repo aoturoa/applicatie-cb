@@ -10,6 +10,8 @@
   <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
+
+    
     <form class="form" data-decorator="init-form-validation">
       <fieldset>
         <legend class="visually-hidden">E-mailadres</legend>
@@ -100,33 +102,28 @@
               </div>
             </li>
             <li class="list__item">
-              <h2>Selecteer uw voorkeursinstellingen</h2>
-              <p>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.</p>
+              <h2>Kies uw berichten</h2>
+              <p>Kies het soort berichten dat u wilt ontvangen. Berichten hebben bestrekking op een specifieke locatie of op uw hele gemeente.</p>
               <fieldset>
                 <legend class="visually-hidden">Voorkeursinstellingen</legend>
                 <div class="columns">
                   <div class="column">
                     <div class="form__row u-margin-top-32">
                       <h3 class="form__sublegend">Rondom een adres</h3>
-                      <p class="">Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.</p>
+                      <p class="">Omgevingsvergunningen en meldingen met activiteiten zoals bouwen, slopen en kappen, verkeersbesluiten, evenementenvergunningen en dergelijke.</p>
                       {{render "@subselection" rondomadresContext }}
                     </div>
                     <div class="form__row u-margin-top-48">
-                      <h3 class="form__sublegend">Bestemmingsplannen</h3>
-                      <p class="">Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.</p>
-                      {{render "@subselection" bestemmingsplannenContext }}
+                      <h3 class="form__sublegend">Voorschriften &amp; beleid</h3>
+                      <p class="">Waaronder beleidsregels of stukken van het bestuur voor de hele gemeente of besluiten van algemene strekking.</p>
+                      {{render "@subselection" voorschriftenContext }}
                     </div>
                   </div>
                   <div class="column">
                     <div class="form__row u-margin-top-32">
                       <h3 class="form__sublegend">Voorlichting</h3>
-                      <p class="">Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.</p>
+                      <p class="">Waaronder voorlichting over inspraak en verkiezingen voor de hele gemeente of openingstijden en huisafval.</p>
                       {{render "@subselection" voorlichtingContext }}
-                    </div>
-                    <div class="form__row u-margin-top-48">
-                      <h3 class="form__sublegend">Voorschriften &amp; beleid</h3>
-                      <p class="">Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.</p>
-                      {{render "@subselection" voorschriftenContext }}
                     </div>
                   </div>
                 </div>

@@ -334,7 +334,7 @@ describe('Subselection', function () {
 
   // 'Selecteer alle opties' checkbox;
 
-  it('should check all checkboxes in modal, after checking the master check-all (selecteer alle opties)', function () {
+  it('should check all checkboxes in modal, after checking the master check-all (selecteer alle opties) -1', function () {
     browser.get('http://localhost:3000/components/preview/subselection--with-check-all-options');
 
     var width = 1200;
@@ -359,7 +359,7 @@ describe('Subselection', function () {
 
     browser.driver.sleep(500);
 
-    var item = element(by.css('.subselection__summaryitem'));
+    var item = element(by.css('.subselection__summaryitem__remove'));
     item.click();
 
     browser.driver.sleep(500);
@@ -394,7 +394,7 @@ describe('Subselection', function () {
     var modalButton = element(by.css('[data-handler="close-modal"]'));
     modalButton.click();
 
-    var item = element(by.css('.subselection__summaryitem'));
+    var item = element(by.css('.subselection__summaryitem__remove'));
     item.click();
 
     browser.driver.sleep(500);

@@ -1,30 +1,26 @@
 (function () {
   'use strict';
 
+  // This component is used inside a subselection, WITHIN an checkbox-selectall element.
+
   onl.decorate({
-    'init-selectall': function (element) {
-      new selectall(element);
+    'init-selectall2': function (element) {
+      new selectallInner(element);
     }
   });
 
-  var selectall = function (element) {
+  var selectallInner = function (element) {
     this.element = element;
-    this.mastercheckbox = this.element.querySelector('.js-checkbox-master');
+    this.mastercheckbox = this.element.querySelector('.js-checkbox-master-inner');
     this.mastercheckboxId = this.mastercheckbox.getAttribute('id');
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]:not(.js-checkbox-master)');
+    this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]:not(.js-checkbox-master-inner)');
     this.checkboxSelectAllOnMain = document.getElementById('ref-'+this.mastercheckboxId);
-
-    this.amountLabel = this.element.querySelector('.js-amount-checkboxes');
-    if(this.amountLabel){
-      this.amountLabel.innerHTML = this.checkboxes.length;
-    }
 
     this.init();
   };
 
-  selectall.prototype.init = function (e) {
-    var self = this;
+  selectallInner.prototype.init = function (e) {
     // check mastercheckbox if all checkboxes are checked on pageload;
     if(this.areAllCheckboxesChecked()){
       this.mastercheckbox.checked = true;
@@ -33,23 +29,15 @@
       if(this.checkboxSelectAllOnMain) {
         this.checkboxSelectAllOnMain.checked = true;
 
-        pubsub.publish('/selectall/init/checkboxSelectAllOnMain/true', {
+        pubsub.publish('/selectall-inner/init/checkboxSelectAllOnMain/true', {
           element: this.element
         });
       }
     }
-    
-    var subscription = pubsub.subscribe('/selectall-inner/changeCheckbox/allAreChecked', function (target) {
-      self.changeCheckbox(target);
-    });
-    var subscription = pubsub.subscribe('/selectall-inner/changeMasterCheckbox/allAreChecked', function (target) {
-      self.changeCheckbox(target);
-    });
-
     this.initEventListeners();
   }
 
-  selectall.prototype.initEventListeners = function (e) {
+  selectallInner.prototype.initEventListeners = function (e) {
     var i;
 
     // regular checkboxes;
@@ -62,13 +50,13 @@
     this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
   };
 
-  selectall.prototype.areAllCheckboxesChecked = function (e) {
+  selectallInner.prototype.areAllCheckboxesChecked = function (e) {
     if (this.countAmountChecked() === this.checkboxes.length) {
       return true;
     }
     return false;
   }
-  selectall.prototype.countAmountChecked = function (e) {
+  selectallInner.prototype.countAmountChecked = function (e) {
     var y;
     var amountChecked = 0;
 
@@ -81,7 +69,7 @@
     return amountChecked;
   }
 
-  selectall.prototype.changeCheckbox = function (e) {
+  selectallInner.prototype.changeCheckbox = function (e) {
     var totalCheckboxes = this.checkboxes.length;
     var stateMasterCheckbox;
 
@@ -95,6 +83,9 @@
     if (totalCheckboxes === this.countAmountChecked()) {
       this.mastercheckbox.checked = true;
       stateMasterCheckbox = true;
+      pubsub.publish('/selectall-inner/changeCheckbox/allAreChecked', {
+        target: e
+      });
     }
 
     if(this.checkboxSelectAllOnMain) {
@@ -102,11 +93,11 @@
     }
   }
 
-  selectall.prototype.changeMasterCheckbox = function (e) {
+  selectallInner.prototype.changeMasterCheckbox = function (e) {
     var i;
     var checkboxes = this.checkboxes;
     var stateMasterCheckbox = e.target.checked;
-
+    
     for (i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i] !== e.target) {
 
@@ -131,20 +122,9 @@
 
     }
 
-    var insideSubselection = getClosest(this.element, '.subselection');
-    if(insideSubselection){
-      var checkboxSelectAllOnMain = insideSubselection.querySelector('.js-checkbox-selectAllOnMain');
-      if(insideSubselection && checkboxSelectAllOnMain) {
-        checkboxSelectAllOnMain.checked = stateMasterCheckbox;
-      }
-
-      var subselectionId = insideSubselection.getAttribute('data-id');
-      pubsub.publish('/selectall/changeMasterCheckbox', {
-        element: subselectionId
-      });
-    }
-
-
+    pubsub.publish('/selectall-inner/changeMasterCheckbox/allAreChecked', {
+      target: e
+    });
 
   };
 

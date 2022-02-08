@@ -521,6 +521,9 @@ context:
           fieldLabel: Indiener (achternaam)
           fieldLabelModifier: form__label--secondary
           placeholder: 'Bijv. Jansen'
+          datalistId: items1
+          name: indienerVoornaam
+          hiddenFieldClass: classIndienerVoornaam
           items:
             - item: Geerts
               code: Geerts
@@ -535,6 +538,9 @@ context:
           fieldLabel: Ontvanger (achternaam)
           fieldLabelModifier: form__label--secondary
           placeholder: 'Bijv. Jansen'
+          datalistId: items2
+          name: indienerAchternaam
+          hiddenFieldClass: classIndienerAchternaam
           items:
             - item: Geerts
               code: Geerts
@@ -542,7 +548,6 @@ context:
               code: Jansen
             - item: van Dam
               code: van Dam
-            
         kv_datepicker1:
           id: 111181222323223128
           haslabel: true
