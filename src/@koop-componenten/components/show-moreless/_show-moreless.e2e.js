@@ -26,7 +26,7 @@ describe('Show more-hide', function () {
         });
     }
     element.all(getVisibleDivs).then(function (items) {
-      expect(items.length).toEqual(6);
+      expect(items.length).toEqual(5);
     });
 
   });
@@ -71,7 +71,7 @@ describe('Show more-hide', function () {
         });
     }
     element.all(getVisibleDivs).then(function (items) {
-      expect(items.length).toEqual(6);
+      expect(items.length).toEqual(5);
     });
   });
 
