@@ -231,6 +231,10 @@ div.link {
     @extend .icon;
     @extend .icon--tel;
   }
+  &--info {
+    @extend .icon;
+    @extend .icon--info;
+  }
 }
 
 .link-iconed {
