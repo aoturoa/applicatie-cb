@@ -37,6 +37,10 @@ context:
       required: true
       requiredLabel: true
       hastooltip: true
+      tooltipContext:
+        id: 1321
+        label: 'Helptekst bij het veld Emailadres'
+        content: Wij kunnen helaas geen contact met u opnemen indien uw ingevoerde e-mailadres niet geldig is of niet werkt.
     inputEmailRepeat:
       id: 4
       fieldLabel: Herhaal e-mailadres
