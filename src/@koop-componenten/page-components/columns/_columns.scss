@@ -170,6 +170,9 @@ $breakpointDesktopAdjusted: 65em;
 
     &--main {
       max-width: 52em;
+      &-small {
+        max-width: 35em;
+      }
     }
 
     &--sidebar-left {
