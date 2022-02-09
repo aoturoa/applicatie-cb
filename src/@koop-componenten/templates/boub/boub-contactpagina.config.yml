@@ -1,0 +1,104 @@
+---
+label: BouB - Contactpagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks: false
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  jumbotronContext:
+    heading: Stel uw vraag over <br>Berichten over uw buurt
+    h: h1
+    subheading: MijnOverheid Wonen
+    centered: true
+    headingcentered: true
+  blockContactformulier:
+    heading: Contactformulier
+    subheading: Waar kunnen we u mee helpen?
+    inputName:
+      id: 2
+      fieldLabel: Naam
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldPlaceholder: 'Naam'
+      required: true
+      requiredLabel: true
+    inputEmail:
+      id: 3
+      fieldLabel: E-mailadres
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldPlaceholder: 'E-mailadres'
+      required: true
+      requiredLabel: true
+      hastooltip: true
+    inputEmailRepeat:
+      id: 4
+      fieldLabel: Herhaal e-mailadres
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldPlaceholder: 'Herhaal e-mailadres'
+      required: true
+      requiredLabel: true
+    inputOnderwerp:
+      id: 5
+      fieldLabel: Onderwerp
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldPlaceholder: 'Onderwerp'
+    textareaVraag:
+      id: 6
+      fieldPlaceholder: 'Uw vraag of opmerking'
+      fieldLabel: 'Uw vraag of opmerking'
+      fieldLabelModifier: form__label--accent
+      required: true
+      requiredLabel: true
+      rows: 6
+    checkboxContent:
+      options:
+        - id: checkbox-2
+          text: 'Ik ga akkoord met de verwerking van mijn persoonsgegevens volgens het <a href="#">privacystatement</a>.'
+          name: countries
+          arguments: required
+    buttonSubmit:
+      text: "Verzenden"
+      button: true
+      type: submit
+      modifier: form__button button--primary
+  blockhelpen:
+    id: 12
+    htype: 2
+    heading: Kunnen we u verder helpen?
+    subheading: Berichten over uw buurt
+    content: false
+    buttonText: false
+    highlight: true
+    slim: true
+    barContext:
+      items:
+      - link:
+          label: Berichten over uw buurt
+          icon: info
+          href: https://www.overheid.nl/berichten-over-uw-buurt
+        content: <p>Lees meer over MijnOverheid wonen</p>
+      - link:
+          label: Veelgestelde vragen
+          icon: question
+          href: https://www.overheid.nl/faq
+        content: <p>Vind direct het antwoord op uw vraag</p>
+      - link:
+          label: MijnOverheid
+          icon: external
+          href: https://www.mijnoverheid.nl/
+        content: <p>Pas uw voorkeuren aan</p>
+      - link:
+          label: +31(0)12 3456 789
+          icon: tel
+          href: https://www.overheid.nl/tel
+        content: <p>Op werkdagen bereikbaar van 08.30 tot 17.00 uur</p>
+
