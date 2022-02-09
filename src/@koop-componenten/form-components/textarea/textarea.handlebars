@@ -3,6 +3,6 @@
   {{#if fieldInstruction }}
     <small>{{ fieldInstruction }}</small>
   {{/if }}
-
-  <textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" {{#if rows}}rows="{{ rows }}"{{/if}}></textarea>
+  {{#if requiredLabel}}<span class="mandatory">Verplicht</span>{{/if}}
+  <textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" {{#if required}}required{{/if}} name="{{#if name}}{{name}}{{else}}{{id}}{{/if}}" {{#if rows}}rows="{{ rows }}"{{/if}}></textarea>
 {{!-- </div> --}}
