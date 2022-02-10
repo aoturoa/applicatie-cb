@@ -63,6 +63,8 @@ context:
       icon: icon-permalink.svg
       modal: true
       modalId: 512
+  alert:
+    text: Bij deze publicatie zijn documenten beschikbaar waar u op kunt reageren. <a href="#">Bekijk documenten.</a>
   documentbanner:
     img:
       src: ../../images/maintiendrai-grijs.png
