@@ -1,8 +1,7 @@
-{{!-- <div class="form__element"> --}}
-  {{#if fieldLabel}}<label for="textarea--{{ id }}" class="form__label {{fieldLabelModifier}}">{{ fieldLabel }}</label>{{/if}}
-  {{#if fieldInstruction }}
-    <small>{{ fieldInstruction }}</small>
-  {{/if }}
-  {{#if requiredLabel}}<span class="mandatory">Verplicht</span>{{/if}}
-  <textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" {{#if required}}required{{/if}} name="{{#if name}}{{name}}{{else}}{{id}}{{/if}}" {{#if rows}}rows="{{ rows }}"{{/if}}></textarea>
-{{!-- </div> --}}
+{{#if fieldLabel}}<label for="textarea--{{ id }}" class="form__label {{fieldLabelModifier}}{{#if fieldLabelVisible}}{{else}} visually-hidden{{/if}}">{{ fieldLabel }}</label>{{/if}}
+{{#if fieldInstruction }}
+  <small>{{ fieldInstruction }}</small>
+{{/if }}
+{{#if requiredLabel}}<span class="mandatory">Verplicht</span>{{/if}}
+<textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" {{#if required}}required{{/if}} name="{{#if name}}{{name}}{{else}}{{id}}{{/if}}" {{#if rows}}rows="{{ rows }}"{{/if}}>{{content}}</textarea>
+
