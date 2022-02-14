@@ -102,6 +102,8 @@ context:
     modifier: list--relations
     items:
       - content: <a href="https://wetten.overheid.nl">Tabals- en rookwarenwet</a><small>Toon geconsolideerde verrsie op wetten.nl</small>
+  alert:
+    text: Bij deze publicatie zijn documenten beschikbaar waar u op kunt reageren. <a href="#">Bekijk documenten.</a>
   alertinfo1:
     text: Deze publicatie is niet beschikbaar als Webversie. <a href="#">Bekijk de authentieke versie (PDF)</a>
   alertinfo2:
