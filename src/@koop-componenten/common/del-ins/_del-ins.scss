@@ -88,10 +88,14 @@ del.del {
     // }
 
     .table__container {
-      margin-bottom: 0;
+      // margin-bottom: 0;
       & ~ .table__container {
         margin-bottom: 2em;
       }
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
     }
   }
 
