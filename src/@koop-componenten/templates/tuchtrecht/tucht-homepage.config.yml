@@ -49,7 +49,7 @@ context:
     text: Instanties tuchtrecht
     text2: tuchtrechturl.nl
     modifier: button--doubleline button--icon-external
-    action: http://www.google.nl
+    action: http://www.overheid.nl
     anchor: true
     button: false
     iconButton: false
@@ -62,7 +62,7 @@ context:
     text: Tuchtrecht banken
     text2: tuchtrechtbanken.nl
     modifier: button--doubleline button--icon-external
-    action: http://www.google.nl
+    action: http://www.overheid.nl
     anchor: true
     button: false
     iconButton: false

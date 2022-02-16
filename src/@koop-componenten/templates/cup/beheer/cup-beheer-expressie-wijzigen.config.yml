@@ -192,7 +192,7 @@ context:
       fieldPlaceholder: false
     buttonSubmitMetadata:
       text: Toevoegen
-      action: http://www.google.nl
+      action: http://www.overheid.nl
       anchor: false
       button: true
       iconButton: false

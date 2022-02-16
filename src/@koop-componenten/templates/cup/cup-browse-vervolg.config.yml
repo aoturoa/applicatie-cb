@@ -67,7 +67,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: Downloaden
         disabled: disabled
       remark: true
@@ -80,7 +80,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: Downloaden
         disabled: disabled
       remark: true
@@ -93,7 +93,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: Downloaden
         disabled: disabled
       remark: true
@@ -109,7 +109,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: Downloaden
         disabled: disabled
       remark: true
@@ -125,7 +125,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: Downloaden
         disabled: disabled
       remark: true

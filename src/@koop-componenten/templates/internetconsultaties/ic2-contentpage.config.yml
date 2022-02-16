@@ -125,7 +125,7 @@ context:
               modifier:
               button: false
               anchor: true
-              action: http://www.google.nl
+              action: http://www.overheid.nl
               text: Downloaden
           - name: Ontwerp toelichting
             filesize: (1kb)
@@ -135,7 +135,7 @@ context:
               modifier:
               button: false
               anchor: true
-              action: http://www.google.nl
+              action: http://www.overheid.nl
               text: Downloaden
     accordionitem6:
       itemId: sectie-ondersteunendedocumenten

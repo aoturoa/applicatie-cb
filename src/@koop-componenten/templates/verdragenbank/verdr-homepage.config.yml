@@ -29,7 +29,7 @@ context:
     text: Overzicht verdragen in voorbereiding
     text2: officielebekendmakingen.nl
     modifier: button--doubleline button--icon-external
-    action: http://www.google.nl
+    action: http://www.overheid.nl
     anchor: true
     button: true
     iconButton: false
@@ -42,7 +42,7 @@ context:
     text: Tractatenbladen en maandberichten
     text2: officielebekendmakingen.nl
     modifier: button--doubleline button--icon-external
-    action: http://www.google.nl
+    action: http://www.overheid.nl
     anchor: true
     button: true
     iconButton: false

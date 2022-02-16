@@ -18,7 +18,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
     - name: Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente Score Gemeente 2016 Score Gemeente 2016 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016
       files:
@@ -30,7 +30,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
     - name: Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente Score Gemeente 2016 Score Gemeente 2016 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016
       files:
@@ -41,7 +41,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
     - name: Score wijk 2016
       files:
@@ -57,7 +57,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
       moreInfo: true
       title: Toegankslink
@@ -77,7 +77,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
         disabled: disabled
       remark: true
@@ -97,7 +97,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
         disabled: disabled
       remark: true
@@ -116,7 +116,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
         disabled: disabled
       remark: true
@@ -130,7 +130,7 @@ context:
         modifier: button--primary
         button: false
         anchor: true
-        action: http://www.google.nl
+        action: http://www.overheid.nl
         text: download bestand
         disabled: disabled
       remark: true
