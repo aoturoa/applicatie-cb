@@ -1,0 +1,80 @@
+---
+label: Externe link
+status: ready
+context:
+  items:
+    - href: /sites/
+      rel: Intern
+      protocol: https
+    - href: https://www.overheid.nl
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://www.overheid.nl/path/2
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://subdomein.overheid.nl
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://overheid.nl
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://www.rijksoverheid.nl
+      rel: Extern
+      protocol: https
+    - href: https://www.rijksoverheid.nl/path/2
+      rel: Extern
+      protocol: https
+    - href: https://subdomein.rijksoverheid.nl
+      rel: Extern
+      protocol: https
+    - href: https://rijksoverheid.nl
+      rel: Extern
+      protocol: https
+    - href: https://www.officielebekendmakingen.nl
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://www.officielebekendmakingen.nl/path/2
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://subdomein.officielebekendmakingen.nl
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: https://officielebekendmakingen.nl
+      rel: Intern (whitelisted)
+      protocol: https
+    - href: http://www.overheid.nl
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://www.overheid.nl/path/2
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://subdomein.overheid.nl
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://overheid.nl
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://www.rijksoverheid.nl
+      rel: Extern
+      protocol: http
+    - href: http://www.rijksoverheid.nl/path/2
+      rel: Extern
+      protocol: http
+    - href: http://subdomein.rijksoverheid.nl
+      rel: Extern 
+      protocol: http
+    - href: http://rijksoverheid.nl
+      rel: Extern
+      protocol: http
+    - href: http://www.officielebekendmakingen.nl
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://www.officielebekendmakingen.nl/path/2
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://subdomein.officielebekendmakingen.nl
+      rel: Intern (whitelisted)
+      protocol: http
+    - href: http://officielebekendmakingen.nl
+      rel: Intern (whitelisted)
+      protocol: http

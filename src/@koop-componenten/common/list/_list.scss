@@ -634,6 +634,10 @@ ol {
           background-image: $externalLinkIcon;
           background-size: 0.5em;
           background-position: center right;
+
+          &:after {
+            display: none;
+          }
         }
       }
     }
