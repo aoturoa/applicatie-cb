@@ -1,4 +1,4 @@
-{{#if fieldLabel}}<label for="textarea--{{ id }}" class="form__label {{fieldLabelModifier}}{{#if fieldLabelVisible}}{{else}} visually-hidden{{/if}}">{{ fieldLabel }}</label>{{/if}}
+{{#if fieldLabel}}<label for="textarea--{{ id }}" class="form__label {{fieldLabelModifier}}{{#if fieldLabelHidden}} visually-hidden{{else}}{{/if}}">{{ fieldLabel }}</label>{{/if}}
 {{#if fieldInstruction }}
   <small>{{ fieldInstruction }}</small>
 {{/if }}
