@@ -1,0 +1,28 @@
+<p>
+  ['overheid.nl','officielebekendmakingen.nl','officiele-overheidspublicaties.nl', 'localhost:3000']
+</p>
+
+<table class="table table--condensed">
+  <thead>
+      <tr>
+          <th scope="col" class="">Rel</th>
+          <th scope="col" class="">Protocol</th>
+          <th scope="col" class="">URL</th>
+      </tr>
+  </thead>
+  <tbody>
+  {{#each items}}
+    <tr>
+      <td>{{rel}}</td>
+      <td>{{protocol}}</td>
+      <td><a href="{{href}}">{{href}}</a></td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+
+<a href="www.google.nl" class="button">Button</a>
+
+<a class="button button--doubleline button--icon-external" href="https://wetten.overheid.nl" role="button"><span class="button__label">Wet- en regelgeving <span class="button__sub">Nationaal</span></span></a>
+<a class="button button--doubleline button--icon-external" href="https://wetten.nl" role="button"><span class="button__label">Wet- en regelgeving <span class="button__sub">Nationaal</span></span></a>
