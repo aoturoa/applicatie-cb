@@ -556,6 +556,11 @@
       "label": "onl-zoekresultaten-diensten",
       "url": "http://localhost:3000/components/preview/templates-zoekresultaten-diensten",
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-zoekresultaten-diensten.html"
+    },
+    {
+      "label": "external-link",
+      "url": "http://localhost:3000/components/preview/external-link",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/external-link.html"
     }
   ],
   "paths": {
