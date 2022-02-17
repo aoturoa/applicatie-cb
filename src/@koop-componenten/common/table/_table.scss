@@ -109,6 +109,11 @@ table,
       font-weight: bold;
     }
 
+    a,
+    a:hover {
+      color: white;
+    }
+
     &--lvl1 {
       th,td {
         background: $darkBlue;
