@@ -1,5 +1,5 @@
 ---
-label: Document
+label: Document stcrt-2022-13
 status: ready
 context:
   header:
@@ -18,8 +18,9 @@ context:
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
-      - url: '#content'
-        text: Direct naar content
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
     metaLinks:
       - profile: true
         profileContext:
@@ -48,27 +49,18 @@ context:
     - link: '#'
       text: Authentieke versie (PDF)
       icon: icon-download.svg
-    - link: '#extrainformatie'
-      text: Informatie
-      icon: icon-info-blue.svg
-    - link: '#gerelateerd'
-      text: Gerelateerd
-      icon: icon-document.svg
-    - link: '#'
-      text: Printen
-      icon: icon-print-blue.svg
-      actionPrint: true
     - link: '#'
       text: Delen
       icon: icon-permalink.svg
       modal: true
       modalId: 512
-  alert:
-    text: Bij deze publicatie zijn documenten beschikbaar waar u op kunt reageren. <a href="#">Bekijk documenten.</a>
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+      actionPrint: true
   documentbanner:
     img:
       src: ../../images/maintiendrai-grijs.png
-      alt: logo Overheid
     heading: Staatsblad van het Koninkrijk der Nederlanden
   navInformatie:
     items:
@@ -80,10 +72,3 @@ context:
     closeButton: Toevoegen
     copydata:
       url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
-  listDownloads1:
-    heading: Publicaties over kamerdossier
-    headingType: h4
-    modifier: list--relations
-    items:
-      - content: <a href="#">Kamerdossier 45643</a><small>Toon publicaties die dit dossier behandelen</small>
-      - content: <a href="#">Kamerdossier 654</a><small>Toon publicaties die dit dossier behandelen</small>

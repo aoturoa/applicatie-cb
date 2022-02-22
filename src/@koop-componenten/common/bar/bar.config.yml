@@ -1,7 +1,6 @@
 ---
 title: bar
 context:
-  text: bar
   items:
     - link:
         label: Veelgestelde vragen

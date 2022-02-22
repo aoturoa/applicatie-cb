@@ -11,13 +11,13 @@ onl.handle({
     closeEvent.initEvent( 'othersites:close', true, true );
 
     if ( toggleState === 'true' ) {
-      onl.ui.hide( otherSites );
+      otherSites.setAttribute( 'aria-hidden', 'true' );
       element.setAttribute( 'aria-expanded', 'false' );
       window.dispatchEvent( closeEvent );
     }
 
     else {
-      onl.ui.show( otherSites );
+      otherSites.setAttribute( 'aria-hidden', 'false' );
 
       if ( onl.ui.getFocusableElements( otherSites ).length > 0 ) {
         onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
@@ -55,6 +55,6 @@ onl.decorate({
 
     otherSites.classList.add( 'header__more--closed' );
 
-    onl.ui.hide( otherSites );
+    otherSites.setAttribute( 'aria-hidden', 'true' );
   }
 });

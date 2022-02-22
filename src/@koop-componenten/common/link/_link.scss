@@ -12,8 +12,17 @@ a {
 
   &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]):not([href*=".officiele-overheidspublicaties.nl"]),
   &[rel="external"] {
-    // padding-right: 1.5em;
-    // margin-right: .25em;
+
+    .related--primaryBlue & {
+      &:after {
+        background-image: $externalLinkWhiteIcon;
+      }
+    }
+
+  }
+
+  &.is-external {
+    position: relative;
 
     &:after {
       content: "";
@@ -29,11 +38,6 @@ a {
       height: .8em;
       top: 1px;
       position: relative;
-    }
-    .related--primaryBlue & {
-      &:after {
-        background-image: $externalLinkWhiteIcon;
-      }
     }
   }
 
@@ -230,6 +234,10 @@ div.link {
   &--tel {
     @extend .icon;
     @extend .icon--tel;
+  }
+  &--info {
+    @extend .icon;
+    @extend .icon--info;
   }
 }
 

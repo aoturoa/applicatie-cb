@@ -104,7 +104,7 @@ context:
           modifier: button--secundary
           button: false
           anchor: true
-          action: http://www.google.nl
+          action: http://www.overheid.nl
           text: Downloaden
       - name: 02.FF_Jacob Catsstraat Noordsingel_Def
         icon: icon--publication-new
@@ -121,7 +121,7 @@ context:
           modifier: button--secundary
           button: false
           anchor: true
-          action: http://www.google.nl
+          action: http://www.overheid.nl
           text: Downloaden
   rowHeadingDocuments:
     heading: <h2>Documenten <span class="h2__sub">2 documenten</span></h2>

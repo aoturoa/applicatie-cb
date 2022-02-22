@@ -7,7 +7,7 @@
     {{/if}}
     <div class="jumbotron__heading {{#if headingcentered}}jumbotron__heading--centered{{/if}}">
       {{#if subheading}}<p class="jumbotron__subheader">{{subheading}}</p>{{/if}}
-      {{#if heading}}<{{#if h}}{{h}}{{else}}h1{{/if}} class="jumbotron__header {{#if hstyle}}{{hstyle}}{{/if}}">{{heading}}</{{#if h}}{{h}}{{else}}h1{{/if}}>{{/if}}
+      {{#if heading}}<{{#if h}}{{h}}{{else}}h1{{/if}} class="jumbotron__header {{#if hstyle}}{{hstyle}}{{/if}}">{{{heading}}}</{{#if h}}{{h}}{{else}}h1{{/if}}>{{/if}}
       {{#if intro}}
         <p class="jumbotron__intro">
           {{{intro}}}

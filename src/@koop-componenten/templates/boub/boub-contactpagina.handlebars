@@ -1,0 +1,63 @@
+{{ render "@header" header merge=true }}
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="row row--spacer">
+    <div class="columns--main-small">
+      {{#> @block blockContactformulier }}
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Contactoformulier Berichten over uw buurt</legend>
+            <div class="form__row">
+              {{ render "@input-text" inputName }}
+            </div>
+            <div class="columns">
+              <div class="column">
+                <div class="form__row">
+                  {{ render "@input-text--email" inputEmail }}
+                </div>
+              </div>
+              <div class="column">
+                <div class="form__row">
+                  {{ render "@input-text--email" inputEmailRepeat }}
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              {{ render "@input-text" inputOnderwerp }}
+            </div>
+            <div class="form__row">
+              {{ render "@textarea" textareaVraag }}
+            </div>
+            <div class="form__row">
+              {{ render "@input-checkbox" checkboxContent }}
+            </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      {{/@block}}
+    </div>
+  </div>
+
+  <div class="row">
+    {{#> @block--slim blockhelpen }}
+      <p>Heeft u vragen over de dienst Berichten over uw buurt van MijnOverheid? We helpen u graag verder.</p>
+      {{ render "@bar" barContext merge=true }}
+    {{/@block--slim}}
+  </div>
+
+</div>
+
+{{ render "@footer" }}

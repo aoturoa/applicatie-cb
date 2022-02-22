@@ -79,7 +79,7 @@ context:
       linklistLimit: false
       linklistItems:
         - link: www.stichtingihe.nl
-          url: https://www.google.nl
+          url: https://www.overheid.nl
       buttons:
         - button: Bekijk details
           type: primary
@@ -97,7 +97,7 @@ context:
       linklistLimit: false
       linklistItems:
         - link: www.stichtingtheaterdelft.nl
-          url: https://www.google.nl
+          url: https://www.overheid.nl
       buttons:
         - button: Bekijk details
           type: primary

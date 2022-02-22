@@ -18,7 +18,8 @@
             13: 'enter',
             27: 'escape',
             40: 'downArrow',
-            38: 'upArrow'
+            38: 'upArrow',
+            32: 'space'
         };
 
     function Fastsearch(inputElement, options) {
@@ -255,6 +256,9 @@
                   if (event.keyCode === 13 /* ENTER */ ) {
                     self.onEnter(event);
                   }
+                  if (event.keyCode === 32 /* SPACE */ ) {
+                    self.onEnter(event);
+                  }
                   if (event.keyCode === 40) /* arrow down */ {
                       self.navigateItem('down');
                   }
@@ -389,7 +393,6 @@
         },
 
         onEnter: function(e) {
-
             var $currentItem = this.$resultItems.filter(':focus');
 
             if ($currentItem.length) {

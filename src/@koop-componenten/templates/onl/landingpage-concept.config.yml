@@ -28,7 +28,7 @@ context:
     content: <p>Informatie van Europese instellingen en nationale overheidsinformatie in Europees verband.</p>
     cta: true
     ctalabel: Europese overheidsinformatie
-    ctahref: '#'
+    ctahref: 'www.rijksoverheid.nl'
     ctaexternal: true
   block3Context:
     id: 3
@@ -41,7 +41,7 @@ context:
     ctaexternal: true
   list1:
     items:
-      - content: <a href="#" rel="external">Evaluaties en beleidsdoorlichtingen</a>
+      - content: <a href="www.rijksoverheid.nl" rel="external">Evaluaties en beleidsdoorlichtingen</a>
       - content: <a href="#">Wetenschappelijke Raad voor het Regeringsbeleid (WRR)</a>
       - content: <a href="#">Centraal Planbureau (CPB)</a>
       - content: <a href="#" rel="external">Sociaal en Cultureel Planbureau (SCP)</a>

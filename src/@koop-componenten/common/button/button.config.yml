@@ -3,7 +3,7 @@ status: ready
 default: Default
 context:
   text: Verzenden
-  action: http://www.google.nl
+  action: http://www.overheid.nl
   anchor: false
   button: true
   iconButton: false
