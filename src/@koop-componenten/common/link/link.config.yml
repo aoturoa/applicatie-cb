@@ -7,12 +7,12 @@ variants:
     label: Externe link (auto)
     context:
       text: externe link
-      action: http://www.google.nl
+      action: http://www.rijksoverheid.nl
   - name: extern (manual)
     label: Externe link (manual)
     context:
       text: externe link (manual)
-      action: http://www.google.nl
+      action: http://www.rijksoverheid.nl
       mode: manual
       external: true
   - name: Wachtwoord vergeten
