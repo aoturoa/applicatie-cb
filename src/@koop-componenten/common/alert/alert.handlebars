@@ -1,4 +1,23 @@
 <div {{#if id}}id="{{id}}"{{/if}} class="alert {{ modifier }} {{#if fixed }} show {{/if}}" role="alert">
+  {{#if_eq modifier 'alert--warning'}}
+    <span class="visually-hidden">Let op: </span>
+  {{/if_eq}}
+  {{#if_eq modifier 'alert-default'}}
+    <span class="visually-hidden">Notificatie: </span>
+  {{/if_eq}}
+  {{#if_eq modifier 'alert--success'}}
+    <span class="visually-hidden">Succesvol: </span>
+  {{/if_eq}}
+  {{#if_eq modifier 'alert--info'}}
+    <span class="visually-hidden">Ter informatie: </span>
+  {{/if_eq}}
+  {{#if_eq modifier 'alert--small alert--info'}}
+    <span class="visually-hidden">Ter informatie: </span>
+  {{/if_eq}}
+  {{#if_eq modifier 'alert--update'}}
+    <span class="visually-hidden">Update: </span>
+  {{/if_eq}}
+  
   {{#if heading}}<h2 class="alert__heading">{{{ heading }}}</h2>{{/if}}
   <div class="alert__inner">
     {{{ text }}}
