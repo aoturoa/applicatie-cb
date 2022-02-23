@@ -6,6 +6,9 @@ context:
     - href: /sites/
       rel: Intern
       protocol: https
+    - href: '#other-sites'
+      rel: Intern
+      protocol: https
     - href: https://www.overheid.nl
       rel: Extern (whitelisted)
       protocol: https
