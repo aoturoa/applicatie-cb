@@ -52,28 +52,30 @@
 
           // ignore anker-links;
           if(!href.includes('#')){
-            
-            
-            var subdomain = href.split('.').slice(0, -2).join('.');
-            if(subdomain){
-              href = href.replace(subdomain + '.', 'https://');
-            }
-    
-            var match = false;
-            if(!this.regexInternalLink.test(href)) {
-    
-                if (this.whitelistedDomains) {
-                    var z;
-                    for (var z = 0; z < this.whitelistedDomainsRegexxed.length; z++) {
-                        if (this.whitelistedDomainsRegexxed[z].test(href)) {
-                            match = true;
-                            break;
-                        }
-                    }
-                }
-                if (!match) {
-                    this.arrayExternalLinks.push(this.allLinks[i]);
-                }  
+            if(href != ''){
+              
+              var subdomain = href.split('.').slice(0, -2).join('.');
+              if(subdomain){
+                href = href.replace(subdomain + '.', 'https://');
+              }
+      
+              var match = false;
+              if(!this.regexInternalLink.test(href)) {
+      
+                  if (this.whitelistedDomains) {
+                      var z;
+                      for (var z = 0; z < this.whitelistedDomainsRegexxed.length; z++) {
+                          if (this.whitelistedDomainsRegexxed[z].test(href)) {
+                              match = true;
+                              break;
+                          }
+                      }
+                  }
+                  if (!match) {
+                      this.arrayExternalLinks.push(this.allLinks[i]);
+                  }  
+              }
+
             }
           }
       }
