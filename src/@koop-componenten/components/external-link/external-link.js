@@ -32,7 +32,7 @@
   
       this.regexInternalLink = new RegExp('^https?://([^@]*@)?' + subdomains + host, 'i');
   
-      this.whitelistedDomains = ['overheid.nl','officielebekendmakingen.nl','officiele-overheidspublicaties.nl'];
+      this.whitelistedDomains = ['overheid.nl','officielebekendmakingen.nl','officiele-overheidspublicaties.nl', 'localhost:3000'];
       this.whitelistedDomainsRegexxed = [];
       var y;
       for(y = 0; y < this.whitelistedDomains.length; y++) {
@@ -48,6 +48,11 @@
           var href = '';
           if (typeof this.allLinks[i].href == 'string') {
               href = this.allLinks[i].href.toLowerCase();
+          }
+
+          // ignore anker-links;
+          if(href.includes('/#')){
+            continue;
           }
           
           var subdomain = href.split('.').slice(0, -2).join('.');
