@@ -49,10 +49,10 @@
           if (typeof this.allLinks[i].href == 'string') {
               href = this.allLinks[i].href.toLowerCase();
           }
-
+          
           // ignore anker-links;
           if(!href.includes('#')){
-            if(href != ''){
+            if(this.allLinks[i].getAttribute('href') != ''){
               
               var subdomain = href.split('.').slice(0, -2).join('.');
               if(subdomain){
