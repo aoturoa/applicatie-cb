@@ -28,6 +28,7 @@
 
       $(element).on('change', function () {
         this.setAttribute('data-date', this.value);
+        this.setAttribute('value', this.value);
         self.hiddenfield.setAttribute('value', this.value);
         if ( self.round > 0 ) {
           if ($('.js-fixedbottom-button__button')){
@@ -39,6 +40,7 @@
     } else {
       $(element).on('change', function () {
         this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
+        this.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
         self.hiddenfield.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
         if (self.round > 0) {
           if ($('.js-fixedbottom-button__button')) {
