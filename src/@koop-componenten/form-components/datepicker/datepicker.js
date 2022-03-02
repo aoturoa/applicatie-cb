@@ -19,9 +19,11 @@
     this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
     this.round = 0;
 
-
-
-    this.createHiddenField();
+    // only create new hidden (for absolute truth) field it doesn't exist yet;
+    if(!document.querySelector('[name="date-' + this.elementId + '"]')) {
+      this.createHiddenField();  
+    }
+    
 
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
