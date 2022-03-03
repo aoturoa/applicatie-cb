@@ -27,7 +27,7 @@ context:
     type: text
     fieldLabelVisible: true
     labelmodifier: accent
-    fieldPlaceholder: Zoekterm of (dossier)nummer
+    fieldPlaceholder: Waar bent u naar op zoek?
     fieldLabel: Zoeken op
   multiSelectDocumentsoort:
     id: 1112312
@@ -73,6 +73,7 @@ context:
             value: Waterschapsblad
           - label: Blad gemeenschappelijke regeling
             value: Blad gemeenschappelijke regeling
+  hasSelectedFilterbar: true
   blocksearchSubmit:
     text: Zoek opnieuw
     modifier: button--primary button--block button--nolabel

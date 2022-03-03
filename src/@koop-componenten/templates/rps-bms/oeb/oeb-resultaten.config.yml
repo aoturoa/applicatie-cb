@@ -59,6 +59,12 @@ context:
     - label: Relevantie
       value: value
       singleSort: true
+    amountPerPageOptions:
+      - amount: 10
+        active: true
+        pressed: true
+      - amount: 20
+      - amount: 50
   resultsContext:
     modifier: result--list--publications
     items:
