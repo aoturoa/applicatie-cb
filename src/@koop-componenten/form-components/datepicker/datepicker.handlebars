@@ -23,6 +23,7 @@
   <div class="datepicker">
     <input type="date" {{#if required}}required{{/if}} {{#if disabled}}disabled{{/if}} value="{{value}}" name="{{name}}" data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" data-placeholder="{{ fieldPlaceholder }}" />
+      {{#if generateHiddenField}}{{else}}<input type="hidden" name="date-input--{{ id }}" value="{{value}}" class="datepicker__hiddenfield">{{/if}}
   </div>
 {{/if}}
 {{#if selectToday}}
