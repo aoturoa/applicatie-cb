@@ -17,7 +17,7 @@ context:
       modifier2: input-text__prefix--medium
       prefix: true
       type: text
-      prefixLabel: https://www.overheid.nl
+      prefixLabel: https://identifier-tst.overheid.nl
     formalertContext:
       modifier: alert--warning
       text: De opgegeven URI is ongeldig.
