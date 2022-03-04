@@ -14,7 +14,7 @@
 
   &:focus + label {
     box-shadow: 0 0 0 2px $focus !important;
-    outline: 1px solid $focusSecondary;
+    outline: 2px solid $focusSecondary;
     outline-offset: 2px;
   }
 
