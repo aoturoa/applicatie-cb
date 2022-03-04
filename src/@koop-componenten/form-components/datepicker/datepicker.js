@@ -14,20 +14,16 @@
     this.element = element;
     this.elementId = this.element.getAttribute('id');
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
-    this.config.generateHiddenField = this.config.generateHiddenField || true;
+    
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
     this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
     this.round = 0;
 
     // only create new hidden (for absolute truth) field it doesn't exist yet;
-    // if(!document.querySelector('[name="date-' + this.elementId + '"]')) {
-    //   this.createHiddenField();  
-    // }
-    if(this.config.generateHiddenField){
+    if(!this.config.manualHiddenField){
       this.createHiddenField();
     }
-    
 
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );

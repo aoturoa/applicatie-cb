@@ -8,7 +8,7 @@ context:
   datavalue: '19-04-2020'
   configDateFormat: 'dd-mm-yy'
   name: nameplaceholder
-  generateHiddenField: true
+  manualHiddenField: false
 variants:
   - name: Range
     status: prototype
