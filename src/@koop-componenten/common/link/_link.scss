@@ -21,6 +21,10 @@ a {
 
   }
 
+  &:empty {
+    display: none;
+  }
+
   &.is-external {
     position: relative;
 

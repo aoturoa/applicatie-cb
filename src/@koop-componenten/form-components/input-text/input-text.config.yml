@@ -8,6 +8,16 @@ context:
   fieldInstruction:
   fieldPlaceholder: 'Bijv: BK001'
 variants:
+  - name: label
+    label: Input met label
+    context:
+      id: 1
+      type: text
+      fieldLabel: Waarde
+      fieldInstruction:
+      fieldPlaceholder: 'Waarde'
+      fieldLabelVisible: true
+      labelmodifier: accent
   - name: Password
     label: Input password
     context:

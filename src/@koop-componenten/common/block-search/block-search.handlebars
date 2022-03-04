@@ -11,7 +11,11 @@
           </div>
           <div class="column column-d-4">
             <div class="form__row">
-               {{ render "@select-multi" multiSelectDocumentsoort }}
+              {{#if isRegularSelect}}
+                {{ render "@select-custom" regularSelect }}
+              {{else}}
+                {{ render "@select-multi" multiSelectDocumentsoort }}
+              {{/if}}
             </div>
           </div>
           <div class="column column-d-3">
@@ -22,6 +26,8 @@
         </div>
       </fieldset>
     </form>
-    {{ render "@selectedfilterbar" selectedFilters merge=true }}
+    {{#if hasSelectedFilterbar}}
+      {{ render "@selectedfilterbar" selectedFilters merge=true }}
+    {{/if}}
   {{/ @partial-block}}
 </div>

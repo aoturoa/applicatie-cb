@@ -1,0 +1,805 @@
+---
+label: Zoekresultaten inno v1
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+      - url: '#zoekopnieuw'
+        text: Direct naar zoek opnieuw
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Officiële bekendmakingen
+        url: '#'
+      - text: Zoekresultaat
+  scRubriek:
+    id: 987682
+    linkText: Toon alle rubrieken
+    modalTitle: Rubrieken
+    label: Zoek rubriek(en)
+    inputPlaceholder: 'Zoekwoord'
+    searchFilter: true
+    multilevel: false
+    buttonResetForm: true
+    initialCheckboxesAmount: 5
+    triggerSubmit: true
+    controls:
+      selectAllLabel: Selecteer alle rubrieken
+    buttonSubmit: true
+    buttonSubmitLabel: Filter toepassen
+    Options:
+      - Option: 177777811
+        id: 177777811
+        title: Aanhangsel van de Handelingen
+        short: Aanhangsel van de Handelingen
+        value: Aanhangsel van de Handelingen
+      - Option: 177777812
+        id: 177777812
+        title: Advies Raad van State
+        short: Advies Raad van State
+        value: Advies Raad van State
+      - Option: 177777813
+        id: 177777813
+        title: Agenda
+        short: Agenda
+        value: Agenda
+      - Option: 177777814
+        id: 177777814
+        title: Algemeen verbindend voorschrift (verordening)
+        short: Algemeen verbindend voorschrift (verordening)
+        value: Algemeen verbindend voorschrift (verordening)
+      - Option: 177777815
+        id: 177777815
+        title: Algemeenverbindendverklaring van cao-bepalingen
+        short: Algemeenverbindendverklaring van cao-bepalingen
+        value: Algemeenverbindendverklaring van cao-bepalingen
+      - Option: 177777816
+        id: 177777816
+        title: AMvB
+        short: AMvB
+        value: AMvB
+      - Option: 177777817
+        id: 177777817
+        title: Ander besluit van algemene strekking
+        short: Ander besluit van algemene strekking
+        value: Ander besluit van algemene strekking
+      - Option: 177777818
+        id: 177777818
+        title: Andere beschikking
+        short: Andere beschikking
+        value: Andere beschikking
+      - Option: 177777819
+        id: 177777819
+        title: Autorisatiebesluit basisregistratie personen
+        short: Autorisatiebesluit basisregistratie personen
+        value: Autorisatiebesluit basisregistratie personen
+  scOrganisatie:
+    id: 9876823
+    linkText: Toon alle organisaties
+    modalTitle: Organisaties
+    label: Zoek organisatie(s)
+    inputPlaceholder: 'Zoekwoord'
+    searchFilter: true
+    multilevel: false
+    buttonResetForm: true
+    initialCheckboxesAmount: 5
+    triggerSubmit: true
+    controls:
+      selectAllLabel: Selecteer alle organisaties
+    buttonSubmit: true
+    buttonSubmitLabel: Filter toepassen
+    Options:
+      - Option: 1777778111
+        id: 1777778111
+        title: Adviescollege
+        short: Adviescollege
+        value: Adviescollege
+      - Option: 1777778112
+        id: 1777778112
+        title: Dienst en agentschap
+        short: Dienst en agentschap
+        value: Dienst en agentschap
+      - Option: 1777778113
+        id: 1777778113
+        title: Gemeente
+        short: Gemeente
+        value: Gemeente
+      - Option: 1777778114
+        id: 1777778114
+        title: Hoog college van staat
+        short: Hoog college van staat
+        value: Hoog college van staat
+      - Option: 1777778115
+        id: 1777778115
+        title: Ministerie
+        short: Ministerie
+        value: Ministerie
+      - Option: 1777778116
+        id: 1777778116
+        title: Openbaar lichaam voor bedrijf en beroep
+        short: Openbaar lichaam voor bedrijf en beroep
+        value: Openbaar lichaam voor bedrijf en beroep
+      - Option: 1777778117
+        id: 1777778117
+        title: Provincie
+        short: Provincie
+        value: Provincie
+      - Option: 1777778118
+        id: 1777778118
+        title: Rechterlijke macht
+        short: Rechterlijke macht
+        value: Rechterlijke macht
+      - Option: 1777778119
+        id: 1777778119
+        title: Regionaal samenwerkingsorgaan
+        short: Regionaal samenwerkingsorgaan
+        value: Regionaal samenwerkingsorgaan
+      - Option: 17777781110
+        id: 17777781110
+        title: Staten generaal
+        short: Staten generaal
+        value: Staten generaal
+      - Option: 17777781111
+        id: 17777781111
+        title: Waterschap
+        short: Waterschap
+        value: Waterschap
+      - Option: 17777781112
+        id: 17777781112
+        title: Zelfstandig bestuursorgaan
+        short: Zelfstandig bestuursorgaan
+        value: Zelfstandig bestuursorgaan
+  scPubOrganisatie:
+    id: 9876824
+    linkText: Toon alle publicerende organisaties
+    modalTitle: Publicerende organisaties
+    label: Zoek publicerende organisatie(s)
+    inputPlaceholder: 'Zoekwoord'
+    searchFilter: true
+    multilevel: false
+    buttonResetForm: true
+    initialCheckboxesAmount: 5
+    triggerSubmit: true
+    controls:
+      selectAllLabel: Selecteer alle publicerende organisaties
+    buttonSubmit: true
+    buttonSubmitLabel: Filter toepassen
+    Options:
+      - Option: 177777811141
+        id: 177777811141
+        title: "'s-Gravenhage (38)"
+        short: "'s-Gravenhage (38)"
+        value: "'s-Gravenhage (38)"
+      - Option: 177777811142
+        id: 177777811142
+        title: "'s-Hertogenbosch (19)"
+        short: "'s-Hertogenbosch (19)"
+        value: "'s-Hertogenbosch (19)"
+      - Option: 177777811143
+        id: 177777811143
+        title: "Agentschap Basisadministratie Persoonsgegevens en Reisdocumenten (BPR) (1)"
+        short: "Agentschap Basisadministratie Persoonsgegevens en Reisdocumenten (BPR) (1)"
+        value: "Agentschap Basisadministratie Persoonsgegevens en Reisdocumenten (BPR) (1)"
+      - Option: 177777811144
+        id: 177777811144
+        title: "Algemene Rekenkamer (2)"
+        short: "Algemene Rekenkamer (2)"
+        value: "Algemene Rekenkamer (2)"
+      - Option: 177777811145
+        id: 177777811145
+        title: "Alkmaar (4)"
+        short: "Alkmaar (4)"
+        value: "Alkmaar (4)"
+      - Option: 177777811146
+        id: 177777811146
+        title: "Altena (1)"
+        short: "Altena (1)"
+        value: "Altena (1)"
+      - Option: 177777811147
+        id: 177777811147
+        title: "Amersfoort (1)"
+        short: "Amersfoort (1)"
+        value: "Amersfoort (1)"
+      - Option: 177777811148
+        id: 177777811148
+        title: "Amstelveen (4)"
+        short: "Amstelveen (4)"
+        value: "Amstelveen (4)"
+      - Option: 177777811149
+        id: 177777811149
+        title: "Amsterdam (11)"
+        short: "Amsterdam (11)"
+        value: "Amsterdam (11)"
+  publicatiedatumContext:
+    moreless: true
+    options:
+    - id: radio-21231232
+      text: Afgelopen week (1)
+      name: publicatie
+    - id: radio-3312312312
+      text: Afgelopen maand (1)
+      name: publicatie
+    - id: radio-412312313
+      text: Afgelopen jaar (1)
+      name: publicatie
+    - id: radio-412312314
+      text: Ouder dan een jaar (4321)
+      name: publicatie
+    - id: radio-51222
+      text: Andere periode
+      name: publicatie
+      linkedto: 1
+  publicatieCustomRange:
+    range: true
+    rangeInput1:
+      id: dp10
+      label: Vanaf
+      value: '2020-04-19'
+      datadate: '19-04-2020'
+    rangeInput2: 
+      id: dp11
+      label: Tot en met
+      value: '2020-05-19'
+      datadate: '19-05-2020'
+    placeholder: false
+  documentdatumContext:
+    moreless: true
+    options:
+    - id: radio-212312321
+      text: Afgelopen week (1)
+      name: document
+    - id: radio-33123123121
+      text: Afgelopen maand (1)
+      name: document
+    - id: radio-4123123131
+      text: Afgelopen jaar (1)
+      name: document
+    - id: radio-4123123132
+      text: Ouder dan een jaar (231)
+      name: document
+    - id: radio-512221
+      text: Andere periode
+      name: document
+      linkedto: 11
+  documentCustomRange:
+    range: true
+    rangeInput1:
+      id: dp12
+      label: Vanaf
+      value: '2020-06-19'
+      datadate: '19-06-2020'
+    rangeInput2: 
+      id: dp13
+      label: Tot en met
+      value: '2020-07-19'
+      datadate: '19-07-2020'
+    placeholder: false
+  blockSearch:
+    isRegularSelect: true
+    regularSelect:
+      fieldLabel: Binnen
+      labelmodifier: accent
+      fieldLabelVisible: true
+      id: 32123
+      options:
+        - label: Op gehele tekst
+          value: 10
+          selected: selected
+        - label: Alleen de titel
+          value: 20
+    hasSelectedFilterbar: false
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+      - label: Datum publicatie
+        value: value
+        active: is-active
+      - label: Datum document
+        value: value
+      - label: Relevantie
+        value: value
+        singleSort: true
+    amountPerPageOptions:
+      - amount: 10
+        active: true
+        pressed: true
+      - amount: 20
+      - amount: 50
+  resultsContext:
+    modifier: result--list--publications
+    items:
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Gemeente Venlo - Verkeersbesluit - instellen eenrichtingsverkeer - Burgemeester Houbenstraat - Venlo
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+      - title: Beschikking | Aanvraag
+        titleHeader: h2
+        titleHref: '#'
+        subTitle: Aangevraagde omgevingsvergunning, het plaatsen van een kunstwerk, Van Tienhovenlaan 4 Oisterwijk
+        subTitleHref: '#'
+        share: false
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
+  buttonDocumentsoort:
+    id: 12335
+    text: Filter toepassen
+    type: submit
+    button: true
+  buttonRubriek:
+    text: Filter toepassen
+    type: submit
+    button: true
+  buttonOrganisatie:
+    id: 123334
+    text: Filter toepassen
+    type: submit
+    button: true
+  buttonPubOrganisatie:
+    id: 1233331
+    text: Filter toepassen
+    type: submit
+    button: true
+  buttonPublicatiedatum:
+    id: 123332
+    text: Filter toepassen
+    type: submit
+    button: true
+  buttonDocumentdatum:
+    id: 123331
+    text: Filter toepassen
+    type: submit
+    button: true
+  accordion1:
+    item1:
+      headerId: itemheader1
+      headerLabel: Onderwerp
+      contentId: itemcontent1
+      scOnderwerp:
+        id: 987682422
+        linkText: Toon alle onderwerpen
+        modalTitle: Onderwerp
+        label: Zoek onderwerp(en)
+        inputPlaceholder: 'Zoekwoord'
+        searchFilter: true
+        multilevel: false
+        buttonResetForm: true
+        initialCheckboxesAmount: 5
+        triggerSubmit: true
+        controls:
+          selectAllLabel: Selecteer alle onderwerpen
+        buttonSubmit: true
+        buttonSubmitLabel: Filter toepassen
+        Options:
+          - Option: 17777781114131
+            id: 17777781114131
+            title: Arbitrage
+            short: Arbitrage
+            value: Arbitrage
+          - Option: 17777781114132
+            id: 17777781114132
+            title: Belasting
+            short: Belasting
+            value: Belasting
+          - Option: 17777781114133
+            id: 17777781114133
+            title: Bestuur | Gemeenten
+            short: Bestuur | Gemeenten
+            value: Bestuur | Gemeenten
+          - Option: 17777781114134
+            id: 17777781114134
+            title: Bestuur | Organisatie en beleid
+            short: Bestuur | Organisatie en beleid
+            value: Bestuur | Organisatie en beleid
+          - Option: 17777781114135
+            id: 17777781114135
+            title: Bestuur | Provincies
+            short: Bestuur | Provincies
+            value: Bestuur | Provincies
+          - Option: 17777781114136
+            id: 17777781114136
+            title: Bestuur | Rijksoverheid
+            short: Bestuur | Rijksoverheid
+            value: Bestuur | Rijksoverheid
+          - Option: 17777781114137
+            id: 17777781114137
+            title: Bestuur | Waterschappen
+            short: Bestuur | Waterschappen
+            value: Bestuur | Waterschappen
+          - Option: 17777781114138
+            id: 17777781114138
+            title: Cultuur en recreatie | Cultuur
+            short: Cultuur en recreatie | Cultuur
+            value: Cultuur en recreatie | Cultuur
+          - Option: 17777781114139
+            id: 17777781114139
+            title: Cultuur en recreatie | Media
+            short: Cultuur en recreatie | Media
+            value: Cultuur en recreatie | Media
+          - Option: 17777781114140
+            id: 17777781114140
+            title: Cultuur en recreatie | Organisatie en beleid
+            short: Cultuur en recreatie | Organisatie en beleid
+            value: Cultuur en recreatie | Organisatie en beleid
+          - Option: 17777781114141
+            id: 17777781114141
+            title: Cultuur en recreatie | Recreatie
+            short: Cultuur en recreatie | Recreatie
+            value: Cultuur en recreatie | Recreatie
+      buttonOnderwerp:
+        id: 12333312
+        text: Filter toepassen
+        type: submit
+        button: true
+    item2:
+      headerId: itemheader2
+      headerLabel: Jaargang
+      contentId: itemcontent2
+      buttonJaargang:
+        id: 123333
+        text: Filter toepassen
+        type: submit
+        button: true
+      scJaargang:
+        id: sc1
+        linkText: Toon alle jaargangen
+        modalTitle: Jaargang
+        label: Zoek jaargang(en)
+        inputPlaceholder: 'Zoekwoord'
+        searchFilter: true
+        multilevel: false
+        buttonResetForm: true
+        initialCheckboxesAmount: 5
+        triggerSubmit: true
+        controls:
+          selectAllLabel: Selecteer alle jaargangen
+        buttonSubmit: true
+        buttonSubmitLabel: Filter toepassen
+        Options:
+          - Option: 1
+            id: 1
+            title: 2021 (98)
+            short: 2021 (98)
+            value: 2021 (98)
+          - Option: 2
+            id: 2
+            title: 2020 (102)
+            short: 2020 (102)
+            value: 2020 (102)
+          - Option: 3
+            id: 3
+            title: 2019 (133)
+            short: 2019 (133)
+            value: 2019 (133)
+          - Option: 4
+            id: 4
+            title: 2018 (91)
+            short: 2018 (91)
+            value: 2018 (91)
+          - Option: 5
+            id: 5
+            title: 2017 (94)
+            short: 2017 (94)
+            value: 2017 (94)
+          - Option: 6
+            id: 6
+            title: 2016 (90)
+            short: 2016 (90)
+            value: 2016 (90)
+          - Option: 7
+            id: 7
+            title: 2015 (67)
+            short: 2015 (67)
+            value: 2015 (67)
+          - Option: 8
+            id: 8
+            title: 2014 (91)
+            short: 2014 (91)
+            value: 2014 (91)
+          - Option: 9
+            id: 9
+            title: 2013 (25)
+            short: 2013 (25)
+            value: 2013 (25)
+          - Option: 10
+            id: 10
+            title: 2012 (25)
+            short: 2012 (25)
+            value: 2012 (25)
+    item3:
+      headerId: itemheader3
+      headerLabel: Nummer
+      contentId: itemcontent3
+      inputNummer:
+        type: number
+        fieldLabel: Nummer
+        fieldPlaceholder: 'Nummer'
+      buttonNummer:
+        id: 12333
+        text: Filter toepassen
+        type: submit
+        button: true
+    item4:
+      headerId: itemheader4
+      headerLabel: Systematisch jaar
+      contentId: itemcontent4
+      buttonSysJaar:
+        id: 1233
+        text: Filter toepassen
+        type: submit
+        button: true
+      scSysJaar:
+        id: sc4
+        linkText: Toon alle jaren
+        modalTitle: Systematisch jaar
+        label: Zoek systematisch jaar
+        inputPlaceholder: 'Zoekwoord'
+        searchFilter: true
+        multilevel: false
+        buttonResetForm: true
+        initialCheckboxesAmount: 5
+        triggerSubmit: true
+        controls:
+          selectAllLabel: Selecteer alle jaren
+        buttonSubmit: true
+        buttonSubmitLabel: Filter toepassen
+        Options:
+          - Option: 100
+            id: 100
+            title: 2021 (98)
+            short: 2021 (98)
+            value: 2021 (98)
+          - Option: 101
+            id: 101
+            title: 2020 (102)
+            short: 2020 (102)
+            value: 2020 (102)
+    item5:
+      headerId: itemheader5
+      headerLabel: Systematisch nummer
+      contentId: itemcontent5
+      inputSysNummer:
+        id: 123422
+        type: number
+        fieldLabel: Systematisch nummer
+        fieldPlaceholder: 'Nummer'
+      buttonSysNummer:
+        id: 12323
+        text: Filter toepassen
+        type: submit
+        button: true
+    item6:
+      headerId: itemheader6
+      headerLabel: Systematisch volgnummer
+      contentId: itemcontent6
+      inputSysVolgnummer:
+        id: 123
+        type: number
+        fieldLabel: Systematisch volgnummer
+        fieldPlaceholder: 'Nummer'
+      buttonSysVolgnummer:
+        id: 123233
+        text: Filter toepassen
+        type: submit
+        button: true
+    item7:
+      headerId: itemheader7
+      headerLabel: Datum totstandkoming verdrag
+      contentId: itemcontent7
+    item8:
+      headerId: itemheader8
+      headerLabel: Plaats totstandkoming verdrag
+      contentId: itemcontent8
+  linkAbonneren:
+    text: Abonneer op deze zoekvraag
+  linkFeed:
+    text: Abonneer op deze zoekvraag
+  alertSruQuery:
+    text: <h2>SRU-zoekvraag:</h2><a href="#">https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%253d%253d%2522officielepublicaties%2522)and(cql.textAndIndexes%253d%2522test%2522)%20AND%20dt.type==%22Aanhangsel%20van%20de%20Handelingen%22&zv=test&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cAanhangsel+van+de+Handelingen</a>
+  selectedfilterbar2:
+    id: 1098765672
+    heading: Door u gekozen filters
+    selectedFilters:
+      items:
+        - label: Blad gemeenschappelijke regelingen
+          url: "#"
+        - label: Aanbestedingen
+          url: "#"
+    buttonAction:
+      text: Wis alle filters
+      action: '#'
+      class: link link--remove
+

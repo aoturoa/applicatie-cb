@@ -14,20 +14,27 @@
     this.element = element;
     this.elementId = this.element.getAttribute('id');
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
+    this.config.generateHiddenField = this.config.generateHiddenField || true;
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
     this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
     this.round = 0;
 
-
-
-    this.createHiddenField();
+    // only create new hidden (for absolute truth) field it doesn't exist yet;
+    // if(!document.querySelector('[name="date-' + this.elementId + '"]')) {
+    //   this.createHiddenField();  
+    // }
+    if(this.config.generateHiddenField){
+      this.createHiddenField();
+    }
+    
 
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
 
       $(element).on('change', function () {
         this.setAttribute('data-date', this.value);
+        this.setAttribute('value', this.value);
         self.hiddenfield.setAttribute('value', this.value);
         if ( self.round > 0 ) {
           if ($('.js-fixedbottom-button__button')){
@@ -39,6 +46,7 @@
     } else {
       $(element).on('change', function () {
         this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
+        this.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
         self.hiddenfield.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
         if (self.round > 0) {
           if ($('.js-fixedbottom-button__button')) {

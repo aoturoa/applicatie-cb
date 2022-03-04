@@ -46,7 +46,9 @@ input[type=email].input-text,
   }
 
   &__container--prefix {
-    display: flex;
+    @media ( min-width: $breakpointDesktop ) {
+      display: flex;
+    }
 
     .input-text {
       border-width: 2px;
@@ -54,23 +56,37 @@ input[type=email].input-text,
   }
 
   &__container--prefix &__prefix {
-    flex: 0 0 auto;
-    margin: 0;
-    width: auto !important;
-    padding: 1.7em 1.5em .75em 1.25em;
-    margin-right: -5px;
+    width: 100%;
+    display: block;
+    padding: 0.75em;
+    word-break: break-all;
+    margin: 0 0 -3px 0;
+
+    @media ( min-width: $breakpointDesktop ) {
+      flex: 0 0 auto;
+      width: auto !important;
+      max-width: 75%;
+      padding: 1.7em 1.5em .75em 1.25em;
+      margin: 0 -5px 0 0;
+      word-break: break-all;
+      min-width: 1%;
+    }
+
+    
+    
+    // margin-right: -5px;
     font-style: italic;
     border: 2px solid $darkBlue;
     background: $lightBlue;
     border-radius: 3px;
-    font-size: 0.6em;
+    font-size: 0.8em;
 
     @media ( min-width: $breakpointDesktop ) {
       font-size: 1.125em;
       padding-top: .75em;
     }
     &--medium {
-      padding-top: 2em;
+      padding-top: .75em;
       padding-bottom: .5em;
 
       @media ( min-width: $breakpointDesktop ) {
