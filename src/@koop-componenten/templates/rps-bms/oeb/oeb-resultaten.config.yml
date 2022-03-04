@@ -45,6 +45,9 @@ context:
       - text: Officiële bekendmakingen
         url: '#'
       - text: Zoekresultaat
+  blocksearch:
+    blocksearchInput:
+      fieldPlaceholder: 'Zoekterm of (dossier)nummer'
   sortContext:
     modifier:
     columns: true
