@@ -81,6 +81,12 @@
       beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
       },
+      beforeShow: function () {                
+        setTimeout(function () {
+            $('.ui-datepicker-year').attr('id', 'ui-datepicker-year');
+            $('.ui-datepicker-year').before('<label for="ui-datepicker-year" class="visually-hidden">Jaar</label>');
+        }, 200);
+      },
       onSelect: function(dateText) {
         var date = dateText;
 
