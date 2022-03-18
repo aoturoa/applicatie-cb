@@ -234,6 +234,12 @@ div.link {
     @extend .icon;
     @extend .icon--external;
     background-size: 1em !important;
+
+    &.is-external {
+      &:after {
+        display: none;
+      }
+    }
   }
   &--tel {
     @extend .icon;
