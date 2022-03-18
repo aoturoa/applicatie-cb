@@ -1,6 +1,6 @@
 {
   "name": "applicatie-cb",
-  "version": "1.9.591",
+  "version": "1.9.592",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {

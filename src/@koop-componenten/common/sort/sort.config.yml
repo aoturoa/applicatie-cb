@@ -11,8 +11,11 @@ context:
     - amount: 10
       active: true
       pressed: true
+      href: '/10'
     - amount: 20
+      href: '/20'
     - amount: 50
+      href: '/50'
 variants:
   - name: with amount
     label: met Aantal resultaten

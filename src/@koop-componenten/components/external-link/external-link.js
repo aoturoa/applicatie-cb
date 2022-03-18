@@ -29,10 +29,10 @@
       else {
         subdomains = subdomain.replace('.', '\\.');
       }
-  
-      this.regexInternalLink = new RegExp('^https?://([^@]*@)?' + subdomains + host, 'i');
-  
-      this.whitelistedDomains = ['overheid.nl','officielebekendmakingen.nl','officiele-overheidspublicaties.nl', 'localhost:3000'];
+      // this.regexInternalLink = new RegExp('^https?://([^@]*@)?' + subdomains + host, 'i');
+      this.regexInternalLink = new RegExp('^https?://([^@]*@)?' + host, 'i');
+      
+      this.whitelistedDomains = ['overheid.nl','officielebekendmakingen.nl','officiele-overheidspublicaties.nl'];
       this.whitelistedDomainsRegexxed = [];
       var y;
       for(y = 0; y < this.whitelistedDomains.length; y++) {
@@ -49,15 +49,38 @@
           if (typeof this.allLinks[i].href == 'string') {
               href = this.allLinks[i].href.toLowerCase();
           }
-          
+
+          href = href.replace('http://localhost:3000', 'https://' + host);
+          href = href.replace('https://localhost:3000', 'https://' + host);
+
           // ignore anker-links;
-          if(!href.includes('#')){
+          if(!href.startsWith('#')){
             if(this.allLinks[i].getAttribute('href') != ''){
               
-              var subdomain = href.split('.').slice(0, -2).join('.');
-              if(subdomain){
-                href = href.replace(subdomain + '.', 'https://');
+              // var subdomain = href.split('.').slice(0, -2).join('.');
+              var hrefModified = href.replace('https://', '');
+              hrefModified = hrefModified.replace('http://', '');
+              
+              
+              var hrefOnlyDomain = hrefModified.split('/');
+              var hrefOnlyDomainSplitted = hrefOnlyDomain[0].split('.');
+              
+              var hasSubdomain = false;
+              
+              if(hrefOnlyDomainSplitted.length === 3) {
+                hasSubdomain = true;
               }
+
+              if(hasSubdomain){
+                href = href.replace(hrefOnlyDomainSplitted[0] + '.', 'https://');
+                href = href.replace('https://https://', 'https://');
+                href = href.replace('http://http://', 'https://');
+                href = href.replace('http://https://', 'https://');
+                href = href.replace('https://http://', 'https://');
+              }
+              if(href.startsWith('/')){
+                href = "https://" + host;
+              }            
       
               var match = false;
               if(!this.regexInternalLink.test(href)) {
