@@ -41,10 +41,9 @@
   </div>
   {{#if nav}}
   <nav class="header__nav header__nav--closed" id="nav">
-    <h2 class="visually-hidden">Primaire navigatie</h2>
     <div class="container">
       <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        {{#if headerMore}}<li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen&nbsp;</span> &nbsp;Overheid.nl</a></li>{{else}}{{/if}}
         {{#if navLinks }}
         {{#each navLinks }}
           {{#if modifier }}
@@ -56,7 +55,7 @@
         {{/if}}
       </ul>
       {{#if headerMore }}
-      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen&nbsp;</span> &nbsp;Overheid.nl</a>
       {{/if}}
     </div>
   </nav>
