@@ -1,0 +1,29 @@
+{{ render "@skiplinks" skipLinks }}
+{{ render "@topbar" topbar }}
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      {{render "@nav" navToeContext }}
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    <h1 class="h1 h1--result--list">Groep werkvoorraad
+      <span class="h1__sub">1 resultaat</span>
+    </h1>
+    {{ render "@resultlist" resultlist }}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
