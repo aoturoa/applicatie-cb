@@ -128,14 +128,18 @@
       font-size: 1.125rem;
       word-break: normal;
 
+      &:visited {
+        color: white !important;
+      }
+
       &:hover {
-        color: $headerLinkCurrentColor;
+        color: $headerLinkCurrentColor !important;
         background-color: $headerBorderColor;
       }
 
       &.is-active {
         background: $mediumBlue;
-        color: $black;
+        color: $black !important;
       }
     }
 

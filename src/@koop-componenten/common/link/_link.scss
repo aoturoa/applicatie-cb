@@ -21,10 +21,6 @@ a {
 
   }
 
-  &:visited {
-    color: #551A8B;
-  }
-
   &:empty {
     display: none;
   }
@@ -95,6 +91,12 @@ a {
       position: left 3px;
       size: 1em;
     }
+  }
+}
+
+a:not(.button) {
+  &:visited {
+    color: #551A8B;
   }
 }
 
