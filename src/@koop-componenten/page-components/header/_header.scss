@@ -209,6 +209,8 @@
 
   &__more {
     overflow-y: hidden;
+    margin-top: -1em;
+    margin-bottom: 1em;
 
     .container {
       padding-top: 1em;
@@ -218,6 +220,10 @@
         flex-direction: row;
         animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
       }
+    }
+
+    h2 {
+      font-size: 1.125em;
     }
 
     &[hidden="true"] .container {

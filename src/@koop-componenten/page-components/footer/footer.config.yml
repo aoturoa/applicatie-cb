@@ -3,11 +3,11 @@ context:
   listContext1:
     modifier: list--linked
     items:
-      - content: <a href="https://beta.overheid.nl/over-deze-site">Over deze website</a>
-      - content: <a href="https://beta.overheid.nl/contact">Contact</a>
-      - content: <a href="https://beta.overheid.nl/english" lang="en">English</a>
-      - content: <a href="https://beta.overheid.nl/help">Help</a>
-      - content: <a href="https://beta.overheid.nl/help/zoeken">Zoeken</a>
+      - content: <a href="https://www.overheid.nl/over-deze-site">Over deze website</a>
+      - content: <a href="https://www.overheid.nl/contact">Contact</a>
+      - content: <a href="https://www.overheid.nl/english" lang="en">English</a>
+      - content: <a href="https://www.overheid.nl/help">Help</a>
+      - content: <a href="https://www.overheid.nl/help/zoeken">Zoeken</a>
   listContext2:
     modifier: list--linked
     items:
