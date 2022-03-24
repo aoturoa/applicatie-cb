@@ -94,6 +94,12 @@ a {
   }
 }
 
+a:not(.button) {
+  &:visited {
+    color: #551A8B;
+  }
+}
+
 p a {
   text-decoration: underline;
 }

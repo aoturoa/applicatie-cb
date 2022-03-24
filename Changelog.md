@@ -1,3 +1,9 @@
+## 1.9.58
+### Nieuw component
+- Subselection checkbox
+### Gewijzigde componenten
+- Datepicker
+- Block-search
 ## 1.9.57
 - Focus styles aangepast (nu rood)
 - Templates geupdate van BKW (rubrieken)

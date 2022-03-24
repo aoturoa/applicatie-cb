@@ -95,7 +95,10 @@ gulp.task( 'lint:watch', function() {
 gulp.task( 'css:process', function() {
   const logger = console;
 
-  return gulp.src( paths.styles + '/*.scss' )
+  return gulp.src( [
+    paths.styles + '/*.scss',
+    '!' + paths.styles + '/generic.scss'
+   ])
     .pipe( sass() )
     .on( 'error', function( err ) {
       logger.error( err.message );

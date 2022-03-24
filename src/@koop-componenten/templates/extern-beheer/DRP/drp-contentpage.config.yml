@@ -1,0 +1,84 @@
+---
+label: DRP - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    headerMore: false
+    navLinks:
+    - url: '#'
+      text: Documenten
+      className: is-active
+    - url: '#'
+      text: Help
+      modifier: secondary
+    skipLinks: false
+    metaLinks:
+      - text: M Haaren namens Aalsmeer
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Organisatie wijzigen
+        class: link
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+    youAreHere:
+      - text: OPA (tst)
+  skipLinks:
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  topbar:
+    navItems:
+      - label: DROP
+        href: '#'
+      - label: DRP-Beheersite
+        href: '#'
+      - label: GVOP
+        href: '#'
+      - label: CAM
+        href: '#'
+      - label: BeheerSite
+        href: '#'
+      - label: Digitaal Loket
+        href: '#'
+      - label: Verkeersbesluiten
+        href: '#'
+      - label: Stage BMS
+        href: '#'
+      - label: MND
+        href: '#'
+      - label: STCRTIN
+        href: '#'
+      - label: Oproepingen
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '/components/preview/templates-eb-homepage'
+    - text: Oproepingen
+  navToeContext:
+    id: 2
+    items:
+    - title: OPA
+      href: '#'
+      active: true
+      sub: true
+      subItems:
+        - stitle: Groep werkvoorraad
+          sactive: true
+        - stitle: Mijn werkvoorraad
+        - stitle: Nieuwe publicatie
+  resultlist:
+    items:
+      - title: OPA regressie 1 - 23 okt
+        titleHeader: h2
+        titleHref: '/item'
+        metadata:
+          - value: 'Oproepingen'
+          - value: 'Deurwaardersexploten • Ter beoordeling aangeboden'
+          
