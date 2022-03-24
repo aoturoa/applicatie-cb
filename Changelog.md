@@ -1,3 +1,10 @@
+## 2.0.0
+### Gewijzigde componenten
+- Header
+- Logo
+## 1.9.59
+### Gewijzigde componenten
+- Datepicker
 ## 1.9.58
 ### Nieuw component
 - Subselection checkbox
