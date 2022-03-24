@@ -54,7 +54,7 @@
           href = href.replace('https://localhost:3000', 'https://' + host);
 
           // ignore anker-links;
-          if(!href.startsWith('#')){
+          if(href.charAt(0) != '#'){
             if(this.allLinks[i].getAttribute('href') != ''){
               
               // var subdomain = href.split('.').slice(0, -2).join('.');
@@ -78,7 +78,7 @@
                 href = href.replace('http://https://', 'https://');
                 href = href.replace('https://http://', 'https://');
               }
-              if(href.startsWith('/')){
+              if(href.charAt(0) === '/'){
                 href = "https://" + host;
               }            
       
@@ -113,7 +113,9 @@
           var externalLabel = document.createElement('span');
           externalLabel.innerHTML = "Externe link: ";
           externalLabel.classList.add('visually-hidden');
-          this.arrayExternalLinks[r].prepend(externalLabel);
+          
+          // prepend hidden span to A-element;
+          this.arrayExternalLinks[r].insertBefore(externalLabel, this.arrayExternalLinks[r].firstChild);
         }
       }
   
