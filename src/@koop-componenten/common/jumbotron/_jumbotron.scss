@@ -19,6 +19,30 @@
     background: none;
   }
 
+  @media (min-width: $breakpointDesktop) {
+    &--wvisual &__content {
+      max-width: 60%;
+    }
+  }
+
+  &--wvisual &__visual {
+    position: absolute;
+    right: 3em;
+    bottom: -2.5em;
+    width: 12em;
+
+    @media (min-width: $breakpointDesktop) {
+      display: block;
+      right: 3em;
+      bottom: -3.5em;
+      width: 35%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
   // = default, do not use anymore.
   // &--highlight {
   //   background: $lightBlue;

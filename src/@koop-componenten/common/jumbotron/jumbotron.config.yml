@@ -56,3 +56,12 @@ variants:
       centered: true
       headingcentered: true
       content: Secondary style variant van de jumbotron
+  - name: with visual
+    label: Met afbeelding
+    context:
+      h: h1
+      content: Met afbeelding
+      modifier: wvisual
+      visual:
+        src: /images/temp/img-library-1.svg
+        alt: ""

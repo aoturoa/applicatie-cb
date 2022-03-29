@@ -33,6 +33,11 @@ variants:
     context:
       text: Secundaire knop
       modifier: icon-bg icon--bin
+  - name: Secondary Icon CTA
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--cta
   - name: Secondary Icon Edit
     status: ready
     context:
