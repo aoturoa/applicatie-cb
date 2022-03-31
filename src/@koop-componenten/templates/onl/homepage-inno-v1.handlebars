@@ -20,6 +20,9 @@
               <div class="form__rowsubmit__item">
                 {{ render "@button--primary" btnSubmit merge=true }}
               </div>
+              <div class="form__rowsubmit__item">
+                {{ render "@link--pijl-beneden-(rechts)" linkAndereOverheidsinformatie merge=true }}
+              </div>
             </div>
           </fieldset>
         </form>
@@ -27,48 +30,49 @@
     {{/@jumbotron}}
 
   </div>
-  <div class="row">
-
-    {{!-- <h2 class="row__heading">Zoek documenten op thema</h2> --}}
-    
+  <div class="row">   
     <div class="row row--large">
       <div class="columns columns--dominant">
         <div class="column">
-          {{render "@block" blockIntro }}
+          {{!-- {{render "@block" blockIntro }} --}}
+          {{#> @block blockIntro }}
+            <p>Overheid.nl is de wegwijzer naar informatie en diensten van alle overheidsorganisaties in Nederland. Deze website is een initiatief van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties in samenwerking met: de andere ministeries, de Eerste- en Tweede Kamer en gemeenten, provincies, waterschappen en gemeenschappelijke regelingen.</p>
+            {{ render "@button--secondary-icon-cta" button merge=true }}
+          {{/@block}}
         </div>
         {{#> @block blockBurger }}
-          {{ render "@list--linklist" listBurger merge=true }}
+          {{ render "@list--action" listBurger merge=true }}
         {{/@block}}
       </div>
     </div>
-
   </div>
 
-  <div class="row">
+  <div class="row" id="andereoverheidsinformatie">
 
+    <p class="p p--accent">Informatie van alle overheden</p>
     <h2 class="row__heading">Ga snel naar</h2>
 
     <div class="columns">
       <div class="column">
         <h3>Dienstverlening</h3>
         <p>
-          Verschillende diensten van Overheid.nl op basis van overheidsinformatie.
+          Informatie die u helpt als u de overheid nodig heeft.
         </p>
-        {{ render "@list--linklist" listDienstverlening merge=true }}
+        {{ render "@list--action" listDienstverlening merge=true }}
       </div>
       <div class="column">
         <h3>Publicaties</h3>
         <p>
           Officiële publicaties van de overheid.
         </p>
-        {{ render "@list--linklist" listPublicaties merge=true }}
+        {{ render "@list--action" listPublicaties merge=true }}
       </div>
       <div class="column">
         <h3>Wet- en regelgeving</h3>
         <p>
-          Alle wet- en regelgeving geldend op lokaal of nationaal niveau. 
+          Wet- en regelgeving geldend op nationaal en lokaal niveau.
         </p>
-        {{ render "@list--linklist" listWER merge=true }}
+        {{ render "@list--action" listWER merge=true }}
       </div>
     </div>
   

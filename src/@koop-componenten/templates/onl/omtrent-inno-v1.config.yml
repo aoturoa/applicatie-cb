@@ -3,10 +3,10 @@ name: omtrent ONL inno v1
 label: omtrent (inno v1)
 status: ready
 context:
-  headerContext:
-    metaLinks:
-      - url: 'https://www.mijnoverheid.nl'
-        text: MijnOverheid.nl
+  header:
+    navLinks: false
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
   breadcrumb:
     breadcrumb:
       - text: Overheid.nl
@@ -32,10 +32,6 @@ context:
       text: Zoek iets
       button: true
       type: submit
-  buttonCtaGegevens:
-    text: Bekijke alle gegevens
-    action: http://www.overheid.nl/roo
-    anchor: true
   mapContext:
     modifier: h-400
     controls: false
@@ -47,7 +43,7 @@ context:
   listBoub:
     items:
       - content: <a href="#">Meldingen - Sloopmelding ingediend, Roggekamp 135 te Den Haag</a>
-      - content: <a href="#">Meldingen - Sloopmelding ingediend, Roggekamp 44 te Den Haag</a>
+      - content: <a href="https://www.rijksoverheid.nl">Meldingen - Sloopmelding ingediend, Roggekamp 44 te Den Haag</a>
       - content: <a href="#">Aanvraag omgevingsvergunning (kenmerk 787474) Waalhofflaan 6 Voorburg uitbreiden van het bestaande dakterras</a>
       - content: <a href="#">Omgevingsvergunning - Aangevraagd, Stuyvesantstraat 95 te Den Haag</a>
       - content: <a href="#">Aanvraag omgevingsvergunning (kenmerk 787551) Populierendreef 956 Voorburg plaatsen van een dakkapel in het voordakvlak van de woning</a>
@@ -71,17 +67,27 @@ context:
     text: Alle lokale wet- en regelgeving
   linkCta3:
     text: Alle diensten
+  linkTerug:
+    text: Zoek opnieuw
   blockContact:
-    heading: Neem contact op
-    subheading: Vragen?
+    heading: Uw gemeente helpt u graag verder!
+    subheading: Heeft u nog vragen?
     linkInternet:
       text: www.rotterdam.nl
-      action: www.rotterdam.nl
+      action: https://www.rotterdam.nl
       external: true
+    buttonCtaGegevens:
+      text: Bekijke alle gegevens
+      action: http://www.overheid.nl/roo
+      anchor: true
   jumbotron2Context:
     modifier: slim
-    heading: Meld je aan voor de mail service
+    heading: Meld u aan voor Berichten over uw buurt!
     h: h2
-    subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
+    subheading: Altijd op de hoogte van wat er in uw buurt gebeurt?
     centered: true
     headingcentered: true
+    inputNewsletter:
+      label: Uw e-mailadres
+      showLabel: true
+      placeholder: mail@adres.nl

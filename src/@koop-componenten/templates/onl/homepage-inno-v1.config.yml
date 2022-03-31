@@ -12,17 +12,17 @@ context:
       - text: Home
         url: '#'
   jumbotronContext:
-    heading: Naslagwerk voor  alle officiële overheidsinformatie
+    heading: Wijst de weg naar informatie en diensten van alle overheden
     subheading: Overheid.nl
-    intro: Overheid.nl is een wegwijzer naar informatie en diensten van alle overheiden. Waar bent u naar op zoek?
+    intro: Op Overheid.nl vindt u informatie en diensten van alle overheidsorganisaties in Nederland. Bent u benieuwd naar een bouwproject in uw buurt of wilt u een nieuw paspoort aanvragen? Overheid.nl wijst u de weg. 
     modifier: wvisual
     visual:
       src: /images/temp/img-library-1.svg
       alt: ""
     inputSearchContext:
       id: 87656
-      fieldPlaceholder: Bijv. "Gemeente Rotterdam" of "2273"
-      fieldLabel: Postcode, woonplaats of gemeente
+      fieldPlaceholder: Postcode, woonplaats of gemeente
+      fieldLabel: Zoek in uw omgeving
       fieldLabelVisible: true
       name: searchcr
       labelmodifier: medium
@@ -31,24 +31,29 @@ context:
       text: Zoeken
       button: true
       type: submit
+    linkAndereOverheidsinformatie:
+      text: Andere overheidsinformatie 
+      action: '#andereoverheidsinformatie'
   blockIntro:
     id: 1
-    heading: Hoe kunnen we u helpen?
-    subheading: Overheid.nl
-    content: '<p>De website Overheid.nl is de wegwijzer naar informatie en diensten van alle overheidsorganisaties in Nederland. Deze website is een initiatief van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties in samenwerking met: de andere ministeries, de Eerste- en Tweede Kamer en gemeenten, provincies, waterschappen en gemeenschappelijke regelingen.</p>'
-    buttonText: Onze diensten
-    href: '#'
+    heading: Wat u op deze website kunt vinden
+    subheading: Hoe kunnen we u helpen?
+    button:
+      context:
+      text: Over deze website
+      action: /over
+      anchor: true
   blockBurger:
     id: 2
     modifier: secondary
     flexed: true
     heading: Voor u als burger
-    subheading: Overheid.nl
+    subheading: Wegwijs in uw omgeving
     listBurger:
       items:
         - content: <a href="#">Berichten over uw buurt</a>
-        - content: <a href="#">Wet- en regelgeving in uw omgeving</a>
-        - content: <a href="#">Producten &amp; diensten van alle overheden</a>
+        - content: <a href="#">Lokale wet- en regelgeving</a>
+        - content: <a href="#">Producten & diensten</a>
         - content: <a href="#">Contactgegevens overheden</a>
   listDienstverlening:
     items:
