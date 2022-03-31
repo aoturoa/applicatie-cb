@@ -255,6 +255,16 @@ div.link {
     @extend .icon;
     @extend .icon--info;
   }
+  &--arrow-down {
+    @extend .icon;
+    @extend .icon--arrow-down;
+  }
+  &--r-arrow-down {
+    @extend .icon;
+    @extend .icon--arrow-down;
+    padding: 0 2em 0 0 !important;
+    background-position: right top !important;
+  }
 }
 
 .link-iconed {

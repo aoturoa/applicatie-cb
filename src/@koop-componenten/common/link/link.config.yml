@@ -87,6 +87,18 @@ variants:
       text: Download
       action: '#'
       class: link link--download
+  - name: Pijl beneden
+    label: pijl beneden
+    context:
+      text: Meer informatie
+      action: '#'
+      class: link link--arrow-down
+  - name: Pijl beneden (rechts)
+    label: pijl beneden (rechts)
+    context:
+      text: Meer informatie
+      action: '#'
+      class: link link--r-arrow-down
   - name: Question
     label: Vraag
     context:
