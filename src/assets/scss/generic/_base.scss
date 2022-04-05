@@ -73,6 +73,10 @@ p,
   }
 }
 
+.p--accent ~ .row__heading {
+  margin-top: 0;
+}
+
 .footer {
   float: left;
   width: 100%;
