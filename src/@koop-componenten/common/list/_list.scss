@@ -122,6 +122,10 @@ ol {
       &.is-selected {
         background: $darkBlue;
         color: white;
+
+        &:visited {
+          color: white;
+        }
       }
     }
   }
@@ -172,6 +176,10 @@ ol {
           background-color: $lightGrey;
         }
 
+        &:visited {
+          color: $darkBlue !important;
+        }
+
         &[aria-selected="true"],
         &.is-selected {
           border: 0;
@@ -186,6 +194,10 @@ ol {
 
           &:hover {
             background-color: $darkBlue;
+          }
+
+          &:visited {
+            color: white !important;
           }
         }
       }
