@@ -1,3 +1,17 @@
+## 2.1.1
+Nodig voor git-release.
+## 2.1.0
+- (162052)[complib] doubleline voorbeeld aanpassen naar hyperlink
+- (160953)[COMPLIB] Toevoegen at-root bij @font-face tbv nested imports 
+- (157930)[COMPLIB] Timebox vervolgstappen 'Omtrent' 
+- (152960)[COMPLIB] Links uit het uitklapmenu in de header van de hele complib halen
+- (160954)[COMPLIB] Fix in _button.scss
+- (158537)[DRP] Basis template
+### Nieuwe componenten
+- Card
+### Gewijzigde componenten
+- Link
+- Jumbotron
 ## 2.0.0
 ### Gewijzigde componenten
 - Header
