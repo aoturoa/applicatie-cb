@@ -231,6 +231,10 @@ div.link {
     @extend .icon;
     @extend .icon--download;
   }
+  &--document {
+    @extend .icon;
+    @extend .icon--document;
+  }
   &--question {
     @extend .icon;
     @extend .icon--explanation;
