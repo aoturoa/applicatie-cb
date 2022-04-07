@@ -74,6 +74,8 @@ variants:
       text: Bekijk publicatie
       text2: Opent in een nieuw scherm
       modifier: button--doubleline button--icon-external
+      anchor: true
+      action: 'https://www.rijksoverheid.nl'
   - name: Arrowed
     status: ready
     context:
