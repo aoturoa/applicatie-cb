@@ -1,0 +1,53 @@
+---
+label: SONL - Veelgestelde vragen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+    - text: StandaardenOverheid.nl
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    navLinks:
+    - url: '#'
+      text: OWMS
+      className: is-active
+    - url: '#'
+      text: Contentmodellen
+    - url: '#'
+      text: Nieuws
+    - url: '#'
+      text: Contact
+    - url: '#'
+      text: Sitemap
+    - url: '#'
+      text: Toegankelijkheid
+  breadcrumb:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: OWMS
+      url: '#'
+    - text: Veelgestelde vragen
+  navToeContext:
+    id: 3
+    items:
+    - title: OWMS
+      sub: true
+      active: true
+      sactive: true
+      subItems:
+        - stitle: OWMS 4.0
+          href: "/1"
+        - stitle: OWMS 3.5
+          href: "/2"
+        - stitle: Beheer
+          href: "/3"
+        - stitle: Veelgestelde vragen
+          href: "/4"
+        - stitle: SRU-koppelvlak zoekdienst
+          href: "/4"
+        - stitle: Publicaties
+          href: "/5"
