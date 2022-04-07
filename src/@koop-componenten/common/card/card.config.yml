@@ -1,0 +1,28 @@
+---
+label: Card
+context:
+  id: 1
+  heading:
+    label: Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden
+  subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+  figure:
+    figcaption: false
+    source: false
+    picture:
+      src: ../../images/temp/illu-walkingdog.png
+      alt: alt text
+  labels:
+    - label:
+        text: Onderwijs
+        modifier: label--large label--info
+    - label:
+        text: 16-07-2020
+        modifier: label--large
+  cta:
+    label: Bekijk consultatie
+variants:
+  - name: without figure
+    label: Zonder afbeelding
+    status: ready
+    context:
+      figure: false

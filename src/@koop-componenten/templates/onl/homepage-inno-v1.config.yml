@@ -1,0 +1,73 @@
+---
+name: homepag ONL inno v1
+label: Homepage (inno v1)
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: 'https://www.mijnoverheid.nl'
+        text: MijnOverheid.nl
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+  jumbotronContext:
+    heading: Wijst de weg naar informatie en diensten van alle overheden
+    subheading: Overheid.nl
+    intro: Op Overheid.nl vindt u informatie en diensten van alle overheidsorganisaties in Nederland. Bent u benieuwd naar een bouwproject in uw buurt of wilt u een nieuw paspoort aanvragen? Overheid.nl wijst u de weg. 
+    modifier: wvisual
+    visual:
+      src: /images/temp/img-library-1.svg
+      alt: ""
+    inputSearchContext:
+      id: 87656
+      fieldPlaceholder: Postcode, woonplaats of gemeente
+      fieldLabel: Zoek in uw omgeving
+      fieldLabelVisible: true
+      name: searchcr
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    btnSubmit:
+      text: Zoeken
+      button: true
+      type: submit
+    linkAndereOverheidsinformatie:
+      text: Andere overheidsinformatie 
+      action: '#andereoverheidsinformatie'
+  blockIntro:
+    id: 1
+    heading: Wat u op deze website kunt vinden
+    subheading: Hoe kunnen we u helpen?
+    button:
+      context:
+      text: Over deze website
+      action: /over
+      anchor: true
+  blockBurger:
+    id: 2
+    modifier: secondary
+    flexed: true
+    heading: Voor u als burger
+    subheading: Wegwijs in uw omgeving
+    listBurger:
+      items:
+        - content: <a href="#">Berichten over uw buurt</a>
+        - content: <a href="#">Lokale wet- en regelgeving</a>
+        - content: <a href="#">Producten & diensten</a>
+        - content: <a href="#">Contactgegevens overheden</a>
+  listDienstverlening:
+    items:
+      - content: <a href="#">Berichten over uw buurt</a>
+      - content: <a href="#">Producten &amp; diensten</a>
+      - content: <a href="#">Levensgebeurtenissen</a>
+      - content: <a href="#">Contactgegevens overheden</a>
+  listPublicaties:
+    items:
+      - content: <a href="#">Bekendmakingen</a>
+      - content: <a href="#">Parlementaire documenten</a>
+  listWER:
+    items:
+      - content: <a href="#">Nationale wet- en regelgeving</a>
+      - content: <a href="#">Lokale wet- en regelgeving</a>
+      - content: <a href="#">Wetgevingskalender</a>
+      - content: <a href="#">Internetconsultatie</a>

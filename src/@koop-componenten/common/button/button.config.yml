@@ -33,6 +33,11 @@ variants:
     context:
       text: Secundaire knop
       modifier: icon-bg icon--bin
+  - name: Secondary Icon CTA
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--cta
   - name: Secondary Icon Edit
     status: ready
     context:
@@ -69,6 +74,8 @@ variants:
       text: Bekijk publicatie
       text2: Opent in een nieuw scherm
       modifier: button--doubleline button--icon-external
+      anchor: true
+      action: 'https://www.rijksoverheid.nl'
   - name: Arrowed
     status: ready
     context:

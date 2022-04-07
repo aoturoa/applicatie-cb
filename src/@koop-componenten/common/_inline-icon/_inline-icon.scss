@@ -30,7 +30,9 @@ $icons: (
   external: $externalLinkv2Icon,
   explanation: $explanationIcon,
   tel: $iconTel,
-  info: $infoIconBlue
+  info: $infoIconBlue,
+  cta: $arrowCTAIcon,
+  arrow-down: $iconArrowDown
 );
 
 button.icon {

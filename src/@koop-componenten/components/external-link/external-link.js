@@ -107,15 +107,20 @@
       for(r = 0; r < this.arrayExternalLinks.length; r++) {
         var hrefStart = this.arrayExternalLinks[r].href.substr(0,7);
         if(hrefStart != 'mailto:' && this.arrayExternalLinks[r].href != 'javascript:void(0)' && this.arrayExternalLinks[r].href !== '') {
-          if(!this.arrayExternalLinks[r].classList.contains('button--doubleline')){
-            this.arrayExternalLinks[r].classList.add('is-external');
-          }
-          var externalLabel = document.createElement('span');
-          externalLabel.innerHTML = "Externe link: ";
-          externalLabel.classList.add('visually-hidden');
           
-          // prepend hidden span to A-element;
-          this.arrayExternalLinks[r].insertBefore(externalLabel, this.arrayExternalLinks[r].firstChild);
+
+          if(!this.arrayExternalLinks[r].classList.contains('is-external')){
+            if(!this.arrayExternalLinks[r].classList.contains('button--doubleline')){
+              this.arrayExternalLinks[r].classList.add('is-external');
+            }
+            
+            var externalLabel = document.createElement('span');
+            externalLabel.innerHTML = "Externe link: ";
+            externalLabel.classList.add('visually-hidden');
+            
+            // prepend hidden span to A-element;
+            this.arrayExternalLinks[r].insertBefore(externalLabel, this.arrayExternalLinks[r].firstChild);
+          }
         }
       }
   
