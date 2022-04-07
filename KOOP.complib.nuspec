@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>KOOP.componentenbiliotheek</id>
-    <version>2.0.0</version>
+    <version>2.1.1</version>
     <title>Componentenbibliotheek</title>
     <authors>Kennis- en Exploitatiecentrum voor Officiële Overheidspublicaties</authors>
     <owners>Kennis- en Exploitatiecentrum voor Officiële Overheidspublicaties</owners>
