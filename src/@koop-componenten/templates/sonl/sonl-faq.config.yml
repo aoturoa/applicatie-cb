@@ -37,7 +37,6 @@ context:
     - title: OWMS
       sub: true
       active: true
-      sactive: true
       subItems:
         - stitle: OWMS 4.0
           href: "/1"
@@ -47,7 +46,31 @@ context:
           href: "/3"
         - stitle: Veelgestelde vragen
           href: "/4"
+          sactive: true
         - stitle: SRU-koppelvlak zoekdienst
           href: "/4"
         - stitle: Publicaties
           href: "/5"
+  accordion:
+    item1:
+      headerId: header12
+      headerLabel: In hoeverre is het verplicht OWMS toe te passen?
+      contentId: con12
+    item2:
+      headerId: header13
+      headerLabel: Voor wie is OWMS bedoeld?
+      contentId: con13
+    item3:
+      headerId: header14
+      headerLabel: Voor mijn applicatie heb ik behoefte aan een nieuwe waardelijst. Wat nu?
+      contentId: con14
+    item4:
+      headerId: header15
+      headerLabel: Is het mogelijk om zelf inspraak te krijgen in de door-ontwikkeling van de standaard?
+      contentId: con15
+    item5:
+      headerId: header16
+      headerLabel: Voldoet mijn metadata, die aan OWMS 3.5 voldoet, nu ook aan OWMS 4.0?
+      contentId: con16
+  contact:
+    text: 'Bij vragen of opmerkingen, neem contact met ons op via e-mailadres: <a href="mailto:ContactOWMS@overheid.nl">ContactOWMS@overheid.nl</a>'

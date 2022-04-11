@@ -16,104 +16,28 @@
    </div>
 
    <div role="main" id="content">
-      <h1>OWMS</h1>
-      <p>
-         De Overheid.nl Web Metadata Standaard (<abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr>) is de
-         metadatastandaard voor informatie van de Nederlandse overheid op internet. De standaard is gebaseerd op de
-         internationale metadatastandaard van het <a href="http://www.dublincore.org/" lang="en">Dublin Core Metadata
-            Initiative</a> (<abbr title="Dublin Core&amp; &copy; Metadata Initiative">DCMI</abbr>).
-      </p>
-      <p>
-         <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> bestaat uit afspraken over semantiek en syntax
-         van:
-      </p>
-      <ul>
-         <li>
-            <strong>eigenschappen</strong> die overheidsinformatie beschrijven
-         </li>
-         <li>
-            <strong>lijsten van waarden</strong> die deze eigenschappen kunnen hebben
-         </li>
-         <li>
-            <strong>syntax van waarden</strong> die deze eigenschappen kunnen hebben
-         </li>
-      </ul>
-      <p>De belangrijkste wijzigingen zijn:</p>
-      <ol>
-         <li>De kern is uitgebreid met de eigenschap&nbsp;<strong>overheid:authority</strong></li>
-         <li>Ondersteuning van het gebruik van pointers (<strong><abbr
-                  title="Uniform Resource Identifiers">URI</abbr>'s</strong>)</li>
-         <li>Publicatie van waardelijsten met <abbr title="Uniform Resource Identifiers">URI</abbr>'s volgens <a
-               href="https://nl.wikipedia.org/wiki/Linked_data">Linked Open Data</a>&nbsp;principes.</li>
-         <li>Schrijfwijze voor <strong><abbr title="eXtendable Markup Language">XML</abbr>-<abbr
-                  title="Recource Description Framework with attributes">RDFa</abbr></strong> is toegevoegd</li>
-         <li>Een <strong><abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr>-inside</strong> variant van de
-            <abbr title="eXtendable Markup Language">XML</abbr>-schemadefinitie
-         </li>
-      </ol>
-      <p>
-         Een zin met een <a href="#" class="link link--document">PDF-document</a> ter voorbeeld.
-      </p>
-      <h2><abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr>-Kern</h2>
-      <ul>
-         <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">dcterms:identifier</a> (Verwijzing)</li>
-         <li><a href="/owms/4.0/doc/eigenschappen/dcterms.title">dcterms:title</a> (Titel)</li>
-         <li><a href="/owms/4.0/doc/eigenschappen/dcterms.type">dcterms:type</a> (Informatietype)</li>
-      </ul>
-      <h2><abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr>-Kern</h2>
-      <ul>
-         <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">dcterms:abstract</a> (Samenvatting inhoud)</li>
-         <li><a href="/owms/4.0/doc/eigenschappen/dcterms.title">dcterms:accessRights</a> (Toegangsrechten)</li>
-         <li><a href="/owms/4.0/doc/eigenschappen/dcterms.type">dcterms:alternative</a> (Alternatieve titel)</li>
-      </ul>
-      <p>Tot <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> behorende de volgende standaard
-         syntax-codeerschema's:</p>
-      <ul>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/vrijetekst">VrijeTekst</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/dcterms.imt">dcterms:IMT</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/dcterms.period">dcterms:Period</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/dcterms.rfc4646">dcterms:RFC4646</a> (<spanxml:lang="en">
-               deprecated</span>)</li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/dcterms.uri">dcterms:URI</a> (<spanxml:lang="en">
-               deprecated</span>)</li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/dcterms.w3cdtf">dcterms:W3CDTF</a> (<spanxml:lang="en">
-               deprecated</span>)</li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/overheid.postcodehuisnummer">overheid:PostcodeHuisnummer</a>
-         </li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/overheid.EPSG28992">overheid:EPSG28992</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/xsd.anyuri">xsd:anyURI</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/xsd.date">xsd:date</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/xsd.datetime">xsd:dateTime</a></li>
-         <li><a href="/owms/4.0/doc/syntax-codeerschemas/xsd.language">xsd:language</a></li>
-      </ul>
-      <h3>Overheidsorganisaties</h3>
-      <ul>
-         <li>
-            <a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:Overheidsorganisatie</a>
-            <ul>
-               <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:Adviescollege</a></li>
-               <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:Deelgemeente</a></li>
-               <li>
-                  <a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:RegionaalSamenwerkingsorgaan</a>
-                  <ul>
-                     <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:GGD</a></li>
-                     <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:Milieudienst</a></li>
-                     <li><a href="/owms/4.0/doc/eigenschappen/dcterms.identifier">overheid:Plusregio</a> (depricated)
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-         </li>
-      </ul>
-      <p>Naast deze on-line documentatie zijn er nog drie documenten:</p>
-      <ul class="list list--unstyled">
-         <li><a href="/owms/3.5/doc/introductie.pdf" class="link link--document">Introductie OWMS 4.0</a><br>
-            Een beschrijving van het document
-         </li>
-         <li><a href="/owms/3.5/doc/introductie.pdf" class="link link--document">Introductie OWMS 3.5</a><br>
-            Een beschrijving van het document
-         </li>
-      </ul>
+      <h1>Veelgestelde vragen</h1>
+      
+      {{#> @accordion accordion }}
+         {{#> @accordion-item item1 }}
+             <p><abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> staat op de <a class="external" href="http://www.forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">'pas toe of leg uit'-lijst met open standaarden van het Forum Standaardisatie</a>.</p> <p>Het Forum stelt hierover:</p><blockquote>"Overheden en semi-overheden zijn <a class="external" href="http://www.forumstandaardisatie.nl/open-standaarden/voor-overheden/pas-toe-of-leg-uit-regime/">verplicht</a> de open standaarden, die op delijst met 'pas toe of leg uit'-standaarden staan, bij aanschaf of (ver)bouw vanICT-systemen/-diensten te eisen ('pas toe'). Afwijken mag alleen met zwaarwegende redenen en verantwoording hierover moet worden afgelegd in het jaarverslag ('leg uit')."</blockquote><p>Als functioneel toepassingsgebied van <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> is bepaald:"Metadateren van publieke overheidsinformatie op internet". Dat moet worden geinterpreteerd als: <strong>indien</strong> metadata wordt verstrekt, <strong>dan</strong> moet deze compliant zijn met <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr>. Het verstrekken van metadata is op zichzelf niet verplicht. Men kan naar eigen inzicht bepalen voor welke informatie het relevant is om metadata te verstrekken. Doorgaans wordt <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> toegepast in centrale voorzieningen die informatie verzamelen uit decentrale bronnen. Voor zo'n voorziening wordt een toepassingsprofiel geschreven waarin <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> wordt opgenomen. Voorbeelden van toepassingsprofielen zijn de contentmodellen op deze site.</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item2 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item3 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item4 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item5 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+      {{/@accordion}}
+      
+
+      {{ render "@alert" contact }}
       
    </div>
 

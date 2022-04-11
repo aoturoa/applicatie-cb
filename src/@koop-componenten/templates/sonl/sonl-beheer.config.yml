@@ -1,5 +1,5 @@
 ---
-label: SONL - Contentpagina
+label: SONL - Beheer
 status: ready
 context:
   header:
@@ -29,13 +29,14 @@ context:
     - text: Home
       url: '#'
     - text: OWMS
+      url: '#'
+    - text: Beheer
   navToeContext:
     id: 3
     items:
     - title: OWMS
       sub: true
       active: true
-      sactive: true
       subItems:
         - stitle: OWMS 4.0
           href: "/1"
@@ -43,6 +44,7 @@ context:
           href: "/2"
         - stitle: Beheer
           href: "/3"
+          sactive: true
         - stitle: Veelgestelde vragen
           href: "/4"
         - stitle: SRU-koppelvlak zoekdienst
