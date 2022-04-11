@@ -22,7 +22,9 @@ a {
   }
 
   &:empty {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    height: 20px;
   }
 
   &.is-external {
