@@ -84,6 +84,21 @@
       text-decoration: none;
     }
   }
+  &--textinline {
+    border: 0;
+    text-decoration: underline;
+    background: transparent;
+    font-weight: normal;
+    font-size: em(16) !important;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      background: transparent !important;
+      box-shadow: none !important;
+      color: $primaryBlue;
+    }
+  }
 
   &--primary {
     background-color: $buttonPrimaryBackgroundColor;
