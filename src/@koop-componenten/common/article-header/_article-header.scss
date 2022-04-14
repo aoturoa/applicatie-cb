@@ -156,5 +156,8 @@
   p {
     display: table-cell;
     width: calc(100% - 14em);
+    a {
+      font-weight: bold;
+    }
   }
 }
