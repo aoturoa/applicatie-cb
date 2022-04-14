@@ -1,6 +1,6 @@
 ---
-title: BWB - Zoekresultaten (toekomstig)
-label: BWB - Zoekresultaten (toekomstig)
+title: BWB - TT - Zoekresultaten
+label: BWB - TT - Zoekresultaten
 status: ready
 context:
   header:
@@ -13,11 +13,11 @@ context:
         text: Eenvoudig zoeken
       - url: '#'
         text: Uitgebreid zoeken
-        className: is-active
       - url: '#'
         text: Zoeken in EU-richtlijnen
       - url: '#'
         text: Toekomstige teksten
+        className: is-active
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:

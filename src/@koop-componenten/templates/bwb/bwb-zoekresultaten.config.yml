@@ -11,17 +11,19 @@ context:
     navLinks:
       - url: '#'
         text: Eenvoudig zoeken
+        className: is-active
       - url: '#'
         text: Uitgebreid zoeken
-        className: is-active
       - url: '#'
         text: Zoeken in EU-richtlijnen
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
-      - text: Uitgebreid zoeken
+      - text: Eenvoudig zoeken
         url: '#'
       - text: Zoekresultaten
+  alertToekomstig:
+    text: Op basis van uw zoekactie zijn er resultaten gevonden in nog niet in werkinggetreden regelingen. <a href="#">Bekijk toekomstige teksten</a>
   spoedpublicatiemelding:
     modifier: alert--info
     text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
