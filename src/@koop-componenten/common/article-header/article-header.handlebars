@@ -2,7 +2,7 @@
   {{#if useTitle}}
     <{{titleTag}}>{{ counter }}</{{titleTag}}>
   {{ else }}
-    <p class=""> {{ activeFrom }}</p>
+    <p class=""> {{{ activeFrom }}}</p>
   {{/if}}
   <ul>
     {{#if relations}}<li class="action--relations {{relationsClass}}" {{#if relationsDataAttributes}}{{{relationsDataAttributes}}}{{/if}}>{{ relationsAmount }}<a href="{{#if relationsAHref}}{{relationsAHref}}{{else}}#{{/if}}" {{#if relationsAClass}}class="{{relationsAClass}}"{{/if}} {{#if relationsADataAttributes}}{{{relationsADataAttributes}}}{{/if}} data-decorator="init-modal" data-handler="open-modal" data-modal="{{relationsAModalId}}"><span>{{relationsLabel}}</span> <span class="visually-hidden"> voor: {{ counter }}</span></a></li>{{/if}}
