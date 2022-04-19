@@ -1,0 +1,63 @@
+---
+label: SONL - BWB
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+    - text: StandaardenOverheid.nl
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    navLinks:
+    - url: '#'
+      text: OWMS
+    - url: '#'
+      text: Contentmodellen
+      className: is-active
+    - url: '#'
+      text: Nieuws
+    - url: '#'
+      text: Contact
+    - url: '#'
+      text: Sitemap
+    - url: '#'
+      text: Toegankelijkheid
+  breadcrumb:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Contentmodellen
+      url: '#'
+    - text: Basiswettenbestand
+  navToeContext:
+    id: 3
+    items:
+    - title: Contentmodellen
+      sub: true
+      active: true
+      subItems:
+        - stitle: Basiswettenbestand
+          href: "/1"
+          sactive: true
+        - stitle: Bekendmakingen
+          href: "/2"
+        - stitle: Decentrale regelgeving
+          href: "/3"
+        - stitle: Landelijke Voorziening Bekendmaken en Beschikbaarstellen
+          href: "/4"
+        - stitle: Platform Rijksoverheid Online
+          href: "/4"
+        - stitle: Samenwerkende Catalogi
+          href: "/5"
+        - stitle: Standaard Officiële Publicaties
+          href: "/5"
+        - stitle: <abbr title="Thesaurus en Ontologie Overheidsinformatie">TOOI</abbr>
+          href: "/5"
+        - stitle: Vergunningen
+          href: "/5"
+        - stitle: Vraag-antwoordcombinatie
+          href: "/5"
+  contact:
+    text: 'Bij vragen of opmerkingen, neem contact met ons op via e-mailadres: <a href="mailto:ContactOWMS@overheid.nl">ContactOWMS@overheid.nl</a>'

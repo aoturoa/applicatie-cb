@@ -1,0 +1,28 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+   <div class="container">
+      {{ render "@breadcrumb" breadcrumb merge=true }}
+   </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability"
+      data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+      <div>
+         {{render "@nav" navToeContext }}
+      </div>
+   </div>
+
+   <div role="main" id="content">
+      <h1>Basiswettenbestand</h1>
+      <p>Documentatie van het contentmodel voor het Basiswettenbestand vindt u op <a href="https://www.overheid.nl/help/wet-en-regelgeving">https://www.overheid.nl/help/wet-en-<wbr>regelgeving</wbr></a>.</p>
+      <p>De standaard voor identificatie van (onderdelen van) wet- en regelgeving is onlangs vastgesteld als <a href="/bwb/doc/Juriconnect_Standaard_BWB_1_3_1.pdf" class="link link--document">Juriconnect Standaard BWB 1.3.1</a> (pdf 332 KB). Deze vervangt de <a href="/bwb/doc/Juriconnect-Standaard-BWB-1.3.pdf" class="link link--document">vorige versie 1.3</a> (pdf 490 KB).</p>
+
+      {{ render "@alert" contact }}
+   </div>
+
+</div>
+
+{{ render "@footer" }}

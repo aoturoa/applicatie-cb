@@ -1,0 +1,69 @@
+---
+label: SONL - DOC Detail
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+    - text: StandaardenOverheid.nl
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    navLinks:
+    - url: '#'
+      text: OWMS
+      className: is-active
+    - url: '#'
+      text: Contentmodellen
+    - url: '#'
+      text: Nieuws
+    - url: '#'
+      text: Contact
+    - url: '#'
+      text: Sitemap
+    - url: '#'
+      text: Toegankelijkheid
+  breadcrumb:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: OWMS
+      url: '#'
+    - text: OWMS 3.5
+      url: '#'
+    - text: Eigenschappen
+  navToeContext:
+    id: 3
+    items:
+    - title: OWMS
+      sub: true
+      active: true
+      subItems:
+        - stitle: OWMS 4.0
+          href: "/1"
+        - stitle: OWMS 3.5
+          href: "/2"
+          sub: true
+          subItems:
+            - stitle: Eigenschappen
+              href: "/1"
+              sactive: true
+            - stitle: Syntax-codeerschema's
+              href: "/2"
+            - stitle: Waardelijsten 
+              href: "/3"
+            - stitle: SRU-koppelvlak zoekdienst
+              href: "/4"
+            - stitle: "XSD OWMS 3.5"
+              href: "/5"
+        - stitle: Beheer
+          href: "/3"
+        - stitle: Veelgestelde vragen
+          href: "/4"
+        - stitle: SRU-koppelvlak zoekdienst
+          href: "/4"
+        - stitle: Publicaties
+          href: "/5"
+  contact:
+    text: 'Bij vragen of opmerkingen, neem contact met ons op via e-mailadres: <a href="mailto:ContactOWMS@overheid.nl">ContactOWMS@overheid.nl</a>'

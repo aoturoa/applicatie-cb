@@ -1,0 +1,53 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+   <div class="container">
+      {{ render "@breadcrumb" breadcrumb merge=true }}
+   </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability"
+      data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+      <div>
+         {{render "@nav" navToeContext }}
+      </div>
+   </div>
+
+   <div role="main" id="content">
+      <h1>Beheer</h1>
+      <p><abbr
+               title="Overheid.nl Web Metadata Standaard">OWMS</abbr> is ontwikkeld in opdracht van het
+         Ministerie van Binnenlandse Zaken en Koninkrijksrelaties (<abbr
+               title="Ministerie van Binnenlandse Zaken en Koninkrijksrelaties">BZK</abbr>), als essentieel
+         onderdeel in verschillende bouwstenen van het Het Nationaal Uitvoeringsprogamma dienstverlening en e-overheid
+         (<abbr
+               title="Nationaal Uitvoeringsprogamma dienstverlening en e-overheid">NUP</abbr>). Om burgers en
+         bedrijven goed te kunnen informeren, is het nodig een structuur te ontwikkelen die de informatie van de
+         overheid op een eenduidige manier ontsluit en uitwisselbaar maakt voor burgers en bedrijven.</p>
+      <p>Het team Contentstandaarden van het Kennis- en exploitatiecentrum Officiële OverheidsPublicaties (<abbr
+               title="Kennis- en exploitatiecentrum Officiële OverheidsPublicaties">KOOP</abbr>) heeft een
+         standaard ontwikkeld voor de semantiek (betekenis) en syntax (schrijfwijze) van metadata om overheidsinformatie
+         op het internet in samenhang vindbaar te maken. De standaard heet de Overheid.nl Web Metadata Standaard (<abbr
+               title="Overheid.nl Web Metadata Standaard">OWMS</abbr>).</p>
+      <p>Het <a href="/owms/beheer/BeheerplanOWMSv1.0.pdf" class="link link--document">beheerplan</a> beschrijft de wijze waarop het beheer van
+         <abbr
+               title="Overheid.nl Web Metadata Standaard">OWMS</abbr> is geregeld. Hierbij is dankbaar gebruik
+         gemaakt van hetgeen in het beheer- en ontwikkelmodel voor open standaarden (<abbr
+               title="Beheer- en Ontwikkelmodel voor Open Standaarden">BOMOS</abbr>) van het <abbr
+               title="Nederland Open in Verbinding">NOiV</abbr> staat beschreven. Zo geven wij de gebruikers van
+         <abbr
+               title="Overheid.nl Web Metadata Standaard">OWMS</abbr>, onze relaties en onszelf inzicht in hoe
+         het beheer van deze metadata standaard is ingericht.</p>
+      <p>Download het <a href="/owms/beheer/BeheerplanOWMSv1.0.pdf" class="link link--document">Beheerplan</a> (Pdf, 398 KB).</p>
+      <p>PDF-bestanden kunt u openen met onder meer de gratis <a class="extern" href="http://www.adobe.com/acrobat/"
+            title=" Adobe Acrobat Reader">Adobe Acrobat Reader</a>.</p>
+   
+   {{ render "@alert" contact }}
+      
+</div>
+
+</div>
+
+{{ render "@footer" }}
