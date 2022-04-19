@@ -1,3 +1,7 @@
+# Releases
+## 2.2.0
+### Gewijzigde componenten
+- Nav
 ## 2.1.1
 Nodig voor git-release.
 ## 2.1.0

@@ -1,0 +1,46 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+   <div class="container">
+      {{ render "@breadcrumb" breadcrumb merge=true }}
+   </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability"
+      data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+      <div>
+         {{render "@nav" navToeContext }}
+      </div>
+   </div>
+
+   <div role="main" id="content">
+      <h1>Veelgestelde vragen</h1>
+      
+      {{#> @accordion accordion }}
+         {{#> @accordion-item item1 }}
+             <p><abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> staat op de <a class="external" href="http://www.forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">'pas toe of leg uit'-lijst met open standaarden van het Forum Standaardisatie</a>.</p> <p>Het Forum stelt hierover:</p><blockquote>"Overheden en semi-overheden zijn <a class="external" href="http://www.forumstandaardisatie.nl/open-standaarden/voor-overheden/pas-toe-of-leg-uit-regime/">verplicht</a> de open standaarden, die op delijst met 'pas toe of leg uit'-standaarden staan, bij aanschaf of (ver)bouw vanICT-systemen/-diensten te eisen ('pas toe'). Afwijken mag alleen met zwaarwegende redenen en verantwoording hierover moet worden afgelegd in het jaarverslag ('leg uit')."</blockquote><p>Als functioneel toepassingsgebied van <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> is bepaald:"Metadateren van publieke overheidsinformatie op internet". Dat moet worden geinterpreteerd als: <strong>indien</strong> metadata wordt verstrekt, <strong>dan</strong> moet deze compliant zijn met <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr>. Het verstrekken van metadata is op zichzelf niet verplicht. Men kan naar eigen inzicht bepalen voor welke informatie het relevant is om metadata te verstrekken. Doorgaans wordt <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> toegepast in centrale voorzieningen die informatie verzamelen uit decentrale bronnen. Voor zo'n voorziening wordt een toepassingsprofiel geschreven waarin <abbr title="Overheid.nl Web Metadata Standaard">OWMS</abbr> wordt opgenomen. Voorbeelden van toepassingsprofielen zijn de contentmodellen op deze site.</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item2 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item3 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item4 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+         {{#> @accordion-item item5 }}
+            <p>Antwoord</p>
+         {{/@accordion-item }}
+      {{/@accordion}}
+      
+
+      {{ render "@alert" contact }}
+      
+   </div>
+
+</div>
+
+{{ render "@footer" }}

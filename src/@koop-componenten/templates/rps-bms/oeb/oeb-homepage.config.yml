@@ -8,7 +8,7 @@ context:
     navLinks:
       - url: '#'
         text: Home
-      - url: '#'
+      - url: '/zoeken/uitgebreid'
         text: Uitgebreid zoeken
       - url: '#'
         text: 'Mijn abonnementen'

@@ -19,6 +19,10 @@
       color: $white;
       text-decoration: none;
 
+      &:visited {
+        color: $white !important;
+      }
+
       &:hover {
         text-decoration: underline;
       }
@@ -46,6 +50,10 @@
         line-height: 0.5;
         &:hover {
           text-decoration: underline;
+        }
+
+        &:visited {
+          color: $white !important;
         }
 
         &[rel="external"] {

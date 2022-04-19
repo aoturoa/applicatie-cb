@@ -1,0 +1,85 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+   <div class="container">
+      {{ render "@breadcrumb" breadcrumb merge=true }}
+   </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability"
+      data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+      <div>
+         {{render "@nav" navToeContext }}
+      </div>
+   </div>
+
+   <div role="main" id="content">
+      <h1>dcterms:language (OWMS 3.5)</h1>
+      <h2>Kenmerken</h2>
+      <table class="table--condensed">
+         <tbody>
+            <tr>
+               <th scope="row" class="u-columnwidth-20p">Term name</th>
+               <td data-before="Term name">identifier</td>
+            </tr>
+            <tr>
+               <th scope="row">Label</th>
+               <td data-before="Label">Verwijzing</td>
+            </tr>
+            <tr>
+               <th scope="row">Type</th>
+               <td data-before="Type"><a href="#">Eigenschap</a></td>
+            </tr>
+            <tr>
+               <th scope="row">Definitie</th>
+               <td data-before="Definitie">Eenduidige verwijzing naar het informatieobject binnen een bepaalde context.</td>
+            </tr>
+            <tr>
+               <th scope="row">Doel</th>
+               <td data-before="Doel">Aanduiden van het informatieobject dat door de metadata-elementen beschreven wordt. De identifier stelt software-applicaties in staat het informatieobject rechtstreeks te benaderen, te ontsluiten of te gebruiken.</td>
+            </tr>
+            <tr>
+               <th scope="row">Definitie</th>
+               <td data-before="Definitie"></td>
+            </tr>
+            <tr>
+               <th scope="row">Toelichting</th>
+               <td data-before="Toelichting">
+                  <p>
+                     De identifier geeft een voor computers leesbare verwijzing naar het informatieobject. Best practice voor webpublicaties is om hier de URL naar het informatieobject op te nemen. In sommige toepassingen is de identifier een interne sleutel van het informatieobject.
+                  </p>
+                  <p>Voorbeeld: <a href="#">http://advies.overheid.nl/contact/</a></p>
+               </td>
+            </tr>
+            <tr>
+               <th scope="row">Wijze van coderen</th>
+               <td data-before="Wijze van coderen"><a href="#">dcterms:URI (OWMS 3.5)</a></td>
+            </tr>
+            <tr>
+               <th scope="row">HTML 4.01 Syntax</th>
+               <td data-before="HTML 4.01 Syntax">
+                  <code>
+                     &lt;meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content=""&gt;Voorbeeld &lt;meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content="http://advies.overheid.nl/contact/"&gt; 
+                  </code>
+               </td>
+            </tr>
+            <tr>
+               <th scope="row">XML Syntax</th>
+               <td data-before="XML Syntax">
+                  <code>
+                     &lt;dcterms:identifier scheme="dcterms:URI"&gt;&lt;/dcterms:identifier&gt;Voorbeeld &lt;dcterms:identifier scheme="dcterms:URI"&gt;http://advies.overheid.nl/contact/&lt;/dcterms:identifier&gt; 
+                  </code>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+
+      {{ render "@alert" contact }}
+
+   </div>
+
+</div>
+
+{{ render "@footer" }}

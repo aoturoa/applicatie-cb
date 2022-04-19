@@ -163,6 +163,10 @@
         position: right .75em center;
       };
 
+      &:visited {
+        color: $headerLinkCurrentColor !important;
+      }
+
       @media ( min-width: $breakpointDesktop ) {
         margin: 0;
         padding: .625em 2em .625em 1em;

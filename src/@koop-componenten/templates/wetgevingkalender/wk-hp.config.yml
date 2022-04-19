@@ -33,3 +33,11 @@ context:
           links:
             - url: '#'
               text: Te implementeren richtlijnen
+        - title: Goedkeuring verdragen
+          intro: Goedkeuringsprocedures voor verdragen die door het Koninkrijk der Nederlanden worden gesloten.
+          links:
+            - url: '#'
+              text: Lopende goedkeuringsprocedures verdragen
+            - url: '#'
+              text: Afgesloten goedkeuringsprocedures verdragen
+        
