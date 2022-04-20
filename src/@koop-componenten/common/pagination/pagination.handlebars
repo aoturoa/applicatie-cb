@@ -10,7 +10,11 @@
                 {{#if @first}}<a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="">Vorige pagina</span></a>
                 {{else if @last}}<a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="">Volgende pagina</span></a>
                 {{else}}
-                <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="visually-hidden">Pagina: </span>{{page}}</a>
+                  {{#if href}}
+                    <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><span class="visually-hidden">Pagina: </span>{{page}}</a>
+                  {{else}}
+                    {{page}}
+                  {{/if}}
                 {{/if}}
               {{/if}}
         </li>
