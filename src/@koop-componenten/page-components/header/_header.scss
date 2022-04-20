@@ -128,10 +128,6 @@
       font-size: 1.125rem;
       word-break: normal;
 
-      &:visited {
-        color: white !important;
-      }
-
       &:hover {
         color: $headerLinkCurrentColor !important;
         background-color: $headerBorderColor;
@@ -162,10 +158,6 @@
         repeat: no-repeat;
         position: right .75em center;
       };
-
-      &:visited {
-        color: $headerLinkCurrentColor !important;
-      }
 
       @media ( min-width: $breakpointDesktop ) {
         margin: 0;
