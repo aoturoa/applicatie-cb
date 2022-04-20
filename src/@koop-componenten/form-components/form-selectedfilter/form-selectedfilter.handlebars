@@ -2,7 +2,7 @@
 <div class="form__selectedfilter {{#if modifier}}form__selectedfilter--{{modifier}}{{/if}}">
   {{label}}{{#if value}}{{#if label}} <span>{{value}}</span>{{else}}{{value}}{{/if}}{{/if}}
   <a {{#if id}}id="{{id}}"{{/if}} href="{{url}}" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
+    <span class="visually-hidden">verwijder filter {{label}}</span>
   </a>
 </div>
 {{/each}}
