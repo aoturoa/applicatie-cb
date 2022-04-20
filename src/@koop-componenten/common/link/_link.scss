@@ -218,6 +218,34 @@ div.link {
     @extend .icon;
     @extend .icon--check2Blue;
   }
+  &--download {
+    @extend .icon;
+    @extend .icon--download;
+  }
+  &--question {
+    @extend .icon;
+    @extend .icon--explanation;
+    background-size: 1em !important;
+  }
+  &--external {
+    @extend .icon;
+    @extend .icon--external;
+    background-size: 1em !important;
+
+    &.is-external {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &--tel {
+    @extend .icon;
+    @extend .icon--tel;
+  }
+  &--info {
+    @extend .icon;
+    @extend .icon--info;
+  }
 }
 
 .link-iconed {
