@@ -21,7 +21,11 @@ $icons: (
   profile: $iconProfile,
   logout: $iconLogout,
   fullscreen: $iconFullscreen,
-  shareBlue: $shareBlueIcon
+  shareBlue: $shareBlueIcon,
+  external: $externalLinkv2Icon,
+  explanation: $explanationIcon,
+  tel: $iconTel,
+  info: $infoIconBlue
 );
 
 button.icon {

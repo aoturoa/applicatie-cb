@@ -222,11 +222,11 @@ div.link {
     @extend .icon;
     @extend .icon--download;
   }
-  &--question {
-    @extend .icon;
-    @extend .icon--explanation;
-    background-size: 1em !important;
-  }
+  // &--question {
+  //   @extend .icon;
+  //   @extend .icon--explanation;
+  //   background-size: 1em !important;
+  // }
   &--external {
     @extend .icon;
     @extend .icon--external;
