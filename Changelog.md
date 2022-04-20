@@ -1,4 +1,6 @@
 # Releases
+## 2.2.1
+Update in CSS; visited styles verwijderd
 ## 2.2.0
 ### Gewijzigde componenten
 - Nav
