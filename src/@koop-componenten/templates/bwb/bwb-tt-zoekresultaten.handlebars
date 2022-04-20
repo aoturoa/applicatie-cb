@@ -19,7 +19,7 @@
 
       {{ render "@pageactions" pageactions }}
 
-      <h1>10.344 resultaten gevonden</h1>
+      <h1>9 resultaten gevonden</h1>
 
       {{ render "@sort" sort merge=true }}
 
@@ -38,18 +38,46 @@
           {{#> @collapsible collapsible }}
           {{/ @collapsible}}
         {{/ @resultlist-item}}
+        {{#> @resultlist-item item3 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+        {{#> @resultlist-item item4 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+        {{#> @resultlist-item item5 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+        {{#> @resultlist-item item6 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
       {{/ @resultlist}}
 
-      <h2>Verdragen</h2>
+      <h2>AMVB's en andere KB's</h2>
 
       {{#> @resultlist resultlist2 }}
         {{#> @resultlist-item item1 }}
           {{#> @collapsible collapsible }}
           {{/ @collapsible}}
         {{/ @resultlist-item}}
+        {{#> @resultlist-item item2 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
       {{/ @resultlist}}
 
-    {{ render "@pagination" pagination merge=true }}
+      <h2>Ministeriële regeling</h2>
+
+      {{#> @resultlist resultlist3 }}
+        {{#> @resultlist-item item1 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+      {{/ @resultlist}}
+
     </div>
   </div>
 </form>

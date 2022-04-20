@@ -71,7 +71,7 @@ context:
     inputButton: false
     inputSubmit: false
     type: button
-    action: http://www.wetten.nl
+    action: '#'
     anchor: true
   dp1:
     id: ZoekOp_Geldigheidsdatum

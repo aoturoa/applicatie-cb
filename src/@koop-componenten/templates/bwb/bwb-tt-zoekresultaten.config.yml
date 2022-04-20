@@ -60,9 +60,12 @@ context:
         title: Afdrukken
   resultlist:
     item1:
-      title: Aanbestedingswet 2012
+      title: Omgevingswet
       href: '#'
-      amountResults: (430 artikelen)
+      labelsSecondair:
+        - labelSecondair: Regeling treed in werking op nader te bepalen tijdstip
+          labelSecondairType: warning
+      amountResults: (663 artikelen)
       hiddenInputs:
         - id:
           class: data-id
@@ -75,15 +78,15 @@ context:
           value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
       collapsible:
         id: 3
-        heading: 605 relevante elementen
+        heading: 1 relevante elementen
         modifier: collapsible--small
     item2:
-      title: Aanbestedingswet op defensie- en veiligheidsgebied
+      title: Invoeringswet Omgevingswet
       href: '#'
       labelsSecondair:
         - labelSecondair: Regeling treed in werking op nader te bepalen tijdstip
           labelSecondairType: warning
-      amountResults: (173 artikelen)
+      amountResults: (98 artikelen)
       hiddenInputs:
         - id:
           class: data-id
@@ -96,18 +99,103 @@ context:
           value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
       collapsible:
         id: 23
-        heading: 247 relevante elementen
+        heading: 1 relevante elementen
+        modifier: collapsible--small
+    item3:
+      title: Wet milieubeheer
+      href: '#'
+      labelsSecondair:
+        - labelSecondair: Tekst geldend vanaf 01-07-2021 t/m 31-12-2021
+          labelSecondairType: info
+      amountResults: (663 artikelen)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0
+        - id:
+          class: data-nr
+          value: 1
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
+      collapsible:
+        id: 23
+        heading: 1 relevante elementen
+        modifier: collapsible--small
+    item4:
+      title: Wet milieubeheer
+      href: '#'
+      labelsSecondair:
+        - labelSecondair: Tekst geldend vanaf 01-01-2022
+          labelSecondairType: info
+      amountResults: (663 artikelen)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0
+        - id:
+          class: data-nr
+          value: 1
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
+      collapsible:
+        id: 23
+        heading: 1 relevante elementen
+        modifier: collapsible--small
+    item5:
+      title: Wet milieubeheer
+      href: '#'
+      labelsSecondair:
+        - labelSecondair: Regeling treed in werking op nader te bepalen tijdstip
+          labelSecondairType: info
+      amountResults: (663 artikelen)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0
+        - id:
+          class: data-nr
+          value: 1
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
+      collapsible:
+        id: 23
+        heading: 1 relevante elementen
+        modifier: collapsible--small
+    item6:
+      title: Wet belastingen op miliuegrondslag
+      href: '#'
+      labelsSecondair:
+        - labelSecondair: Regeling treed in werking op nader te bepalen tijdstip
+          labelSecondairType: info
+      amountResults: (663 artikelen)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0
+        - id:
+          class: data-nr
+          value: 1
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
+      collapsible:
+        id: 23
+        heading: 1 relevante elementen
         modifier: collapsible--small
   resultlist2:
     item1:
-      title: "Aanhangsel I: Internationale Arbeidsorganisatie bij het Verdrag nopens de voorrechten en immuniteiten van de gespecialiseerde organisaties"
+      title: Aanvullingsbesluit natuur Omgevingswet
       href: '#'
+      amountResults: (101 artikelen)
       labelsSecondair:
         - labelSecondair: Regeling treed in werking op nader te bepalen tijdstip
           labelSecondairType: warning
       collapsible:
         id: 33
-        heading: 7 relevante elementen
+        heading: 5 relevante elementen
         modifier: collapsible--small
       hiddenInputs:
         - id:
@@ -119,13 +207,46 @@ context:
         - id:
           class: locationurl
           value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
-  pagination:
-    title: Resultaat pagina's
-    hLevel: 2
-  sort:
-    options:
-      - label: Titel
-        href: '#'
-      - label: Soort
-        href: '#'
-        active: is-active
+    item2:
+      title: Besluit capaciteitsverdeling hoofdspoorweginfrastructuur
+      href: '#'
+      labelsSecondair:
+        - labelSecondair: Tekst geldend vanaf nader te bepalen tijdstip
+          labelSecondairType: info
+      amountResults: (17 artikelen)
+      collapsible:
+        id: 33
+        heading: 2 relevante elementen
+        modifier: collapsible--small
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBV0005592/1948-12-02/0
+        - id:
+          class: data-nr
+          value: 0
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
+  resultlist3:
+    item1:
+      title: Omgevingsregeling
+      href: '#'
+      amountResults: (12 artikelen)
+      labelsSecondair:
+        - labelSecondair: Regeling treed in werking op nader te bepalen tijdstip
+          labelSecondairType: warning
+      collapsible:
+        id: 33
+        heading: 3 relevante elementen
+        modifier: collapsible--small
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBV0005592/1948-12-02/0
+        - id:
+          class: data-nr
+          value: 0
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
