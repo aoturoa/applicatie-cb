@@ -188,7 +188,7 @@
     }
 
     [aria-controls="other-sites"][aria-expanded="true"] {
-      background-image: $dartTopIcon;
+      background-image: $dartTopIcon !important;
 
       &::before {
         opacity: 1;

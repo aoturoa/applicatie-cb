@@ -16,205 +16,112 @@
 
         <h2 class="sidebar__header">Filter resultaten</h2>
 
-        
-            <div class="form__row form__row--large">
-              <form>
-                <fieldset>
-                  <legend>Documentsoort</legend>
-                  <div class="form__row">
-                    {{ render "@subselection-checkbox" }}
-                  </div>
-                  {{ render "@button" buttonDocumentsoort }}
-                </fieldset>
-              </form>
-            </div> 
+        <form>
 
-            <div class="form__row form__row--large">
-              <form>
-                <fieldset>
-                  <legend>Rubrieken</legend>
-                  <div class="form__row">
-                    {{ render "@subselection-checkbox" scRubriek }}
-                  </div>
-                  {{ render "@button" buttonRubriek }}
-                </fieldset>
-              </form>
-            </div> 
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Documentsoort</legend>
+              <div class="form__row">
+                {{ render "@subselection-checkbox" }}
+              </div>
+            </fieldset>
+          </div> 
 
-            <div class="form__row form__row--large">
-              <form>
-                <fieldset>
-                  <legend>Type organisatie</legend>
-                  <div class="form__row">
-                    {{ render "@subselection-checkbox" scOrganisatie }}
-                  </div>
-                  {{ render "@button" buttonOrganisatie }}
-                </fieldset>
-              </form>
-            </div> 
-            
-            <div class="form__row form__row--large">
-              <form>
-                <fieldset>
-                  <legend>Publicerende organisatie</legend>
-                  <div class="form__row">
-                    {{ render "@subselection-checkbox" scPubOrganisatie }}
-                  </div>
-                  {{ render "@button" buttonPubOrganisatie }}
-                </fieldset>
-              </form>
-            </div> 
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Rubrieken</legend>
+              <div class="form__row">
+                {{ render "@subselection-checkbox" scRubriek }}
+              </div>
+            </fieldset>
+          </div> 
 
-            <div class="form__row form__row--large" data-decorator="init-form-conditionals">
-              <form>
-                <fieldset>
-                  <legend>Publicatiedatum</legend>
-                  <div id="citem-0" class="form__row js-form-conditionals__citem">
-                    {{render "@input-radio" publicatiedatumContext }}
-                  </div>
-                  <div id="citem-1" class="form__row js-form-conditionals__citem columns">
-                    {{render "@datepicker" publicatieCustomRange merge=true }}
-                  </div>
-                  {{ render "@button" buttonPublicatiedatum }}
-                </fieldset>
-              </form>
-            </div>
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Type organisatie</legend>
+              <div class="form__row">
+                {{ render "@subselection-checkbox" scOrganisatie }}
+              </div>
+            </fieldset>
+          </div> 
+          
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Publicerende organisatie</legend>
+              <div class="form__row">
+                {{ render "@subselection-checkbox" scPubOrganisatie }}
+              </div>
+            </fieldset>
+          </div> 
 
-            <div class="form__row form__row--large" data-decorator="init-form-conditionals">
-              <form>
-                <fieldset>
-                  <legend>Documentdatum</legend>
-                  <div id="citem-10" class="form__row js-form-conditionals__citem">
-                    {{render "@input-radio" documentdatumContext }}
-                  </div>
-                  <div id="citem-11" class="form__row js-form-conditionals__citem columns">
-                    {{render "@datepicker" documentCustomRange merge=true }}
-                  </div>
-                  {{ render "@button" buttonDocumentdatum }}
-                </fieldset>
-              </form>
-            </div>
+          <div class="form__row form__row--large" data-decorator="init-form-conditionals">
+            <fieldset>
+              <legend>Publicatiedatum</legend>
+              <div id="citem-0" class="form__row js-form-conditionals__citem">
+                {{render "@input-radio" publicatiedatumContext }}
+              </div>
+              <div id="citem-1" class="form__row js-form-conditionals__citem columns">
+                {{render "@datepicker" publicatieCustomRange merge=true }}
+              </div>
+            </fieldset>
+          </div>
 
-            {{#> @accordion accordion1 }}
-              {{#> @accordion-item item1 }}
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden">Onderwerp</legend>
-                    <div class="form__row">
-                      {{ render "@subselection-checkbox" scOnderwerp }}
-                    </div>
-                    {{ render "@button" buttonOnderwerp }}
-                  </fieldset>
-                </form>
-              {{/@accordion-item}}
-              {{#> @accordion-item item2 }}
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden">Jaargang</legend>
-                    <div class="form__row">
-                      {{ render "@subselection-checkbox" scJaargang }}
-                    </div>
-                    {{ render "@button" buttonJaargang }}
-                  </fieldset>
-                </form>
-              {{/@accordion-item}}
-              {{#> @accordion-item item3 }}
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden">Nummer</legend>
-                    <div class="form__row">
-                      {{ render "@input-text--label" inputNummer merge=true }}
-                    </div>
-                    {{ render "@button" buttonNummer }}
-                  </fieldset>
-                </form>
-              {{/@accordion-item}}
-              {{#> @accordion-item item4 }}
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden">Systematisch jaar</legend>
-                    <div class="form__row">
-                      {{ render "@subselection-checkbox" scSysJaar }}
-                    </div>
-                    {{ render "@button" buttonSysJaar }}
-                  </fieldset>
-                </form>
-              {{/@accordion-item}}
-              {{#> @accordion-item item5 }}
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden">Systematisch nummer</legend>
-                    <div class="form__row">
-                      {{ render "@input-text--label" inputSysNummer merge=true }}
-                    </div>
-                    {{ render "@button" buttonSysNummer }}
-                  </fieldset>
-                </form>
-              {{/@accordion-item}}
-              {{#> @accordion-item item6 }}
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden">Systematisch volgnummer</legend>
-                    <div class="form__row">
-                      {{ render "@input-text--label" inputSysVolgnummer merge=true }}
-                    </div>
-                    {{ render "@button" buttonSysVolgnummer }}
-                  </fieldset>
-                </form>
-              {{/@accordion-item}}
-              {{!-- {{#> @accordion-item item7 }}
-                x
-              {{/@accordion-item}}
-              {{#> @accordion-item item7 }}
-                x
-              {{/@accordion-item}} --}}
-            {{/@accordion}}          
+          <div class="form__row form__row--large" data-decorator="init-form-conditionals">
+            <fieldset>
+              <legend>Documentdatum</legend>
+              <div id="citem-10" class="form__row js-form-conditionals__citem">
+                {{render "@input-radio" documentdatumContext }}
+              </div>
+              <div id="citem-11" class="form__row js-form-conditionals__citem columns">
+                {{render "@datepicker" documentCustomRange merge=true }}
+              </div>
+            </fieldset>
+          </div>
 
-            {{!-- <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Rubriek</legend>
-                {{ render "@facetlinkgroup" fgRubriek }}
-              </fieldset>
-            </div>
+          <div class="form__row form__row--large">
 
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Rubriek</legend>
-                {{ render "@facetlinkgroup" fgRubriek }}
-              </fieldset>
-            </div>
+          {{#> @accordion accordion1 }}
+            {{#> @accordion-item item1 }}
+              <div class="form__row">
+                {{ render "@subselection-checkbox" scOnderwerp }}
+              </div>
+            {{/@accordion-item}}
+            {{#> @accordion-item item2 }}
+              <div class="form__row">
+                {{ render "@subselection-checkbox" scJaargang }}
+              </div>
+            {{/@accordion-item}}
+            {{#> @accordion-item item3 }}
+              <div class="form__row">
+                {{ render "@input-text--label" inputNummer merge=true }}
+              </div>
+            {{/@accordion-item}}
+            {{#> @accordion-item item4 }}
+              <div class="form__row">
+                {{ render "@subselection-checkbox" scSysJaar }}
+              </div>
+            {{/@accordion-item}}
+            {{#> @accordion-item item5 }}
+              <div class="form__row">
+                {{ render "@input-text--label" inputSysNummer merge=true }}
+              </div>
+            {{/@accordion-item}}
+            {{#> @accordion-item item6 }}
+              <div class="form__row">
+                {{ render "@input-text--label" inputSysVolgnummer merge=true }}
+              </div>
+            {{/@accordion-item}}
+          {{/@accordion}}
 
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Publicerende organisaties</legend>
-                {{ render "@facetlinkgroup" fgPubOrga }}
-              </fieldset>
-            </div>
+          </div>
 
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Publicatie datum</legend>
-                {{ render "@facetlinkgroup" fgPublicatiedatum }}
-              </fieldset>
-            </div>
+          <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
+          data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
 
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Jaargang</legend>
-                {{ render "@facetlinkgroup" fgJaargang }}
-              </fieldset>
-            </div>
-
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Onderwerp</legend>
-                {{ render "@facetlinkgroup" fgOnderwerp }}
-              </fieldset>
-            </div> --}}
-
-        
-
+        </form>
       </div>
+
+    </div>
 
       <div class="sidebar__section">
 
@@ -232,11 +139,9 @@
 
       </div>
 
-    </div>
+    
   </div>
   <div id="content" role="main">
-
-    {{!-- {{ render "@alert--info" alertSruQuery merge=true }} --}}
 
     <h1>Zoekresultaten
       <span class="h1__sub">1-10 van de 7396 resultaten</span>

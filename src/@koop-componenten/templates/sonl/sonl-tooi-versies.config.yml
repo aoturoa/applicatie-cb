@@ -1,5 +1,5 @@
 ---
-label: SONL - BWB
+label: SONL - TOOI versies
 status: ready
 context:
   header:
@@ -40,7 +40,6 @@ context:
       subItems:
         - stitle: Basiswettenbestand
           href: "/1"
-          sactive: true
         - stitle: Bekendmakingen
           href: "/2"
         - stitle: Decentrale regelgeving
@@ -54,6 +53,7 @@ context:
         - stitle: Standaard Officiële Publicaties
           href: "/5"
         - stitle: <abbr title="Thesaurus en Ontologie Overheidsinformatie">TOOI</abbr> versies
+          sactive: true
           href: "/5"
         - stitle: Vergunningen
           href: "/5"

@@ -31,6 +31,11 @@ context:
     - text: Contentmodellen
       url: '#'
     - text: Documentatie TOOI
+  linkBack:
+    text: Terug naar versies
+  labelVersie:
+    text: Versie 1.0.1, gepubliceerd in 01-01-2022
+    modifier: label--large
   navToeContext:
     id: 3
     items:

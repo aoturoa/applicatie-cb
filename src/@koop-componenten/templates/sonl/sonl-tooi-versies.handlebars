@@ -1,0 +1,45 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+   <div class="container">
+      {{ render "@breadcrumb" breadcrumb merge=true }}
+   </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability"
+      data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+      <div>
+         {{render "@nav" navToeContext }}
+      </div>
+   </div>
+
+   <div role="main" id="content">
+      <h1>TOOI versies</h1>
+      
+      <table class="table--condensed">
+         <thead>
+            <tr>
+               <th>Versienummer</th>
+               <th>Datum publicatie</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><a href="#">1.0.2</a></td>
+               <td>01-01-2022</td>
+            </tr>
+            <tr>
+               <td><a href="#">1.0.1</a></td>
+               <td>01-01-2021</td>
+            </tr>
+         </tbody>
+      </table>
+
+      {{ render "@alert" contact }}
+   </div>
+
+</div>
+
+{{ render "@footer" }}
