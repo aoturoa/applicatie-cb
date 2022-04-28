@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "npm e2e && npm vrtest && npm atest",
-    "start": "gulp dev",
     "dev-twig": "gulp dev-twig",
     "e2e": "protractor test/protractor.config.js",
     "vrtest": "backstop reference && backstop test",
