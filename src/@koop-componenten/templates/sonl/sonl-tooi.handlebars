@@ -11,6 +11,7 @@
    <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability"
       data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
       <div>
+         {{ render "@link--terug-naar" linkBack merge=true }}
          <h3 class="nav-sub__heading"><i>Inhoudsopgave</i></h3>
          {{ render "@treeview" }}
       </div>
@@ -20,10 +21,11 @@
       
       <article id="ht-content" class="ht-content">
         <header class="ht-content-header">
-            <div id="ht-breadcrumb">
-    
-</div>            <h1 id="src-35702612"> <span>Documentatie TOOI</span></h1>
+         <h1 id="src-35702612"> <span>Documentatie TOOI</span></h1>
         </header>
+         <p>
+            {{ render "@label" labelVersie merge=true }}
+         </p>
 
         <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
 
