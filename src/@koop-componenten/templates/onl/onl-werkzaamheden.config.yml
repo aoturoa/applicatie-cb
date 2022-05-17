@@ -1,0 +1,19 @@
+---
+label: ONL - Werkzaamheden
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: wegwijzer naar informatie en diensten van alle overheden
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+  jumbotronContext:
+    heading: Site in onderhoud
+    subheading: Overheid.nl
+    intro: Overheid.nl is op dit moment in onderhoud en zal spoedig weer beschikbaar zijn. Bedankt voor uw geduld.
+    centered: true
+    headingcentered: true
