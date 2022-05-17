@@ -11,13 +11,19 @@
     document.documentElement.className = 'has-js';
   </script>
 
+  <script>
+    window.appEnvironment = {
+      API_URL: "https://repository.overheid.nl/sru",
+      API_ENV: "prd",
+    };
+  </script>
   <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
   <script src="{{~ path '/vendor/kaartmodule/js/index.js' ~}}"></script>
   <link rel="stylesheet" href="{{~ path '/vendor/kaartmodule/css/index.css' ~}}">
 
   <link rel="stylesheet" title="complib main" href="{{~ path '/css/main.css' ~}}">
   <link rel="stylesheet" href="{{~ path '/css/print.css' ~}}">
-
+  
 </head>
 <body class="preview">
   {{{ yield }}}
