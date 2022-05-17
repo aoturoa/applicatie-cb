@@ -5,13 +5,15 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-    language: true
+    nav: false
+    youAreHere:
+      - text: wegwijzer naar informatie en diensten van alle overheden
   breadcrumb:
     breadcrumb:
       - text: Home
   jumbotronContext:
     heading: Site in onderhoud
     subheading: Overheid.nl
-    intro: Praesent maximus lectus ac gravida condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas feugiat enim nec nisi dictum tempus. Donec auctor sagittis nisi, et gravida nunc dapibus hendrerit. 
+    intro: Overheid.nl is op dit moment in onderhoud en zal spoedig weer beschikbaar zijn. Bedankt voor uw geduld.
     centered: true
     headingcentered: true
