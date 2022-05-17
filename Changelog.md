@@ -1,4 +1,8 @@
 # Releases
+## 2.4.0
+Update van KM (2.10.1)
+### Nieuwe templates
+- (152462) [COMPLIB] Thema 2.0 - Onderhoudspagina vormgeven
 ## 2.3.0
 ### Gewijzigde componenten
 - Inputsubmit
