@@ -14,16 +14,53 @@ context:
       - url: '#'
         text: Uitgebreid zoeken
       - url: '#'
-        text: Zoeken in EU-richtlijnen
-      - url: '#'
-        text: Toekomstige teksten
+        text: Toekomstige teksten zoeken
         className: is-active
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
       - text: Toekomstige teksten
   alertToekomstig:
     text: U zoekt in toekomstige teksten. <a href="#">Wat betekent dit?</a>
+  sc1:
+    id: ZoekOp_BronPublicatie
+    modifier: select-custom--width-s
+    options:
+      - label: Publicatie
+        value: ''
+        selected: selected
+      - label: Staatsblad
+        value: stb
+      - label: Staatscourant
+        value: stcrt
+      - label: Staatscourant-supplement
+        value: Supplement-Stcrt
+      - label: Tractatenblad
+        value: Trb
+      - label: Uitleg
+        value: Uitleg
+      - label: Infobulletin
+        value: Infob
+      - label: PBO blad
+        value: Vbbo
+  inputtext1:
+    id: ZoekOp_BronPublicatieJaar
+    cleanID: true
+    fieldLabel: Publicatiejaar
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'Jaar'
+    modifier: input--xsmall
+  inputtext2:
+    id: ZoekOp_BronPublicatieNummer
+    cleanID: true
+    fieldLabel: Nummer
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'Nr'
+    modifier: input--small
   tt1:
     id: 1
     label: Help?
@@ -64,6 +101,18 @@ context:
     id: 9
     label: Help?
     content: Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.
+  tt19:
+    id: 19
+    label: Help?
+    content: U zoekt hier op het dossiernummer van de Kamerstukken behorend bij zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin. Bijvoorbeeld ‘34702’.
+  tt18:
+    id: 18
+    label: Help?
+    content: U zoekt hier op de identifier van een in wetten.overheid.nl opgenomen regeling. Bijvoorbeeld ‘BWBR0001840’ voor de Grondwet en ‘BWBV0005225’ voor het Europees Vestingsverdrag.
+  tt20:
+    id: 20
+    label: Help?
+    content: U zoek hier op het (departementaal) kenmerk van de regeling.
   btnSubmit:
     text: Zoeken
   btnReset:
