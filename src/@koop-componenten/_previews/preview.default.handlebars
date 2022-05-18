@@ -12,6 +12,12 @@
   </script>
 
   <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script>
+    window.appEnvironment = {
+      API_URL: "https://repository.overheid.nl/sru",
+      API_ENV: "prd",
+    };
+  </script>
   <script src="{{~ path '/vendor/kaartmodule/js/index.js' ~}}"></script>
   <link rel="stylesheet" href="{{~ path '/vendor/kaartmodule/css/index.css' ~}}">
 
