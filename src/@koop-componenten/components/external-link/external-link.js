@@ -17,6 +17,18 @@
   
       var pattern = /^(([^\/:]+?\.)*)([^\.:]{1,})((\.[a-z0-9]{1,253})*)(:[0-9]{1,5})?$/;
       var host = window.location.host.replace(pattern, '$2$3$6');
+      // host = 'koop.online.wgk.web';
+      // only get last two parts of host (ie. 'overheid.nl')
+      var hostSplits = host.split('.');
+      console.log('(splits: ' + hostSplits + ')', hostSplits.length);
+      if(hostSplits.length > 1) {
+        host = hostSplits[hostSplits.length-2] + "." + hostSplits[hostSplits.length-1];
+      } else {
+        host = hostSplits;
+      }
+
+      console.log("Host: " + host);
+
       var subdomain = window.location.host.replace(host, '');
       
       var subdomains;
@@ -66,21 +78,28 @@
               var hrefOnlyDomainSplitted = hrefOnlyDomain[0].split('.');
               
               var hasSubdomain = false;
+
               
-              if(hrefOnlyDomainSplitted.length === 3) {
+              
+              if(hrefOnlyDomainSplitted.length >= 3) {
                 hasSubdomain = true;
               }
 
               if(hasSubdomain){
-                href = href.replace(hrefOnlyDomainSplitted[0] + '.', 'https://');
-                href = href.replace('https://https://', 'https://');
-                href = href.replace('http://http://', 'https://');
-                href = href.replace('http://https://', 'https://');
-                href = href.replace('https://http://', 'https://');
+
+                var newHref = hrefOnlyDomainSplitted[hrefOnlyDomainSplitted.length-2] + "." + hrefOnlyDomainSplitted[hrefOnlyDomainSplitted.length-1];
+                href = 'https://' + newHref;
+                // href = href.replace(hrefOnlyDomainSplitted[0] + '.', 'https://');
+                // href = href.replace('https://https://', 'https://');
+                // href = href.replace('http://http://', 'https://');
+                // href = href.replace('http://https://', 'https://');
+                // href = href.replace('https://http://', 'https://');
               }
               if(href.charAt(0) === '/'){
                 href = "https://" + host;
-              }            
+              }
+              
+              console.log("Link to match: " + href);
       
               var match = false;
               if(!this.regexInternalLink.test(href)) {
