@@ -1,6 +1,6 @@
 {
   "name": "applicatie-cb",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "gulp-minifier": "^3.5.0",
     "jquery": "^3.6.0",
     "kind-of": "^6.0.3",
-    "moment": "^2.29.1",
+    "moment": "^2.29.3",
     "node-sass": "^7.0.1",
     "sass": "^1.38.0"
   },

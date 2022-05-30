@@ -1,4 +1,6 @@
 # Releases
+## 2.4.1
+Update van MomentJS (naar 2.29.3)
 ## 2.4.0
 Update van KM (2.10.1)
 ### Nieuwe templates
