@@ -20,14 +20,11 @@
       // host = 'koop.online.wgk.web';
       // only get last two parts of host (ie. 'overheid.nl')
       var hostSplits = host.split('.');
-      console.log('(splits: ' + hostSplits + ')', hostSplits.length);
       if(hostSplits.length > 1) {
         host = hostSplits[hostSplits.length-2] + "." + hostSplits[hostSplits.length-1];
       } else {
         host = hostSplits;
       }
-
-      console.log("Host: " + host);
 
       var subdomain = window.location.host.replace(host, '');
       
@@ -99,8 +96,6 @@
                 href = "https://" + host;
               }
               
-              console.log("Link to match: " + href);
-      
               var match = false;
               if(!this.regexInternalLink.test(href)) {
       
