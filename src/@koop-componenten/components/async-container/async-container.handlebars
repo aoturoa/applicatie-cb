@@ -1,0 +1,17 @@
+<container id="id123" class="">
+</container>
+
+Tijdens laden van data:
+<container id="id123" class="is-loading" aria-live="polite">
+  {{ render "@alert" }} 
+</container>
+
+Als data is geladen en geplaatst:
+<container id="id123" aria-live="polite">
+  ## De data is geladen
+</container>
+
+Als data ophalen mislukt is:
+<container id="id123" class="is-failed" aria-live="polite">
+  {{ render "@alert--warning" }}
+</container>
