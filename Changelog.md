@@ -1,4 +1,7 @@
 # Releases
+## 2.4.2
+- Async placeholders
+- Subselection twig file
 ## 2.4.1
 Update van MomentJS (naar 2.29.3)
 ## 2.4.0
