@@ -38,6 +38,7 @@ window.onl = {
     hide: function( element, focusElement ) {
       if ( !onl.ui.isHidden( element ) ) {
         element.setAttribute( 'hidden', true );
+        element.removeAttribute( 'aria-hidden', true );
       }
       onl.ui.focus( focusElement );
     },
@@ -45,6 +46,7 @@ window.onl = {
     show: function( element, focusElement ) {
       if ( onl.ui.isHidden( element ) ) {
         element.removeAttribute( 'hidden' );
+        element.removeAttribute( 'aria-hidden' );
       }
       if (focusElement) {
         onl.ui.focus( focusElement );

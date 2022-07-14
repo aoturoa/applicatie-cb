@@ -41,11 +41,13 @@
           onl.ui.show( toggleable );
           element.textContent = closeText;
           element.setAttribute( 'aria-expanded', 'true' );
+          console.log('if: element', element);
         }
         else {
           onl.ui.hide( toggleable );
           element.textContent = openText;
           element.setAttribute( 'aria-expanded', 'false' );
+          console.log('else: element', element);
         }
       });
     }
@@ -64,8 +66,15 @@
         toggleButton.type = 'button';
         toggleButton.textContent = closeText;
         toggleButton.setAttribute( 'data-handler', 'toggle-fold' );
-        toggleButton.setAttribute( 'aria-expanded', 'false' );
-
+        
+        // check if sublist is visable on page-load;
+        var sublist = document.getElementById(foldableChildrenIDRef);
+        if(sublist) {
+            toggleButton.setAttribute( 'aria-expanded', 'true' );         
+        } else {
+          toggleButton.setAttribute( 'aria-expanded', 'false' );
+        }
+        
         if ( foldableChildrenIDRef ) {
           toggleButton.setAttribute( 'aria-controls', foldableChildrenIDRef );
         }
