@@ -37,9 +37,14 @@ select {
   font-size: .875rem;
   border-radius: .5em;
 
-  &::placeholder {
+  &::placeholder,
+  &::-moz-placeholder
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &::-ms-input-placeholder {
     color: $darkGrey;
     font-style: italic;
+    opacity: 1;
   }
 
   &.input--error {
