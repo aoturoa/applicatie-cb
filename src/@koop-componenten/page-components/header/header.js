@@ -20,10 +20,10 @@ onl.handle({
       otherSites.setAttribute( 'aria-hidden', 'false' );
 
       if ( onl.ui.getFocusableElements( otherSites ).length > 0 ) {
-        onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
+        // onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
       }
       else {
-        onl.ui.focus ( otherSites );
+        // onl.ui.focus ( otherSites );
       }
 
       element.setAttribute( 'aria-expanded', 'true' );
