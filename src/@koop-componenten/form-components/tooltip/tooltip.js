@@ -26,11 +26,19 @@
       this.trigger.addEventListener('blur', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.content.addEventListener('click', function (e) { this.showTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('click', function (e) { e.preventDefault(); }.bind(this), false);
-      this.trigger.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
+
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+        if ("key" in evt) {
+            isEscape = (evt.key === "Escape" || evt.key === "Esc");
+        } else {
+            isEscape = (evt.keyCode === 27);
+        }
+        if (isEscape) {
           self.hideTooltip();
         }
-      });
+      };
 
       this.content.addEventListener('mouseenter', function(element) {
         self.mouseOverTooltip = true;
@@ -39,13 +47,7 @@
         self.mouseOverTooltip = false;
         self.timeoutTooltip();
       });
-
-
-
     }
-
-
-
   };
 
   tooltip.prototype.createCloseButton = function () {
@@ -81,6 +83,7 @@
     this.trigger.classList.add('is-active');
     this.content.setAttribute('aria-hidden', 'false');
     this.content.classList.remove('is-hidden');
+    this.content.classList.add('is-tooltip-visible');
 
     if(sourceEvent === 'click') {
       this.trigger.classList.add('is-clicked');
@@ -130,6 +133,7 @@
 
       this.content.classList.add('is-hidden');
       this.content.setAttribute('aria-hidden', 'true');
+      this.content.classList.remove('is-tooltip-visible');
     // }
   };
 

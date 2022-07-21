@@ -41,13 +41,11 @@
           onl.ui.show( toggleable );
           element.textContent = closeText;
           element.setAttribute( 'aria-expanded', 'true' );
-          console.log('if: element', element);
         }
         else {
           onl.ui.hide( toggleable );
           element.textContent = openText;
           element.setAttribute( 'aria-expanded', 'false' );
-          console.log('else: element', element);
         }
       });
     }
