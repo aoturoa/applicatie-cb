@@ -25,6 +25,8 @@ context:
     zoekeninContext:
       label: Zoeken op
       radio: true
+      legend: 
+        label: Zoeken op
       labelsize: accent
       options:
       - id: checkbox-4012312312312

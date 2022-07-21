@@ -310,6 +310,9 @@ context:
   zoekeninContext:
     label: Zoekwoord(en) in
     radio: true
+    legend: 
+        label: Zoekwoord(en) in
+        hidden: true
     size: large
     labelsize: accent
     flex: true
