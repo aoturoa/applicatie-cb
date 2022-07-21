@@ -75,6 +75,8 @@
       firstDay: 1,
       dayNamesMin: ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'],
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
+      selectYearLabel: 'Selecteer jaar',
+      selectMonthLabel: 'Selecteer maand',
       showButtonPanel: true,
       closeText: 'Sluiten',
       onClose: this.removeAria.bind(this),
