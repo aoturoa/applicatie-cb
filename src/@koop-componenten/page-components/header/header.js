@@ -37,7 +37,7 @@ onl.handle({
     if ( element.getAttribute( 'aria-expanded' ) === 'false' ) {
       nav.classList.remove( closedClass );
       element.setAttribute( 'aria-expanded', 'true' );
-      onl.ui.focus( nav );
+      // onl.ui.focus( nav );
     }
     else {
       nav.classList.add( closedClass );
