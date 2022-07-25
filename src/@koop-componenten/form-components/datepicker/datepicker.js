@@ -77,6 +77,8 @@
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       selectYearLabel: 'Selecteer jaar',
       selectMonthLabel: 'Selecteer maand',
+      prevText: 'Vorige maand',
+      nextText: 'Volgende maand',
       showButtonPanel: true,
       closeText: 'Sluiten',
       onClose: this.removeAria.bind(this),
