@@ -4,7 +4,7 @@ status: ready
 context:
   header:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
     navLinks:
       - url: '#'
         text: Over internetconsultaties

@@ -5,7 +5,7 @@ status: prototype
 context:
   header:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
   resultlist:
     item1:
       title: Aanpassingswet enige wetten Ministerie van Veiligheid en Justitie (brengen van een aantal zelfstandige bestuursorganen onder werking van Kaderwet zelfstandige bestuursorganen)

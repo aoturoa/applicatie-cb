@@ -2,7 +2,7 @@ title: Test
 status: ready
 context:
   file: logo.svg
-  alt: Overheid.nl logo
+  alt: Logo Overheid.nl, ga naar de startpagina
   nav: true
   youAreHere:
     - text: Register voor overheidsinstanties

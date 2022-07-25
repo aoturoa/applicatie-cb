@@ -4,7 +4,7 @@ status: ready
 context:
   header:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
   jumbotronContext:
     heading: Fusce dapibus, tellus ac cursus commodo, tortor mauris
     subheading: Repository

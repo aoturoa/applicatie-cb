@@ -5,7 +5,7 @@ status: ready
 context:
   headerContext:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
     language: true
     skipLinks:
       - url: '#content'

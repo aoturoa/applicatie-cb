@@ -3,7 +3,7 @@ label: Wettenpocket Detail Redactioneel
 context:
   headerContext:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
     navLinks:
       - url: 'templates-wp-homepage'
         text: Home
