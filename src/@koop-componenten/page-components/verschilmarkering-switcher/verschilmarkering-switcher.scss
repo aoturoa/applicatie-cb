@@ -1,0 +1,41 @@
+.verschilmarkering {
+    @extend .alert;
+    @extend .alert--info;
+    @extend .columns;
+
+    & > div:last-child {
+        text-align: right;
+
+        ul {
+            margin: 0;
+            li {
+                margin: 0;
+            }
+
+            li::after {
+            content: ' | ';
+            margin: 0 .5em;
+            }
+        
+            li:last-child::after {
+            content: '';
+            margin: 0;
+            }
+            
+            button.is-active {
+                font-weight: bold !important;
+            }
+        }
+    }
+}
+
+.is-delinscontrollerstate-del {
+    ins {
+      @extend .visually-hidden;
+    }  
+  }
+  .is-delinscontrollerstate-ins {
+    del {
+      @extend .visually-hidden;
+    }  
+  }

@@ -1,0 +1,21 @@
+<div class="verschilmarkering" data-decorator="init-controller-insdel" {{#if dataConfig}}data-config='{{{dataConfig}}}'{{/if}}>
+  <div>
+    {{{content}}} 
+    {{#if modal}}
+      {{#> @modal modal merge=true }}
+        {{{modalContent}}}
+      {{/@modal}}
+    {{/if}}
+  </div>
+  <div>
+    {{#if options}}
+      <ul class="list list--inline">
+      {{#each options}}
+        <li><button class="{{option/buttonClass}}{{#if option/isActive}} is-active{{/if}}" {{#if option/isActive}}aria-pressed="true"{{/if}} role="button" data-controller-value="{{option/value}}">{{option/label}}</button></li>
+      {{/each}}
+      </ul>
+    {{/if}}
+    {{!-- <a href="#" data-controller-value="del">Alleen DEL</a> --}}
+    {{!-- <a href="#" data-controller-value="all">Herstel</a> --}}
+  </div>
+</div>

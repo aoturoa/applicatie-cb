@@ -1,0 +1,30 @@
+---
+title: Verschilmarkering switcher
+status: ready
+context:
+  dataConfig: '{"targetContainer": "#broodtekst"}'
+  content: U bekijkt een publicatie met
+  modal:
+    initClosed: true
+    openButton: wijzigingen
+    buttonAriaLabel: Lees meer over de wijzigingen
+    buttonModifier: button--inline
+    modalContent: '<h2>Verschilmarkering</h2><p>Deze publicatie bevat verschilmarkering t.o.v. eerdere regelingtekst. Tekst en afbeeldingen die worden toegevoegd zijn onderstreept en groen gemarkeerd, of van een groen kader voorzien. Tekst en afbeeldingen die worden verwijderd zijn doorgestreept en rood gemarkeerd, of van een rood kader voorzien.</p><p>De publicatie wordt standaard getoond met verschilmarkering. Door te kiezen voor ‘Was’ of ‘Wordt’ kunt u de voormalige of vernieuwde tekst op zichzelf bekijken.</p>'
+  options:
+    - option:
+        href: '#'
+        value: all
+        label: Verschilmarkering
+        buttonClass: button button--inline
+        isActive: true
+    - option:
+        href: '#'
+        value: del
+        label: Was
+        buttonClass: button button--inline
+    - option:
+        href: '#'
+        value: ins
+        label: Wordt
+        buttonClass: button button--inline
+  
