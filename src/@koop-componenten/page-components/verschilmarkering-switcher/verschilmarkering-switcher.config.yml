@@ -2,7 +2,6 @@
 title: Verschilmarkering switcher
 status: ready
 context:
-  dataConfig: '{"targetContainer": "#broodtekst"}'
   content: U bekijkt een publicatie met
   modal:
     initClosed: true
