@@ -4,7 +4,7 @@ status: ready
 context:
   header:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
     language: true
   jumbotronContext:
     heading: Uitspraken in het Nederlandse Tuchtrecht
@@ -87,6 +87,9 @@ context:
     zoekeninContext:
       label: Zoekwoord(en) in
       radio: true
+      legend: 
+        label: Zoekwoord(en) in
+        hidden: true
       size: large
       labelsize: accent
       flex: true

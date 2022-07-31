@@ -64,8 +64,15 @@
         toggleButton.type = 'button';
         toggleButton.textContent = closeText;
         toggleButton.setAttribute( 'data-handler', 'toggle-fold' );
-        toggleButton.setAttribute( 'aria-expanded', 'false' );
-
+        
+        // check if sublist is visable on page-load;
+        var sublist = document.getElementById(foldableChildrenIDRef);
+        if(sublist) {
+            toggleButton.setAttribute( 'aria-expanded', 'true' );         
+        } else {
+          toggleButton.setAttribute( 'aria-expanded', 'false' );
+        }
+        
         if ( foldableChildrenIDRef ) {
           toggleButton.setAttribute( 'aria-controls', foldableChildrenIDRef );
         }

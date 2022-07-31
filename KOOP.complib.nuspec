@@ -9,6 +9,17 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Front-end componentenbiliotheek</description>
     <releaseNotes>
+      ## 2.4.3
+      - 172024 / Help-iconen focus
+      - 172021 / focus volgorde
+      - 172005 / focus hamburgermenu
+      - 172008 / focus toggle button
+      - 172022 / focus outline hoofdmenu
+      - 172010 / Datepicker nederlandstalig
+      - 172014 / alt-tekst logo
+      - 172002 / contrast placeholders
+      - 171990 / info en relaties
+      - 172832 / sitemap (treeview)
       ## 2.4.2
       - Async placeholders
       - Subselection twig file

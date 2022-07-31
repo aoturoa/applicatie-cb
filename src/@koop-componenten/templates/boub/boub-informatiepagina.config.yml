@@ -4,7 +4,7 @@ status: ready
 context:
   header:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
     navLinks: false
     youAreHere:
       - text: Wegwijzer naar informatie en diensten van alle overheden
@@ -16,7 +16,7 @@ context:
     h: h1
     subheading: MijnOverheid Wonen
     intro: Wanneer gemeenten of andere overheidsorganisaties een besluit nemen over bijvoorbeeld een aangevraagde bouwvergunning bij u in de straat of als er werkzaamheden in uw buurt uitgevoerd gaan worden, wordt dit gepubliceerd.
-    text: <p>U leest deze berichten over uw buurt op MijnOverheid.<p>
+    text: '<p>U leest deze berichten over uw buurt op MijnOverheid.</p>'
     centered: true
     headingcentered: true
   blockinfo1:

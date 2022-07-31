@@ -5,7 +5,7 @@ status: wip
 context:
   header:
     file: logo.svg
-    alt: Overheid.nl logo
+    alt: Logo Overheid.nl, ga naar de startpagina
   spoedpublicatiemelding:
     modifier: alert--info
     text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.

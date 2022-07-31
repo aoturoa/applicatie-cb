@@ -78,11 +78,19 @@
 
   &__heading {
     margin: 0 0 2em;
+    display: flex;
+    flex-wrap: wrap;
 
     &--centered {
       text-align: center;
     }
+
+    > * {
+      width: 100%;
+    }
   }
+
+  
 
   &__content {
 
@@ -115,9 +123,16 @@
     &--aligncenter {
       text-align: center;
     }
+
+    > div:last-child {
+      margin-bottom: 0 !important;
+    }
   }
 
   &__subheader {
+    order: -1;
+    flex-shrink: 0;
+    flex-grow: 1;
     font-size: 1.125rem;
     font-style: italic;
     margin-bottom: 0.5em;
@@ -145,6 +160,8 @@
   }
 
   &__header {
+    flex-shrink: 0;
+    flex-grow: 1;
     margin-top: 0;
     margin-bottom: .25em;
     font-size: 2em;
@@ -157,12 +174,18 @@
     }
   }
 
-  &__header ~ p {
+  &__header ~ &__subheader {
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  }
+
+  &__header ~ p:not(.jumbotron__subheader),
+  &__subheader ~ p {
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
-      margin-top: 1em;
-      margin-bottom: 1.75em;
+      // margin-top: 0em;
+      // margin-bottom: 0;
     }
   }
 
@@ -179,17 +202,35 @@
         margin-bottom: .5em;
       }
     }
+  
+  &__heading {
+
+    > *:last-child:not(.jumbotron__subheader) {
+      margin-bottom: 0 !important;
+    }
+  }
+  &__heading ~ &__intro {
+    // margin-top: .5em !important;
+
+    @media (min-width: $breakpointDesktop) {
+      // margin-top: 1.125em !important;
+    }
+  }
+  &__heading &__header {
+    margin-bottom: 0 !important;
+  }
 
   &__intro {
+    margin-top: 1em;
+
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
-      margin-top: 1em;
-      margin-bottom: 1.75em;
+      margin-bottom: 1.125em;
     }
 
     & ~ p {
-      margin-top: -1em;
+      // margin-top: -1em;
     }
   }
 

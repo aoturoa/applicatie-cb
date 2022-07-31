@@ -1,8 +1,14 @@
 .block-content {
   margin: 0 0 1em 0;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
   &__heading {
+    order: 0;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: 100%;
     margin-top: 0;
     font-size: em(29);
   }
@@ -11,6 +17,10 @@
   }
 
   &__subheading {
+    order: -1;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: 100%;
     margin-bottom: em(4);
     font-size: em(22);
     font-style: italic;
@@ -42,6 +52,7 @@
 
   @media (min-width: $breakpointDesktop) {
     &--flexed {
+      align-self: center;
       padding-bottom: 3em;
     }
     &--flexed &__cta {

@@ -20,10 +20,10 @@ onl.handle({
       otherSites.setAttribute( 'aria-hidden', 'false' );
 
       if ( onl.ui.getFocusableElements( otherSites ).length > 0 ) {
-        onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
+        // onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
       }
       else {
-        onl.ui.focus ( otherSites );
+        // onl.ui.focus ( otherSites );
       }
 
       element.setAttribute( 'aria-expanded', 'true' );
@@ -37,7 +37,7 @@ onl.handle({
     if ( element.getAttribute( 'aria-expanded' ) === 'false' ) {
       nav.classList.remove( closedClass );
       element.setAttribute( 'aria-expanded', 'true' );
-      onl.ui.focus( nav );
+      // onl.ui.focus( nav );
     }
     else {
       nav.classList.add( closedClass );

@@ -1,11 +1,11 @@
 <div class="block-cards">
-  <p class="block-cards__subheading">{{subheading}}</p>
   <h2 class="block-cards__heading">{{heading}}</h2>
   {{#if intro}}
     <div class="block-cards__intro">
       {{{intro}}}
     </div>
   {{/if}}
+  <p class="block-cards__subheading">{{subheading}}</p>
   <div class="columns">
     {{#each cards}}
       <div class="block-cards__card">
