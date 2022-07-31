@@ -52,6 +52,7 @@
 
   @media (min-width: $breakpointDesktop) {
     &--flexed {
+      align-self: center;
       padding-bottom: 3em;
     }
     &--flexed &__cta {

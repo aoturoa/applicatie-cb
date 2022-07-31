@@ -90,6 +90,8 @@
     }
   }
 
+  
+
   &__content {
 
     // nowhere used anymore;
@@ -120,6 +122,10 @@
 
     &--aligncenter {
       text-align: center;
+    }
+
+    > div:last-child {
+      margin-bottom: 0 !important;
     }
   }
 
@@ -178,8 +184,8 @@
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
-      margin-top: 0em;
-      margin-bottom: 0;
+      // margin-top: 0em;
+      // margin-bottom: 0;
     }
   }
 
@@ -196,17 +202,35 @@
         margin-bottom: .5em;
       }
     }
+  
+  &__heading {
+
+    > *:last-child:not(.jumbotron__subheader) {
+      margin-bottom: 0 !important;
+    }
+  }
+  &__heading ~ &__intro {
+    // margin-top: .5em !important;
+
+    @media (min-width: $breakpointDesktop) {
+      // margin-top: 1.125em !important;
+    }
+  }
+  &__heading &__header {
+    margin-bottom: 0 !important;
+  }
 
   &__intro {
+    margin-top: 1em;
+
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
-      margin-top: 1em;
-      margin-bottom: 1.75em;
+      margin-bottom: 1.125em;
     }
 
     & ~ p {
-      margin-top: -1em;
+      // margin-top: -1em;
     }
   }
 
