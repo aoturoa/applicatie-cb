@@ -37,6 +37,7 @@ select {
   font-size: .875rem;
   border-radius: .5em;
 
+  &::-webkit-input-placeholder,
   &::placeholder,
   &::-moz-placeholder,
   &:-moz-placeholder,
