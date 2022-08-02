@@ -21,7 +21,7 @@
       this.content.addEventListener('mouseout', function (e) { this.timeoutTooltip(); }.bind(this), false);
       this.trigger.addEventListener('mouseover', function (e) { this.showTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('focus', function (e) { this.showTooltip(e); }.bind(this), false);
-      this.trigger.addEventListener('keyup', function (e) { this.hideTooltipKeyboard(e); }.bind(this), false);
+      // this.trigger.addEventListener('keyup', function (e) { this.hideTooltipKeyboard(e); }.bind(this), false);
       this.trigger.addEventListener('mouseout', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('blur', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.content.addEventListener('click', function (e) { this.showTooltip(e); }.bind(this), false);
@@ -36,7 +36,21 @@
             isEscape = (evt.keyCode === 27);
         }
         if (isEscape) {
-          self.hideTooltip();
+          // self.hideTooltip();
+          var allTooltips = document.querySelectorAll('.tooltip');
+          for (var i = 0; i < allTooltips.length; i++) {
+            var element = allTooltips[i].querySelector('.tooltip__trigger');
+            var content = allTooltips[i].querySelector('.tooltip__content');
+
+            element.setAttribute('aria-expanded', 'false');
+            element.classList.remove('is-active');
+            element.classList.remove('has-position--left');
+            element.classList.remove('has-position--fixed');
+
+            content.classList.add('is-hidden');
+            content.setAttribute('aria-hidden', 'true');
+            content.classList.remove('is-tooltip-visible');
+          }
         }
       };
 
@@ -126,8 +140,8 @@
 
   tooltip.prototype.hideTooltip = function (sourceEvent) {
     // if(!this.trigger.classList.contains('is-clicked') || sourceEvent === 'closebutton') {
-      this.element.setAttribute('aria-expanded', 'false');
-      this.element.classList.remove('is-active');
+      this.element.querySelector('.tooltip__trigger').setAttribute('aria-expanded', 'false');
+      this.element.querySelector('.tooltip__trigger').classList.remove('is-active');
       this.element.classList.remove('has-position--left');
       this.element.classList.remove('has-position--fixed');
 
