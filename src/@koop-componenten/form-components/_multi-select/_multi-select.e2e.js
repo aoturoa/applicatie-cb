@@ -4,71 +4,102 @@ describe('Multi-select', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  // xit('should open autocomplete with typing', function () {
-  //   browser.get('http://localhost:3000/components/preview/multi-select');
+  it('should show show fixed-button on change', function () {
+    browser.get('http://localhost:3000/components/preview/templates-pacta-searchresults');
 
-  //   var input = element(by.css('.multiselect__controls input'));
-  //   var expander = element(by.css('.multiselect__resultscontainer'));
+    var width = 1200;
+    var height = 800;
+    var results;
+    browser.driver.manage().window().setSize(width, height);
+    
+    browser.driver.sleep(500);
+    
+    var input = element(by.css('.multiselect__input'));
+    input.sendKeys('hand');
 
-  //   input.sendKeys('vol');
-  //   browser.driver.sleep(750);
+    browser.driver.sleep(250);
 
-  //   expect(expander.isDisplayed()).toBeTruthy();
-  // });
+    browser.actions().sendKeys(protractor.Key.TAB).perform();
+    browser.driver.sleep(250);
+    browser.actions().sendKeys(protractor.Key.ENTER).perform();
+    browser.driver.sleep(250);
 
-  // xit('should get result matching VOL', function () {
-  //   var result = element(by.css('.multiselect__result'));
+    var button = element(by.css('.js-fixedbottom-button__button'));
 
-  //   expect(result.getText()).toEqual('Volvo');
-  // });
+    expect(button.isDisplayed()).toBeTruthy();    
 
-  // xit('should select VOLVO when pushing TAB', function () {
+  });
 
-  //   browser.actions().sendKeys(protractor.Key.TAB).perform();
-  //   browser.driver.sleep(750);
 
-  //   expect('Volvo').toEqual(browser.driver.switchTo().activeElement().getText());
-  // });
+  it('should open autocomplete with typing', function () {
+    
+    browser.get('http://localhost:3000/components/preview/multi-select');
 
-  // xit('should add Volvo has selected choice', function () {
-  //   browser.get('http://localhost:3000/components/preview/multi-select');
 
-  //   var input = element(by.css('.multiselect__controls input'));
+    var input = element(by.css('.multiselect__controls input'));
+    var expander = element(by.css('.multiselect__resultscontainer'));
 
-  //   input.sendKeys('Volvo');
+    input.sendKeys('vol');
+    browser.driver.sleep(750);
 
-  //   browser.actions().sendKeys(protractor.Key.TAB).perform();
-  //   browser.driver.sleep(250);
-  //   browser.actions().sendKeys(protractor.Key.ENTER).perform();
-  //   browser.driver.sleep(250);
+    expect(expander.isDisplayed()).toBeTruthy();
+  });
 
-  //   var selectedContainer = element(by.css('.multiselect__controls'));
-  //   var result = selectedContainer.element(by.css('.multiselect__choice'));
+  it('should get result matching VOL', function () {
+    var result = element(by.css('.multiselect__result'));
 
-  //   expect(result.getAttribute('data-text')).toEqual('Volvo');
-  // });
+    expect(result.getText()).toEqual('Volvo');
+  });
 
-  // xit('should delete choice Volvo when removed', function () {
-  //   var result = element(by.css('.multiselect__choice button'));
-  //   result.click();
+  it('should select VOLVO when pushing TAB', function () {
 
-  //   expect(result.isPresent().toBeFalsy);
+    browser.actions().sendKeys(protractor.Key.TAB).perform();
+    browser.driver.sleep(750);
 
-  // });
-  // xit('should hide resultlist when ESC', function () {
-  //   browser.get('http://localhost:3000/components/preview/multi-select');
+    expect('Volvo').toEqual(browser.driver.switchTo().activeElement().getText());
+  });
 
-  //   var input = element(by.css('.multiselect__controls input'));
+  it('should add Volvo has selected choice', function () {
+    browser.get('http://localhost:3000/components/preview/multi-select');
 
-  //   input.sendKeys('Volvo');
+    var input = element(by.css('.multiselect__controls input'));
 
-  //   browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
-  //   browser.driver.sleep(250);
+    input.sendKeys('Volvo');
 
-  //   var selectedContainer = element(by.css('.multiselect__controls'));
+    browser.actions().sendKeys(protractor.Key.TAB).perform();
+    browser.driver.sleep(250);
+    browser.actions().sendKeys(protractor.Key.ENTER).perform();
+    browser.driver.sleep(250);
 
-  //   expect( selectedContainer.isPresent().toBeFalsy() );
-  // });
+    var selectedContainer = element(by.css('.multiselect__controls'));
+    var result = selectedContainer.element(by.css('.multiselect__choice'));
+
+    expect(result.getAttribute('data-text')).toEqual('Volvo');
+  });
+
+  it('should delete choice Volvo when removed', function () {
+    var result = element(by.css('.multiselect__choice button'));
+    result.click();
+
+    expect(result.isPresent().toBeFalsy);
+
+  });
+  it('should hide resultlist when ESC', function () {
+    browser.get('http://localhost:3000/components/preview/multi-select');
+
+    browser.driver.sleep(750);
+
+    var input = element(by.css('.multiselect__controls input'));
+
+    input.sendKeys('Volvo');
+
+    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+    browser.driver.sleep(250);
+
+    var selectedContainer = element(by.css('.multiselect__controls'));
+
+    expect( selectedContainer.isDisplayed().toBeFalsy );
+  });
 
 
 });
