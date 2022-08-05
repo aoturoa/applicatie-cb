@@ -3,7 +3,15 @@
     @extend .alert--info;
     @extend .columns;
 
-    & > div:last-child {
+    &-message {
+      &:after {
+        content: ".";
+        position: relative;
+        left: -4px;
+      }
+    }
+
+    &-options:last-child {
         text-align: right;
 
         ul {
@@ -18,24 +26,45 @@
             }
         
             li:last-child::after {
-            content: '';
-            margin: 0;
+              content: '';
+              display: inline-block;
+              margin: 0;
             }
             
-            button.is-active {
+            .toast {
+              display: inline-block;
+            }
+
+            button {
+              background: transparent;
+              padding: 0;
+              padding: 0;
+              border: 0;
+              font-family: inherit;
+              font-size: inherit;
+              text-decoration: underline;
+              cursor: pointer;
+              color: inherit;
+
+              &:hover {
+                color: $primaryBlue;
+              }
+
+              &.is-active {
                 font-weight: bold !important;
+              }
             }
         }
     }
 }
 
 .is-delinscontrollerstate-del {
-    ins {
-      @extend .visually-hidden;
-    }  
+  ins {
+    @extend .visually-hidden;
   }
-  .is-delinscontrollerstate-ins {
-    del {
-      @extend .visually-hidden;
-    }  
-  }
+}
+.is-delinscontrollerstate-ins {
+  del {
+    @extend .visually-hidden;
+  }  
+}
