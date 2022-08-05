@@ -9,6 +9,7 @@ context:
     buttonAriaLabel: Lees meer over de wijzigingen
     buttonModifier: button--inline
     modalContent: '<h2>Verschilmarkering</h2><p>Deze publicatie bevat verschilmarkering t.o.v. eerdere regelingtekst. Tekst en afbeeldingen die worden toegevoegd zijn onderstreept en groen gemarkeerd, of van een groen kader voorzien. Tekst en afbeeldingen die worden verwijderd zijn doorgestreept en rood gemarkeerd, of van een rood kader voorzien.</p><p>De publicatie wordt standaard getoond met verschilmarkering. Door te kiezen voor ‘Was’ of ‘Wordt’ kunt u de voormalige of vernieuwde tekst op zichzelf bekijken.</p>'
+  optionsLabel: Toon versie van document
   options:
     - option:
         toast: 'true'
@@ -16,8 +17,9 @@ context:
         toastContext:
           id: 1
           dataAttributes: "data-controller-value='all'"
-          isPressed: true
           trigger:
+            isPressed: true
+            ariaLabel: Toon document met verschilmarkering
             label: Verschilmarkering
           message:
             variant: success
@@ -30,9 +32,16 @@ context:
           trigger:
             label: Was
           message:
-            variant: wa
+            variant: success
             text: U bekijkt deze publicatie nu met de voormalige tekst.
     - option:
-        label: Wordt
-        dataAttributes: "data-controller-value='ins'"
+        toast: 'true'
+        toastContext:
+          id: 3
+          dataAttributes: "data-controller-value='ins' data-config='{\"timeout\":1000}'"
+          trigger:
+            label: Wordt
+          message:
+            variant: success
+            text: U bekijkt deze publicatie nu met de vernieuwde tekst.
   

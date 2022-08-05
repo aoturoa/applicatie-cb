@@ -33,10 +33,10 @@
 
     // set state for trigger buttons;
     for(i = 0; i < this.triggers.length; i++) {
-        this.triggers[i].classList.remove('is-active');
-        this.triggers[i].removeAttribute('aria-pressed');
+        // this.triggers[i].classList.remove('is-active');
+        this.triggers[i].setAttribute('aria-pressed', false);
     }
-    trigger.classList.add('is-active');
+    // trigger.classList.add('is-active');
     trigger.setAttribute('aria-pressed', true);
 
     // the dom has visually changed, notify the user about this;
