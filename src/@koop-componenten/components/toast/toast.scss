@@ -1,5 +1,5 @@
 .toast {
-
+  
   &-message {
     position: fixed;
     top: -4em;
@@ -14,7 +14,11 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 
-    &.is-visible {
+    &[aria-hidden="true"] {
+      display: block !important;
+    }
+
+    &[aria-hidden="false"] {
       top: 0;
       -webkit-transform: translate(1em,0,0,0);
       -moz-transform: translate(1em,0,0,0);
@@ -61,15 +65,15 @@
 
 }
 
-@keyframes slide-in {
-  0% { top: -4em; } 
-  100% { top:0 }
-}
-@-moz-keyframes slide-in {
-  0% { top: -4em; } 
-  100% { top:0 }
-}
-@-webkit-keyframes slide-in {
-  0% { top: -4em; } 
-  100% { top:0 }
-}
+// @keyframes slide-in {
+//   0% { top: -4em; } 
+//   100% { top:0 }
+// }
+// @-moz-keyframes slide-in {
+//   0% { top: -4em; } 
+//   100% { top:0 }
+// }
+// @-webkit-keyframes slide-in {
+//   0% { top: -4em; } 
+//   100% { top:0 }
+// }

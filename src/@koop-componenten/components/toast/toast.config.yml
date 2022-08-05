@@ -6,6 +6,7 @@ context:
   debug: true
   trigger:
     label: Toon toast
+    ariaLabel: Toon toast
   message:
     variant: success
     text: U bekijkt deze publicatie nu met de voormalige tekst.

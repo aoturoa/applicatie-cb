@@ -10,10 +10,13 @@
   var toast = function (element) {
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.config2 = JSON.parse(this.element.getAttribute('data-config')) || [];
 
-    this.timeout = this.config.timeout || '5000';
     this.trigger = this.element.querySelector('.toast-trigger');
     this.message = this.element.querySelector('.toast-message');
+
+    this.triggerConfig = JSON.parse(this.trigger.getAttribute('data-config')) || [];
+    this.timeout = this.triggerConfig.timeout || '5000';
 
     this.init();
   };
@@ -34,7 +37,7 @@
 
       var allToasts = self.element.querySelectorAll('.toast-message');
       for (var i = 0; i < allToasts.length; i++) {
-        self.removeAllAttributes(allToasts[i]);
+        self.hideToast(allToasts[i]);
       }
     });
 
@@ -45,32 +48,25 @@
 
     this.hideAllActiveToasts();
 
-    this.addAttributes(self.message);
+    this.showToast(self.message);
 
     this.timer = setTimeout(function(){
-      self.removeAllAttributes(self.message);
+      self.hideToast(self.message);
     }, this.timeout);
   };
 
   toast.prototype.hideAllActiveToasts = function () {
-    
-
-    // for (var i = 0; i < allToasts.length; i++) {
-      // this.removeAllAttributes(allToasts[i]);
-      pubsub.publish('/toast/hideAllActiveToasts');
-    // }
+    // publish signal, for other toasts to react (and initiate hiding function);
+    pubsub.publish('/toast/hideAllActiveToasts');
   };
 
-  toast.prototype.addAttributes = function ( element ) {
-    element.classList.add('is-visible');
+  toast.prototype.showToast = function ( element ) {
+    element.setAttribute('aria-hidden', false);
   };
-  toast.prototype.removeAllAttributes = function ( element ) {
-    console.log('remove all');
-    // for (var i = 0; i < element.length; i++) {
-      if ( element.classList.contains('is-visible')) {
-        element.classList.remove('is-visible');
-      }
-    // }
+  toast.prototype.hideToast = function ( element ) {
+    if ( element.getAttribute('aria-hidden')) {
+      element.setAttribute('aria-hidden', true);
+    }
   };
 
 })();
