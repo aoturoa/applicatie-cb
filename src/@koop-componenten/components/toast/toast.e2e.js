@@ -40,7 +40,7 @@ describe('Toast', function () {
   });
 
 
-  fit('when clicked on trigger open, show 21 items', function () {
+  fit('should hide the toast after X seconds', function () {
 
     var toast = element(by.css('.toast-message'));
 
