@@ -6,7 +6,7 @@ describe('Verschilmarkering', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should show DELs and INs', function () {
+  it('should show DELs and INs', function () {
     browser.get('http://localhost:3000/components/preview/templates-1stop-xml-elementen');
 
     var width = 1000;
@@ -29,7 +29,7 @@ describe('Verschilmarkering', function () {
     //expect( inputins.isDisplayed() ).toBeTruthy();
   });
 
-  fit('should hide all INS when clicked on "was"', function () {
+  it('should hide all INS when clicked on "was"', function () {
     var input = element(by.css('[data-controller-value="del"]'));
     input.click();
 
@@ -41,7 +41,7 @@ describe('Verschilmarkering', function () {
     expect(inputins.getCssValue('position')).toBe('absolute');
   });
   
-  fit('should hide all DEL when clicked on "was"', function () {
+  it('should hide all DEL when clicked on "was"', function () {
     var input = element(by.css('[data-controller-value="ins"]'));
     input.click();
 
@@ -54,7 +54,7 @@ describe('Verschilmarkering', function () {
     expect(inputins.getCssValue('position')).toBe('static');
   });
 
-  fit('should reset all when clicked on "all"', function () {
+  it('should reset all when clicked on "all"', function () {
     var input = element(by.css('[data-controller-value="all"]'));
     input.click();
 
