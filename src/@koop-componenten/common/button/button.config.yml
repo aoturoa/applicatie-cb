@@ -161,6 +161,13 @@ variants:
       text: Button tekst
       modifier: button--text
       button: true
+  - name: Text inline
+    status: ready
+    label: Text inline
+    context:
+      text: Button tekst
+      modifier: button--inline
+      button: true
   - name: Block element
     status: ready
     label: Block element

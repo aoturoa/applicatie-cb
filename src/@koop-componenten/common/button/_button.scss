@@ -129,6 +129,23 @@
     }
   }
 
+  &--inline {
+    border: 0;
+    text-decoration: underline;
+    background: transparent;
+    font-weight: normal;
+    font-size: em(16) !important;
+    margin: 0;
+    padding: 0 !important;
+    vertical-align: initial;
+
+    &:hover {
+      background: transparent !important;
+      box-shadow: none !important;
+      text-decoration: none;
+    }
+  }
+
   &--primary {
     background-color: $buttonPrimaryBackgroundColor;
     color: $white;
