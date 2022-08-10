@@ -150,17 +150,17 @@ h3.ankered {
   }
 }
 
-.icon--backlink ~ .columns.columns--gutter-med > .column > .form__row {
+.columns.columns--gutter-med > .column > .form__row {
   display: flex;
   flex-wrap: wrap;
 
-  & > h1 {
+  & > h1.h1 {
     flex-grow: 1;
   }
-  & > .h--preheader {
+  & > h1.h1 ~ .h--preheader {
     order: -1;
-    flex-shrink: 0;
     flex-grow: 1;
+    width: 100%;
   }
 }
   
