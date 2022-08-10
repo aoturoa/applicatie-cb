@@ -1,0 +1,25 @@
+<div class="verschilmarkering" data-decorator="init-controller-insdel" {{#if dataConfig}}data-config='{{{dataConfig}}}'{{/if}}>
+  <div class="verschilmarkering-message">{{{content}}}{{#if modal}} {{#> @modal modal merge=true }}{{{modalContent}}}{{/@modal}}{{/if}}</div>
+  {{#if options}}
+    <div class="verschilmarkering-options">
+      {{#if optionsLabel}}
+        <p class="visually-hidden">
+          {{optionsLabel}}
+        </p>
+      {{/if}}
+      <ul aria-label="{{optionsLabel}}">
+      {{#each options}}
+        <li>
+          {{#if_eq option/toast 'true'}}
+            {{#> @toast option/toastContext }}
+              {{option/toastContext/message/text}}
+            {{/@toast}}
+          {{else}}
+            <button class="{{option/buttonClass}}" {{#if option/isPressed}}aria-pressed="true"{{/if}} role="button" {{{option/dataAttributes}}}>{{option/label}}</button>
+          {{/if_eq}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+  </div>
+</div>

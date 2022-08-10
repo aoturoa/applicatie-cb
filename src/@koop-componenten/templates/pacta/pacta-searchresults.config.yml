@@ -1,0 +1,86 @@
+---
+label: PACTA - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
+  inputsubmitContext:
+    id: 5
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
+      titleHeader: h2
+      titleHref: '#'
+      label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      share: false
+      metadata:
+        - value: "Uitgegeven door: Flevoland"
+    - title: Handhavingsbeleid Vergunningplicht Autoverhuur Heerlen 2019
+      titleHeader: h2
+      titleHref: '#'
+      label: Regeling vervallen per 01-01-2019
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      labelType: danger
+      metadata:
+        - value: "Uitgegeven door: Heerlen"
+    - title: Verordening i.h.k.v. Wet Gemeentelijke Antidiscriminatievoorzieningen (V-WGA)
+      titleHeader: h2
+      titleHref: '#'
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      share: false
+      metadata:
+        - value: "Uitgegeven door: Bernisse"
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  selectedfilterContext:
+    items:
+      - label: Gezocht op "leveringen"
+        url: "#"
+      - label: Bouwvergunning
+        url: "#"
+      - label: APV vergunning
+        url: "#"
+
+
+
+
+

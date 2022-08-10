@@ -1,0 +1,79 @@
+.toast {
+  
+  &-message {
+    position: fixed;
+    top: -4em;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: $lightGrey;
+    padding: 1.15em 0;
+    text-align: left;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+
+    &[aria-hidden="true"] {
+      display: block !important;
+    }
+
+    &[aria-hidden="false"] {
+      top: 0;
+      -webkit-transform: translate(1em,0,0,0);
+      -moz-transform: translate(1em,0,0,0);
+      -o-transform: translate(1em,0,0,0);
+      -ms-transform: translate(1em,0,0,0);
+      transform: translate(1em,0,0,0);
+      
+    }
+
+    &__body {
+      @extend .container;
+      background-image: $infoIconBlue;
+      background-size: 1em;
+      background-repeat: no-repeat;
+      background-position: 1em 0.125em;
+      padding-left: 3.5em;
+    }
+
+    &--success {
+      background-color: $lightGreen;
+    }
+    &--success &__body {
+      background-image: $iconCheckFilledGreen;
+      background-position: 1em -0.125em !important;
+      background-size: 1.5em;
+    }
+    &--info {
+      background-color: $lightBlue;
+    }
+    &--info &__body {
+      background-image: $infoIconBlue;
+      background-size: 1em;
+      background-position: 1.125em 0.125em !important;
+    }
+    &--warning {
+      background-color: lighten($lightRed,7);
+    }
+    &--warning &__body {
+      background-image: $iconAlertRed;
+      // background-size: 1em;
+      background-position: 1.125em 0em !important;
+    }
+  }
+
+}
+
+// @keyframes slide-in {
+//   0% { top: -4em; } 
+//   100% { top:0 }
+// }
+// @-moz-keyframes slide-in {
+//   0% { top: -4em; } 
+//   100% { top:0 }
+// }
+// @-webkit-keyframes slide-in {
+//   0% { top: -4em; } 
+//   100% { top:0 }
+// }

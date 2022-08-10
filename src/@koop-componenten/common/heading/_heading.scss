@@ -150,3 +150,18 @@ h3.ankered {
   }
 }
 
+.columns.columns--gutter-med > .column > .form__row {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > h1.h1 {
+    flex-grow: 1;
+  }
+  & > h1.h1 ~ .h--preheader {
+    order: -1;
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+  
+

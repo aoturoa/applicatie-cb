@@ -1,0 +1,84 @@
+.verschilmarkering {
+    @extend .alert;
+    @extend .alert--info;
+    @extend .columns;
+
+    text-align: left !important;
+  
+
+    &-message {
+      &:after {
+        content: ".";
+        position: relative;
+        left: -4px;
+      }
+    }
+
+    &-options {
+        
+      @media ( min-width: $breakpointDesktop ) {
+        text-align: right;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+          padding: 0;
+          margin: 0.5em 0 0 0;
+          display: inline-block;
+
+          @media ( min-width: $breakpointDesktop ) {
+            margin: 0;  
+          }
+        }
+
+        li::after {
+        content: ' | ';
+        margin: 0 .5em;
+        }
+    
+        li:last-child::after {
+          content: '';
+          display: inline-block;
+          margin: 0;
+        }
+        
+        .toast {
+          display: inline-block;
+        }
+
+        button {
+          background: transparent;
+          padding: 0;
+          padding: 0;
+          border: 0;
+          font-family: inherit;
+          font-size: inherit;
+          text-decoration: underline;
+          cursor: pointer;
+          color: inherit;
+
+          &:hover {
+            color: $primaryBlue;
+          }
+
+          &[aria-current="true"] {
+            font-weight: bold !important;
+          }
+        }
+      }
+    }
+}
+
+.is-delinscontrollerstate-del {
+  ins {
+    @extend .visually-hidden;
+  }
+}
+.is-delinscontrollerstate-ins {
+  del {
+    @extend .visually-hidden;
+  }  
+}

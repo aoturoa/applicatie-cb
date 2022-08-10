@@ -169,10 +169,13 @@
       element = el;
       var calculate = function() {
         referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + getScrollY() + 16;
-        if (onl.dom.$('.container > .breadcrumb')[0]) {
+        console.log(onl.dom.$('.container > .breadcrumb')[0]);
+        if (onl.dom.$('.container > .breadcrumb')[0] !== undefined) {
           left = onl.dom.$('.container > .breadcrumb')[0].getBoundingClientRect().left;
         } else {
-          left = onl.dom.$('.logo')[0].getBoundingClientRect().left;
+          if(onl.dom.$('.logo')[0] !== undefined) {
+            left = onl.dom.$('.logo')[0].getBoundingClientRect().left;
+          }
         }
         if (onl.dom.$('h1')[0]) {
           h1ReferenceTop = onl.dom.$('h1')[0].getBoundingClientRect().bottom;

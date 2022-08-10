@@ -53,7 +53,13 @@
       itemClass: 'multiselect__result',
       loadingClass: 'is-loading',
       noResultsClass: 'has-noresults',
-      focusedItemClass: 'has-focus'
+      focusedItemClass: 'has-focus',
+      onItemSelect: function () {
+        var fixedButton = document.querySelector('.js-fixedbottom-button__button');
+        if (fixedButton){
+          fixedButton.removeAttribute('hidden');
+        }
+      }
     });
   };
 

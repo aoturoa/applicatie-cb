@@ -1,4 +1,10 @@
 # Releases
+## 2.5.0
+- 173702 / [PACTA] [COMPLIB] Kalender weergave omlijning niet volledig
+- 172761 / [PACTA] [COMPLIB] Button 'Zoek opnieuw' verschijnt na het wijzigen van selectie lijst type 
+'SelectMulti'
+- 174579 / [DigiToegankelijkheid] [ROO] [COMPLIB] Laatste tooltip op de pagina sluit niet met ESCAPE toets
+- 173393 / [OEB] (Refactor) component was-word front-end
 ## 2.4.3
 - 172024 / Help-iconen focus
 - 172021 / focus volgorde
