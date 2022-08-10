@@ -13,12 +13,11 @@ context:
   options:
     - option:
         toast: 'true'
-        isActive: true
         toastContext:
           id: 1
           dataAttributes: "data-controller-value='all'"
           trigger:
-            isPressed: true
+            isActive: true
             ariaLabel: Toon document met verschilmarkering
             label: Verschilmarkering
           message:
@@ -31,6 +30,7 @@ context:
           dataAttributes: "data-controller-value='del'"
           trigger:
             label: Was
+            ariaLabel: Toon document met de voormalige tekst
           message:
             variant: success
             text: U bekijkt deze publicatie nu met de voormalige tekst.
@@ -38,9 +38,10 @@ context:
         toast: 'true'
         toastContext:
           id: 3
-          dataAttributes: "data-controller-value='ins' data-config='{\"timeout\":1000}'"
+          dataAttributes: "data-controller-value='ins'"
           trigger:
             label: Wordt
+            ariaLabel: Toon document met de vernieuwde tekst
           message:
             variant: success
             text: U bekijkt deze publicatie nu met de vernieuwde tekst.

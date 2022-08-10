@@ -64,7 +64,7 @@
             color: $primaryBlue;
           }
 
-          &[aria-pressed="true"] {
+          &[aria-current="true"] {
             font-weight: bold !important;
           }
         }

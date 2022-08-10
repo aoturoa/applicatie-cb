@@ -6,7 +6,7 @@ describe('Toast', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should show toast when clicked on trigger', function () {
+  it('should show toast when clicked on trigger', function () {
     browser.get('http://localhost:3000/components/preview/toast');
 
     var width = 1000;
@@ -40,7 +40,7 @@ describe('Toast', function () {
   });
 
 
-  fit('should hide the toast after X seconds', function () {
+  it('should hide the toast after X seconds', function () {
 
     var toast = element(by.css('.toast-message'));
 
