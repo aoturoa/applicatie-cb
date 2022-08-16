@@ -15,9 +15,6 @@ context:
         modifier: secondary
     youAreHere:
       - text: Register voor Overheidsorganisaties
-    skipLinks:
-      - url: '#content'
-        text: Direct naar content
   breadcrumb:
     breadcrumb:
       - text: Home

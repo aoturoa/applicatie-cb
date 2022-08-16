@@ -1,0 +1,32 @@
+.beeldelement {
+    background: $lightGrey;
+    padding: .25em;
+
+    @media ( min-width: $breakpointDesktop ) {
+        padding: .75em;
+    }
+
+    &__inner {
+        // @extend .container;
+        @extend .columns;
+    }
+
+    &__column {
+        @extend .column;
+
+        &:first-child {
+            background: $iconLockBlue no-repeat left top;
+            padding-left: 2.25em;
+
+            p {
+                margin: 0;
+            }
+        }
+            
+        @media ( min-width: $breakpointDesktop ) {
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
