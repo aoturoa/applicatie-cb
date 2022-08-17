@@ -74,9 +74,10 @@
   }
 
   &__intro {
-    font-size: em(20);
+    font-size: em(18);
     margin-bottom: em(24);
     @media ( min-width: $breakpointDesktop ) {
+      font-size: em(20);
       padding-right: 30%;
     }
   }

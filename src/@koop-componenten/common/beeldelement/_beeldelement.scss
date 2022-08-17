@@ -1,6 +1,6 @@
 .beeldelement {
     background: $lightGrey;
-    padding: .25em;
+    padding: .75em 1em;
 
     @media ( min-width: $breakpointDesktop ) {
         padding: .75em;
@@ -9,23 +9,35 @@
     &__inner {
         // @extend .container;
         @extend .columns;
+        background: $iconLockBlue no-repeat left center;
+
+        @media ( min-width: $breakpointDesktop ) {
+            background-position: left top;
+        }
     }
 
     &__column {
         @extend .column;
+        font-size: 0.9em;
+
+        @media ( min-width: $breakpointDesktop ) {
+            font-size: 1em;
+        }
 
         &:first-child {
-            background: $iconLockBlue no-repeat left top;
             padding-left: 2.25em;
+
 
             p {
                 margin: 0;
             }
         }
-            
-        @media ( min-width: $breakpointDesktop ) {
-            &:last-child {
+        
+        &:last-child {
+            padding-left: 2.25em;
+            @media ( min-width: $breakpointDesktop ) {
                 text-align: right;
+                padding-left: 0em;
             }
         }
     }
