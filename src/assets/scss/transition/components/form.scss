@@ -15,7 +15,7 @@ textarea {
   margin: 0;
 
   &.has-error,
-  &[aria-invalid="true"] {
+  &[aria-invalid="true"]:not(:focus) {
     border-color: $red;
     color: $red;
   }

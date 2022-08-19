@@ -24,6 +24,7 @@
     class="input input-text {{ modifier }} {{class}} {{#if error}}has-error{{/if}}"
     {{#if fieldPlaceholder}}placeholder="{{ fieldPlaceholder }}"{{/if}}
     {{#if error}}aria-describedby="input-text-{{id}}__error"{{/if}}
+    {{#if fieldDescribedby}}aria-describedby="{{fieldDescribedby}}"{{/if}}
     aria-invalid="{{#if error}}true{{else}}false{{/if}}"
     {{#if required}}required{{/if}}
     {{#if disabled}}disabled{{/if}}
