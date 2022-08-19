@@ -59,17 +59,25 @@
   .result--title {
     max-width: 100%;
     margin-top: 0;
+  }
+  .result--title ~ .list--metadata {
+    line-height: 1.25em;
+    margin-bottom: 1em;
 
-    ~ .list--metadata {
-      line-height: 1.25em;
-      margin-bottom: 1em;
-
-      li {
-        font-style: normal;
-
-      }
+    li {
+      font-style: normal;
     }
   }
+
+  .item-header ~ .list--metadata {
+    line-height: 1.25em;
+    margin-bottom: 1em;
+
+    li {
+      font-style: normal;
+    }
+  }
+
   h2.result--title {
     margin-bottom: .5em;
 
