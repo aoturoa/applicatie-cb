@@ -251,9 +251,17 @@
     }
   }
 
+  .form__error,
+  input.has-error {
+    color: $redDarker !important;
+    border-color: $redDarker !important;
+  }
+
 }
 
 .modal .jumbotron {
   padding: 0;
   background: none;
 }
+
+
