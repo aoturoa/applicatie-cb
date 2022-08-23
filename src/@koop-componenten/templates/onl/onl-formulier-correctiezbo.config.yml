@@ -5,13 +5,15 @@ context:
   header:
     file: logo.svg
     alt: Logo Overheid.nl, ga naar de startpagina
+    youAreHere:
+    - text: wegwijzer naar informatie en diensten van alle overheden
   breadcrumbAttenderen:
     breadcrumb:
-    - text: Home
+    - text: Overheid.nl
       url: '#'
-    - text: Berichten over uw buurt
+    - text: Contactgegevens overheden
       url: '#'
-    - text: Registratie
+    - text: Vragen correcties zbo
   jumbotronContext:
     heading: Vragen of correctie zbo
     h: h1
