@@ -127,6 +127,7 @@
       this.fieldPasswordRepeat.classList.remove('is-invalid');
       this.fieldPasswordRepeat.classList.remove('has-error');
       this.fieldPasswordRepeat.value = '';
+      this.fieldPasswordRepeat.setAttribute('aria-invalid', false);
       this.removeFieldMessage(this.fieldPasswordRepeat);
     }
 
@@ -198,6 +199,8 @@
       this.fieldPasswordRepeat.classList.remove('is-valid');
       this.fieldPasswordRepeat.classList.add('is-invalid');
       this.fieldPasswordRepeat.classList.add('pw-invalid-repeat', 'has-error');
+      this.fieldPasswordRepeat.setAttribute('aria-invalid', true);
+      console.log('err');
       fieldState = 'error';
     } else {
         this.removeError(this.fieldPasswordRepeat);
@@ -206,6 +209,7 @@
         this.fieldPasswordRepeat.classList.remove('pw-invalid-repeat');
         this.fieldPasswordRepeat.classList.remove('has-error');
         this.fieldPasswordRepeat.classList.remove('is-invalid');
+        this.fieldPasswordRepeat.setAttribute('aria-invalid', false);
         fieldState = 'success';
       // }
     }
@@ -217,12 +221,12 @@
 
   passwordstrength.prototype.showError = function (field) {
     if (field.nextElementSibling){
-      field.nextElementSibling.removeAttribute('hidden');
+      // field.nextElementSibling.removeAttribute('hidden');
     }
   }
   passwordstrength.prototype.removeError = function (field) {
     if (field.nextElementSibling) {
-      field.nextElementSibling.setAttribute('hidden', 'hidden');
+      // field.nextElementSibling.setAttribute('hidden', 'hidden');
     }
   }
 
