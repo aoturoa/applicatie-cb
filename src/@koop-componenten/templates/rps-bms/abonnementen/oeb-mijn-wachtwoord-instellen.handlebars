@@ -25,7 +25,8 @@
               {{render "@input-text--email" emailInput merge=true }}
             </div>
             <div class="form__row">
-              <div data-decorator="init-passwordstrength">
+              {{ render "@passwordstrength" passwordstrength merge=true }}
+              {{!-- <div data-decorator="init-passwordstrength">
                 <div class="form__row">
                     {{render "@input-text--password" newPWInput merge=true }}
                 </div>
@@ -43,10 +44,11 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
             <div class="form__row">
               {{render "@input-text--password" repeatPWInput merge=true }}
+              {{!-- <p class="form__error">ww is niet gelijk</p> --}}
             </div>
             <div class="form__row">
               {{render "@input-text" inputCode merge=true }}
@@ -61,7 +63,7 @@
       </div>
       <div class="column">
         <div data-decorator="init-sticky">
-          <div class="well js-passwordstrength__duplicateregexcontainer hidden-mobile"></div>
+          <div class="passwordstrength__regexcontainer js-passwordstrength__duplicateregexcontainer hidden-mobile"></div>
         </div>
       </div>
     </div>

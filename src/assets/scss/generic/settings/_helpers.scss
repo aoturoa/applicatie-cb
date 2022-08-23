@@ -160,6 +160,17 @@
     position: absolute;
     width: 1px;
 }
+@media ( min-width: $breakpointDesktop) {
+    .visually-hidden--desktop {
+        border: none;
+        clip: rect( 1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}
 
 .is-modal-open {
     overflow: hidden;
