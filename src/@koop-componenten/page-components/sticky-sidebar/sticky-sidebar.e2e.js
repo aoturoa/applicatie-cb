@@ -21,13 +21,13 @@ describe('Sidebar sticky', function () {
 
     browser.driver.sleep(750);
 
-    var input = element(by.css('[data-toggle-open="Open sidebar"]'));
+    var input = element(by.css('[data-toggle-open="Details openen"]'));
 
     expect( input.isDisplayed() ).toBeTruthy();
   });
 
   it('should show sidebar when click on trigger', function () {
-    var input = element(by.css('[data-toggle-open="Open sidebar"]'));
+    var input = element(by.css('[data-toggle-open="Details openen"]'));
     input.click();
 
     var sidebarContainer = element(by.css(' .columns--sticky-sidebar__sidebar > div '));
@@ -36,7 +36,7 @@ describe('Sidebar sticky', function () {
   });
 
   it('should close sidebar when click on trigger', function () {
-    var input = element(by.css('[data-toggle-open="Open sidebar"]'));
+    var input = element(by.css('[data-toggle-open="Details openen"]'));
     input.click();
 
     var sidebarContainer = element(by.css(' .columns--sticky-sidebar__sidebar > div '));
