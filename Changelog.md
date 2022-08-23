@@ -1,4 +1,14 @@
 # Releases
+## 2.6.0
+- 173265 / [DigiToegankelijkheid] [Complib] hoofdnavigatie aria-attribuut
+- 153713 / [ROO] [COMPLIB] Implementatie beeldelement in de KOOP componentenbibliotheek
+- 173360 / [DigiToegankelijkheid] [ROO] [COMPLIB] sluiten/open button zijbalk heeft geen 'generated' value
+- 173346 / [DigiToegankelijkheid] [RPS-BMS] [COMPLIB] aria-pressed foutief gebruik
+- 173344 / [DigiToegankelijkheid] [RPS-BMS] [COMPLIB] verwijder-filter heeft geen alternatieve tekst
+- 173264 / [DigiToegankelijkheid] [RPS-BMS] [COMPLIB] vinkjes voor wachtwoordcontrole ontberen een tekstalternatief
+- 165973 / [DigiToegankelijkheid] [BouB] [COMPLIB] Overheid.nl conform WCAG 2.1: bevinding: 1.4.1 - Gebruik van kleur
+- 173347 / [DigiToegankelijkheid] [CVDR] visuele volgorde vs. headings
+- 163235 / [Complib] Updaten van contactformulier zbo
 ## 2.5.0
 - 173702 / [PACTA] [COMPLIB] Kalender weergave omlijning niet volledig
 - 172761 / [PACTA] [COMPLIB] Button 'Zoek opnieuw' verschijnt na het wijzigen van selectie lijst type 
