@@ -1,0 +1,45 @@
+---
+label: RIO - Informatiepagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+    navLinks:
+      - url: '#'
+        text: Help
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks: false
+  jumbotronContext:
+    heading: Register Internetdomeinen Overheid
+    h: h1
+    subheading: U bekijkt een website van de overheid
+    intro: Hoe weet ik zeker dat ik een website van de overheid bekijk?
+    centered: true
+    headingcentered: true
+  blockinfo1:
+    icon:
+      src: ../../images/icon-64-digitaalonderzoek.svg
+    content: <p>Controleer het domein in het Register Internetdomeinen Overheid. </p>
+  blockinfo2:
+    icon:
+      src: ../../images/icon-64-website.svg
+    content: <p>Kopieer de domeinnaam vanuit de adresbalk, dan weet u altijd zeker dat u de juist URL controleert.</p>
+  blockinfo3:
+    icon:
+      src: ../../images/icon-64-schild.svg
+    content: <p>Staat een domeinnaam geregistreerd in het register? Dan kunt u deze veilig gebruiken. </p>
+  jumbotron2Context:
+    heading: Controleer een domein
+    h: h2
+    subheading: Zoek in het domeinregister
+    centered: true
+    headingcentered: true
+    inputsubmitContext:
+      id: 102
+      label: Domeinnaam
+      showLabel: true
+      placeholder: Domeinnaam
+      button: Zoeken
+      type: text
