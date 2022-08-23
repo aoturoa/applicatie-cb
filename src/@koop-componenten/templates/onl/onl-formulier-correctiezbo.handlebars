@@ -1,0 +1,94 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+    {{/@jumbotron}}
+
+  </div>
+  
+  <div class="row row--spacer">
+    <div class="columns--main-small">
+      {{#> @block blockContactformulier }}
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Formulier: Vragen of correctie zbo</legend>
+            <div class="form__row">
+              <p>Hebt u vragen of opmerkingen over een zbo, bekijkt u dan eerst de <a href="/help/zbo-register">Help</a> en de <a href="/veelgestelde-vragen/veelgestelde-vragen-over-zbo-register ">Veelgestelde vragen</a>. Daarna kunt u het onderstaande reactieformulier invullen als u denkt dat de informatie van een zbo incompleet of niet correct is. U krijgt over het algemeen binnen vijf werkdagen een reactie.</p>
+            <p>Voor het beantwoorden van vragen hanteert Overheid.nl als basis de <a href="/contact/e-mailgedragslijn-voor-overheden/">e-mailgedragslijn voor overheden</a>. In de <a href="/contact/privacyverklaring">privacyverklaring</a> leest u hoe Overheid.nl omgaat met uw persoonsgegevens en met cookies.</p>
+            </div>
+            <div class="form__row">
+              {{ render "@input-text" inputVoornaam }}
+            </div>
+            <div class="form__row">
+              {{ render "@input-text" inputAchternaam }}
+            </div>
+            <div class="columns">
+              <div class="column">
+                <div class="form__row">
+                  {{ render "@input-text" inputEmail }}
+                </div>
+              </div>
+              <div class="column">
+                <div class="form__row">
+                  {{ render "@input-text" inputEmailHerhaal }}
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              {{ render "@input-text" inputZbo }}
+            </div>
+            <div class="form__row">
+              {{ render "@textarea" textareaVraag }}
+            </div>
+
+            <fieldset>
+              <h2>Informatie over de verwerking van uw persoonsgegevens</h2>
+              <p>KOOP (onderdeel van het Ministerie van Binnenlandse Zaken en Koninkrijksrelaties) verwerkt de persoonsgegevens, die u ons verstrekt bij het stellen van uw vraag, om uw vragen te beantwoorden en u te kunnen bereiken. Wij gebruiken uw gegevens uitsluitend ter beantwoording van uw vragen.</p>
+              <div class="form__row">
+                {{#> @collapsible collapsible }}
+                  <h3 class="h4">Waarom worden deze gegevens gevraagd?</h3>
+                  <p>De gegevens, die in het contactformulier worden gevraagd, zijn noodzakelijk om uw reactie adequaat, tijdig en compleet te kunnen behandelen.</p>
+                  <h3 class="h4">Op welke manier worden uw gegevens verwerkt?</h3>
+                  <p>Uw gegevens van het contactformulier worden geregistreerd in het meldingen-informatiesysteem van KOOP. De melding wordt vervolgens behandeld door servicedeskmedewerkers en/of verdere specialisten. Als eerste krijgt u een bevestiging van de ontvangst van uw melding. Nadien zal u verder bericht krijgen over de behandeling van uw melding. Uw gegevens worden niet voor andere doeleinden gebruikt dan de behandeling van uw reactie.</p>
+                  <h3 class="h4">Hoelang bewaren wij uw gegevens?</h3>
+                  <p>KOOP bewaart uw persoonsgegevens niet langer dan nodig is voor het doel waarvoor u ze heeft achtergelaten. Daarnaast worden gegevens gebruikt voor kennisopbouw, het verbeteren van de werking van websites, het bijhouden van statistieken en het functioneren van de Servicedesk. Indien er een motief is om het handelen van de overheid inzichtelijk te houden, bijvoorbeeld bij het aanvragen en verstrekken van accounts, worden gegevens permanent bewaard.</p>
+                  <h3 class="h4">Wat zijn uw rechten?</h3>
+                  <p>Voor uw rechten m.b.t. de verwerking van uw gegevens verwijzen wij u naar de privacyverklaring van deze website. U kunt ook contact opnemen met de Servicedesk van KOOP: <a href="mailto:servicedesk@koop.overheid.nl">servicedesk@koop.overheid.nl</a>.</p>
+                {{/@collapsible}}
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Akkoordverklaring</legend>
+              {{ render "@input-checkbox" checkboxAgree }}
+            </fieldset>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      {{/@block}}
+    </div>
+  </div>
+
+  <div class="row">
+    {{#> @block--slim blockhelpen }}
+      <p>Heeft u vragen over de dienst Berichten over uw buurt van MijnOverheid? We helpen u graag verder.</p>
+      {{ render "@bar" barContext merge=true }}
+    {{/@block--slim}}
+  </div>
+
+</div>
+
+{{ render "@footer" }}

@@ -6,7 +6,7 @@
       <ul class="sort__options">
         {{#each options}}
           <li>
-            <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" role="button" class="{{#if singleSort}}{{else}}{{#if sortDescending}}sort--descending{{else}}sort--ascending{{/if}}{{/if}} {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
+            <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" role="button" class="{{#if singleSort}}{{else}}{{#if sortDescending}}sort--descending{{else}}sort--ascending{{/if}}{{/if}} {{active}}" aria-current="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
           </li>
         {{/each}}
       </ul>
@@ -22,7 +22,7 @@
           <ul class="sort__options">
             {{#each amountPerPageOptions}}
             <li>
-              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="{{#if active}}is-active{{/if}}" role="button" {{#if pressed}}aria-pressed="true"{{/if}}><span class="visually-hidden">Toon </span>{{amount}}<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="{{#if active}}is-active{{/if}}" role="button" {{#if pressed}}aria-current="true"{{/if}}><span class="visually-hidden">Toon </span>{{amount}}<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             {{/each}}
           </ul>

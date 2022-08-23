@@ -779,8 +779,11 @@ input[type=password],
 input[type=email],
 input[type=number] {
   &.is-valid {
-    &[required] {
+    // &[required] {
       border-color: $green;
-    }
+    // }
+  }
+  &.is-invalid {
+    border-color: $red;
   }
 }

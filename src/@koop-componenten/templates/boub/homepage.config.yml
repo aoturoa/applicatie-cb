@@ -38,6 +38,8 @@ context:
       required: true
       requiredLabel: true
       patterntype: zipcode
+      error: true
+      errorMessage: Ongeldige postcode
     selectContext:
       id: 876
       modifier: select-custom--large

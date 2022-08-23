@@ -2,25 +2,27 @@
   <ul>
   {{#if items }}
     {{#each items }}
-      <li>
+      <li class="item">
+        <div class="item-header">
 
-        {{#if headerimg }}
-          <p><img src="{{headerimg}}" /></p>
-        {{/if}}
+          {{#if titleHeader }}
+            <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}>
+          {{else}}
+            <a href="{{href}}" class="result--title">{{ title }}</a>
+          {{/if}}
+          
+          {{#if headerimg }}
+            <p><img src="{{headerimg}}" /></p>
+          {{/if}}
 
-        {{#if label }}
-          <p class="result--label"><i><span class="label {{#if labelType}}label--{{labelType}}{{/if}}">{{ label }}</span></i></p>
-        {{/if}}
+          {{#if label }}
+            <p class="result--label"><i><span class="label {{#if labelType}}label--{{labelType}}{{/if}}">{{ label }}</span></i></p>
+          {{/if}}
 
-        {{#if titleHeader }}
-          <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}>
-        {{else}}
-          <a href="{{href}}" class="result--title">{{ title }}</a>
-        {{/if}}
-
-        {{#if subTitle}}
-          <p><a href="{{subTitleHref}}" class="result--subtitle">{{ subTitle }}</a></p>
-        {{/if}}
+          {{#if subTitle}}
+            <p><a href="{{subTitleHref}}" class="result--subtitle">{{ subTitle }}</a></p>
+          {{/if}}
+        </div>
 
         {{#if publicationDetails}}
           {{ render "@definitionlist--publication" publicationDetails merge=true }}

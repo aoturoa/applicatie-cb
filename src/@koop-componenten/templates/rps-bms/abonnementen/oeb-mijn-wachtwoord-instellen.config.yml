@@ -59,6 +59,9 @@ context:
     fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
     required: true
     requiredLabel: true
+  passwordstrength:
+    regexContainer:
+      modifier: visually-hidden--desktop
   oldPWInput:
     modifier:
     id: 222

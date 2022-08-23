@@ -1,0 +1,47 @@
+{{ render "@skiplinks" skipLinks }}
+{{ render "@beeldelement" }}
+{{ render "@header" header merge=true }}
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="row row--container">
+    <div class="row__header">
+      <h2 class="row__heading">Waar moet ik op letten?</h2>
+      <p class="row__subheading">Controleer</p>
+      <div class="row__intro">
+        <p>
+          Om zeker te weten dat u een website van de overheid bekijkt zijn er een aantal zaken waar u op kunt letten. 
+        </p>
+      </div>
+    </div>
+    <div class="columns">
+      {{ render "@block-info" blockinfo1 }}
+      {{ render "@block-info" blockinfo2 }}
+      {{ render "@block-info" blockinfo3 }}
+    </div>
+  </div>
+
+  <div class="row">
+    {{#> @jumbotron jumbotron2Context }}
+      <form class="form">
+        <fieldset>
+          <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+          <div class="form__row">
+            {{ render "@input-inputsubmit" inputsubmitContext }}
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
+  </div>
+
+</div>
+
+{{ render "@footer" }}

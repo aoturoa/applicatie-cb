@@ -52,7 +52,7 @@
           {{#if modifier }}
             <li><a class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</a></li>
           {{else}}
-            <li><a href="{{ url }}" class="{{ className }}">{{ text }}</a></li>
+            <li><a href="{{ url }}" class="{{ className }}" {{#if_eq className 'is-active'}}aria-current="page"{{/if_eq}}>{{ text }}</a></li>
           {{/if}}
         {{/each}}
         {{/if}}

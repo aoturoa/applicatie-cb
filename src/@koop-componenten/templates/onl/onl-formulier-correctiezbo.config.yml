@@ -1,0 +1,129 @@
+---
+label: ONL - Formulier correctie zbo
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+    youAreHere:
+    - text: wegwijzer naar informatie en diensten van alle overheden
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Overheid.nl
+      url: '#'
+    - text: Contactgegevens overheden
+      url: '#'
+    - text: Vragen correcties zbo
+  jumbotronContext:
+    heading: Vragen of correctie zbo
+    h: h1
+    subheading: Overheid.nl
+    centered: true
+    headingcentered: true
+  blockContactformulier:
+    heading: Vragen of correctie zbo
+    subheading: Formulier
+    inputVoornaam:
+      modifier:
+      id: 1
+      fieldLabel: Voornaam / Initialen
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldInstruction:
+      fieldPlaceholder: Voornaam / Initialen
+    inputAchternaam:
+      modifier:
+      id: 2
+      fieldLabel: Achternaam
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldInstruction:
+      fieldPlaceholder: Achternaam
+      required: true
+      requiredLabel: true
+    inputEmail:
+      modifier:
+      id: 3
+      type: email
+      fieldLabel: Uw e-mailadres
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldInstruction:
+      fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+      required: true
+      requiredLabel: true
+    inputEmailHerhaal:
+      modifier:
+      id: 4
+      type: email
+      fieldLabel: Herhaal e-mailadres
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldInstruction:
+      fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+      required: true
+      requiredLabel: true
+    inputZbo:
+      modifier:
+      id: 5
+      type: url
+      fieldLabel: Het zbo waar u een vraag of opmerking over heeft.
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldInstruction:
+      fieldPlaceholder: De URL van de pagina (https://...)
+    textareaVraag:
+      id: 6
+      fieldLabel: Uw vraag of opmerking
+      fieldPlaceholder: 'Uw opmerkingen'
+      fieldLabelModifier: form__label--accent
+      rows: 5
+      required: true
+      requiredLabel: true
+    collapsible:
+      id: 505
+      heading: Extra informatie over de verwerking van uw persoonsgegevens.
+    checkboxAgree:
+      name: regAgree
+      options:
+        - id: checkbox-1
+          text: Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan.
+          name: regAgree
+    buttonSubmit:
+      id: 123
+      text: Verzenden
+      button: true
+      modifier: button--primary
+  blockhelpen:
+    id: 12
+    htype: 2
+    heading: Kunnen we u verder helpen?
+    subheading: Berichten over uw buurt
+    content: false
+    buttonText: false
+    highlight: true
+    slim: true
+    barContext:
+      items:
+      - link:
+          label: Berichten over uw buurt
+          icon: info
+          href: https://www.overheid.nl/berichten-over-uw-buurt
+        content: <p>Lees meer over MijnOverheid wonen</p>
+      - link:
+          label: Veelgestelde vragen
+          icon: question
+          href: https://www.overheid.nl/faq
+        content: <p>Vind direct het antwoord op uw vraag</p>
+      - link:
+          label: MijnOverheid
+          icon: external
+          href: https://www.mijnoverheid.nl/
+        content: <p>Pas uw voorkeuren aan</p>
+      - link:
+          label: +31(0)12 3456 789
+          icon: tel
+          href: https://www.overheid.nl/tel
+        content: <p>Op werkdagen bereikbaar van 08.30 tot 17.00 uur</p>
+  preheader:
+    value: E-mailservice Berichten over uw buurt

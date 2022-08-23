@@ -1,0 +1,10 @@
+---
+title: Beeldelement
+context:
+  id: 1
+  content: '<p>U bekijkt een website van de overheid</p>'
+  cta:
+    href: '#'
+    label: 'Hoe weet ik dit zeker?'
+    modifier: ''
+    dataAttributes: ''

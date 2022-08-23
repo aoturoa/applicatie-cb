@@ -105,8 +105,8 @@
         var button = document.createElement( 'button' );
         var classlist = 'is-column-default';
         var labels = {
-          open: 'Open sidebar',
-          close: 'Sluit sidebar'
+          open: 'Details openen',
+          close: 'Details sluiten'
         };
 
         if (document.querySelector('.columns--sidebar__sidebar form') ) {

@@ -11,6 +11,23 @@
       margin-bottom: .5em;
       padding-bottom: .5em;
       border-bottom: 1px solid $lightGrey;
+
+      > .item-header {
+        display: flex;
+        flex-wrap: wrap;
+        
+        & > .result--label {
+          order: -1;
+          // flex-shrink: 0;
+          flex-grow: 1;
+        }
+        & > .result--title {
+          order: 0;
+          // flex-shrink: 0;
+          flex-grow: 1;
+        }
+      }
+      
     }
   }
 
