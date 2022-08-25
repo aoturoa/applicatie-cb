@@ -1,0 +1,66 @@
+---
+label: RIO - Domeinnamen detail
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+    navLinks:
+      - url: '#'
+        text: Help
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Register van organisaties
+        url: '#'
+      - text: Contactgegevens overheden
+        url: '#'
+      - text: Register internetdomeinen Gemeente Delft
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Gemeente Delft (Delft)
+      href: "#"
+      sub: true
+      active: true
+      sactive: true
+      subItems:
+        - stitle: Domein
+          href: "#sectie-domein"
+        - stitle: Registratie
+          href: "#sectie-registratie"
+  tt1:
+    id: 1
+    label: Help?
+    content: Op 27-07-2020 is door de organisatie aangegeven dat de gegevens correct zijn. De laatste wijziging is op 27-07-2020 doorgevoerd.
+  labelType:
+    text: 'Gemeente'
+    modifier: label--info label--large label--italic
+  tableDomeinnamen:
+    label: default
+    modifier: table--striped
+    items:
+      - item:
+        - column:
+          type: '<abbr title="Uniform Resource Locator">URL</abbr>'
+          value: '<a href="https://www.delft.nl">https://www.delft.nl</a>'
+        - column:
+          type: Gegevens
+          value: '<a href="#" class="cta">Bekijk gegevens <span class="visually-hidden">van van domeinnaam www.delft.nl</span></a>'
+      - item:
+        - column:
+          type: '<abbr title="Uniform Resource Locator">URL</abbr>'
+          value: '<a href="https://delft.incijfers.nl">https://delft.incijfers.nl</a>'
+        - column:
+          type: Gegevens
+          value: '<a href="#" class="cta">Bekijk gegevens <span class="visually-hidden">van van domeinnaam delft.incijfers.nl</span></a>'
+      - item:
+        - column:
+          type: '<abbr title="Uniform Resource Locator">URL</abbr>'
+          value: '<a href="https://www.parkerendelft.com">https://www.parkerendelft.com</a>'
+        - column:
+          type: Gegevens
+          value: '<a href="#" class="cta">Bekijk gegevens <span class="visually-hidden">van van domeinnaam www.parkerendelft.com</span></a>'

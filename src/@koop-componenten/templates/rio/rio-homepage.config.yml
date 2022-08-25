@@ -29,7 +29,7 @@ context:
       required: true
     buttonSubmit:
       id: 123
-      text: Zoek organisaties
+      text: Zoeken
       button: true
       type: submit
       modifier: button--primary form__button

@@ -1,0 +1,76 @@
+{{ render "@skiplinks" skipLinks }}
+{{ render "@beeldelement" }}
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter" role="main">
+
+
+  <div id="content" role="main" class="content">
+
+    <h1>Register internetdomeinen Gemeente Delft (Delft)</h1>
+    
+    <section class="section-chapter js-scrollSection" id="sectie-domein">
+      <h2>Domein</h2>
+      <p><a href="https://www.delft.nl">https://www.delft.nl</a></p>
+    </section>
+    <section class="section-chapter js-scrollSection" id="sectie-registratie">
+      <h2>Registratie</h2>
+      <table class="table__data-overview">
+        <tbody>
+          <tr>
+              <th scope="row"><abbr title="Uniform Resource Locator">URL</abbr></th>
+              <td><a href="https://www.delft.nl">https://www.delft.nl</a></td>
+          </tr>
+          <tr>
+              <th scope="row">Domein houder</th>
+              <td><a href="#" class="cta"><span class="visually-hidden">Bekijk domein houder gegevens van de </span>Gemeente Delft</a></td>
+          </tr>
+          <tr>
+              <th scope="row">Registrar</th>
+              <td><a href="#" class="cta"><span class="visually-hidden">Bekijk Registrar gegevens van de </span>Gemeente Delft</a></td>
+          </tr>
+          <tr>
+              <th scope="row">Gebruiksdoel</th>
+              <td>Hoofddomein website</td>
+          </tr>
+          <tr>
+              <th scope="row">E-mailgebruik</th>
+              <td>Verzenden en ontvangen</td>
+          </tr>
+          <tr>
+              <th scope="row">Startdatum registratie</th>
+              <td><time datetime="2001-01-01">01-01-2001</time></td>
+          </tr>
+          <tr>
+              <th scope="row">Einddatum registratie</th>
+              <td><time datetime="2049-01-01">01-01-2049</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoeken</a>
+      </p>
+
+      <h3 class="nav-sub__heading">Register Internetdomein</h3>
+      
+      {{render "@nav" navVerdragContext }}
+
+    </div>
+  </div>
+  
+</div>
+
+{{ render "@footer" }}
