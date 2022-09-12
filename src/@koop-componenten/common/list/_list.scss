@@ -685,11 +685,11 @@ ol {
       list-style: none;
       border-bottom: 1px solid $lighterGrey;
       margin: 0;
-      padding: 0;
+      padding: em(6) 0;
 
       a {
         display: block;
-        padding: em(6) em(16) em(6) 0;
+        padding: 0 em(16) 0 0;
         background-repeat: no-repeat;
         background-position: center right 5px;
         background-size: 0.5em;
@@ -705,6 +705,10 @@ ol {
             display: none;
           }
         }
+      }
+
+      small {
+        font-size: 90%;
       }
     }
   }
