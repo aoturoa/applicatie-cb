@@ -111,6 +111,10 @@
 
         if (document.querySelector('.columns--sidebar__sidebar form') ) {
           classlist = 'is-column-filters';
+          var labels = {
+            open: 'Filters openen',
+            close: 'Filters sluiten'
+          };
         }
 
         // set data to button

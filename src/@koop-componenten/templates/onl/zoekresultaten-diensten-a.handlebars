@@ -1,0 +1,86 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true}}
+  </div>
+</div>
+
+<div class="container">
+  {{ render "@alert--warning" alertPostcode merge=true }}
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+      
+      {{!-- <div class="sidebar__section"> --}}
+        {{ render "@link--terug-naar" terugZoek merge=true }}
+
+        <h2 class="sidebar__header">Verfijn zoekopdracht</h2>
+        <form class="form" data-decorator="init-form-validation">
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Locatie</legend>
+              {{!-- {{render "@input-text" postcodeContext }} --}}
+              {{render "@input-inputsubmit" inputsubmitContext }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Gewijzigd</legend>
+              {{render "@facetlinkgroup" fgRubriek }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Toon producten voor</legend>
+              {{render "@facetlinkgroup" fgProductenvoor }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Toon producten van</legend>
+              {{render "@facetlinkgroup" fgProductenvan }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Bevoegd gezag</legend>
+              {{render "@facetlinkgroup" fgBevoegdgezag }}
+            </fieldset>
+          </div>
+          
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Digitaal aanvragen</legend>
+              {{render "@facetlinkgroup" fgBevoegdgezag2 }}
+            </fieldset>
+          </div>
+
+
+          <button class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+
+        </form>
+      {{!-- </div> --}}
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    <h1 class="h1 h1--result--list">Zoekresultaten <span class="h1__sub">1-10 van de 105 resultaten</span></h1>
+    
+    {{render "@sort" sortContext }}
+    
+    {{render "@resultlist" resultsContext }}
+
+    <div class="pull-right">
+      {{render "@pagination" }}
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

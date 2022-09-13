@@ -1,0 +1,71 @@
+---
+label: Landingpage - diensten A
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+  breadcrumb:
+    breadcrumb:
+      - text: Overheid.nl
+        url: '#'
+      - text: Dienstverlening
+  jumbotronContext:
+    heading: Zoek naar diensten van de overheid
+    subheading: Dienstverlening
+    intro: Diensten van lokale overheden in uw buurt of wat u met de overheid moet regelen als er een bepaalde levensgebeurtenis plaatsvindt.
+    centered: true
+    headingcentered: true
+    inputPostcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 122
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: 0000 AA
+      required: true
+      patterntype: zipcode
+      title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
+      hastooltip: true
+      tooltipContext:
+        id: 11456456
+        label: Help?
+        content: 'Hulptekst'
+    zoektermContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Zoekterm
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Zoekterm
+      hastooltip: true
+      tooltipContext:
+        id: 114564567
+        label: Help?
+        content: 'Hulptekst'
+  rowDiensten:
+    header:
+      heading: Thema's
+      headingType: h2
+      subheading: "Zoek op thema's"
+      intro: "De overheid biedt diensten aan op basis van wetten en regels. Van subsidies voor jeugdsport tot ontheffingen voor het parkeren van caravans. En van aangifte van een huwelijk tot het mantelzorgcompliment. Al deze diensten zijn ingedeeld in thema's."
+    listDiensten:
+      items:
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+      - content: <h3 class="list__heading"><a href="#">Titel link</a></h3><p>Beschijving Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>

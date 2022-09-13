@@ -25,10 +25,7 @@
     </div>
   </div>
 
-  <div class="row row--large">
-    {{#> @block blockIntro }}{{/@block}}
-  </div>
-  <div class="row row--container">
+  {{#> @row rowActueel merge=true }}
     <div class="columns">
       <div class="column">
         <h3>Berichten over uw buurt</h3>
@@ -41,7 +38,7 @@
         <p>{{ render "@link--cta" linkCta2 merge=true }}</p>
       </div>
     </div>
-  </div>
+  {{/@row}}
 
   {{#> @row rowDiensten merge=true }}
     {{ render "@list--themas" listDiensten merge=true }}

@@ -1,8 +1,9 @@
-<div class="row">
+<div class="row {{modifier}}">
   {{#if header }}
     <div class="row__header">
       {{#if header/heading }}<{{header/headingType}} class="row__heading">{{header/heading}}</{{header/headingType}}>{{/if}}
       {{#if header/subheading }}<p class="row__subheading">{{header/subheading}}</p>{{/if}}
+      {{#if header/intro }}<p class="row__intro">{{header/intro}}</p>{{/if}}
     </div>
   {{/if}}
   {{#> @partial-block}}

@@ -17,31 +17,30 @@ context:
   mapContext:
     modifier: h-400
     controls: false
-  blockIntro:
-    id: 1
-    heading: Actueel in de Gemeente Rotterdam
-    htype: 2
-    subheading: Het laatste nieuws
-  listBoub:
-    items:
-      - content: <a href="#">Aangevraagde omgevingsvergunning George Hintzenweg 89</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
-      - content: <a href="https://www.rijksoverheid.nl">Kennisgeving ontwerpbeschikking Franciscus Gasthuis & Vlietland, locatie Gasthuis (9999249670)</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
-      - content: <a href="#">Vergunning kamerbewoning onder de overgangsbepaling voor bestaande situaties van kamerbewoning Den Hertigstraat 37C</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
-      - content: <a href="#">Vergunning kamerbewoning onder de overgangsbepaling voor bestaande situaties van kamerbewoning Den Hertigstraat 37C</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
-      - content: <a href="#">Vergunning kamerbewoning onder de overgangsbepaling voor bestaande situaties van kamerbewoning Den Hertigstraat 37C</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
-  listCvdr:
-    items:
-      - content: <a href="#">2012-2</a> <small>24-08-2022 09:06  |  Hoogheemraadschap van Delfland</small>
-      - content: <a href="#">Namen van straten enz.</a> <small>24-08-2022 09:06  |  Veiligheidsregio Rotterdam-Rijnmond</small>
-      - content: <a href="#">Aansluitverordening riolering 2012</a> <small>24-08-2022 09:06  |  Omgevingsdienst Haaglanden</small>
-      - content: <a href="#">Aansluitverordening riolering 2012</a> <small>24-08-2022 09:06  |  Omgevingsdienst Haaglanden</small>
-      - content: <a href="#">Namen van straten enz. Beijerlandse Passage</a> <small>24-08-2022 09:06  |  Omgevingsdienst Haaglanden</small>
-  linkCta1:
-    text: Alle Berichten over uw buurt
-  linkCta2:
-    text: Alle lokale wet- en regelgeving
-  linkCta3:
-    text: Alle diensten
+  rowActueel:
+    modifier: row--spacer 
+    header:
+      heading: Actueel in de Gemeente Rotterdam
+      headingType: h2
+      subheading: Het laatste nieuws
+    listBoub:
+      items:
+        - content: <a href="#">Aangevraagde omgevingsvergunning George Hintzenweg 89</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
+        - content: <a href="https://www.rijksoverheid.nl">Kennisgeving ontwerpbeschikking Franciscus Gasthuis & Vlietland, locatie Gasthuis (9999249670)</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
+        - content: <a href="#">Vergunning kamerbewoning onder de overgangsbepaling voor bestaande situaties van kamerbewoning Den Hertigstraat 37C</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
+        - content: <a href="#">Vergunning kamerbewoning onder de overgangsbepaling voor bestaande situaties van kamerbewoning Den Hertigstraat 37C</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
+        - content: <a href="#">Vergunning kamerbewoning onder de overgangsbepaling voor bestaande situaties van kamerbewoning Den Hertigstraat 37C</a> <small>24-08-2022 09:06  |  Omgevingsvergunning</small>
+    listCvdr:
+      items:
+        - content: <a href="#">2012-2</a> <small>24-08-2022 09:06  |  Hoogheemraadschap van Delfland</small>
+        - content: <a href="#">Namen van straten enz.</a> <small>24-08-2022 09:06  |  Veiligheidsregio Rotterdam-Rijnmond</small>
+        - content: <a href="#">Aansluitverordening riolering 2012</a> <small>24-08-2022 09:06  |  Omgevingsdienst Haaglanden</small>
+        - content: <a href="#">Aansluitverordening riolering 2012</a> <small>24-08-2022 09:06  |  Omgevingsdienst Haaglanden</small>
+        - content: <a href="#">Namen van straten enz. Beijerlandse Passage</a> <small>24-08-2022 09:06  |  Omgevingsdienst Haaglanden</small>
+    linkCta1:
+      text: Alle Berichten over uw buurt
+    linkCta2:
+      text: Alle lokale wet- en regelgeving
   linkTerug:
     text: Zoek opnieuw
   rowDiensten:

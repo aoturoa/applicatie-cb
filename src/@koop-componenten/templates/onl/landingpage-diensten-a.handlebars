@@ -1,0 +1,48 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">E-mailadres</legend>
+          <div class="columns">
+            <div class="column column-d-8">
+              <div class="form__row">
+                {{render "@input-text" zoektermContext }}
+              </div>
+            </div>
+            <div class="column column-d-4">
+              <div class="form__row">
+                {{render "@input-text" inputPostcodeContext }}
+              </div>
+            </div>
+          </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              <button type="submit" class="form__button button button--primary">Zoek diensten</button>
+            </div>
+            <div class="form__rowsubmit__item">
+              <a href="/components/preview/templates-att-homepage" class="cta">Uitgebreid zoeken</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      {{/@jumbotron}}
+
+  </div>
+
+  {{#> @row rowDiensten merge=true }}
+    {{ render "@list--themas" listDiensten merge=true }}
+  {{/@row}}
+
+</div>
+
+{{ render "@footer" }}
