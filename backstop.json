@@ -543,6 +543,11 @@
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-landingpage-diensten.html"
     },
     {
+      "label": "onl-landingpage-diensten-a",
+      "url": "http://localhost:3000/components/preview/templates-landingpage-diensten-a",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-landingpage-diensten-a.html"
+    },
+    {
       "label": "onl-landingpage-oproepingen",
       "url": "http://localhost:3000/components/preview/templates-landingpage-oproepingen",
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-landingpage-oproepingen.html"
@@ -556,6 +561,11 @@
       "label": "onl-zoekresultaten-diensten",
       "url": "http://localhost:3000/components/preview/templates-zoekresultaten-diensten",
       "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-zoekresultaten-diensten.html"
+    },
+    {
+      "label": "onl-zoekresultaten-diensten-a",
+      "url": "http://localhost:3000/components/preview/templates-zoekresultaten-diensten-a",
+      "referenceUrl": "https://componenten-koop-tst.overheid.nl/components/preview/templates-zoekresultaten-diensten-a.html"
     },
     {
       "label": "external-link",
