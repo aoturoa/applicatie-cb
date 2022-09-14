@@ -1,4 +1,11 @@
 # Releases
+## 2.6.1
+- 175627 / [RIO] [COMPLIB] Templates RIO
+- 176131 / [DigiToegankelijkheid] [COMPLIB] [ONL] contrast placeholders in Firefox fixen
+- 168031 / [COMPLIB] Subselection - Master ook 'aan' als alles initieel 'aan' is
+- 176353 / [RPS/BMS] CSS CB docWijzigArtikel verschilt van docArtikel
+- 178076 / [ONL] Front-end templates "Omtrent"
+- 178091 / [ONL] Front-end templates thema-indeling "Diensten"
 ## 2.6.0
 - 173265 / [DigiToegankelijkheid] [Complib] hoofdnavigatie aria-attribuut
 - 153713 / [ROO] [COMPLIB] Implementatie beeldelement in de KOOP componentenbibliotheek

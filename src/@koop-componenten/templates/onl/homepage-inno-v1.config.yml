@@ -3,13 +3,15 @@ name: homepag ONL inno v1
 label: Homepage (inno v1)
 status: ready
 context:
-  headerContext:
+  header:
     metaLinks:
       - url: 'https://www.mijnoverheid.nl'
         text: MijnOverheid.nl
+    youAreHere:
+    - text: wegwijzer naar informatie en diensten van alle overheden
   breadcrumb:
     breadcrumb:
-      - text: Home
+      - text: Overheid.nl
         url: '#'
   jumbotronContext:
     heading: Wijst de weg naar informatie en diensten van alle overheden

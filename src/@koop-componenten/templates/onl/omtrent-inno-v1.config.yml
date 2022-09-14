@@ -5,8 +5,11 @@ status: ready
 context:
   header:
     navLinks: false
+    metaLinks:
+      - url: 'https://www.mijnoverheid.nl'
+        text: MijnOverheid.nl
     youAreHere:
-      - text: Wegwijzer naar informatie en diensten van alle overheden
+      - text: wegwijzer naar informatie en diensten van alle overheden
   breadcrumb:
     breadcrumb:
       - text: Overheid.nl
