@@ -5,6 +5,9 @@ context:
   header:
     file: logo.svg
     alt: Logo Overheid.nl, ga naar de startpagina
+    youAreHere:
+      - text: wegwijzer naar informatie en diensten van alle overheden
+    navLinks: false
   breadcrumb:
     breadcrumb:
       - text: Overheid.nl
