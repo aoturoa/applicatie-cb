@@ -1,0 +1,215 @@
+---
+label: Zoekresultaten - diensten A
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+    youAreHere:
+      - text: wegwijzer naar informatie en diensten van alle overheden
+    navLinks: false
+  breadcrumb:
+    breadcrumb:
+      - text: Overheid.nl
+        url: '#'
+      - text: Dienstverlening
+        url: '#'
+      - text: Zoekresultaten
+  alertPostcode:
+    text: "U zoekt op dit moment in de volledige catalogus. Zoek op postcode om een beter resultaat te krijgen. <a href=\"#\" data-decorator='init-setfocus' data-setfocus-target=\"9657\">Zoek op postcode<span class='visually-hidden'>, verplaatst de focus naar het veld Postcode</span></a>"
+  terugZoek:
+    text: Zoek opnieuw
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    amountPerPageOptions:
+    - amount: 10
+      active: true
+      pressed: true
+      href: '/10'
+    - amount: 20
+      href: '/20'
+    - amount: 50
+      href: '/50'
+    - amount: 100
+      href: '/100'
+  inputsubmitContext:
+    id: 9657
+    label: Postcode
+    showLabel: true
+    placeholder: 0000 AA
+    button: Zoeken
+    modifierComponent: input-inputsubmit--
+  fgRubriek:
+    items:
+      - label: Ouder dan een jaar
+        href: '#'
+        amount: 10
+      - label: Afgelopen jaar
+        href: '#'
+        amount: 10
+      - label: Afgelopen maand
+        href: '#'
+        amount: 10
+      - label: Afgelopen week
+        href: '#'
+        amount: 10
+      - label: Gisteren
+        href: '#'
+        amount: 10
+  fgProductenvoor:
+    items:
+      - label: Particulier
+        href: '#'
+        amount: 10
+      - label: Ondernemer
+        href: '#'
+        amount: 10
+  fgProductenvan:
+    items:
+      - label: Leiderdorp
+        href: '#'
+        amount: 10
+      - label: Noordwijk
+        href: '#'
+        amount: 10 
+      - label: Steenwijkerland
+        href: '#'
+        amount: 10
+      - label: Terneuzen
+        href: '#'
+        amount: 10
+      - label: De Ronde Venen
+        href: '#'
+        amount: 10
+      - label: Vlaardingen
+        href: '#'
+        amount: 10
+      - label: Rotterdam
+        href: '#'
+        amount: 10
+      - label: Schiedam
+        href: '#'
+        amount: 10
+      - label: Amsterdam
+        href: '#'
+        amount: 1
+    modal:
+      modalId: modal-987
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Toon producten van
+  fgBevoegdgezag:
+    items:
+      - label: Gemeente
+        href: '#'
+        amount: 10
+      - label: Ministerie
+        href: '#'
+        amount: 10
+  fgBevoegdgezag2:
+    items:
+      - label: Ja
+        href: '#'
+        amount: 10
+      - label: Nee
+        href: '#'
+        amount: 10
+      - label: DigiD
+        href: '#'
+        amount: 10
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Test titel
+      titleHeader: h2
+      titleHref: '#'
+      text: Dit is een introductie. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+      share: false
+      metadataDates:
+        - value: 'Meta data 1'
+        - value: 'Meta data 2'
+        - value: 'Meta data 3'
+        - value: 'Meta data 4'
+    - title: Test titel
+      titleHeader: h2
+      titleHref: '#'
+      text: Dit is een introductie. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+      share: false
+      metadataDates:
+        - value: 'Meta data 1'
+        - value: 'Meta data 2'
+        - value: 'Meta data 3'
+        - value: 'Meta data 4'
+    - title: Test titel
+      titleHeader: h2
+      titleHref: '#'
+      text: Dit is een introductie. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+      share: false
+      metadataDates:
+        - value: 'Meta data 1'
+        - value: 'Meta data 2'
+        - value: 'Meta data 3'
+        - value: 'Meta data 4'
+    - title: Test titel
+      titleHeader: h2
+      titleHref: '#'
+      text: Dit is een introductie. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+      share: false
+      metadataDates:
+        - value: 'Meta data 1'
+        - value: 'Meta data 2'
+        - value: 'Meta data 3'
+        - value: 'Meta data 4'
+  postcodeContext:
+    labelmodifier: accent
+    id: 2
+    fieldLabel: Postcode
+    fieldLabelVisible: true
+    fieldPlaceholder: 0000 AA
+  checkallDienstenvoorContext:
+    id: 1
+    label: doelgroepen
+    checkboxes:
+      options:
+      - id: checkbox-20
+        text: Ondernemers
+        name: onderwerp
+      - id: checkbox-21
+        text: Particulieren
+        name: onderwerp
+  gewijzigdContext:
+    name: alliedforces
+    options:
+      - id: checkbox-1
+        text: Afgelopen week
+        name: segment
+      - id: checkbox-2
+        text: Huidige jaar
+        name: segment
+      - id: checkbox-3
+        text: Eerder
+        name: segment
+  checkallDienstenvanContext:
+    id: 2
+    label: organisaties
+    checkboxes:
+      options:
+      - id: checkbox-202
+        text: Gemeente
+        name: onderwerp2
+      - id: checkbox-212
+        text: Provincie
+        name: onderwerp2
+      - id: checkbox-222
+        text: Regionaal Samenwerkingsorgaan
+        name: onderwerp2
+      - id: checkbox-232
+        text: Rijkswaterstaat
+        name: onderwerp2
+      - id: checkbox-242
+        text: Waterschap
+        name: onderwerp2

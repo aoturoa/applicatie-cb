@@ -6,32 +6,6 @@
 </div>
 
 <div class="container" role="main" id="content">
-  {{!-- <div class="row row--spacer"> --}}
-
-    {{!-- {{#> @jumbotron jumbotronContext }} --}}
- 
-        {{!-- <form class="form form__row form__row--medium">
-          <fieldset>
-            <legend class="visually-hidden">Doorzoek de overheidsdocumenten</legend>
-            <div class="form__row form__row--medium">
-              {{render "@input-text" inputSearchContext }}
-            </div>
-            <div class="form__rowsubmit">
-              <div class="form__rowsubmit__item">
-                {{ render "@button--primary" btnSubmit merge=true }}
-              </div>
-              <div class="form__rowsubmit__item">
-                {{ render "@link" linkCta }}
-              </div>
-            </div>
-          </fieldset>
-        </form> --}}
-
-    {{!-- {{/@jumbotron}} --}}
-
-  {{!-- </div> --}}
-
-  {{!-- <div class="row row--container u-margin-top-48"> --}}
   
   <div class="row row--container u-margin-top-48">
     {{ render "@link--terug-naar" linkTerug merge=true }}
@@ -44,14 +18,14 @@
         <p>
           In de gemeente Rotterdam maken verschillende overheidsinstanties informatie bekend die effect hebben op u en uw omgeving. Of het nu gaat om een bouwvergunning of informatie over nieuwe regelgeving in uw stadscentrum, op overheid.nl vindt u alle informatie die u nodig heeft. 
         </p>
+        <p>
+          {{ render "@link--cta" linkIntro merge=true }}
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="row row--large">
-    {{#> @block blockIntro }}{{/@block}}
-  </div>
-  <div class="row row--container">
+  {{#> @row rowActueel merge=true }}
     <div class="columns">
       <div class="column">
         <h3>Berichten over uw buurt</h3>
@@ -63,13 +37,12 @@
         {{ render "@list--action" listCvdr merge=true }}
         <p>{{ render "@link--cta" linkCta2 merge=true }}</p>
       </div>
-      <div class="column">
-        <h3>Diensten</h3>
-        {{ render "@list--action" listDiensten merge=true }}
-        <p>{{ render "@link--cta" linkCta3 merge=true }}</p>
-      </div>
     </div>
-  </div>
+  {{/@row}}
+
+  {{#> @row rowDiensten merge=true }}
+    {{ render "@list--themas" listDiensten merge=true }}
+  {{/@row}}
   
   <div class="row row--container">
     {{#> @jumbotron jumbotron2Context }}
@@ -84,76 +57,7 @@
     {{/@jumbotron}}
   </div>
 
-  <div class="row row--container">
-
-    <div class="columns columns--gutter-med">
-      <div class="column">
-        {{#> @block blockContact }}
-          <table class="table__data-overview">
-            <tbody>
-              <tr>
-                <th scope="row">Bezoekadres</th>
-                <td>Coolsingel 40<br/>3011 AD ROTTERDAM</td>
-              </tr>
-              <tr>
-                <th scope="row">Provincie</th>
-                <td>Zuid-Holland</td>
-              </tr>
-              <tr>
-                <th scope="row">Postadres</th>
-                <td>Postbus 70012<br/>3000 KP ROTTERDAM</td>
-              </tr>
-              <tr>
-                <th scope="row">Telefoon</th>
-                <td>14 010 (algemeen)</td>
-              </tr>
-              <tr>
-                <th scope="row">Internet</th>
-                <td>{{ render "@link" linkInternet}}</td>
-              </tr>
-            </tbody>
-          </table>
-          {{ render "@button--secondary-icon-external" buttonCtaGegevens merge=true }}
-        {{/@block}}       
-      </div>
-      <div class="column">
-        {{render "@map" mapContext }}
-        <script id="config1" type="application/json">
-        {
-          "locations": [
-            {
-              "type": "adres",
-              "geometry": "POINT(4.34015737 52.07846659)",
-              "geometry_type": "WKT",
-              "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
-              "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
-            }
-          ],
-          "options": {
-            "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
-            "class": "kaartprikmodule-overlay",
-            "mode": "geoview",
-            "center": {
-              "highlight": true,
-              "type": "location",
-              "location": {
-                "type": "gemeente",
-                "title": "Gemeente Rotterdam"
-              }
-            },
-            "controls": ["base-layer", "center", "fullscreen", "zoom"],
-            "layers": {
-              "bgtachtergrondkaart": {
-                "enabled": true
-              }
-            }
-          }
-        }
-        </script>
-      </div>
-    </div>    
-
-  </div>
+  
 
 </div>
 

@@ -25,6 +25,7 @@
 
   selectall.prototype.init = function (e) {
     var self = this;
+
     // check mastercheckbox if all checkboxes are checked on pageload;
     if(this.areAllCheckboxesChecked()){
       this.mastercheckbox.checked = true;
@@ -39,10 +40,26 @@
       }
     }
     
+    var subscription3 = pubsub.subscribe('/selectall-inner/init/checkboxSelectAllOnMain/true', function (target) {
+      var checkboxes = self.element.querySelectorAll('input[type="checkbox"]');
+      if(self.areAllCheckboxesChecked(checkboxes)){
+        self.mastercheckbox.checked = true;
+  
+        if(self.checkboxSelectAllOnMain) {
+          self.checkboxSelectAllOnMain.checked = true;
+  
+          pubsub.publish('/selectall/init/checkboxSelectAllOnMain/true', {
+            element: self.element
+          });
+        }
+      }
+    });
+
+
     var subscription = pubsub.subscribe('/selectall-inner/changeCheckbox/allAreChecked', function (target) {
       self.changeCheckbox(target);
     });
-    var subscription = pubsub.subscribe('/selectall-inner/changeMasterCheckbox/allAreChecked', function (target) {
+    var subscription2 = pubsub.subscribe('/selectall-inner/changeMasterCheckbox/allAreChecked', function (target) {
       self.changeCheckbox(target);
     });
 
@@ -62,7 +79,8 @@
     this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
   };
 
-  selectall.prototype.areAllCheckboxesChecked = function (e) {
+  selectall.prototype.areAllCheckboxesChecked = function (checkboxes) {
+    var checkboxes = checkboxes || this.checkboxes;
     if (this.countAmountChecked() === this.checkboxes.length) {
       return true;
     }

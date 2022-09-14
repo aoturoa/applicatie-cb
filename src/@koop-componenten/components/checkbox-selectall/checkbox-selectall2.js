@@ -33,6 +33,10 @@
           element: this.element
         });
       }
+
+      pubsub.publish('/selectall-inner/init/checkboxSelectAllOnMain/true', {
+        target: e
+      });
     }
     this.initEventListeners();
   }

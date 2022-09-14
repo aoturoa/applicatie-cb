@@ -62,7 +62,8 @@ body .docSubsubparagraaf {
   font-weight: bold;
   font-style: italic;
 }
-body .docArtikel {
+body .docArtikel,
+body .docWijzigArtikel {
   @extend .h4;
   font-weight: bold;
   font-style: normal;

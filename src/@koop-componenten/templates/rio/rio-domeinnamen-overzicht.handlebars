@@ -1,0 +1,71 @@
+{{ render "@skiplinks" skipLinks }}
+{{ render "@beeldelement" }}
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter" role="main">
+
+
+  <div id="content" role="main" class="content">
+
+    <h1>Gemeente Delft (Delft)</h1>
+
+    <p>
+       De gegevens zijn actueel en laatst bijgewerkt op: 27-07-2020 {{ render "@tooltip" tt1 }}
+    </p>
+
+    <section class="section-chapter js-scrollSection" id="sectie-organisatie">
+      <h2>Organisatie</h2>
+      <table class="table__data-overview">
+        <tbody>
+          <tr>
+              <th scope="row">Domein eigenaar</th>
+              <td><a href="#" class="cta">Gemeente Delft</a></td>
+          </tr>
+          <tr>
+              <th scope="row">Telefoon</th>
+              <td>14015 (algemeen)</td>
+          </tr>
+          <tr>
+              <th scope="row">Website</th>
+              <td><a href="https://www.delft.nl">https://www.delft.nl</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="section-chapter js-scrollSection" id="sectie-domeinnamen">
+      <h2>Geregistreerde domeinnamen</h2>
+      {{ render "@table" tableDomeinnamen }}
+    </section>
+
+  </div>
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoeken</a>
+      </p>
+
+      <h3 class="nav-sub__heading">Gemeente Delft (Delft)</h3>
+      
+      {{render "@nav" navVerdragContext }}
+
+      <h3 class="nav-sub__heading">Gegevens</h3>
+      <p>
+        Er zijn meer gegevens bekend van deze organisatie
+      </p>
+      <p>
+        <a href="#" class="cta">Bekijk organisatie gegevens</a>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

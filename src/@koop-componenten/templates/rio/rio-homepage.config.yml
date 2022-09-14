@@ -1,0 +1,82 @@
+---
+label: RIO - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Logo Overheid.nl, ga naar de startpagina
+    navLinks:
+      - url: '#'
+        text: Help
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks: false
+  jumbotronContext:
+    heading: Register Internetdomeinen Overheid
+    h: h1
+    intro: Zoek naar domeinnamen van Nederlandse overheidsorganisaties.
+    centered: true
+    headingcentered: true
+    searchterm:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: search
+      fieldLabel: Domeinnaam
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Domeinnaam
+      requiredLabel: true
+      required: true
+    buttonSubmit:
+      id: 123
+      text: Zoeken
+      button: true
+      type: submit
+      modifier: button--primary form__button
+  blockIntro:
+    id: 1
+    heading: '"Is dit een website van de overheid?"'
+    subheading: Register Internetdomeinen Overheid
+    content: <p>In het Register Internetdomeinen Overheid kunt u nazoeken of een website of emailadres bij een overheidsorganisatie hoort. Zo kunt u bij twijfel controleren of een website die u bezoekt wel bij de overheidsorganisatie hoort die u verwacht. Ook kunt u van elke overheidsorganisatie opzoeken welke domeinnamen ze geregistreerd hebben.</p>
+    buttonText: Meer over het register
+    href: '#'
+  list1:
+    items:
+      - content: <a href="#">Gemeenten</a>
+      - content: <a href="#">Provincies</a>
+      - content: <a href="#">Waterschappen</a>
+      - content: <a href="#">Gemeenschappelijke regelingen</a>
+      - content: <a href="#">Regionale samenwerkingsorganen</a>
+      - content: <a href="#">Grensoverschrijdende gemeenschappelijke regelingen</a>
+      - content: <a href="#">Grensoverschrijdende regionale samenwerkingsorganen</a>
+      - content: <a href="#">Koepelorganisaties</a>
+      - content: <a href="#">Caribische openbare lichamen</a>
+      - content: <a href="#">Aruba, Curaçao en Sint Maarten</a>
+  list2:
+    items:
+      - content: <a href="#">Openbare lichamen voor beroep en bedrijf</a>
+      - content: <a href="#">Kabinet van de Koning</a>
+      - content: <a href="#">Hoge Colleges van Staat</a>
+      - content: <a href="#">Ministeries</a>
+      - content: <a href="#">Agentschappen</a>
+      - content: <a href="#">Interdepartementale commissies</a>
+      - content: <a href="#">Adviescolleges</a>
+      - content: <a href="#">Zelfstandige bestuursorganen</a>
+      - content: <a href="#">Politie en brandweer</a>
+      - content: <a href="#">Rechtspraak</a>
+  blockOrganisatiesBuiten:
+    id: 100
+    flexed: true
+    highlight: true
+    cta: false
+    heading: Onderdeel van het Register van Overheidsorganisaties
+    listBuiten:
+      modifier: list--linked u-nomargin
+      items:
+        - content: <a href="http://www.parlement.com/id/vh8lnhrpfxut/partijen_in_tweede_en_eerste_kamer/">Politieke partijen in Eerste en Tweede Kamer</a>
+        - content: <a href="http://www.rijksoverheid.nl/onderwerpen/ambassades-consulaten-en-overige-vertegenwoordigingen">Buitenlandse ambassades en consulaten in Nederland</a>
+        - content: <a href="http://www.europa-nu.nl/9353000/1/j9vvh6nf08temv0/vh7goo0jfubw">Europese organisaties</a>
+        - content: <a href="https://www.rijksoverheid.nl/onderwerpen/internationale-organisaties-in-nederland/lijst-van-internationale-organisaties-in-nederland">Internationale organisaties in Nederland</a>
+        - content: <a href="http://libguides.northwestern.edu/ForeignGovernmentList">Internationale overheidsorganisaties</a>
+        - content: <a href="http://taalunieversum.org/koppelingen/74/scholen_onderwijsinstellingen">Onderwijs- en onderzoeksinstellingen</a>
+        - content: <a href="http://www.bibliotheek.nl/">Openbare bibliotheken</a>

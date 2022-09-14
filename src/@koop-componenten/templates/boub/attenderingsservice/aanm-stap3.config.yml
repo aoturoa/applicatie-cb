@@ -67,6 +67,7 @@ context:
         title: Alle omgevingsvergunning en -melding
         short: Alle omgevingsvergunning en -melding
         checkAll: true
+        checked: checked
         OptionsSubs:
           - OptionsSub: 11776
             id: 11776
@@ -77,89 +78,108 @@ context:
             id: 12776
             title: Kappen
             short: Kappen
+            checked: checked
           - OptionsSub: 127761
             id: 127761
             title: Slopen
             short: Slopen
+            checked: checked
           - OptionsSub: 127762
             id: 127762
             title: Ruimtelijke ordening
             short: Ruimtelijke ordening
+            checked: checked
           - OptionsSub: 127763
             id: 127763
             title: Milieu
             short: Milieu
+            checked: checked
           - OptionsSub: 127764
             id: 127764
             title: Uitweg en inrit
             short: Uitweg en inrit
+            checked: checked
           - OptionsSub: 1277641
             id: 1277641
             title: Reclame
             short: Reclame
+            checked: checked
           - OptionsSub: 1277642
             id: 1277642
             title: Natuur
             short: Natuur
+            checked: checked
           - OptionsSub: 1277643
             id: 1277643
             title: Brandveilig gebruik
             short: Brandveilig gebruik
+            checked: checked
       - Option: 2776111121
         id: 2776111121
         title: Verkeersbesluit of -mededeling
         short: Verkeersbesluit of -mededeling
         isSingle: true
+        checked: checked
       - Option: 2776111122
         id: 2776111122
         title: Evenementenvergunning
         short: Evenementenvergunning
         isSingle: true
+        checked: checked
       - Option: 2776111123
         id: 2776111123
         title: Evenementmelding
         short: Evenementmelding
         isSingle: true
+        checked: checked
       - Option: 2776111124
         id: 2776111124
         title: Ruimtelijk plan of omgevingsdocument
         short: Ruimtelijk plan of omgevingsdocument
         isSingle: true
+        checked: checked
       - Option: 2776111125
         id: 2776111125
         title: Exploitatievergunning
         short: Exploitatievergunning
         isSingle: true
+        checked: checked
       - Option: 2776111126
         id: 2776111126
         title: Exploitatiemelding
         short: Exploitatiemelding
         isSingle: true
+        checked: checked
       - Option: 2776111127
         id: 2776111127
         title: Vergunning voor activiteiten op of in oppervlaktewater
         short: Vergunning voor activiteiten op of in oppervlaktewater
         isSingle: true
+        checked: checked
       - Option: 2776111128
         id: 2776111128
         title: Melding van activiteiten op of in oppervlaktewater
         short: Melding van activiteiten op of in oppervlaktewater
         isSingle: true
+        checked: checked
       - Option: 2776111129
         id: 2776111129
         title: Andere vergunning
         short: Andere vergunning
         isSingle: true
+        checked: checked
       - Option: 2776111130
         id: 2776111130
         title: Andere beschikking
         short: Andere beschikking
         isSingle: true
+        checked: checked
       - Option: 2776111131
         id: 2776111131
         title: Andere melding
         short: Andere melding
         isSingle: true
+        checked: checked
   voorlichtingContext:
     id: 21
     type: span
