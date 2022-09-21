@@ -1,6 +1,6 @@
 <div class="tabs {{ modifier }}" data-decorator="init-tabs">
   {{#if tabs }}
-  <ul class="tabs__list">
+  <ul class="tabs__list" role="tablist">
     {{#each tabs}}
       {{#if cta }}
         <li><button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button></li>
