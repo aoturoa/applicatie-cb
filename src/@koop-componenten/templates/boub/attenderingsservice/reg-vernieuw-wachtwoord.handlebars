@@ -26,16 +26,13 @@
             {{render "@input-text" emailInput }}
           </div>
           <div class="form__row">
-            <div data-decorator="init-passwordstrength">
-              <div class="form__row">
-                  {{render "@input-text" newPWInput }}
-              </div>
-              <div class="well js-passwordstrength__regexcontainer hidden-desktop">
+            <div class="passwordstrength" data-decorator="init-passwordstrength">
+              <div class="well passwordstrength__regexcontainer js-passwordstrength__regexcontainer hidden-desktop">
                 <div>
                   <p>
                     Het wachtwoord dient te voldoen aan de volgende beveiligingseisen:
                   </p>
-                  <ul class="list list--checked">
+                  <ul class="passwordstrength__regexcontainer__regexoptions">
                     <li data-regex="(?&#x3D;.{12,})" data-regex-label="">Minimaal 12 tekens</li>
                     <li data-regex="(?&#x3D;.*[A-Z])" data-regex-label="">Minimaal 1 hoofdletter</li>
                     <li data-regex="(?&#x3D;.*[a-z])" data-regex-label="">Minimaal 1 kleine letter</li>
@@ -43,6 +40,9 @@
                     <li data-regex="[!@#$%^&amp;*(),.?:{}|&lt;&gt;]" data-regex-label="">Minimaal 1 leesteken</li>
                   </ul>
                 </div>
+              </div>
+              <div class="form__row">
+                  {{render "@input-text" newPWInput }}
               </div>
             </div>
           </div>
@@ -64,5 +64,7 @@
   </div>
 
 </div>
+
+
 
 {{ render "@footer" }}
