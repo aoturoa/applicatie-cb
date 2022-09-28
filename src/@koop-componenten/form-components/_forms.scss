@@ -210,6 +210,10 @@ fieldset {
 
     &__item {
       margin-bottom: em(8);
+
+      &:first-child {
+        margin-bottom: em(16);
+      }
     }
     @media (min-width: $breakpointDesktop) {
       display: flex;
@@ -219,8 +223,13 @@ fieldset {
 
       &__item {
         flex-grow: 1;
-
+        order: 2;
+        
         &:first-child {
+          margin-bottom: em(8);
+        }
+
+        &:last-child {
           order: 2;
           text-align: right;
           padding-bottom: 0;

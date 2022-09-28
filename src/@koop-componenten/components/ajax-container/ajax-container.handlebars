@@ -1,0 +1,42 @@
+<div style="padding: 20px">
+    <div id="id123">
+
+    </div>
+</div>
+
+{{!-- <container id="id123" class="is-loading" aria-shizzle>
+icon | Bezig met laden
+</container>
+<container id="id123" class="is-loaded" aria-live="polite">
+</container>
+<container id="id123" class="is-failed" aria-shizzle>
+icon | Mooie zin dat data ingalden kan worden tijdelijk
+<a>Ga naar diensten</a> --}}
+<p>
+    <button type="button" id="btn-busy">Zet status op 'bezig met ophalen'</button>
+    <button type="button" id="btn-ready">Zet status op 'klaar'</button>
+    <button type="button" id="btn-failed">Zet status op 'mislukt'</button>
+</p>
+
+<style>
+</style>
+<script>
+    var btnBusy = document.getElementById('btn-busy');
+    var btnReady = document.getElementById('btn-ready');
+    var btnFailed = document.getElementById('btn-failed');
+    btnBusy.addEventListener('click', function (e) {
+      var container = document.getElementById('id123');
+      container.setAttribute('aria-live', 'polite');
+      container.innerHTML = '<div class="alert alert--loading"><div class="alert__inner">Bezig met laden</div></div>';
+    }.bind(this), false);
+    btnReady.addEventListener('click', function (e) {
+      var container = document.getElementById('id123');
+      container.setAttribute('aria-live', 'polite');
+      container.innerHTML = '';
+    }.bind(this), false);
+    btnFailed.addEventListener('click', function (e) {
+      var container = document.getElementById('id123');
+      container.setAttribute('aria-live', 'polite');
+      container.innerHTML = '<div class="alert alert--warning"><div class="alert__inner">Het ophalen van de informatie mislukt.</div></div>';
+    }.bind(this), false);
+</script>

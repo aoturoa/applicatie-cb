@@ -1,6 +1,6 @@
 ---
-name: homepag ONL inno v1
-label: Homepage (inno v1)
+name: homepage ONL inno v1
+label: Homepage (omtrent)
 status: ready
 context:
   header:

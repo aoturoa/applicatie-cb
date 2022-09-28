@@ -48,6 +48,12 @@
     }
   }
 
+
+  &--loading {
+    background-color: lighten($primaryBlue, 50%);
+    background-image: $loadingIcon;
+  }
+
   &--warning {
     background-color: lighten($orange, 50%);
     background-image: $warningIcon;

@@ -17,6 +17,10 @@
     background-image: $infoIconBlue;
   }
 
+  &--loading {
+    background-color: $lightBlue;
+  }
+
   &--warning {
     background-color: lighten($lightRed,7);
     background-image: $iconAlertRed;

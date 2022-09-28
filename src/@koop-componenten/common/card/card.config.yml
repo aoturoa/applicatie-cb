@@ -10,7 +10,6 @@ context:
     source: false
     picture:
       src: ../../images/temp/illu-walkingdog.png
-      alt: alt text
   labels:
     - label:
         text: Onderwijs

@@ -9,6 +9,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Front-end componentenbiliotheek</description>
     <releaseNotes>
+      ## 2.7.0
+      - wcag / 173359 / sorteer opties label op/aflopend
+      - wcag / 176586 / Focusvolgorde knoppen jumbotron
+      - wcag / 178555 / tabbladen niet evident voor voorleessoftware
+      - wcag / 177978 / volgorde 'uitgelicht' blokken niet logisch
+      - boub template; password field update naar laatste versie DOM
+      - ajax-container; voorbeeld feedback/states van een ajax-container
       ## 2.6.1
       - 175627 / [RIO] [COMPLIB] Templates RIO
       - 176131 / [DigiToegankelijkheid] [COMPLIB] [ONL] contrast placeholders in Firefox fixen
