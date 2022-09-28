@@ -200,7 +200,6 @@
       this.fieldPasswordRepeat.classList.add('is-invalid');
       this.fieldPasswordRepeat.classList.add('pw-invalid-repeat', 'has-error');
       this.fieldPasswordRepeat.setAttribute('aria-invalid', true);
-      console.log('err');
       fieldState = 'error';
     } else {
         this.removeError(this.fieldPasswordRepeat);
