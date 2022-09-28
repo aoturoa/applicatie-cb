@@ -1,4 +1,9 @@
 <div class="block-cards__card">
+  {{#if figure}}
+    <div class="block-cards__card__media">
+      {{ render "@figure" figure }}
+    </div>
+  {{/if}}
   {{#if heading}}
     <h3 class="block-cards__card__heading">{{#if heading/isLink}}<a href="#">{{/if}}{{heading/label}}{{#if heading/isLink}}</a>{{/if}}</h3>
   {{/if}}
@@ -7,17 +12,12 @@
       {{subheading}}
     </p>
   {{/if}}
-  {{#if figure}}
-    <div class="block-cards__card__media">
-      {{ render "@figure" figure }}
-    </div>
-  {{/if}}
   <div class="block-cards__card__tags">
     {{#each labels}}
       {{ render "@label--large" label }}
     {{/each}}
   </div>
   {{#if cta}}
-    <a href="{{cta/href}}" {{#if cta/id}}id="{{cta/id}}"{{/if}} class="block-cards__card__cta" {{#if cta/external}}rel="external"{{/if}}>{{cta/label}}</a>
+    <a href="{{cta/href}}" {{#if cta/id}}id="{{cta/id}}"{{/if}} class="block-cards__card__cta" {{#if cta/external}}rel="external"{{/if}}>{{cta/label}} <span class="visually-hidden">: {{heading/label}}</span></a>
   {{/if}}
 </div>
